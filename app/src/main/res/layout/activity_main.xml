@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="32dp"
+    android:background="#111111">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LinkCore"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/nativeStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Comprobando núcleo nativo..."
+        android:textColor="#CFCFCF"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/loadRom"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Cargar ROM" />
+
+    <Button
+        android:id="@+id/online"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Jugar online (próximamente)"
+        android:enabled="false" />
+</LinearLayout>

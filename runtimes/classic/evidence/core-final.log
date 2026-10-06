@@ -1,0 +1,14 @@
+PASS exact interpreter
+PASS Zlib one-shot
+PASS Zlib stream
+PASS Marshal 4.8 roundtrip
+PASS UTF-8 regex
+PASS Shift_JIS transcode
+PASS Latin-1 transcode
+PASS binary file save/load
+PASS legacy String integer byte
+PASS regex backref scope
+PASS String game alias does not recurse
+PASS Big5 transcode
+PASS GB18030 transcode
+CORE_SELFTEST_COMPLETE

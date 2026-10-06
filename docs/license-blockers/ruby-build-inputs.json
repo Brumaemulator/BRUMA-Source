@@ -1,0 +1,1753 @@
+{
+  "translation_unit_count": 41,
+  "ruby_file_count": 57,
+  "units": [
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/compar.c.o",
+      "ruby_inputs": [
+        "compar.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/class.c.o",
+      "ruby_inputs": [
+        "class.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "rubysig.h",
+        "node.h",
+        "st.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/dln.c.o",
+      "ruby_inputs": [
+        "dln.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "dln.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/dir.c.o",
+      "ruby_inputs": [
+        "dir.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "util.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/enumerator.c.o",
+      "ruby_inputs": [
+        "enumerator.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/enum.c.o",
+      "ruby_inputs": [
+        "enum.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "node.h",
+        "st.h",
+        "util.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/array.c.o",
+      "ruby_inputs": [
+        "array.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "util.h",
+        "st.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/bignum.c.o",
+      "ruby_inputs": [
+        "bignum.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "rubysig.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/error.c.o",
+      "ruby_inputs": [
+        "error.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "env.h",
+        "st.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/gc.c.o",
+      "ruby_inputs": [
+        "gc.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "rubysig.h",
+        "st.h",
+        "node.h",
+        "env.h",
+        "re.h",
+        "regex.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/inits.c.o",
+      "ruby_inputs": [
+        "inits.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/file.c.o",
+      "ruby_inputs": [
+        "file.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "rubyio.h",
+        "rubysig.h",
+        "util.h",
+        "dln.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/hash.c.o",
+      "ruby_inputs": [
+        "hash.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "st.h",
+        "util.h",
+        "rubysig.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/math.c.o",
+      "ruby_inputs": [
+        "math.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/marshal.c.o",
+      "ruby_inputs": [
+        "marshal.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "rubyio.h",
+        "st.h",
+        "util.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/numeric.c.o",
+      "ruby_inputs": [
+        "numeric.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "env.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/object.c.o",
+      "ruby_inputs": [
+        "object.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "st.h",
+        "util.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/io.c.o",
+      "ruby_inputs": [
+        "io.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "rubyio.h",
+        "rubysig.h",
+        "env.h",
+        "re.h",
+        "regex.h",
+        "util.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/pack.c.o",
+      "ruby_inputs": [
+        "pack.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/prec.c.o",
+      "ruby_inputs": [
+        "prec.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/process.c.o",
+      "ruby_inputs": [
+        "process.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "rubysig.h",
+        "st.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/random.c.o",
+      "ruby_inputs": [
+        "random.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/range.c.o",
+      "ruby_inputs": [
+        "range.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/eval.c.o",
+      "ruby_inputs": [
+        "eval.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "node.h",
+        "st.h",
+        "env.h",
+        "util.h",
+        "rubysig.h",
+        "dln.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/ruby.c.o",
+      "ruby_inputs": [
+        "ruby.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "dln.h",
+        "node.h",
+        "st.h",
+        "util.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/re.c.o",
+      "ruby_inputs": [
+        "re.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "re.h",
+        "regex.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/signal.c.o",
+      "ruby_inputs": [
+        "signal.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "rubysig.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/st.c.o",
+      "ruby_inputs": [
+        "st.c",
+        "config.h",
+        "defines.h",
+        "st.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/sprintf.c.o",
+      "ruby_inputs": [
+        "sprintf.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "re.h",
+        "regex.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/struct.c.o",
+      "ruby_inputs": [
+        "struct.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "env.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/time.c.o",
+      "ruby_inputs": [
+        "time.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/parse.c.o",
+      "ruby_inputs": [
+        "parse.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "env.h",
+        "node.h",
+        "st.h",
+        "regex.h",
+        "util.h",
+        "lex.c"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/string.c.o",
+      "ruby_inputs": [
+        "string.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "re.h",
+        "regex.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/version.c.o",
+      "ruby_inputs": [
+        "version.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "version.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/variable.c.o",
+      "ruby_inputs": [
+        "variable.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "env.h",
+        "node.h",
+        "st.h",
+        "util.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/missing/memcmp.c.o",
+      "ruby_inputs": [
+        "missing/memcmp.c"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/dmyext.c.o",
+      "ruby_inputs": [
+        "dmyext.c"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/missing/crypt.c.o",
+      "ruby_inputs": [
+        "missing/crypt.c"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/regex.c.o",
+      "ruby_inputs": [
+        "regex.c",
+        "config.h",
+        "defines.h",
+        "regex.h",
+        "util.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/util.c.o",
+      "ruby_inputs": [
+        "util.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h",
+        "util.h"
+      ]
+    },
+    {
+      "object": "CMakeFiles/ruby.dir/ruby18/ext/zlib/zlib.c.o",
+      "ruby_inputs": [
+        "ext/zlib/zlib.c",
+        "ruby.h",
+        "config.h",
+        "defines.h",
+        "missing.h",
+        "intern.h"
+      ]
+    }
+  ],
+  "files": [
+    {
+      "path": "array.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "2df46dbc4f27f7fc3587a6c06b6f5f09e9dfdce4bcafb3a096895277277756e1",
+      "built_source_sha256": "2df46dbc4f27f7fc3587a6c06b6f5f09e9dfdce4bcafb3a096895277277756e1",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        },
+        {
+          "line": 10,
+          "text": "Copyright (C) 2000  Network Applied Communication Laboratory, Inc."
+        },
+        {
+          "line": 11,
+          "text": "Copyright (C) 2000  Information-technology Promotion Agency, Japan"
+        }
+      ]
+    },
+    {
+      "path": "bignum.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "15cd69b2d67e7acb1aad1d631c5a25a658aaecb545541d86204fb09f93be55d2",
+      "built_source_sha256": "15cd69b2d67e7acb1aad1d631c5a25a658aaecb545541d86204fb09f93be55d2",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "class.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "86734d3a6e11de9fa2b58c04d56eadbbd07501ac1a7ee3e6a996f05590efd120",
+      "built_source_sha256": "86734d3a6e11de9fa2b58c04d56eadbbd07501ac1a7ee3e6a996f05590efd120",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "compar.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "221777df03c9fa2e088c4a4dccd87e5781f9f5bfa47e8286b8353b1e3508edea",
+      "built_source_sha256": "221777df03c9fa2e088c4a4dccd87e5781f9f5bfa47e8286b8353b1e3508edea",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "config.h",
+      "compiled_or_included": true,
+      "baseline_sha256": null,
+      "built_source_sha256": "44355073f0a259c02cd9fff845f93ae95cc003f8cb6cab0f23dcbf0bb81ef981",
+      "license": "Generated configuration/adaptation; underlying Ruby License OR GPL-2.0-only where applicable",
+      "evidence": "generated header/source inputs, BRUMA recipe",
+      "full_file_notice_markers": []
+    },
+    {
+      "path": "defines.h",
+      "compiled_or_included": true,
+      "baseline_sha256": "6820121f5331937ac8be6dc0b76a29bdd080bb36d0ac983cd04322c3eb81908c",
+      "built_source_sha256": "6820121f5331937ac8be6dc0b76a29bdd080bb36d0ac983cd04322c3eb81908c",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 118,
+          "text": "#define S_IRUSR 0000400        /* read permission, owner */"
+        },
+        {
+          "line": 121,
+          "text": "#define S_IRGRP 0000040        /* read permission, group */"
+        },
+        {
+          "line": 124,
+          "text": "#define S_IROTH 0000004        /* read permission, other */"
+        },
+        {
+          "line": 127,
+          "text": "#define S_IWUSR 0000200        /* write permission, owner */"
+        },
+        {
+          "line": 130,
+          "text": "#define S_IWGRP 0000020        /* write permission, group */"
+        },
+        {
+          "line": 133,
+          "text": "#define S_IWOTH 0000002        /* write permission, other */"
+        },
+        {
+          "line": 136,
+          "text": "#define S_IXUSR 0000100        /* execute/search permission, owner */"
+        },
+        {
+          "line": 139,
+          "text": "#define S_IXGRP 0000010        /* execute/search permission, group */"
+        },
+        {
+          "line": 142,
+          "text": "#define S_IXOTH 0000001        /* execute/search permission, other */"
+        },
+        {
+          "line": 145,
+          "text": "#define S_IRWXU 0000700        /* read, write, execute permissions, owner */"
+        },
+        {
+          "line": 148,
+          "text": "#define S_IRWXG 0000070        /* read, write, execute permissions, group */"
+        },
+        {
+          "line": 151,
+          "text": "#define S_IRWXO 0000007        /* read, write, execute permissions, other */"
+        }
+      ]
+    },
+    {
+      "path": "dir.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "ac6a18a9af270fdce08eb5be100ff50fe96b512d7ee8736fd910fb56bc9a6bb5",
+      "built_source_sha256": "ac6a18a9af270fdce08eb5be100ff50fe96b512d7ee8736fd910fb56bc9a6bb5",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        },
+        {
+          "line": 10,
+          "text": "Copyright (C) 2000  Network Applied Communication Laboratory, Inc."
+        },
+        {
+          "line": 11,
+          "text": "Copyright (C) 2000  Information-technology Promotion Agency, Japan"
+        },
+        {
+          "line": 895,
+          "text": "*  Makes a new directory named by <i>string</i>, with permissions"
+        },
+        {
+          "line": 897,
+          "text": "*  permissions may be modified by the value of"
+        },
+        {
+          "line": 900,
+          "text": "*  also the discussion of permissions in the class documentation for"
+        }
+      ]
+    },
+    {
+      "path": "dln.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "e0e2b285c690efb2d353dab33718384c311e5914097c695549e5a6f39d368898",
+      "built_source_sha256": "e0e2b285c690efb2d353dab33718384c311e5914097c695549e5a6f39d368898",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "dln.h",
+      "compiled_or_included": true,
+      "baseline_sha256": "ac84b4a54fa105e27f376bbac4dbdea4cb29e096ef9a9b6d470fbe850d2e422c",
+      "built_source_sha256": "ac84b4a54fa105e27f376bbac4dbdea4cb29e096ef9a9b6d470fbe850d2e422c",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "dmyext.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "cdce65005f7207f6c9e0f8d2d227e9982a30859e6333bfbadcbd0c13b11bb015",
+      "built_source_sha256": "909931c5190cb3cc3710174d5905f18fadecf49e81302fe9a6f28aefb49a4e82",
+      "license": "Generated configuration/adaptation; underlying Ruby License OR GPL-2.0-only where applicable",
+      "evidence": "generated header/source inputs, BRUMA recipe",
+      "full_file_notice_markers": []
+    },
+    {
+      "path": "enum.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "5746037b5c83d6b90e78f3ffef9631c1018061c7c797b6ee4e7a8851209171af",
+      "built_source_sha256": "5746037b5c83d6b90e78f3ffef9631c1018061c7c797b6ee4e7a8851209171af",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "enumerator.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "796746c49b213be7a8b9d43884bcf2cd4b42d1823918155fea95a060937e3758",
+      "built_source_sha256": "796746c49b213be7a8b9d43884bcf2cd4b42d1823918155fea95a060937e3758",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 7,
+          "text": "Copyright (C) 2001-2003 Akinori MUSHA"
+        }
+      ]
+    },
+    {
+      "path": "env.h",
+      "compiled_or_included": true,
+      "baseline_sha256": "bb73610d8a60f9a9141ac07fc42307a6ecd60202cc7ab1aad8eae269647be228",
+      "built_source_sha256": "bb73610d8a60f9a9141ac07fc42307a6ecd60202cc7ab1aad8eae269647be228",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "error.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "82d17715e6ba1c592e408bb88579340d6dfbbad288915c1e3aeb3628d090724d",
+      "built_source_sha256": "82d17715e6ba1c592e408bb88579340d6dfbbad288915c1e3aeb3628d090724d",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "eval.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "e07e3963f860fdd8bddccb778ac6efd57027d48aa6369a5fa66dac4dde657317",
+      "built_source_sha256": "e07e3963f860fdd8bddccb778ac6efd57027d48aa6369a5fa66dac4dde657317",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        },
+        {
+          "line": 10,
+          "text": "Copyright (C) 2000  Network Applied Communication Laboratory, Inc."
+        },
+        {
+          "line": 11,
+          "text": "Copyright (C) 2000  Information-technology Promotion Agency, Japan"
+        }
+      ]
+    },
+    {
+      "path": "ext/zlib/zlib.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "49fb2d86ce24edc1fbc20da5a2328792e540f3ddc33678e4383d8d0dde4de09f",
+      "built_source_sha256": "49fb2d86ce24edc1fbc20da5a2328792e540f3ddc33678e4383d8d0dde4de09f",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 4,
+          "text": "*   Copyright (C) UENO Katsuhiro 2000-2003"
+        }
+      ]
+    },
+    {
+      "path": "file.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "8c939bfb80d66281bcddb9463dcb765be39353b22cd0db0e5dbaff9bbbddd7c8",
+      "built_source_sha256": "8c939bfb80d66281bcddb9463dcb765be39353b22cd0db0e5dbaff9bbbddd7c8",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        },
+        {
+          "line": 10,
+          "text": "Copyright (C) 2000  Network Applied Communication Laboratory, Inc."
+        },
+        {
+          "line": 11,
+          "text": "Copyright (C) 2000  Information-technology Promotion Agency, Japan"
+        },
+        {
+          "line": 320,
+          "text": "*  Returns an integer representing the permission bits of"
+        },
+        {
+          "line": 1714,
+          "text": "*  Changes permission bits on the named file(s) to the bit pattern"
+        },
+        {
+          "line": 1745,
+          "text": "*  Changes permission bits on <i>file</i> to the bit pattern"
+        },
+        {
+          "line": 1793,
+          "text": "*  links (so it will change the permissions associated with the link,"
+        },
+        {
+          "line": 2273,
+          "text": "*  default permissions, so a umask of <code>0222</code> would make a"
+        },
+        {
+          "line": 4268,
+          "text": "*  permission bit set, <code>false</code> if it doesn't or if the"
+        },
+        {
+          "line": 4289,
+          "text": "*  permission bit set, <code>false</code> if it doesn't or if the"
+        },
+        {
+          "line": 4629,
+          "text": "*  <em>permission bits</em> are a platform-specific"
+        },
+        {
+          "line": 4630,
+          "text": "*  set of bits that indicate permissions of a file. On Unix-based"
+        },
+        {
+          "line": 4631,
+          "text": "*  systems, permissions are viewed as a set of three octets, for the"
+        },
+        {
+          "line": 4633,
+          "text": "*  entities, permissions may be set to read, write, or execute the"
+        },
+        {
+          "line": 4636,
+          "text": "*  The permission bits <code>0644</code> (in octal) would thus be"
+        },
+        {
+          "line": 4640,
+          "text": "*  special features. If the permissions are for a directory, the"
+        },
+        {
+          "line": 4646,
+          "text": "*  permission bits will be synthesized to resemble typical values. For"
+        },
+        {
+          "line": 4647,
+          "text": "*  instance, on Windows NT the default permission bits are"
+        }
+      ]
+    },
+    {
+      "path": "gc.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "a216a3d81826f855bb58b42ac516e0afb96f2306a647b0d19076f73bec3f8a04",
+      "built_source_sha256": "a216a3d81826f855bb58b42ac516e0afb96f2306a647b0d19076f73bec3f8a04",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        },
+        {
+          "line": 10,
+          "text": "Copyright (C) 2000  Network Applied Communication Laboratory, Inc."
+        },
+        {
+          "line": 11,
+          "text": "Copyright (C) 2000  Information-technology Promotion Agency, Japan"
+        }
+      ]
+    },
+    {
+      "path": "hash.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "dc10d615377b0f76df8e4d669e0d6260233e45f9e13fbae0fcc0c434abd903e0",
+      "built_source_sha256": "dc10d615377b0f76df8e4d669e0d6260233e45f9e13fbae0fcc0c434abd903e0",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        },
+        {
+          "line": 10,
+          "text": "Copyright (C) 2000  Network Applied Communication Laboratory, Inc."
+        },
+        {
+          "line": 11,
+          "text": "Copyright (C) 2000  Information-technology Promotion Agency, Japan"
+        }
+      ]
+    },
+    {
+      "path": "inits.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "c04758087f19eb652a2ee30301512962a583be8ec63b1c76b91093884f8d798d",
+      "built_source_sha256": "c04758087f19eb652a2ee30301512962a583be8ec63b1c76b91093884f8d798d",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "intern.h",
+      "compiled_or_included": true,
+      "baseline_sha256": "30485d250987cb744d0803e9092c9f3bbc7841a2ae2c97afd5301451e4fa582b",
+      "built_source_sha256": "30485d250987cb744d0803e9092c9f3bbc7841a2ae2c97afd5301451e4fa582b",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        },
+        {
+          "line": 10,
+          "text": "Copyright (C) 2000  Network Applied Communication Laboratory, Inc."
+        },
+        {
+          "line": 11,
+          "text": "Copyright (C) 2000  Information-technology Promotion Agency, Japan"
+        },
+        {
+          "line": 534,
+          "text": "void ruby_show_copyright _((void));"
+        }
+      ]
+    },
+    {
+      "path": "io.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "0cb4aded6b965d7dd859500483657c92473f4fe607939525127ea235fc36e8ab",
+      "built_source_sha256": "0cb4aded6b965d7dd859500483657c92473f4fe607939525127ea235fc36e8ab",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        },
+        {
+          "line": 10,
+          "text": "Copyright (C) 2000  Network Applied Communication Laboratory, Inc."
+        },
+        {
+          "line": 11,
+          "text": "Copyright (C) 2000  Information-technology Promotion Agency, Japan"
+        },
+        {
+          "line": 3537,
+          "text": "*  permissions may be set using the integer third parameter."
+        },
+        {
+          "line": 4414,
+          "text": "*  permission bits may be given in _perm_. These mode and permission"
+        }
+      ]
+    },
+    {
+      "path": "lex.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "8cb28f6977bc843d1e5a45edfab0669cf8ea1fc294719cb6c366f6a27941d5d0",
+      "built_source_sha256": "8cb28f6977bc843d1e5a45edfab0669cf8ea1fc294719cb6c366f6a27941d5d0",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": []
+    },
+    {
+      "path": "marshal.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "f6a44dbf7f167417ad16e90dfbd65faa306befc612f140c2ef81b47667b2ee60",
+      "built_source_sha256": "f6a44dbf7f167417ad16e90dfbd65faa306befc612f140c2ef81b47667b2ee60",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "math.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "64047622e17c00483ec05b2e1f134b0fd54772e08cbe453bdfe956fb36c6bbe7",
+      "built_source_sha256": "64047622e17c00483ec05b2e1f134b0fd54772e08cbe453bdfe956fb36c6bbe7",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "missing.h",
+      "compiled_or_included": true,
+      "baseline_sha256": "1909ebea7f4b2fd8796241583380160f00b59a675714d73f304a85b683fe5f98",
+      "built_source_sha256": "1909ebea7f4b2fd8796241583380160f00b59a675714d73f304a85b683fe5f98",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": []
+    },
+    {
+      "path": "missing/crypt.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "cdb7836b4456624b25fc8cee6de7982c09506f11da9ba6bffda4c88b88539301",
+      "built_source_sha256": "cdb7836b4456624b25fc8cee6de7982c09506f11da9ba6bffda4c88b88539301",
+      "license": "BSD-3-Clause",
+      "evidence": "actual crypt.c header; LEGAL historical advertising clause removal",
+      "full_file_notice_markers": [
+        {
+          "line": 2,
+          "text": "* Copyright (c) 1989, 1993"
+        },
+        {
+          "line": 8,
+          "text": "* Redistribution and use in source and binary forms, with or without"
+        },
+        {
+          "line": 11,
+          "text": "* 1. Redistributions of source code must retain the above copyright"
+        },
+        {
+          "line": 13,
+          "text": "* 2. Redistributions in binary form must reproduce the above copyright"
+        },
+        {
+          "line": 18,
+          "text": "*    without specific prior written permission."
+        }
+      ]
+    },
+    {
+      "path": "missing/memcmp.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "05ffe24fe25dc78d9c1cc6552dccfad69f24566200d0f5decf6dff257b770c7d",
+      "built_source_sha256": "05ffe24fe25dc78d9c1cc6552dccfad69f24566200d0f5decf6dff257b770c7d",
+      "license": "Public-domain (plus preserve any embedded notices)",
+      "evidence": "LEGAL + file headers",
+      "full_file_notice_markers": [
+        {
+          "line": 1,
+          "text": "/* public domain rewrite of memcmp(3) */"
+        }
+      ]
+    },
+    {
+      "path": "node.h",
+      "compiled_or_included": true,
+      "baseline_sha256": "99e9a5131f0b9b4c5a2ee51447ba9d1c4644b7b906af4d00efc20c4a3b4ef7c0",
+      "built_source_sha256": "99e9a5131f0b9b4c5a2ee51447ba9d1c4644b7b906af4d00efc20c4a3b4ef7c0",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "numeric.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "14bd7cd357b9941e0a6c755e5cbaa990d53193ce8ccf9386348ee7c12204f281",
+      "built_source_sha256": "14bd7cd357b9941e0a6c755e5cbaa990d53193ce8ccf9386348ee7c12204f281",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "object.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "34cb5bd0e80f5f45504cc168b18c095e9f26aecf02f6aed92511082d1897dd3c",
+      "built_source_sha256": "34cb5bd0e80f5f45504cc168b18c095e9f26aecf02f6aed92511082d1897dd3c",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        },
+        {
+          "line": 10,
+          "text": "Copyright (C) 2000  Network Applied Communication Laboratory, Inc."
+        },
+        {
+          "line": 11,
+          "text": "Copyright (C) 2000  Information-technology Promotion Agency, Japan"
+        }
+      ]
+    },
+    {
+      "path": "pack.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "436bfc9075cca05cd45811e0ae2953e917982dc4acf105dd7f2705a92116e152",
+      "built_source_sha256": "436bfc9075cca05cd45811e0ae2953e917982dc4acf105dd7f2705a92116e152",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "parse.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "4a315f36839cccc124cd642935cb66fddbee6136f9bf8d5e11076fe724e0d424",
+      "built_source_sha256": "4a315f36839cccc124cd642935cb66fddbee6136f9bf8d5e11076fe724e0d424",
+      "license": "GPL-2.0-or-later WITH Bison-exception-2.2; Ruby License permitted for generated parser",
+      "evidence": "LEGAL + parse.c Bison skeleton exception",
+      "full_file_notice_markers": [
+        {
+          "line": 5,
+          "text": "Copyright (C) 1984, 1989-1990, 2000-2011 Free Software Foundation, Inc."
+        },
+        {
+          "line": 7,
+          "text": "This program is free software: you can redistribute it and/or modify"
+        },
+        {
+          "line": 8,
+          "text": "it under the terms of the GNU General Public License as published by"
+        },
+        {
+          "line": 9,
+          "text": "the Free Software Foundation, either version 3 of the License, or"
+        },
+        {
+          "line": 15,
+          "text": "GNU General Public License for more details."
+        },
+        {
+          "line": 17,
+          "text": "You should have received a copy of the GNU General Public License"
+        },
+        {
+          "line": 18,
+          "text": "along with this program.  If not, see <http://www.gnu.org/licenses/>.  */"
+        },
+        {
+          "line": 24,
+          "text": "as a parser skeleton.  Alternatively, if you modify or redistribute"
+        },
+        {
+          "line": 27,
+          "text": "Bison output files to be licensed under the GNU General Public"
+        },
+        {
+          "line": 28,
+          "text": "License without this special exception."
+        }
+      ]
+    },
+    {
+      "path": "prec.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "7584fa6a7cb2b288fb6bf3e401f751ac23c432d47cbf6b5462633dacb4029ca7",
+      "built_source_sha256": "7584fa6a7cb2b288fb6bf3e401f751ac23c432d47cbf6b5462633dacb4029ca7",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "process.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "3f8778d6d0cb0b066181f95686c4a17028c6057b4a0c257d4f2a835179c053fd",
+      "built_source_sha256": "3f8778d6d0cb0b066181f95686c4a17028c6057b4a0c257d4f2a835179c053fd",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        },
+        {
+          "line": 10,
+          "text": "Copyright (C) 2000  Network Applied Communication Laboratory, Inc."
+        },
+        {
+          "line": 11,
+          "text": "Copyright (C) 2000  Information-technology Promotion Agency, Japan"
+        }
+      ]
+    },
+    {
+      "path": "random.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "819c1abbfa2630bb8dd6038ba11bab0f3da2cf69a73a31e886a18edd7f80beef",
+      "built_source_sha256": "819c1abbfa2630bb8dd6038ba11bab0f3da2cf69a73a31e886a18edd7f80beef",
+      "license": "Ruby License OR GPL-2.0-only; BSD-3-Clause MT19937 section",
+      "evidence": "random.c header + LEGAL",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        },
+        {
+          "line": 17,
+          "text": "The original copyright notice follows."
+        },
+        {
+          "line": 27,
+          "text": "Copyright (C) 1997 - 2002, Makoto Matsumoto and Takuji Nishimura,"
+        },
+        {
+          "line": 30,
+          "text": "Redistribution and use in source and binary forms, with or without"
+        },
+        {
+          "line": 34,
+          "text": "1. Redistributions of source code must retain the above copyright"
+        },
+        {
+          "line": 37,
+          "text": "2. Redistributions in binary form must reproduce the above copyright"
+        },
+        {
+          "line": 43,
+          "text": "permission."
+        },
+        {
+          "line": 45,
+          "text": "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS"
+        },
+        {
+          "line": 48,
+          "text": "A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR"
+        }
+      ]
+    },
+    {
+      "path": "range.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "5bf653ac989e20c1d6b2c834ebd5ac1562e881d24ba173c5529d66ed6c01d37b",
+      "built_source_sha256": "5bf653ac989e20c1d6b2c834ebd5ac1562e881d24ba173c5529d66ed6c01d37b",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "re.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "23beb658ac06bbee227393d6b26f7aa27e593083eeb2ec09ed4301f12c53da5c",
+      "built_source_sha256": "23beb658ac06bbee227393d6b26f7aa27e593083eeb2ec09ed4301f12c53da5c",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 8,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "re.h",
+      "compiled_or_included": true,
+      "baseline_sha256": "6d079fdb4b645777f9bfe095893e5577d31ee9456e08a80f201f2b023db27606",
+      "built_source_sha256": "6d079fdb4b645777f9bfe095893e5577d31ee9456e08a80f201f2b023db27606",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "regex.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "5423850fec806890706ff02f345e973143f3fb3a76a0fd5b5d69e31ac2772ad6",
+      "built_source_sha256": "5423850fec806890706ff02f345e973143f3fb3a76a0fd5b5d69e31ac2772ad6",
+      "license": "LGPL-2.0-or-later",
+      "evidence": "LEGAL + LGPL headers",
+      "full_file_notice_markers": [
+        {
+          "line": 2,
+          "text": "Copyright (C) 1993, 94, 95, 96, 97, 98 Free Software Foundation, Inc."
+        },
+        {
+          "line": 4,
+          "text": "The GNU C Library is free software; you can redistribute it and/or"
+        },
+        {
+          "line": 5,
+          "text": "modify it under the terms of the GNU Library General Public License as"
+        },
+        {
+          "line": 7,
+          "text": "License, or (at your option) any later version."
+        },
+        {
+          "line": 12,
+          "text": "Library General Public License for more details."
+        },
+        {
+          "line": 15,
+          "text": "License along with the GNU C Library; see the file LGPL.  If not,"
+        }
+      ]
+    },
+    {
+      "path": "regex.h",
+      "compiled_or_included": true,
+      "baseline_sha256": "590e0b276b4a4e4ac92d940a2b6ce38942856a0facd344e0b22c3c9679775c0c",
+      "built_source_sha256": "590e0b276b4a4e4ac92d940a2b6ce38942856a0facd344e0b22c3c9679775c0c",
+      "license": "LGPL-2.0-or-later",
+      "evidence": "LEGAL + LGPL headers",
+      "full_file_notice_markers": [
+        {
+          "line": 3,
+          "text": "Copyright (C) 1985,89,90,91,92,93,95,96,97,98 Free Software Foundation, Inc."
+        },
+        {
+          "line": 8,
+          "text": "The GNU C Library is free software; you can redistribute it and/or"
+        },
+        {
+          "line": 9,
+          "text": "modify it under the terms of the GNU Library General Public License as"
+        },
+        {
+          "line": 11,
+          "text": "License, or (at your option) any later version."
+        },
+        {
+          "line": 16,
+          "text": "Library General Public License for more details."
+        },
+        {
+          "line": 19,
+          "text": "License along with the GNU C Library; see the file LGPL.  If not,"
+        }
+      ]
+    },
+    {
+      "path": "ruby.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "17b011cdd58f71400ee8c81eac52c4db97cad66f9f035de46727399b0bc81833",
+      "built_source_sha256": "17b011cdd58f71400ee8c81eac52c4db97cad66f9f035de46727399b0bc81833",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        },
+        {
+          "line": 10,
+          "text": "Copyright (C) 2000  Network Applied Communication Laboratory, Inc."
+        },
+        {
+          "line": 11,
+          "text": "Copyright (C) 2000  Information-technology Promotion Agency, Japan"
+        },
+        {
+          "line": 102,
+          "text": "\"--copyright     print the copyright\","
+        },
+        {
+          "line": 495,
+          "text": "int copyright = 0;"
+        },
+        {
+          "line": 713,
+          "text": "if (strcmp(\"copyright\", s) == 0)"
+        },
+        {
+          "line": 714,
+          "text": "copyright = 1;"
+        },
+        {
+          "line": 796,
+          "text": "if (copyright) {"
+        },
+        {
+          "line": 797,
+          "text": "ruby_show_copyright();"
+        }
+      ]
+    },
+    {
+      "path": "ruby.h",
+      "compiled_or_included": true,
+      "baseline_sha256": "a1c67ef7b8959d02aec1062639a22c4e7c15a9eafb2ac5d0c1351cbb1aaae1db",
+      "built_source_sha256": "a1c67ef7b8959d02aec1062639a22c4e7c15a9eafb2ac5d0c1351cbb1aaae1db",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 8,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        },
+        {
+          "line": 9,
+          "text": "Copyright (C) 2000  Network Applied Communication Laboratory, Inc."
+        },
+        {
+          "line": 10,
+          "text": "Copyright (C) 2000  Information-technology Promotion Agency, Japan"
+        }
+      ]
+    },
+    {
+      "path": "rubyio.h",
+      "compiled_or_included": true,
+      "baseline_sha256": "40f1ad1d187423af5cd399a92ca7dc6e5430aa5f995280cb9e2853e10f590082",
+      "built_source_sha256": "40f1ad1d187423af5cd399a92ca7dc6e5430aa5f995280cb9e2853e10f590082",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "rubysig.h",
+      "compiled_or_included": true,
+      "baseline_sha256": "00e0381ece18df7c9ddfa692dd6ef4f7a0ea0d7275696bc332cc7d8bb2e63062",
+      "built_source_sha256": "00e0381ece18df7c9ddfa692dd6ef4f7a0ea0d7275696bc332cc7d8bb2e63062",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "signal.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "249c0f7cbe106f97ad94939c748768abafe2df256c6e354e22fc8c4101c66b37",
+      "built_source_sha256": "249c0f7cbe106f97ad94939c748768abafe2df256c6e354e22fc8c4101c66b37",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        },
+        {
+          "line": 10,
+          "text": "Copyright (C) 2000  Network Applied Communication Laboratory, Inc."
+        },
+        {
+          "line": 11,
+          "text": "Copyright (C) 2000  Information-technology Promotion Agency, Japan"
+        }
+      ]
+    },
+    {
+      "path": "sprintf.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "a2da60dc152ea9bf02156aa4edba48b7017e0341df037923c21fe9e34df49195",
+      "built_source_sha256": "a2da60dc152ea9bf02156aa4edba48b7017e0341df037923c21fe9e34df49195",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        },
+        {
+          "line": 10,
+          "text": "Copyright (C) 2000  Network Applied Communication Laboratory, Inc."
+        },
+        {
+          "line": 11,
+          "text": "Copyright (C) 2000  Information-technology Promotion Agency, Japan"
+        }
+      ]
+    },
+    {
+      "path": "st.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "4352897be5358064e029044b0d45bd4e43ca2764ab22616527a13555b660d628",
+      "built_source_sha256": "4352897be5358064e029044b0d45bd4e43ca2764ab22616527a13555b660d628",
+      "license": "Public-domain (plus preserve any embedded notices)",
+      "evidence": "LEGAL + file headers",
+      "full_file_notice_markers": [
+        {
+          "line": 1,
+          "text": "/* This is a public domain general purpose hash table package written by Peter Moore @ UCB. */"
+        }
+      ]
+    },
+    {
+      "path": "st.h",
+      "compiled_or_included": true,
+      "baseline_sha256": "fb5919257eb37c6ffcdb497def714e86008d5db0ff0b0359b564751f5aaa599a",
+      "built_source_sha256": "fb5919257eb37c6ffcdb497def714e86008d5db0ff0b0359b564751f5aaa599a",
+      "license": "Public-domain (plus preserve any embedded notices)",
+      "evidence": "LEGAL + file headers",
+      "full_file_notice_markers": [
+        {
+          "line": 1,
+          "text": "/* This is a public domain general purpose hash table package written by Peter Moore @ UCB. */"
+        }
+      ]
+    },
+    {
+      "path": "string.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "4a94977b51ced8125b38f14344d316a52e91272208e54930b8110887695e37a5",
+      "built_source_sha256": "1da254b7d3b4f504f7a333861dabf54c28f44486d8d89065bd71f30c8d640f81",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        },
+        {
+          "line": 10,
+          "text": "Copyright (C) 2000  Network Applied Communication Laboratory, Inc."
+        },
+        {
+          "line": 11,
+          "text": "Copyright (C) 2000  Information-technology Promotion Agency, Japan"
+        }
+      ]
+    },
+    {
+      "path": "struct.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "d970d6f1426e15b5828285357520bb9a352ac3e9813903d2bdfc76ef8f1d95d2",
+      "built_source_sha256": "d970d6f1426e15b5828285357520bb9a352ac3e9813903d2bdfc76ef8f1d95d2",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "time.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "995a27e3b9d85fd468d5a4b773e6e787d01d167be74acea19e76ddac7e15c9b7",
+      "built_source_sha256": "995a27e3b9d85fd468d5a4b773e6e787d01d167be74acea19e76ddac7e15c9b7",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "util.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "8089d3d382bcc44fa67e3e3d81347b5ccfb84bd851d86e88d4891d711b66c1e8",
+      "built_source_sha256": "8089d3d382bcc44fa67e3e3d81347b5ccfb84bd851d86e88d4891d711b66c1e8",
+      "license": "Ruby License OR GPL-2.0-only; Intergraph Perl GPL/Artistic fragment; Lucent dtoa permissive notice",
+      "evidence": "util.c sections + LEGAL",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2008 Yukihiro Matsumoto"
+        },
+        {
+          "line": 85,
+          "text": "*  Copyright (c) 1993, Intergraph Corporation"
+        },
+        {
+          "line": 88,
+          "text": "*  License or the Artistic License, as specified in the perl README file."
+        },
+        {
+          "line": 685,
+          "text": "* Copyright (c) 1991, 2000, 2001 by Lucent Technologies."
+        },
+        {
+          "line": 687,
+          "text": "* Permission to use, copy, modify, and distribute this software for any"
+        },
+        {
+          "line": 688,
+          "text": "* purpose without fee is hereby granted, provided that this entire notice"
+        },
+        {
+          "line": 722,
+          "text": "* Point Numbers Accurately\" [Proc. ACM SIGPLAN '90, pp. 92-101]."
+        },
+        {
+          "line": 3161,
+          "text": "* Guy L. Steele, Jr. and Jon L. White [Proc. ACM SIGPLAN '90, pp. 112-126]."
+        }
+      ]
+    },
+    {
+      "path": "util.h",
+      "compiled_or_included": true,
+      "baseline_sha256": "c5efacf7d85259d3cceca9b2a26502842925a66eab4b74689ceaf12c47ce6e37",
+      "built_source_sha256": "c5efacf7d85259d3cceca9b2a26502842925a66eab4b74689ceaf12c47ce6e37",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        }
+      ]
+    },
+    {
+      "path": "variable.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "8f092cda55bbb775f1ee470891509c6e0b29ed5cd1931371c4e9b29446efc43a",
+      "built_source_sha256": "8f092cda55bbb775f1ee470891509c6e0b29ed5cd1931371c4e9b29446efc43a",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        },
+        {
+          "line": 10,
+          "text": "Copyright (C) 2000  Network Applied Communication Laboratory, Inc."
+        },
+        {
+          "line": 11,
+          "text": "Copyright (C) 2000  Information-technology Promotion Agency, Japan"
+        }
+      ]
+    },
+    {
+      "path": "version.c",
+      "compiled_or_included": true,
+      "baseline_sha256": "09c59c144fde06c2c5bf213dad4d1f4e0ba62bfe7d50d4450dcdcd68cb68e203",
+      "built_source_sha256": "09c59c144fde06c2c5bf213dad4d1f4e0ba62bfe7d50d4450dcdcd68cb68e203",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 9,
+          "text": "Copyright (C) 1993-2003 Yukihiro Matsumoto"
+        },
+        {
+          "line": 25,
+          "text": "const char *ruby_copyright;"
+        },
+        {
+          "line": 31,
+          "text": "static char copyright[128];"
+        },
+        {
+          "line": 49,
+          "text": "snprintf(copyright, sizeof(copyright), \"ruby - Copyright (C) %d-%d %s\","
+        },
+        {
+          "line": 51,
+          "text": "ruby_copyright = copyright;"
+        },
+        {
+          "line": 52,
+          "text": "tmp = rb_obj_freeze(rb_str_new2(copyright));"
+        },
+        {
+          "line": 53,
+          "text": "rb_define_global_const(\"RUBY_COPYRIGHT\", tmp);"
+        },
+        {
+          "line": 69,
+          "text": "ruby_show_copyright()"
+        },
+        {
+          "line": 71,
+          "text": "PRINT(copyright);"
+        }
+      ]
+    },
+    {
+      "path": "version.h",
+      "compiled_or_included": true,
+      "baseline_sha256": "9308152d5516a7f7d2989798f9ceca0afd0bfeda698111028d00b36f183b0b93",
+      "built_source_sha256": "9308152d5516a7f7d2989798f9ceca0afd0bfeda698111028d00b36f183b0b93",
+      "license": "Ruby License OR GPL-2.0-only",
+      "evidence": "COPYING umbrella + complete file headers; no distinct conflicting notice found",
+      "full_file_notice_markers": [
+        {
+          "line": 20,
+          "text": "RUBY_EXTERN const char *ruby_copyright;"
+        }
+      ]
+    }
+  ]
+}

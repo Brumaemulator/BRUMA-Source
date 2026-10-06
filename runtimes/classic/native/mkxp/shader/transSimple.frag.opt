@@ -1,0 +1,11 @@
+uniform sampler2D frozenScene;
+uniform sampler2D currentScene;
+uniform highp float prog;
+varying highp vec2 v_texCoord;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  tmpvar_1 = mix (texture2D (frozenScene, v_texCoord), texture2D (currentScene, v_texCoord), prog);
+  gl_FragColor = tmpvar_1;
+}
+

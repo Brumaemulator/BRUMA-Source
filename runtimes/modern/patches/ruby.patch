@@ -1,0 +1,11 @@
+--- a/lib/mkmf.rb
++++ b/lib/mkmf.rb
+@@ -589,7 +589,7 @@
+       end
+     else
+       try_do(src, cmd, *opts, &b)
+-    end and File.executable?(exe) or return nil
++    end and (CROSS_COMPILING ? File.file?(exe) : File.executable?(exe)) or return nil
+     exe
+   ensure
+     MakeMakefile.rm_rf(*Dir["#{CONFTEST}*"]-[exe])

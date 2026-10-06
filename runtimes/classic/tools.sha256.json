@@ -1,0 +1,30 @@
+{
+  "clang": {
+    "sha256": "7d31c6f6fad98987b6c9d21b800afaa8b3e37f052e94aaddc941d42ff2a35579",
+    "filename": "clang.exe"
+  },
+  "llvm-ar": {
+    "sha256": "f17d96f5f207a887e620c82afcdf2a55fd3bb1db69f50c8cd3061184d3664bc8",
+    "filename": "llvm-ar.exe"
+  },
+  "cmake": {
+    "sha256": "9b2f3db4222e8c20a844481428b85ef87358fc14596622a69b499af580c26fe3",
+    "filename": "cmake.exe"
+  },
+  "ninja": {
+    "sha256": "950f9deedaf1879ad81e86060307cd4e61cb185c42056e5bd9e8a03120be225c",
+    "filename": "ninja.exe"
+  },
+  "host-ruby": {
+    "sha256": "42889aabd77ec24c261eaa58083d5c9862f6080b6306fa8dbd994a8f8a4ff638",
+    "filename": "ruby.exe"
+  },
+  "host-make": {
+    "sha256": "91b7e155590d59db22e5eb0a3ffeec6350149f70f9ed2c242d133e584eb72fee",
+    "filename": "make.exe"
+  },
+  "host-bash": {
+    "sha256": "7b4dc5d6878aacdec5d09ca9c5d8e2b43b925a6bbf631873a24c692980b792b2",
+    "filename": "bash.exe"
+  }
+}

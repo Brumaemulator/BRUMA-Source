@@ -1,0 +1,165 @@
+{
+  "repositories": [
+    {
+      "directory": "android-mkxp",
+      "url": "https://github.com/joiplay/android-mkxp.git",
+      "commit": "479167ef9313094ddd66275bb30989e39062db36",
+      "submodules": "-6c63e4e2a73192f7bbc591db051c6e5776eceb1f app/src/main/jni/SDL_sound\n-fb5ae916a8cb68a7332ade44a367a8d721e19aa6 app/src/main/jni/mkxp\n-f402782b5077ac8e13c233fa4edf6dae3b8ac89d commons\n-9b09c1cdb756f40d9716f26026b1f79f07b7473c joipad\n-cf241ad766fcd26fb22ebb8014a6218abadef7b0 sdp",
+      "used_in_build": true
+    },
+    {
+      "directory": "FluidLite",
+      "url": "https://github.com/joiplay/FluidLite.git",
+      "commit": "7c150b021f8b7e7d4f624bbad644fd2f96e5826b",
+      "submodules": "",
+      "used_in_build": true
+    },
+    {
+      "directory": "libguess",
+      "url": "https://github.com/joiplay/libguess.git",
+      "commit": "a319758813bbc88340afcb3d84942a45d6876e34",
+      "submodules": "",
+      "used_in_build": false
+    },
+    {
+      "directory": "libiconv",
+      "url": "https://github.com/joiplay/libiconv.git",
+      "commit": "0a05ca75c08ae899f6fca5f79254491e13ffb500",
+      "submodules": "",
+      "used_in_build": false
+    },
+    {
+      "directory": "libsigcplusplus",
+      "url": "https://github.com/joiplay/libsigcplusplus.git",
+      "commit": "9fc3416a95abca28cb992e4607232a3287e847a1",
+      "submodules": "",
+      "used_in_build": true
+    },
+    {
+      "directory": "mkxp",
+      "url": "https://github.com/joiplay/mkxp.git",
+      "commit": "27ce890fa9023598ffa5ab7561cd9c61c5bde3b5",
+      "submodules": "",
+      "used_in_build": true
+    },
+    {
+      "directory": "ogg",
+      "url": "https://github.com/joiplay/ogg.git",
+      "commit": "db5c7a49ce7ebda47b15b78471e78fb7f2483e22",
+      "submodules": "",
+      "used_in_build": true
+    },
+    {
+      "directory": "opus",
+      "url": "https://github.com/joiplay/opus.git",
+      "commit": "8cf872a186b96085b1bb3a547afd598354ebeb87",
+      "submodules": "",
+      "used_in_build": true
+    },
+    {
+      "directory": "opusfile",
+      "url": "https://github.com/joiplay/opusfile.git",
+      "commit": "9d718345ce03b2fad5d7d28e0bcd1cc69ab2b166",
+      "submodules": "",
+      "used_in_build": true
+    },
+    {
+      "directory": "physfs",
+      "url": "https://github.com/joiplay/physfs.git",
+      "commit": "9266e773d34c341877bd32671d674df20c6fd904",
+      "submodules": "",
+      "used_in_build": true
+    },
+    {
+      "directory": "pixman",
+      "url": "https://github.com/joiplay/pixman.git",
+      "commit": "94eaab93cd1a2dacb0a14c902b2a6df94a8cabaf",
+      "submodules": "",
+      "used_in_build": false
+    },
+    {
+      "directory": "ruby18",
+      "url": "https://github.com/joiplay/ruby.git",
+      "commit": "50783b870e31259ed5c91badbd5c8e41f8e56273",
+      "submodules": "",
+      "used_in_build": false
+    },
+    {
+      "directory": "SDL",
+      "url": "https://github.com/libsdl-org/SDL.git",
+      "commit": "92fe3b19c868ad062c323dde2cfc9d8b4bfdd785",
+      "submodules": "",
+      "used_in_build": true
+    },
+    {
+      "directory": "SDL_sound",
+      "url": "https://github.com/Ancurio/SDL_sound.git",
+      "commit": "04798ba55dccd18b094c0f6a2630c2fe7b15aa86",
+      "submodules": "",
+      "used_in_build": true
+    },
+    {
+      "directory": "theora",
+      "url": "https://github.com/joiplay/theora.git",
+      "commit": "7180717276af1ebc7da15c83162d6c5d6203aabf",
+      "submodules": "",
+      "used_in_build": true
+    },
+    {
+      "directory": "theoraplay",
+      "url": "https://github.com/joiplay/theoraplay.git",
+      "commit": "df9a35baf3d8c59bc48cb68e8b108e00992168ce",
+      "submodules": "",
+      "used_in_build": true
+    },
+    {
+      "directory": "vorbis",
+      "url": "https://github.com/joiplay/vorbis.git",
+      "commit": "84c023699cdf023a32fa4ded32019f194afcdad0",
+      "submodules": "",
+      "used_in_build": true
+    },
+    {
+      "directory": "SDL_image",
+      "url": "https://github.com/libsdl-org/SDL_image",
+      "commit": "ab2a9c602623193d61827ccd395302d92d90fc38",
+      "download_ref": "release-2.0.5",
+      "used_in_build": true
+    },
+    {
+      "directory": "SDL_ttf",
+      "url": "https://github.com/libsdl-org/SDL_ttf",
+      "commit": "33cdd1881e31184b49a68b4890d1d256fc0c6dc1",
+      "download_ref": "release-2.0.15",
+      "used_in_build": true
+    },
+    {
+      "directory": "openal-soft",
+      "url": "https://github.com/kcat/openal-soft",
+      "commit": "d3875f333fb6abe2f39d82caca329414871ae53b",
+      "download_ref": "1.23.1",
+      "used_in_build": true
+    }
+  ],
+  "historical_android_mkxp_dependencies_commit": "2e81fd25c591ae6c4335a19989ce48c35d6a9d41",
+  "toolchain": {
+    "ndk": "28.2.13676358",
+    "abi": "arm64-v8a",
+    "api": 26,
+    "agp": "9.4.0",
+    "gradle": "9.6.0",
+    "java": 21,
+    "cpp": 17,
+    "build_type": "Release",
+    "cmake": "4.1.2",
+    "ninja": "Android SDK CMake 4.1.2 distribution"
+  },
+  "ruby193_release": {
+    "version": "1.9.3-p551",
+    "url": "https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p551.tar.xz",
+    "official_hash_reference": "https://www.ruby-lang.org/en/news/2014/11/13/ruby-1-9-3-p551-is-released/",
+    "sha256": "44228297861f4dfdf23a47372a3e3c4c5116fbf5b0e10883417f2379874b55c6",
+    "selected_license": "BSD-2-Clause alternative, with per-file exceptions in LEGAL and source notices"
+  },
+  "status": "EXPERIMENTAL - not substituted in stable BRUMA"
+}

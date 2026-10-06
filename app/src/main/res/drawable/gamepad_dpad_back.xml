@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: MIT; Copyright 2026 BRUMA contributors -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:width="128dp" android:height="128dp" android:viewportWidth="128" android:viewportHeight="128">
+  <path android:fillColor="#606060" android:pathData="M 44 0 H 84 Q 88 0 88 4 V 40 H 124 Q 128 40 128 44 V 84 Q 128 88 124 88 H 88 V 124 Q 88 128 84 128 H 44 Q 40 128 40 124 V 88 H 4 Q 0 88 0 84 V 44 Q 0 40 4 40 H 40 V 4 Q 40 0 44 0 Z"/>
+  <path android:fillColor="#404040" android:pathData="M 45 2 H 83 Q 86 2 86 5 V 42 H 123 Q 126 42 126 45 V 83 Q 126 86 123 86 H 86 V 123 Q 86 126 83 126 H 45 Q 42 126 42 123 V 86 H 5 Q 2 86 2 83 V 45 Q 2 42 5 42 H 42 V 5 Q 42 2 45 2 Z"/>
+</vector>

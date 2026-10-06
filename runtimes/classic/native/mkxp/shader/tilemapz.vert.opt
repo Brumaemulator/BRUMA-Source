@@ -1,0 +1,34 @@
+uniform mat4 projMat;
+uniform vec2 texSizeInv;
+uniform vec2 translation;
+uniform highp int aniIndex;
+attribute vec2 position;
+attribute vec2 texCoord;
+varying lowp vec2 v_texCoord;
+uniform lowp int atFrames[7];
+void main ()
+{
+  lowp int frame_1;
+  lowp vec2 tex_2;
+  lowp int tmpvar_3;
+  tmpvar_3 = int((texCoord.y / 128.0));
+  lowp int tmpvar_4;
+  tmpvar_4 = int(((texCoord.x <= 96.0) && (texCoord.y <= 896.0)));
+  highp int tmpvar_5;
+  tmpvar_5 = (aniIndex - (atFrames[tmpvar_3] * (aniIndex / atFrames[tmpvar_3])));
+  frame_1 = tmpvar_5;
+  lowp int tmpvar_6;
+  tmpvar_6 = (frame_1 / 8);
+  tex_2.x = (texCoord.x + (96.0 * float(
+    ((frame_1 - (8 * tmpvar_6)) * tmpvar_4)
+  )));
+  tex_2.y = (texCoord.y + (32.0 * float(
+    (tmpvar_6 * tmpvar_4)
+  )));
+  vec4 tmpvar_7;
+  tmpvar_7.zw = vec2(0.0, 1.0);
+  tmpvar_7.xy = (position + translation);
+  gl_Position = (projMat * tmpvar_7);
+  v_texCoord = (tex_2 * texSizeInv);
+}
+

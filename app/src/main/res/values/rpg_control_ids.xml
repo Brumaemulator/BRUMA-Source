@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: MIT; Copyright 2026 BRUMA contributors -->
+<resources>
+  <item type="id" name="button_A"/>
+  <item type="id" name="button_ALT"/>
+  <item type="id" name="button_B"/>
+  <item type="id" name="button_C"/>
+  <item type="id" name="button_CTRL"/>
+  <item type="id" name="button_L"/>
+  <item type="id" name="button_R"/>
+  <item type="id" name="button_SHIFT"/>
+  <item type="id" name="button_X"/>
+  <item type="id" name="button_Y"/>
+  <item type="id" name="button_Z"/>
+  <item type="id" name="buttons_action_layout"/>
+  <item type="id" name="buttons_action_row_1"/>
+  <item type="id" name="buttons_action_row_2"/>
+  <item type="id" name="buttons_misc_left_layout"/>
+  <item type="id" name="buttons_misc_left_row"/>
+  <item type="id" name="buttons_misc_right_layout"/>
+  <item type="id" name="buttons_misc_right_row"/>
+  <item type="id" name="buttons_mod_layout"/>
+  <item type="id" name="buttons_mod_row"/>
+  <item type="id" name="dpad"/>
+  <item type="id" name="gamepad_layout"/>
+</resources>

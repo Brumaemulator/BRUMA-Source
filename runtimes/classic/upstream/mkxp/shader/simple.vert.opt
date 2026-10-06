@@ -1,0 +1,15 @@
+uniform mat4 projMat;
+uniform vec2 texSizeInv;
+uniform vec2 translation;
+attribute vec2 position;
+attribute vec2 texCoord;
+varying vec2 v_texCoord;
+void main ()
+{
+  vec4 tmpvar_1;
+  tmpvar_1.zw = vec2(0.0, 1.0);
+  tmpvar_1.xy = (position + translation);
+  gl_Position = (projMat * tmpvar_1);
+  v_texCoord = (texCoord * texSizeInv);
+}
+

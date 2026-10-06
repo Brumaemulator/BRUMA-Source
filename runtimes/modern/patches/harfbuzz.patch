@@ -1,0 +1,29 @@
+--- a/src/hb.hh
++++ b/src/hb.hh
+@@ -1,6 +1,6 @@
+ /*
+- * Copyright © 2007,2008,2009  Red Hat, Inc.
+- * Copyright © 2011,2012  Google, Inc.
++ * Copyright Â© 2007,2008,2009  Red Hat, Inc.
++ * Copyright Â© 2011,2012  Google, Inc.
+  *
+  *  This is part of HarfBuzz, a text shaping library.
+  *
+@@ -38,7 +38,7 @@
+ /* Rules:
+  *
+  * - All pragmas are declared GCC even if they are clang ones.  Otherwise GCC
+- *   nags, even though we instruct it to ignore -Wunknown-pragmas. ¯\_(ツ)_/¯
++ *   nags, even though we instruct it to ignore -Wunknown-pragmas. Â¯\_(ãƒ„)_/Â¯
+  *
+  * - Within each category, keep sorted.
+  *
+@@ -63,7 +63,7 @@
+ /* Error.  Should never happen. */
+ #ifndef HB_NO_PRAGMA_GCC_DIAGNOSTIC_ERROR
+ #pragma GCC diagnostic error   "-Wcast-align"
+-#pragma GCC diagnostic error   "-Wcast-function-type"
++#pragma GCC diagnostic warning "-Wcast-function-type"
+ #pragma GCC diagnostic error   "-Wdelete-non-virtual-dtor"
+ #pragma GCC diagnostic error   "-Wembedded-directive"
+ #pragma GCC diagnostic error   "-Wextra-semi-stmt"

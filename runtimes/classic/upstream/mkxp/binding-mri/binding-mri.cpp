@@ -1,0 +1,1073 @@
+/*
+** binding-mri.cpp
+**
+** This file is part of mkxp.
+**
+** Copyright (C) 2013 Jonas Kulla <Nyocurio@gmail.com>
+**
+** mkxp is free software: you can redistribute it and/or modify
+** it under the terms of the GNU General Public License as published by
+** the Free Software Foundation, either version 2 of the License, or
+** (at your option) any later version.
+**
+** mkxp is distributed in the hope that it will be useful,
+** but WITHOUT ANY WARRANTY; without even the implied warranty of
+** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+** GNU General Public License for more details.
+**
+** You should have received a copy of the GNU General Public License
+** along with mkxp.  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+#include "binding.h"
+#include "binding-util.h"
+#include "sharedstate.h"
+#include "eventthread.h"
+#include "config.h"
+#include "filesystem.h"
+#include "util.h"
+#include "sdl-util.h"
+#include "debugwriter.h"
+#include "graphics.h"
+#include "audio.h"
+#include "boost-hash.h"
+#include "patcher.h"
+
+#include <ruby.h>
+#ifndef RUBY_LEGACY_VERSION
+#include <ruby/encoding.h>
+#endif
+
+#include <assert.h>
+#include <string>
+#include <zlib.h>
+
+#include <SDL_cpuinfo.h>
+#include <SDL_filesystem.h>
+#include <SDL_power.h>
+
+#include <fstream>
+
+extern const char module_rpg1[];
+extern const char module_rpg2[];
+extern const char module_rpg3[];
+
+#include "preload.rb.h"
+#include "postload.rb.h"
+
+#include "cheat_rpgmvx.rb.h"
+#include "cheat_rpgmvxace.rb.h"
+#include "cheat_rpgmxp.rb.h"
+#include "cheat_pe19.rb.h"
+
+static void mriBindingExecute();
+static void mriBindingTerminate();
+static void mriBindingReset();
+
+ScriptBinding scriptBindingImpl =
+{
+	mriBindingExecute,
+	mriBindingTerminate,
+	mriBindingReset
+};
+
+ScriptBinding *scriptBinding = &scriptBindingImpl;
+
+void tableBindingInit();
+void etcBindingInit();
+void fontBindingInit();
+void bitmapBindingInit();
+void spriteBindingInit();
+void viewportBindingInit();
+void planeBindingInit();
+void windowBindingInit();
+void tilemapBindingInit();
+void windowVXBindingInit();
+void tilemapVXBindingInit();
+
+void inputBindingInit();
+void audioBindingInit();
+void graphicsBindingInit();
+void fileIntBindingInit();
+void win32apiBindingInit();
+void nilClassBindingInit();
+void encodingBindingInit();
+void httpBindingInit();
+
+RB_METHOD(mkxpDelta);
+RB_METHOD(mriPrint);
+RB_METHOD(mriP);
+RB_METHOD(mkxpDataDirectory);
+RB_METHOD(mkxpPuts);
+RB_METHOD(mkxpRawKeyStates);
+RB_METHOD(mkxpMouseInWindow);
+RB_METHOD(mkxpRunPostloadScripts);
+
+RB_METHOD(rubyVersion);
+RB_METHOD(mkxpRPGVersion);
+RB_METHOD(mriRgssMain);
+RB_METHOD(mriRgssStop);
+RB_METHOD(_kernelCaller);
+
+RB_METHOD(mkxpSetTitle);
+RB_METHOD(mkxpPlatform);
+RB_METHOD(mkxpUserName);
+RB_METHOD(mkxpUserLanguage);
+RB_METHOD(mkxpGameTitle);
+RB_METHOD(mkxpPowerState);
+RB_METHOD(mkxpSettingsMenu);
+
+RB_METHOD(mkxpApplyOverrides);
+
+RB_METHOD(trueZero);
+RB_METHOD(falseZero);
+
+RB_METHOD(mkxpEnableFastForward);
+
+static void mriBindingInit()
+{
+	tableBindingInit();
+	etcBindingInit();
+	fontBindingInit();
+	bitmapBindingInit();
+	spriteBindingInit();
+	viewportBindingInit();
+	planeBindingInit();
+
+	if (rgssVer == 1)
+	{
+		windowBindingInit();
+		tilemapBindingInit();
+	}
+	else
+	{
+		windowVXBindingInit();
+		tilemapVXBindingInit();
+	}
+
+	inputBindingInit();
+	audioBindingInit();
+	graphicsBindingInit();
+
+	fileIntBindingInit();
+    
+    win32apiBindingInit();
+    nilClassBindingInit();
+	encodingBindingInit();
+	httpBindingInit();
+
+	if (rgssVer >= 3)
+	{
+		_rb_define_module_function(rb_mKernel, "rgss_main", mriRgssMain);
+		_rb_define_module_function(rb_mKernel, "rgss_stop", mriRgssStop);
+        
+		rb_define_global_const("RGSS_VERSION", rb_str_new_cstr("3.0.1"));
+	}
+	else
+	{
+        _rb_define_module_function(rb_mKernel, "print", mriPrint);
+        _rb_define_module_function(rb_mKernel, "p",     mriP);
+		rb_define_alias(rb_singleton_class(rb_mKernel), "_mkxp_kernel_caller_alias", "caller");
+		_rb_define_module_function(rb_mKernel, "caller", _kernelCaller);
+	}
+    
+    _rb_define_module_function(rb_mKernel, "msgbox",    mriPrint);
+	_rb_define_module_function(rb_mKernel, "msgbox_p",  mriP);
+	
+	if (rgssVer == 1)
+		rb_eval_string(module_rpg1);
+	else if (rgssVer == 2)
+		rb_eval_string(module_rpg2);
+	else if (rgssVer == 3)
+		rb_eval_string(module_rpg3);
+	else
+		assert(!"unreachable");
+    
+    //Hangup is used by some scripts for version detection
+    if(rgssVer == 1)
+        VALUE hangup = rb_define_class("Hangup", rb_eException);
+
+	VALUE mod = rb_define_module("MKXP");
+	_rb_define_module_function(mod, "data_directory", mkxpDataDirectory);
+	_rb_define_module_function(mod, "puts", mkxpPuts);
+    _rb_define_module_function(mod, "rpg_version", mkxpRPGVersion);
+	_rb_define_module_function(mod, "raw_key_states", mkxpRawKeyStates);
+	_rb_define_module_function(mod, "mouse_in_window", mkxpMouseInWindow);
+    _rb_define_module_function(mod, "platform", mkxpPlatform);
+	_rb_define_module_function(mod, "run_postload", mkxpRunPostloadScripts);
+	_rb_define_module_function(mod, "apply_overrides", mkxpApplyOverrides);
+    _rb_define_module_function(mod, "power_state", mkxpPowerState);
+	_rb_define_module_function(mod, "ruby_version", rubyVersion);
+	_rb_define_module_function(mod, "enable_fastforward", mkxpEnableFastForward);
+    
+    VALUE sys = rb_define_module("System");
+    _rb_define_module_function(sys, "delta", mkxpDelta);
+    _rb_define_module_function(sys, "data_directory", mkxpDataDirectory);
+    _rb_define_module_function(sys, "set_window_title", mkxpSetTitle);
+    _rb_define_module_function(sys, "show_settings", mkxpSettingsMenu);
+    _rb_define_module_function(sys, "puts", mkxpPuts);
+    _rb_define_module_function(sys, "raw_key_states", mkxpRawKeyStates);
+    _rb_define_module_function(sys, "mouse_in_window", mkxpMouseInWindow);
+    _rb_define_module_function(sys, "platform", mkxpPlatform);
+    _rb_define_module_function(sys, "user_language", mkxpUserLanguage);
+    _rb_define_module_function(sys, "user_name", mkxpUserName);
+    _rb_define_module_function(sys, "game_title", mkxpGameTitle);
+    _rb_define_module_function(sys, "power_state", mkxpPowerState);
+
+	/* Load global constants */
+	rb_gv_set("MKXP", shState->config().hideMKXP ? Qfalse : Qtrue);
+    rb_gv_set("joiplay", Qtrue);
+    rb_gv_set("CHEATS", Qtrue);
+    
+	VALUE debug = rb_bool_new(shState->config().editor.debug);
+	if (rgssVer == 1)
+		rb_gv_set("DEBUG", debug);
+	else if (rgssVer >= 2)
+		rb_gv_set("TEST", debug);
+
+	rb_gv_set("BTEST", rb_bool_new(shState->config().editor.battleTest));
+    
+    VALUE trueClass = rb_const_get(rb_cObject, rb_intern("TrueClass"));
+    _rb_define_method(trueClass, "zero?", trueZero);
+    
+    VALUE falseClass = rb_const_get(rb_cObject, rb_intern("FalseClass"));
+    _rb_define_method(falseClass, "zero?", falseZero);
+}
+
+static void
+showMsg(const std::string &msg)
+{
+	shState->eThread().showMessageBox(msg.c_str());
+}
+
+static void printP(int argc, VALUE *argv, const char *convMethod, const char *sep)
+{
+	VALUE dispString = rb_str_buf_new(128);
+	ID conv = rb_intern(convMethod);
+
+	for (int i = 0; i < argc; ++i)
+	{
+		VALUE str = rb_funcall2(argv[i], conv, 0, NULL);
+		rb_str_buf_append(dispString, str);
+
+		if (i < argc)
+			rb_str_buf_cat2(dispString, sep);
+	}
+    
+    std::string message = StringValueCStr(dispString);
+#ifdef INI_ENCODING
+    convertIfNotValidUTF8("", message);
+#endif
+
+	showMsg(message.c_str());
+    Debug()<<message.c_str();
+}
+
+static bool stringContains(std::string str, std::string substr)
+{
+    return ( str.find(substr) != std::string::npos);
+}
+
+RB_METHOD(mriPrint)
+{
+	RB_UNUSED_PARAM;
+
+	printP(argc, argv, "to_s", "");
+
+	return Qnil;
+}
+
+RB_METHOD(mriP)
+{
+	RB_UNUSED_PARAM;
+
+	printP(argc, argv, "inspect", "\n");
+
+	return Qnil;
+}
+
+RB_METHOD(mkxpDelta)
+{
+    RB_UNUSED_PARAM;
+    
+    return ULL2NUM(shState->runTime());
+}
+
+RB_METHOD(mkxpDataDirectory)
+{
+	RB_UNUSED_PARAM;
+
+	const std::string &path = shState->config().customDataPath;
+	const char *s = path.empty() ? "." : path.c_str();
+
+	return rb_str_new_cstr(s);
+}
+
+RB_METHOD(mkxpPuts)
+{
+	RB_UNUSED_PARAM;
+
+	const char *str;
+	rb_get_args(argc, argv, "z", &str RB_ARG_END);
+
+	Debug() << str;
+
+	return Qnil;
+}
+
+RB_METHOD(rubyVersion)
+{
+	RB_UNUSED_PARAM;
+	std::string rubyMajor = std::to_string(RUBY_API_VERSION_MAJOR);
+	std::string rubyMinor = std::to_string(RUBY_API_VERSION_MINOR);
+	std::string versionString = rubyMajor+"."+rubyMinor;
+	return rb_str_new_cstr(versionString.c_str());
+}
+RB_METHOD(mkxpRPGVersion)
+{
+    RB_UNUSED_PARAM;
+    if (rgssVer == 1)
+		return INT2NUM(1);
+	else if (rgssVer == 2)
+        return INT2NUM(2);
+    else if (rgssVer == 3)
+        return INT2NUM(3);
+    else
+        return INT2NUM(0);
+}
+
+RB_METHOD(mkxpSetTitle) {
+  RB_UNUSED_PARAM;
+  
+  return Qnil;
+}
+
+RB_METHOD(mkxpRawKeyStates)
+{
+	RB_UNUSED_PARAM;
+
+	VALUE str = rb_str_new(0, sizeof(EventThread::keyStates));
+	memcpy(RSTRING_PTR(str), EventThread::keyStates, sizeof(EventThread::keyStates));
+
+	return str;
+}
+
+RB_METHOD(mkxpMouseInWindow)
+{
+	RB_UNUSED_PARAM;
+
+	return rb_bool_new(EventThread::mouseState.inWindow);
+}
+
+RB_METHOD(mkxpPlatform)
+{
+    RB_UNUSED_PARAM;
+
+#if RUBY_API_VERSION_MAJOR == 3
+    return rb_str_new_cstr(SDL_GetPlatform());
+#else
+    return rb_str_new_cstr("Windows");
+#endif
+}
+
+RB_METHOD(mkxpDataDir)
+{
+    RB_UNUSED_PARAM;
+
+    return rb_str_new_cstr(".");
+}
+
+RB_METHOD(mkxpPowerState)
+{
+    RB_UNUSED_PARAM;
+    
+    int secs, pct;
+    SDL_PowerState ps = SDL_GetPowerInfo(&secs, &pct);
+    
+    VALUE hash = rb_hash_new();
+    
+    rb_hash_aset(hash, ID2SYM(rb_intern("seconds")), (secs > -1) ? INT2NUM(secs) : Qnil);
+    
+    rb_hash_aset(hash, ID2SYM(rb_intern("percent")), (pct > -1) ? INT2NUM(pct) : Qnil);
+    
+    rb_hash_aset(hash, ID2SYM(rb_intern("discharging")), rb_bool_new(ps == SDL_POWERSTATE_ON_BATTERY));
+    
+    return hash;
+}
+
+RB_METHOD(mkxpUserLanguage)
+{
+  RB_UNUSED_PARAM;
+
+  return rb_str_new_cstr("en");
+}
+
+RB_METHOD(mkxpUserName)
+{
+  RB_UNUSED_PARAM;
+
+  return rb_str_new_cstr("JoiPlay");
+}
+
+RB_METHOD(mkxpGameTitle)
+{
+  RB_UNUSED_PARAM;
+
+  return rb_str_new_cstr(shState->config().game.title.c_str());
+}
+
+RB_METHOD(mkxpSettingsMenu)
+{
+  RB_UNUSED_PARAM;
+
+  return Qnil;
+}
+
+RB_METHOD(mkxpEnableFastForward)
+{
+	RB_UNUSED_PARAM;
+
+	VALUE isEnabled;
+	rb_scan_args(argc, argv, "1", &isEnabled);
+
+	shState->config().fastForward = RTEST(isEnabled);
+}
+
+static VALUE rgssMainCb(VALUE block)
+{
+	rb_funcall2(block, rb_intern("call"), 0, 0);
+	return Qnil;
+}
+
+static VALUE rgssMainRescue(VALUE arg, VALUE exc)
+{
+	VALUE *excRet = (VALUE*) arg;
+
+	*excRet = exc;
+
+	return Qnil;
+}
+
+static void processReset()
+{
+	shState->graphics().reset();
+	shState->audio().reset();
+
+	shState->rtData().rqReset.clear();
+	shState->graphics().repaintWait(shState->rtData().rqResetFinish,
+	                                false);
+}
+
+RB_METHOD(mriRgssMain)
+{
+	RB_UNUSED_PARAM;
+
+	while (true)
+	{
+		VALUE exc = Qnil;
+
+#if RUBY_API_VERSION_MAJOR == 1
+		rb_rescue2((VALUE(*)(ANYARGS)) rgssMainCb, rb_block_proc(),
+		           (VALUE(*)(ANYARGS)) rgssMainRescue, (VALUE) &exc,
+		           rb_eException, (VALUE) 0);
+#else
+                rb_rescue2(rgssMainCb, rb_block_proc(), rgssMainRescue, (VALUE)&exc,
+                           rb_eException, (VALUE)0);
+#endif
+		if (NIL_P(exc))
+			break;
+
+		if (rb_obj_class(exc) == getRbData()->exc[Reset])
+			processReset();
+		else
+			rb_exc_raise(exc);
+	}
+
+	return Qnil;
+}
+
+RB_METHOD(mriRgssStop)
+{
+	RB_UNUSED_PARAM;
+
+	while (true)
+		shState->graphics().update();
+
+	return Qnil;
+}
+
+RB_METHOD(_kernelCaller)
+{
+	RB_UNUSED_PARAM;
+
+	VALUE trace = rb_funcall2(rb_mKernel, rb_intern("_mkxp_kernel_caller_alias"), 0, 0);
+
+	if (!RB_TYPE_P(trace, RUBY_T_ARRAY))
+		return trace;
+
+	long len = RARRAY_LEN(trace);
+
+	if (len < 2)
+		return trace;
+
+	/* Remove useless "ruby:1:in 'eval'" */
+	rb_ary_pop(trace);
+
+	/* Also remove trace of this helper function */
+	rb_ary_shift(trace);
+
+	len -= 2;
+
+	if (len == 0)
+		return trace;
+
+	/* RMXP does this, not sure if specific or 1.8 related */
+	VALUE args[] = { rb_str_new_cstr(":in `<main>'"), rb_str_new_cstr("") };
+	rb_funcall2(rb_ary_entry(trace, len-1), rb_intern("gsub!"), 2, args);
+
+	return trace;
+}
+
+RB_METHOD(trueZero) {
+  RB_UNUSED_PARAM;
+
+  return Qfalse;
+}
+
+RB_METHOD(falseZero) {
+  RB_UNUSED_PARAM;
+
+  return Qtrue;
+}
+
+static VALUE newStringUTF8(const char *string, long length)
+{
+	try{
+		std::string str(string);
+		
+		shState->patcher().apply(str);
+		
+		char * p = new char [str.length()+1];
+		strcpy (p, str.c_str());
+		string = p;
+	
+		return rb_enc_str_new(string, str.size(), rb_utf8_encoding());
+	} catch (const Exception &e){
+		Debug()<<e.msg;
+	}
+    
+	return rb_enc_str_new(string, length, rb_utf8_encoding());
+}
+
+RB_METHOD(mkxpApplyOverrides) {
+	RB_UNUSED_PARAM;
+
+	const char *str;
+	rb_get_args(argc, argv, "z", &str RB_ARG_END);
+
+	return newStringUTF8(str, strlen(str));
+}
+
+struct evalArg
+{
+	VALUE string;
+	VALUE filename;
+};
+
+static VALUE evalHelper(evalArg *arg)
+{
+	VALUE argv[] = { arg->string, Qnil, arg->filename };
+	return rb_funcall2(Qnil, rb_intern("eval"), ARRAY_SIZE(argv), argv);
+}
+
+static VALUE evalString(VALUE string, VALUE filename, int *state)
+{
+	evalArg arg = { string, filename };
+	return rb_protect((VALUE (*)(VALUE))evalHelper, (VALUE)&arg, state);
+}
+
+static void runCustomScript(const std::string &filename)
+{
+	std::string scriptData;
+
+	if (!readFileSDL(filename.c_str(), scriptData))
+	{
+		showMsg(std::string("Unable to open '") + filename + "'");
+		return;
+	}
+
+	evalString(newStringUTF8(scriptData.c_str(), scriptData.size()),
+	           newStringUTF8(filename.c_str(), filename.size()), NULL);
+}
+
+bool checkMainScript(std::string scriptString)
+{
+    std::string mainRGSS3 = "rgss_main";
+    std::string mainRGSS1n2 = "$scene.main";
+    std::string mainPokemon = "mainFunction";
+	std::string pbLoadRpgxpScene = "pbLoadRpgxpScene";
+    std::string ecchiString = "if Graphics.frame_count > 0";
+    std::string ecchiString2 = "pbResetEcchiVersion";
+    
+    if(stringContains(scriptString, mainRGSS3))
+    {
+        return true;
+    }
+    else if(stringContains(scriptString, mainPokemon))
+    {
+        return true;
+    }
+    else if(stringContains(scriptString, mainRGSS1n2))
+    {
+        if(stringContains(scriptString, pbLoadRpgxpScene) || stringContains(scriptString, ecchiString) || stringContains(scriptString, ecchiString2))
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
+    }
+    
+    return false;
+}
+
+bool runPostloadScripts(char* code)
+{
+    const Config &conf = shState->rtData().config;
+    
+    if(!conf.enablePostloadScripts)
+        return true;
+    
+	std::string scriptString = code;
+    
+    
+    if(checkMainScript(scriptString))
+    {
+        Debug()<<"Executing postload scripts";
+        
+        rb_eval_string(reinterpret_cast<const char*>(postload_rb));
+        
+        if(conf.cheats)
+        {
+            Debug()<<"Cheats are enabled.";
+            if (rgssVer == 1)
+#if RUBY_API_VERSION_MAJOR == 1
+                rb_eval_string(reinterpret_cast<const char*>(cheat_rpgmxp_rb));
+#else
+				rb_eval_string(reinterpret_cast<const char*>(cheat_pe19_rb));
+#endif
+            else if (rgssVer == 2)
+                rb_eval_string(reinterpret_cast<const char*>(cheat_rpgmvx_rb));
+            else if (rgssVer == 3)
+                rb_eval_string(reinterpret_cast<const char*>(cheat_rpgmvxace_rb));
+        }
+        else
+        {
+            Debug()<<"Cheats are disabled.";
+        }
+        
+        for (std::set<std::string>::iterator i = conf.postloadScripts.begin();
+        i != conf.postloadScripts.end(); ++i)
+		{
+			runCustomScript(*i);
+			if(*i == "postload.rb")
+				rb_gv_set("has_custom_scripts", Qtrue);
+		}
+        
+        return true;
+    }
+    
+    return false;
+}
+
+RB_METHOD(mkxpRunPostloadScripts)
+{
+	RB_UNUSED_PARAM
+	VALUE code;
+	
+	rb_scan_args(argc, argv, "1", &code);
+	
+    runPostloadScripts(StringValuePtr(code));
+	
+	return Qnil;
+}
+
+VALUE kernelLoadDataInt(const char *filename, bool rubyExc);
+
+struct BacktraceData
+{
+	/* Maps: Ruby visible filename, To: Actual script name */
+	BoostHash<std::string, std::string> scriptNames;
+};
+
+#define SCRIPT_SECTION_FMT (rgssVer >= 3 ? "{%04ld}" : "Section%03ld")
+
+static void runRMXPScripts(BacktraceData &btData)
+{
+	const Config &conf = shState->rtData().config;
+	const std::string &scriptPack = conf.game.scripts;
+    const char *platform = SDL_GetPlatform();
+	bool postloadScriptsRan = false;
+
+	if (scriptPack.empty())
+	{
+		showMsg("No game scripts specified (missing Game.ini?)");
+		return;
+	}
+    
+    //Check if unpacked scripts will be used
+    std::string scriptListPath = conf.gameFolder + "/Data/UnpackedScripts/Scripts.list";
+    bool useUnpackedScripts = false;
+    
+    if(conf.useUnpackedScripts)
+    {
+        std::ifstream scriptListStream(scriptListPath.c_str());
+        if(scriptListStream.is_open())
+        	useUnpackedScripts = true;
+        
+        scriptListStream.close();
+    }
+    
+    /* Execute preloaded scripts */
+    rb_eval_string(reinterpret_cast<const char*>(preload_rb));
+	for (std::set<std::string>::iterator i = conf.preloadScripts.begin();
+	     i != conf.preloadScripts.end(); ++i)
+	{
+		runCustomScript(*i);
+		if(*i == "preload.rb")
+			rb_gv_set("has_custom_scripts", Qtrue);
+	}
+
+    VALUE exc = rb_gv_get("$!");
+	if (exc != Qnil)
+		return;
+    
+    long scriptCount;
+    VALUE scriptArray;
+    
+    if(useUnpackedScripts)
+    {
+        Debug()<<"Using unpacked scripts.";
+        //Using standard io instead of SDL_RWops because it's intented to use only with unpacked filesystem
+        std::ifstream scriptListStream(scriptListPath.c_str());
+        if(!scriptListStream.is_open())
+        {
+            showMsg(std::string("Failed to read script data."));
+            return;
+        }
+        
+        //Create a ruby array to store scripts
+        scriptArray = rb_ary_new();
+        
+        //Read script list line by line to get script data. Each two lines contains script name and paths
+        std::string line;
+        while (std::getline(scriptListStream, line)) {
+            //Get script name from first line
+            std::string scriptName = line;
+            
+            //Get script path from second line
+            std::getline(scriptListStream, line);
+            std::string scriptPath = line;
+            
+            //Read unpacked script
+            std::ifstream scriptStream(scriptPath.c_str());
+            std::string scriptData;
+            if(!scriptStream.is_open())
+            {
+                showMsg(std::string("Failed to read script = ") + scriptName);
+                return;
+            }
+            
+            std::string scriptLine;
+            while(std::getline(scriptStream, scriptLine))
+            {
+                scriptData += scriptLine + "\n";
+            }
+            scriptStream.close();
+            
+            //Create script array
+            VALUE script = rb_ary_new();
+            rb_ary_push(script, rb_str_new_cstr(""));
+            rb_ary_push(script, rb_str_new_cstr(scriptName.c_str()));
+            rb_ary_push(script, rb_str_new_cstr(scriptData.c_str()));
+            rb_ary_push(script, rb_str_new_cstr(scriptData.c_str()));
+            
+            Debug()<<"Adding "<<scriptName.c_str()<<" to script array.";
+            //Push scriptData to scriptArray
+            rb_ary_push(scriptArray, script);
+        }
+        scriptListStream.close();
+        
+        //Set scriptCount
+        scriptCount = RARRAY_LEN(scriptArray);
+        //Set $RGSS_SCRIPTS
+        rb_gv_set("$RGSS_SCRIPTS", scriptArray);
+    }
+    else
+    {
+        /* We checked if Scripts.rxdata exists, but something might
+        * still go wrong */
+        try
+        {
+            scriptArray = kernelLoadDataInt(scriptPack.c_str(), false);
+        }
+        catch (const Exception &e)
+        {
+            showMsg(std::string("Failed to read script data: ") + e.msg);
+            return;
+        }
+
+        if (!RB_TYPE_P(scriptArray, RUBY_T_ARRAY))
+        {
+            showMsg("Failed to read script data");
+            return;
+        }
+
+        rb_gv_set("$RGSS_SCRIPTS", scriptArray);
+
+        scriptCount = RARRAY_LEN(scriptArray);
+
+        std::string decodeBuffer;
+        decodeBuffer.resize(0x1000);
+
+        for (long i = 0; i < scriptCount; ++i)
+        {
+            VALUE script = rb_ary_entry(scriptArray, i);
+
+            if (!RB_TYPE_P(script, RUBY_T_ARRAY))
+                continue;
+    
+            VALUE scriptName   = rb_ary_entry(script, 1);
+            VALUE scriptString = rb_ary_entry(script, 2);
+
+            int result = Z_OK;
+            unsigned long bufferLen;
+
+            while (true)
+            {
+                unsigned char *bufferPtr =
+                        reinterpret_cast<unsigned char*>(const_cast<char*>(decodeBuffer.c_str()));
+                const unsigned char *sourcePtr =
+                        reinterpret_cast<const unsigned char*>(RSTRING_PTR(scriptString));
+
+                bufferLen = decodeBuffer.length();
+
+                result = uncompress(bufferPtr, &bufferLen,
+                                    sourcePtr, RSTRING_LEN(scriptString));
+
+                bufferPtr[bufferLen] = '\0';
+
+                if (result != Z_BUF_ERROR)
+                    break;
+
+                decodeBuffer.resize(decodeBuffer.size()*2);
+            }
+
+            if (result != Z_OK)
+            {
+                static char buffer[256];
+                snprintf(buffer, sizeof(buffer), "Error decoding script %ld: '%s'",
+                        i, RSTRING_PTR(scriptName));
+
+                showMsg(buffer);
+
+                break;
+            }
+
+            rb_ary_store(script, 3, rb_str_new_cstr(decodeBuffer.c_str()));
+        }
+    }
+
+	while (true)
+	{
+		for (long i = 0; i < scriptCount; ++i)
+		{
+			VALUE script = rb_ary_entry(scriptArray, i);
+			VALUE scriptDecoded = rb_ary_entry(script, 3);
+			VALUE string = newStringUTF8(RSTRING_PTR(scriptDecoded),
+			                             RSTRING_LEN(scriptDecoded));
+
+			VALUE fname;
+			const char *scriptName = RSTRING_PTR(rb_ary_entry(script, 1));
+			char buf[512];
+			int len;
+
+			if (conf.useScriptNames)
+				len = snprintf(buf, sizeof(buf), "%03ld:%s", i, scriptName);
+			else
+				len = snprintf(buf, sizeof(buf), SCRIPT_SECTION_FMT, i);
+
+			fname = newStringUTF8(buf, len);
+			btData.scriptNames.insert(buf, scriptName);
+            
+            if(!postloadScriptsRan)
+                postloadScriptsRan = runPostloadScripts(RSTRING_PTR(string));
+            
+            Debug()<<"Executing script "<<scriptName;
+
+			// if the script name starts with |s|, only execute
+            // it if "s" is the same first letter as the platform
+            // we're running on
+            
+            // |W| - Windows, |M| - Mac OS X, |L| - Linux
+            
+            // Adding a 'not' symbol means it WON'T run on that
+            // platform (i.e. |!W| won't run on Windows)
+            
+            if (scriptName[0] == '|')
+            {
+                int len = strlen(scriptName);
+                if (len > 2)
+                {
+                    if (scriptName[1] == '!' && len > 3 && scriptName[3] == scriptName[0])
+                    {
+                        if (toupper(scriptName[2]) == platform[0])
+                            continue;
+                    }
+                    if (scriptName[2] == scriptName[0] && toupper(scriptName[1]) != platform[0])
+                        continue;
+                }
+            }
+            
+			int state;
+			evalString(string, fname, &state);
+			if (state)
+				break;
+		}
+
+		VALUE exc = rb_gv_get("$!");
+		if (rb_obj_class(exc) != getRbData()->exc[Reset])
+			break;
+
+		processReset();
+	}
+}
+
+static void showExc(VALUE exc, const BacktraceData &btData)
+{
+	VALUE bt = rb_funcall2(exc, rb_intern("backtrace"), 0, NULL);
+	VALUE msg = rb_funcall2(exc, rb_intern("message"), 0, NULL);
+	VALUE bt0 = rb_ary_entry(bt, 0);
+	VALUE name = rb_class_path(rb_obj_class(exc));
+
+	VALUE ds = rb_sprintf("%" PRIsVALUE ": %" PRIsVALUE " (%" PRIsVALUE ")",
+	                      bt0, exc, name);
+	/* omit "useless" last entry (from ruby:1:in `eval') */
+	for (long i = 1, btlen = RARRAY_LEN(bt) - 1; i < btlen; ++i)
+		rb_str_catf(ds, "\n\tfrom %" PRIsVALUE, rb_ary_entry(bt, i));
+
+	char *s = RSTRING_PTR(bt0);
+
+	char line[16];
+	std::string file(512, '\0');
+
+	char *p = s + strlen(s);
+	char *e;
+
+	while (p != s)
+		if (*--p == ':')
+			break;
+
+	e = p;
+
+	while (p != s)
+		if (*--p == ':')
+			break;
+
+	/* s         p  e
+	 * SectionXXX:YY: in 'blabla' */
+
+	*e = '\0';
+	strncpy(line, *p ? p+1 : p, sizeof(line));
+	line[sizeof(line)-1] = '\0';
+	*e = ':';
+	e = p;
+
+	/* s         e
+	 * SectionXXX:YY: in 'blabla' */
+
+	*e = '\0';
+	strncpy(&file[0], s, file.size());
+	*e = ':';
+
+	/* Shrink to fit */
+	file.resize(strlen(file.c_str()));
+	file = btData.scriptNames.value(file, file);
+
+	std::string ms(640, '\0');
+	snprintf(&ms[0], ms.size(), "Script '%s' line %s: %s occured.\n\n%s",
+	         file.c_str(), line, RSTRING_PTR(name), RSTRING_PTR(msg));
+	
+	Debug() << ms.c_str();
+
+	showMsg(ms);
+}
+
+static void mriBindingExecute()
+{
+	/* Normally only a ruby executable would do a sysinit,
+	 * but not doing it will lead to crashes due to closed
+	 * stdio streams on some platforms (eg. Windows) */
+	int argc = 0;
+	char **argv = 0;
+
+#if RUBY_API_VERSION_MAJOR == 1
+	ruby_init();
+    rb_eval_string("$KCODE='U'");
+#else
+	RUBY_INIT_STACK;
+    ruby_init();
+	ruby_exec_node(ruby_options(argc, (char**) &argv));
+	
+    rb_enc_set_default_internal(rb_enc_from_encoding(rb_utf8_encoding()));
+#endif
+	rb_enc_set_default_external(rb_enc_from_encoding(rb_utf8_encoding()));
+
+	Config &conf = shState->rtData().config;
+
+	if (!conf.rubyLoadpaths.empty())
+	{
+		/* Setup custom load paths */
+		VALUE lpaths = rb_gv_get(":");
+
+		for (size_t i = 0; i < conf.rubyLoadpaths.size(); ++i)
+		{
+			std::string &path = conf.rubyLoadpaths[i];
+
+			VALUE pathv = rb_str_new(path.c_str(), path.size());
+			rb_ary_push(lpaths, pathv);
+		}
+	}
+
+	RbData rbData;
+	shState->setBindingData(&rbData);
+	BacktraceData btData;
+
+	mriBindingInit();
+
+	std::string &customScript = conf.customScript;
+	if (!customScript.empty())
+		runCustomScript(customScript);
+	else
+		runRMXPScripts(btData);
+
+	VALUE exc = rb_errinfo();
+	if (!NIL_P(exc) && !rb_obj_is_kind_of(exc, rb_eSystemExit))
+		showExc(exc, btData);
+
+	ruby_cleanup(0);
+
+	shState->rtData().rqTermAck.set();
+}
+
+static void mriBindingTerminate()
+{
+	rb_raise(rb_eSystemExit, " ");
+}
+
+static void mriBindingReset()
+{
+	rb_raise(getRbData()->exc[Reset], " ");
+}
+

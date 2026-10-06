@@ -1,0 +1,10 @@
+uniform lowp float alpha;
+varying lowp vec4 v_color;
+void main ()
+{
+  lowp vec4 tmpvar_1;
+  tmpvar_1.w = 1.0;
+  tmpvar_1.xyz = (v_color.xyz * alpha);
+  gl_FragColor = tmpvar_1;
+}
+

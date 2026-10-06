@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 9.4.0" type="baseline" client="gradle" dependencies="false" name="AGP (9.4.0)" variant="release" version="9.4.0">
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="                    if (!mGatt.readCharacteristic(chr)) {" errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="86" column="26" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothGatt.readCharacteristic: android.permission.BLUETOOTH_CONNECT" errorLine1="                    if (!mGatt.readCharacteristic(chr)) {" errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="86" column="26" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="                    if (!mGatt.writeCharacteristic(chr)) {" errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="97" column="26" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothGatt.writeCharacteristic: android.permission.BLUETOOTH_CONNECT" errorLine1="                    if (!mGatt.writeCharacteristic(chr)) {" errorLine2="                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="97" column="26" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="                            mGatt.setCharacteristicNotification(chr, true);" errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="122" column="29" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothGatt.setCharacteristicNotification: android.permission.BLUETOOTH_CONNECT" errorLine1="                            mGatt.setCharacteristicNotification(chr, true);" errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="122" column="29" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="                            if (!mGatt.writeDescriptor(cccd)) {" errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="124" column="34" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothGatt.writeDescriptor: android.permission.BLUETOOTH_CONNECT" errorLine1="                            if (!mGatt.writeDescriptor(cccd)) {" errorLine2="                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="124" column="34" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="                return mDevice.connectGatt(mManager.getContext(), managed, this, TRANSPORT_LE);" errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="191" column="24" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothDevice.connectGatt: android.permission.BLUETOOTH_CONNECT" errorLine1="                return mDevice.connectGatt(mManager.getContext(), managed, this, TRANSPORT_LE);" errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="191" column="24" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="                return mDevice.connectGatt(mManager.getContext(), managed, this);" errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="193" column="24" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothDevice.connectGatt: android.permission.BLUETOOTH_CONNECT" errorLine1="                return mDevice.connectGatt(mManager.getContext(), managed, this);" errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="193" column="24" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="            return mDevice.connectGatt(mManager.getContext(), managed, this);" errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="196" column="20" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothDevice.connectGatt: android.permission.BLUETOOTH_CONNECT" errorLine1="            return mDevice.connectGatt(mManager.getContext(), managed, this);" errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="196" column="20" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="        return btManager.getConnectionState(mDevice, BluetoothProfile.GATT);" errorLine2="               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="219" column="16" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothManager.getConnectionState: android.permission.BLUETOOTH_CONNECT" errorLine1="        return btManager.getConnectionState(mDevice, BluetoothProfile.GATT);" errorLine2="               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="219" column="16" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="            mGatt.disconnect();" errorLine2="            ~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="225" column="13" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothGatt.disconnect: android.permission.BLUETOOTH_CONNECT" errorLine1="            mGatt.disconnect();" errorLine2="            ~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="225" column="13" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="                    mGatt.disconnect();" errorLine2="                    ~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="247" column="21" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothGatt.disconnect: android.permission.BLUETOOTH_CONNECT" errorLine1="                    mGatt.disconnect();" errorLine2="                    ~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="247" column="21" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="                        mGatt.disconnect();" errorLine2="                        ~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="259" column="25" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothGatt.disconnect: android.permission.BLUETOOTH_CONNECT" errorLine1="                        mGatt.disconnect();" errorLine2="                        ~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="259" column="25" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="                mGatt.disconnect();" errorLine2="                ~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="274" column="17" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothGatt.disconnect: android.permission.BLUETOOTH_CONNECT" errorLine1="                mGatt.disconnect();" errorLine2="                ~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="274" column="17" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="            mGatt.disconnect();" errorLine2="            ~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="334" column="13" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothGatt.disconnect: android.permission.BLUETOOTH_CONNECT" errorLine1="            mGatt.disconnect();" errorLine2="            ~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="334" column="13" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="                        mGatt.discoverServices();" errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="428" column="25" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothGatt.discoverServices: android.permission.BLUETOOTH_CONNECT" errorLine1="                        mGatt.discoverServices();" errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="428" column="25" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="                gatt.disconnect();" errorLine2="                ~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="447" column="17" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothGatt.disconnect: android.permission.BLUETOOTH_CONNECT" errorLine1="                gatt.disconnect();" errorLine2="                ~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="447" column="17" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="                gatt.writeCharacteristic(reportChr);" errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="504" column="17" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothGatt.writeCharacteristic: android.permission.BLUETOOTH_CONNECT" errorLine1="                gatt.writeCharacteristic(reportChr);" errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="504" column="17" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="            g.disconnect();" errorLine2="            ~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="639" column="13" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothGatt.disconnect: android.permission.BLUETOOTH_CONNECT" errorLine1="            g.disconnect();" errorLine2="            ~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="639" column="13" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="            g.close();" errorLine2="            ~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="640" column="13" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothGatt.close: android.permission.BLUETOOTH_CONNECT" errorLine1="            g.close();" errorLine2="            ~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceBLESteamController.java" line="640" column="13" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothAdapter.getBondedDevices: android.permission.BLUETOOTH_CONNECT" errorLine1="        for (BluetoothDevice device : btAdapter.getBondedDevices()) {" errorLine2="                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceManager.java" line="397" column="39" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="        List&lt;BluetoothDevice&gt; currentConnected = mBluetoothManager.getConnectedDevices(BluetoothProfile.GATT);" errorLine2="                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceManager.java" line="445" column="50" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothManager.getConnectedDevices: android.permission.BLUETOOTH_CONNECT" errorLine1="        List&lt;BluetoothDevice&gt; currentConnected = mBluetoothManager.getConnectedDevices(BluetoothProfile.GATT);" errorLine2="                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceManager.java" line="445" column="50" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="        if (bluetoothDevice.getName() == null) {" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceManager.java" line="518" column="13" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothDevice.getName: android.permission.BLUETOOTH_CONNECT" errorLine1="        if (bluetoothDevice.getName() == null) {" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceManager.java" line="518" column="13" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="        return bluetoothDevice.getName().equals(&quot;SteamController&quot;) &amp;&amp; ((bluetoothDevice.getType() &amp; BluetoothDevice.DEVICE_TYPE_LE) != 0);" errorLine2="               ~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceManager.java" line="522" column="16" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="        return bluetoothDevice.getName().equals(&quot;SteamController&quot;) &amp;&amp; ((bluetoothDevice.getType() &amp; BluetoothDevice.DEVICE_TYPE_LE) != 0);" errorLine2="                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceManager.java" line="522" column="73" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothDevice.getName: android.permission.BLUETOOTH_CONNECT" errorLine1="        return bluetoothDevice.getName().equals(&quot;SteamController&quot;) &amp;&amp; ((bluetoothDevice.getType() &amp; BluetoothDevice.DEVICE_TYPE_LE) != 0);" errorLine2="               ~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceManager.java" line="522" column="16" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by BluetoothDevice.getType: android.permission.BLUETOOTH_CONNECT" errorLine1="        return bluetoothDevice.getName().equals(&quot;SteamController&quot;) &amp;&amp; ((bluetoothDevice.getType() &amp; BluetoothDevice.DEVICE_TYPE_LE) != 0);" errorLine2="                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceManager.java" line="522" column="73" />
+  </issue>
+  <issue id="MissingPermission" message="Call requires permission which may be rejected by user: code should explicitly check to see if permission is available (with `checkPermission`) or explicitly handle a potential `SecurityException`" errorLine1="                mAudioRecord = new AudioRecord(MediaRecorder.AudioSource.DEFAULT, sampleRate," errorLine2="                               ^">
+    <location file="src/main/java/org/libsdl/app/SDLAudioManager.java" line="229" column="32" />
+  </issue>
+  <issue id="MissingPermission" message="Missing permissions required by AudioRecord.AudioRecord: android.permission.RECORD_AUDIO" errorLine1="                mAudioRecord = new AudioRecord(MediaRecorder.AudioSource.DEFAULT, sampleRate," errorLine2="                               ^">
+    <location file="src/main/java/org/libsdl/app/SDLAudioManager.java" line="229" column="32" />
+  </issue>
+  <issue id="MissingLeanbackLauncher" message="Expecting an activity to have `android.intent.category.LEANBACK_LAUNCHER` intent filter" errorLine1="&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;&gt;" errorLine2=" ~~~~~~~~">
+    <location file="src/main/AndroidManifest.xml" line="2" column="2" />
+  </issue>
+  <issue id="WrongConstant" message="Must be one or more of: Intent.FLAG_GRANT_READ_URI_PERMISSION, Intent.FLAG_GRANT_WRITE_URI_PERMISSION" errorLine1="                contentResolver.takePersistableUriPermission(tree,granted)" errorLine2="                                                                  ~~~~~~~">
+    <location file="src/main/java/com/linkcore/emulator/MainActivity.kt" line="570" column="67" />
+  </issue>
+  <issue id="WrongConstant" message="Must be one of: LinearLayout.HORIZONTAL, LinearLayout.VERTICAL" errorLine1="        LinearLayout box=new LinearLayout(this);box.setOrientation(1);box.setPadding(dp(24),dp(28),dp(24),dp(20));box.setBackgroundColor(0xff0b0e18);" errorLine2="                                                                   ~">
+    <location file="src/main/java/com/hatkid/mkxpz/RpgLibraryActivity.java" line="68" column="68" />
+  </issue>
+  <issue id="UnspecifiedRegisterReceiverFlag" message="`mUsbBroadcast` is missing `RECEIVER_EXPORTED` or `RECEIVER_NOT_EXPORTED` flag for unprotected broadcasts registered for org.libsdl.app.USB_PERMISSION" errorLine1="            mContext.registerReceiver(mUsbBroadcast, filter);" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/org/libsdl/app/HIDDeviceManager.java" line="199" column="13" />
+  </issue>
+  <issue id="UnspecifiedRegisterReceiverFlag" message="`closePausedReceiver` is missing `RECEIVER_EXPORTED` or `RECEIVER_NOT_EXPORTED` flag for unprotected broadcasts registered for com.linkcore.emulator.ACTION_CLOSE_PAUSED_RPG" errorLine1="        if(Build.VERSION.SDK_INT&gt;=33)registerReceiver(closePausedReceiver,filter,Context.RECEIVER_NOT_EXPORTED);else registerReceiver(closePausedReceiver,filter);" errorLine2="                                                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/java/com/hatkid/mkxpz/MainActivity.java" line="52" column="118" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_2&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_2&quot;&gt;&quot;YOUR SPACE TO PLAY&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="4" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_3&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_3&quot;&gt;&quot;CLASSICS. NEW ADVENTURES.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="5" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_4&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_4&quot;&gt;&quot;Play your favourites.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="6" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_5&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_5&quot;&gt;&quot;Play your\nfavourites.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="7" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_6&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_6&quot;&gt;&quot;Your favourite games,\nin a space made for you.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="8" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_8&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_8&quot;&gt;&quot;.gba files · Local saves&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="10" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_9&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_9&quot;&gt;&quot;YOUR LAST GAME&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="11" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_10&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_10&quot;&gt;&quot;It starts with a game&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="12" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_11&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_11&quot;&gt;&quot;Add your first ROM and start playing.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="13" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_13&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_13&quot;&gt;&quot;●  Your saves stay with you&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="15" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_15&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_15&quot;&gt;&quot;Fast forward 2× (muted)&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="17" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_20&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_20&quot;&gt;&quot;Your game is paused. Pick up where you left off.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="22" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_21&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_21&quot;&gt;&quot;Ready to play · Load your save inside the game&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="23" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_25&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_25&quot;&gt;&quot;Take a breath.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="27" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_33&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_33&quot;&gt;&quot;Could not save the game. Check available storage.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="35" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_34&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_34&quot;&gt;&quot;Save from the game menu first.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="36" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_36&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_36&quot;&gt;&quot;Choose a .lcsave backup or an external .sav for this same game and version. External .sav files cannot verify which ROM they belong to. It will replace the current save; a backup of the previous save will remain on your phone. The game will restart to load it.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="38" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_39&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_39&quot;&gt;&quot;Open a game first.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="41" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_40&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_40&quot;&gt;&quot;Could not write the backup.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="42" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_42&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_42&quot;&gt;&quot;Could not read the backup.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="44" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_44&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_44&quot;&gt;&quot;Could not import the save.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="46" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_45&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_45&quot;&gt;&quot;Could not complete the operation.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="47" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_46&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_46&quot;&gt;&quot;Made to play&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="48" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_47&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_47&quot;&gt;&quot;Choose a folder to see all its .gba games. Tap Refresh after adding files. For covers, place Juego.png or Juego.jpg next to Juego.gba, or tap ⋯ on a card to choose an image. Use Download covers to find artwork on Libretro. Games without a cover display a generic cartridge; gameplay previews are not generated.\n\nOpen an uncompressed .gba file. Bruma GBA remembers your last game.\n\nSave from the game menu. Use Pause to export a .lcsave backup and import it on another phone with the exact same ROM.\n\nReturning home keeps the session paused. If Android closes the app, in-game saves remain, but the current moment is not saved.\n\nUse RPG Maker · Experimental to import the folder of an RPG Maker XP game. Bruma copies it into its private storage and leaves the original unchanged. Compatibility varies by game.\n\nOnline play is not available yet.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="49" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_52&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_52&quot;&gt;&quot;Select an uncompressed .gba ROM; extract ZIP or 7z files first.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="54" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_53&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_53&quot;&gt;&quot;The ROM exceeds the GBA size limit (32 MB).&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="55" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_54&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_54&quot;&gt;&quot;Could not open the selected file.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="56" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_55&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_55&quot;&gt;&quot;The file is empty or incomplete.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="57" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_56&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_56&quot;&gt;&quot;Could not save the ROM in Bruma GBA.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="58" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_57&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_57&quot;&gt;&quot;Emulation core error&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="59" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_58&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_58&quot;&gt;&quot;Could not generate the frame.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="60" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_59&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_59&quot;&gt;&quot;Could not play audio.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="61" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_60&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_60&quot;&gt;&quot;Could not run the game.&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="62" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;ui_62&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;ui_62&quot;&gt;&quot;GBA controls: D-pad, A, B, L, R, START and SELECT&quot;&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="64" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;save_error_0&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="&lt;string name=&quot;save_error_0&quot;&gt;&quot;The backup exceeds the size limit.&quot;&lt;/string&gt;" errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="65" column="9" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;save_error_1&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="&lt;string name=&quot;save_error_1&quot;&gt;&quot;No compatible save to export yet. Save inside the game first.&quot;&lt;/string&gt;" errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="66" column="9" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;save_error_2&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="&lt;string name=&quot;save_error_2&quot;&gt;&quot;This is not a valid Bruma GBA backup.&quot;&lt;/string&gt;" errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="67" column="9" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;save_error_3&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="&lt;string name=&quot;save_error_3&quot;&gt;&quot;Backup information is missing.&quot;&lt;/string&gt;" errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="68" column="9" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;save_error_4&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="&lt;string name=&quot;save_error_4&quot;&gt;&quot;Unsupported backup format.&quot;&lt;/string&gt;" errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="69" column="9" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;save_error_5&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="&lt;string name=&quot;save_error_5&quot;&gt;&quot;This save belongs to another ROM. Open the exact game and version used to export it.&quot;&lt;/string&gt;" errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="70" column="9" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;save_error_6&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="&lt;string name=&quot;save_error_6&quot;&gt;&quot;The backup does not contain a save.&quot;&lt;/string&gt;" errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="71" column="9" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;save_error_7&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="&lt;string name=&quot;save_error_7&quot;&gt;&quot;The backup is damaged or incomplete.&quot;&lt;/string&gt;" errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="72" column="9" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;save_error_8&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="&lt;string name=&quot;save_error_8&quot;&gt;&quot;Unsupported save size.&quot;&lt;/string&gt;" errorLine2="        ~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="73" column="9" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;speed_cycle&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="&lt;string name=&quot;speed_cycle&quot;&gt;Speed: tap to cycle 1×, 2× and 4×&lt;/string&gt;" errorLine2="        ~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="74" column="9" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;fast_sound_on&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="&lt;string name=&quot;fast_sound_on&quot;&gt;Fast-forward sound: on&lt;/string&gt;" errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="75" column="9" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;fast_sound_off&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="&lt;string name=&quot;fast_sound_off&quot;&gt;Fast-forward sound: off&lt;/string&gt;" errorLine2="        ~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="76" column="9" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;library_empty&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="&lt;string name=&quot;library_empty&quot;&gt;&quot;Your next adventure starts here.\n\nChoose a folder with .gba games to fill your library.&quot;&lt;/string&gt;" errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="86" column="9" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;library_unavailable&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="&lt;string name=&quot;library_unavailable&quot;&gt;&quot;Could not read the folder or game. Choose the folder again to renew access. Your saved progress is safe.&quot;&lt;/string&gt;" errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="89" column="9" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;library_bad_cover&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="&lt;string name=&quot;library_bad_cover&quot;&gt;&quot;Could not open that image. Try a smaller JPG, PNG or WebP image.&quot;&lt;/string&gt;" errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="91" column="9" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;library_limit&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="&lt;string name=&quot;library_limit&quot;&gt;&quot;This folder is too large. Choose a more specific folder with up to 2000 games.&quot;&lt;/string&gt;" errorLine2="        ~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="92" column="9" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;art_replace&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;art_replace&quot;&gt;This replaces the current cover if a match is found.&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="100" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;art_search_hint&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;art_search_hint&quot;&gt;Choose the title and region. Try a shorter name if no results appear.&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="108" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;pad_none&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;pad_none&quot;&gt;No controller detected. Connect it to this phone by USB or pair it in Android Bluetooth settings.&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="111" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;pad_help&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;pad_help&quot;&gt;For controllers recognized by Android.\n\nD-pad / left stick: move\nA / Cross: GBA A · B / Circle: GBA B\nX / Square: GBA B · Y / Triangle: GBA A\nLB / L1 and LT / L2: L\nRB / R1 and RT / R2: R\nStart / Options: START · Select / View / Create: SELECT\nPress right stick: pause\nPress left stick: 1× / 2× / 4×\n\nUse Assign buttons if the layout differs. Assignments are saved per controller. Analog triggers keep their default actions.&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="112" column="13" />
+  </issue>
+  <issue id="MissingTranslation" message="&quot;rpg_missing&quot; is not translated in &quot;de&quot; (German), &quot;ko&quot; (Korean), &quot;pt&quot; (Portuguese), &quot;ja&quot; (Japanese), &quot;it&quot; (Italian), &quot;fr&quot; (French), &quot;zh&quot; (Chinese)" errorLine1="    &lt;string name=&quot;rpg_missing&quot;&gt;Install the Bruma RPG experimental module to try RPG Maker XP games. Compatibility varies by game.&lt;/string&gt;" errorLine2="            ~~~~~~~~~~~~~~~~~~">
+    <location file="src/main/res/values/strings.xml" line="123" column="13" />
+  </issue>
+</issues>

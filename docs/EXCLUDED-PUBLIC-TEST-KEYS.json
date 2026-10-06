@@ -1,0 +1,1652 @@
+[
+  {
+    "path": "runtimes/classic/upstream/ruby-1.8.7-p374/test/openssl/utils.rb",
+    "original_sha256": "42fa8cc2b82f161d9c91494e7833a6655ee329120f0e981ef8de80d7f4db64d0",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/classic/upstream/ruby-1.8.7-p374/test/soap/ssl/client.key",
+    "original_sha256": "3175ecf05041ce22a48143fbb0af7e2b863399bf2d9f0593608b9a7f8937271f",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/classic/upstream/ruby-1.8.7-p374/test/soap/ssl/server.key",
+    "original_sha256": "19bb5dd3045f25a21c464274b7a099af04334e63c7958912d91dd2eef856f2fa",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/apps/ca-key.pem",
+    "original_sha256": "3490491a6a38d202a29ba250f717b8e3065eb1ee3e16d9e5e9171d3f8f2bf8b5",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/apps/client.pem",
+    "original_sha256": "5517423efa9a5cd7ede4604399d1572f271260d2b7214ac4218f499387b18c99",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/apps/pca-key.pem",
+    "original_sha256": "6eba0a092a01ee003a4bf101491de540e4ee03b94075578a67084292581f0430",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/apps/privkey.pem",
+    "original_sha256": "64795d8b4aac68c76ba833da4cfb54e739b7a90161ab3866d441ae0205da6fa9",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/apps/rsa8192.pem",
+    "original_sha256": "24f69b9f93919a7cc85159762f269b3b3a7e807dec24ebf90ccf166e1d63fe6b",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/apps/s1024key.pem",
+    "original_sha256": "dd647f2b3d59c7450bd0693d215355ce93919b0462f4f57c35e4ce292e671a61",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/apps/s512-key.pem",
+    "original_sha256": "eabd97ef4ae742dc493633e69d55c477561662ca63a9d914da1cce76d70f562a",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/apps/server.pem",
+    "original_sha256": "ffdc8d77eb82b815de5235d93d1b733bf7a6934a8276862cd3b0d842b7dcc53d",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/apps/server2.pem",
+    "original_sha256": "315a1d925c484b57b5f6b154318c241f49803a627d5dd97a1add7eb5759a16fd",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/fuzz/dtlsserver.c",
+    "original_sha256": "310e7a1b1f8c85cad0fbadc55447cb4b56abf8381b714137bbdb204347305a3c",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/fuzz/server.c",
+    "original_sha256": "2210965937c75cec3fb58cb01072c0f1e78762c9aea2c2fc3598d89cbb0435dd",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/insta.priv.pem",
+    "original_sha256": "e3fdf57353a5963f422293210b767b330302a40fc8a3e4559287e74e8ebc44aa",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/pemtest.c",
+    "original_sha256": "35f6c2cdeda8ba886a76c9a2cd21553cb30f8c4e7814dc15c7eafe944b195ae7",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/provider_pkey_test.c",
+    "original_sha256": "732c69f7ea39ccea7c0c71812ff9178c1f0a125323a59788589f848bae7e3c8c",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/testec-p112r1.pem",
+    "original_sha256": "8347b49f8fd7810146eb24003402fc310fcb7efd4a715f233896dea923c2df19",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/testec-p256.pem",
+    "original_sha256": "102cae373d1814656f4672c6c5b8ed048873bf202220231a5a776ffdf1398fd2",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/tested25519.pem",
+    "original_sha256": "4b4fc44435f8d20dd4e915752db1019d3936877152b95d5f39414f422b1110cd",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/tested448.pem",
+    "original_sha256": "7d80d12d8f866e70d92e80433feacf9d51493d6743685861438c908d91e95405",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/testmldsa44.pem",
+    "original_sha256": "e6eb29b8946afefd23e3db9a55d6107022bb5ed6dd5e12dc30a30200686c01f9",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/testmldsa65.pem",
+    "original_sha256": "b7685c6d1e651993627e25f101fc411a3ec22d02fc97e4a719a41d3d5df52791",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/testmldsa87.pem",
+    "original_sha256": "46434617081299642b47e25bacb956c53db65dfa6eb27ecfed60313a157d3d35",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/testrsa.pem",
+    "original_sha256": "8afe3364339809561aeedd1200efded7344afc41e185838c637238ac76eed11f",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/testrsa2048.pem",
+    "original_sha256": "930d2215f1b9fbc0343546fcc64ca06e5fab04e9cd63f34197e2a4fb4f43aa18",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/testrsapss.pem",
+    "original_sha256": "ed2e7796ca5642b77221497de727068ad2b93328c2fccd5824d0680f30bc2360",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/testrsapssmandatory.pem",
+    "original_sha256": "3420bde446444f8fb9ab23ae5a4bcd647f2575654041e64d9ae199eaaf8c879e",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/testrsa_withattrs.pem",
+    "original_sha256": "a72f814c8edd5c09ccb989f8dfa84343cf92591b2f521e91c04ea7f186cf3a7f",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/threadstest.c",
+    "original_sha256": "2102b223aa8d3963274f0fd9bc97de39681f33699961470c31057c2d584ae7c1",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/demos/bio/server-ec.pem",
+    "original_sha256": "ceaf699619734a8696d669b0b5534a63a416f9cf0b7da1def7a71b45f5f252e2",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/demos/bio/server.pem",
+    "original_sha256": "57d7d62587cb493806f09fee4f8da1b0a9ea7b6e77aa43879a5fdcc85ff63a4e",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/demos/cms/cakey.pem",
+    "original_sha256": "c7ed282861c32151a60a9aa62b860d81ed7c906532b6eaa6606b77af241703ed",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/demos/cms/signer.pem",
+    "original_sha256": "3a2a367baf036df9f8cae8f6abf59818a6695a513b6c453e86b0c5b2cec5d246",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/demos/cms/signer2.pem",
+    "original_sha256": "adcb64407c7a6aa0b027b584197d7ca2c6606a12fc638a0c6ba532c54b80d65e",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/demos/guide/rootkey.pem",
+    "original_sha256": "793703dc4c12f4e65e084a9eaadf062e9e63373482bd498a5a76fac30fee15e2",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/demos/guide/serverkey.pem",
+    "original_sha256": "fe79cace7b42585511ab629db3a8fa2e1f5e5377942629f9aab4c47b6f23e28c",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/demos/smime/cakey.pem",
+    "original_sha256": "c7ed282861c32151a60a9aa62b860d81ed7c906532b6eaa6606b77af241703ed",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/demos/smime/signer.pem",
+    "original_sha256": "3a2a367baf036df9f8cae8f6abf59818a6695a513b6c453e86b0c5b2cec5d246",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/demos/smime/signer2.pem",
+    "original_sha256": "adcb64407c7a6aa0b027b584197d7ca2c6606a12fc638a0c6ba532c54b80d65e",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/demos/sslecho/key.pem",
+    "original_sha256": "7a8021a459d89ec2defbe612bb99f1b36349731778e70978895c7baaeb001283",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/demos/certs/apps/ckey.pem",
+    "original_sha256": "c261be75344e362cacc629218eadcfbdd96823c869685959a3ba7af79fc3f6b5",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/demos/certs/apps/intkey.pem",
+    "original_sha256": "cba3a56ebf13674fef79721d16fbd3404b991107884b1aa628a43b6538c00429",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/demos/certs/apps/rootkey.pem",
+    "original_sha256": "49c67aac894bac4cacf8891fefc5dc99126ecec6948c5c51ed31443c9cf5cf12",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/demos/certs/apps/skey.pem",
+    "original_sha256": "d0bcbe9a9ff18061856a684670a40e82d5fbd57d3c95f35d886c392ce1bc4929",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/demos/certs/apps/skey2.pem",
+    "original_sha256": "48f1d94844d0d276e8c41fc9ce9e37485bc5551e939f57ba7a4893d0d8d98971",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/doc/man3/PEM_read.pod",
+    "original_sha256": "46c0c181b8882eae8ea608f10c2a2e0e93897101354aabb8d4077fb9b62a498e",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/doc/man3/PEM_read_bio_PrivateKey.pod",
+    "original_sha256": "11eea2c67066b58d92dc1d7773e4dcc7f10ecd6da1541500e3d5bbc285a2c007",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/doc/man7/openssl-glossary.pod",
+    "original_sha256": "8437c819231db56ff64d831be97e9f717e0c1e84c46357ae8d6d6d377dfe7445",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/alt1-key.pem",
+    "original_sha256": "e27a5fc526e96bbac88fd3fcc7aae265c6f68e26743730ffbfb4cf9d3fde5d4a",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/alt2-key.pem",
+    "original_sha256": "70fe6e839204e2796100695a231931713cf524508b52727a63aeb721bf82f1b1",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/alt3-key.pem",
+    "original_sha256": "9b035957b577b798000fcba7ebca68915257aaf7d888f25d44fb23641aa51e4f",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/bad-othername-namec-key.pem",
+    "original_sha256": "1c6623046296ca15e96c12bfbfbd71005dd3f25adcce8be5b3ffe4c739b15d97",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/bad-pc3-key.pem",
+    "original_sha256": "32fada1041bf3a3f85f634572df4f3b2882e77c53e10891e43e4914aa5203920",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/bad-pc4-key.pem",
+    "original_sha256": "e31fbffae3ae256b2e1210d5ae581b8b8b70da54a8da5274083f9166c12f0fe8",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/bad-pc6-key.pem",
+    "original_sha256": "e931b0fb603d7ab5d08fcd28db4fb91a7fe62d0c7b770d0438ab767e1a6f9b52",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/bad.key",
+    "original_sha256": "b68b90f7f429de9bc3408450cb854b4e999a733690727eb56f623732228fb274",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/badalt1-key.pem",
+    "original_sha256": "471809338278ea0d49cc9f5ff39df3b049e2f859720e56b5877b71ddd75e892a",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/badalt10-key.pem",
+    "original_sha256": "8ced0e5910a66bbf707d92af5efb7ee7b82b50f1bf146696f9d461f183770320",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/badalt2-key.pem",
+    "original_sha256": "7aaa121ea825f888c6cd92028b701a64c09923276c677b0d0c6542efa36a9c83",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/badalt3-key.pem",
+    "original_sha256": "c34128a4b3f43fc0439189cb25471bcc0d1d57b550caff6ca58636a7444f6508",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/badalt4-key.pem",
+    "original_sha256": "e7e916fc958fe00d00b8b340a42fb340f8dcf681d7cb1c9797562397dfcabbb2",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/badalt5-key.pem",
+    "original_sha256": "e7a6e7bf4d8ab85b1ed48a8966261606c0103268e30fc3c863d8aaade3a46fd4",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/badalt6-key.pem",
+    "original_sha256": "4d904092012531d2b864270747c546c0ab9f1ee3bdab354572be3737f5d961cc",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/badalt7-key.pem",
+    "original_sha256": "ed98e350f493420a1ba24dab524152d3dbdb92c3b807d05a482baa3d853f66f3",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/badalt8-key.pem",
+    "original_sha256": "836ecd4f03de6fc1f327b5dc845efaa0e23166fd236f87d71d04ae654cc30916",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/badalt9-key.pem",
+    "original_sha256": "320eca208d9eed07ba92a1fdc2bf226e6d952cb3131a354377c23c354d8e5add",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/badcn1-key.pem",
+    "original_sha256": "a7b1f559ee757009c6b79400548526e5e7fa27b15df586b38a142677a8549be3",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ca-key-768.pem",
+    "original_sha256": "8eb536beb70e02fe229ee9a29d08e255b93fbdb27c8fc0e50a32bd2b097f3695",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ca-key-ec-explicit.pem",
+    "original_sha256": "4bd28bfe7864d3ea6d403f53ddf09be33dea84321a5725f986310a6b8fa12a3a",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ca-key-ec-named.pem",
+    "original_sha256": "2d7d92c6a6ba7cf75d79177b8216ec1b1f0c36647019d4521a5e95a2e79a09f6",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ca-key.pem",
+    "original_sha256": "92a47fb08a0585b019f35815b9667535b48b41562e61ea9cb5a5ef465901cfb5",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ca-key2.pem",
+    "original_sha256": "904b45c0c534b29906a335a96e458815644654733947acfc467c1a243ab98e86",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ca-pss-key.pem",
+    "original_sha256": "af0bac141c0b84c3d012592e51fbb0330793eece0bd8c169406afea40adddb19",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/cert-key-cert.pem",
+    "original_sha256": "d752dc61d5deb2475b1cac94cd47b00e98dc87db3aecae47f3d2a0da605c9a4e",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/client-ed25519-key.pem",
+    "original_sha256": "54a69dcf7169928f08c6c07a74510677c6fbc2fc560b46be31fc3923d869e831",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/client-ed448-key.pem",
+    "original_sha256": "e4affa395830a3b20f18bb16c5cc14432b75cdc5f0efa0a23ef60e8f57bb403f",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/client-pss-restrict-key.pem",
+    "original_sha256": "c4431abd5f7dd33eb168d484d0470ed2add2239e06316a83e51c9c879acc966e",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/cross-key.pem",
+    "original_sha256": "83da61d46029b84f46b0b0a48650c825214f6685125dfdc892188eab09f1c555",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ct-server-key.pem",
+    "original_sha256": "af48ba7434275bb5313bc99ec63a7e4009b56fbc27f70e699f89fa3a09280d8c",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/dhk2048.pem",
+    "original_sha256": "29f8a67e5854e496615d58547b555d520ca98411914c9150d54dd57165f6e1da",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ec_privkey_with_chain.pem",
+    "original_sha256": "d997f26e5990a8bdc5e15d5a8b0540fecd106a65c027d6dd129801a906d429af",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ee-ecdsa-key.pem",
+    "original_sha256": "b309e4b736208f0ff0ffdf89db70f9584bcb23fcf04fbd54d816ad8492be6eb8",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ee-key-1024.pem",
+    "original_sha256": "079bddc04f399aad95ee5fd0595a085ec5bd9a047fbde3f2e6fd8fea442e55db",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ee-key-3072.pem",
+    "original_sha256": "bc049863dc0e8cb3dc48181d87143dba2372ce2ecfba841869793f46d23280b5",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ee-key-4096.pem",
+    "original_sha256": "f57f1bfa31f2ee2a77c590fa9277fdf3ebc1a51d5878cd636292dc3a40797cc1",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ee-key-768.pem",
+    "original_sha256": "1129008513ca091d780fd31541c4f67b286e3475d5bd7af57a71bd3b95470fb7",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ee-key-8192.pem",
+    "original_sha256": "7d02a539f9b49a82a66f4468a8168f4a550a2e69d3c10387850305eb5a728088",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ee-key-ec-explicit.pem",
+    "original_sha256": "1a808d6517c6c5bbf9fceec7bd980ebb2e7f918b7fffea1d0f7e2f7acd0186e1",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ee-key-ec-named-explicit.pem",
+    "original_sha256": "d7c733e544d0de97f85f1313155dc1baab31f887f67a72e27a00d35c544addce",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ee-key-ec-named-named.pem",
+    "original_sha256": "a87600cf047b37d5e2fcb89e9f9da1472b958a951fb89088b07988229cb19c85",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ee-key.pem",
+    "original_sha256": "da972fe61f793c4b2b71ae3526dd2157bc52d1310df4d333894fc2e934d8cac7",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/embeddedSCTs1-key.pem",
+    "original_sha256": "fb8cee1e7c1cca1f03dbee2728ec8a3bbeea5868fa202553cadfd1295495fe74",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/embeddedSCTs1_issuer-key.pem",
+    "original_sha256": "025e2876845388b85e518f6d968bc395fd0482fb56422906a70d55deab9cd5ae",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/goodcn1-key.pem",
+    "original_sha256": "702ef215de9e7019482db6a0f37626984de1107501247b3bb87496e0d1cf40c4",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/goodcn2-key.pem",
+    "original_sha256": "8346461942300f53722246df7f39dcc648aa8d78b023ad657b16701873789def",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/interCA.key",
+    "original_sha256": "b76c6eadcd2aab336a92ff4dd820c70787a29417de7f6597d41967b824b40db8",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/leaf.key",
+    "original_sha256": "66d21d966a7dde3100abc32fd83efb18f89b961b7dd8a6bce7b8d8b158012989",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ncca-key.pem",
+    "original_sha256": "045409cc24a17bede92d82ad1322f77b4f3a67b21e017460d75fef3076d57616",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ncca1-key.pem",
+    "original_sha256": "f01361a3cfa43fdd1aa410911009faab48e693b94e4eb7386bb15030fabfc4e1",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ncca2-key.pem",
+    "original_sha256": "c5d609ec3479b4072e83a17e48e0e5921f80f4949bb12ecd6b54aa11cda61343",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ncca3-key.pem",
+    "original_sha256": "5ad71cfbf914be8938b2d550971e5ac416bf99725438516964a856aa61ced3a3",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/ncca4-key.pem",
+    "original_sha256": "cc16b5263d1d1cd9006363d46c13d68cda8f69d9f9103bcc0a93c76f22362436",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/nccaothername-key.pem",
+    "original_sha256": "06859d5c3a4d66ae1b4d0d731544e80f9ea6b5c7b30ea2c242bc848daf3691c9",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/p256-ee-rsa-ca-key.pem",
+    "original_sha256": "d6f4dec6ce2c60e98abdc5c42919ffa7756dd35980f273333fa69f2161063cc6",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/p256-server-key.pem",
+    "original_sha256": "dd9eb4da7daa41a264d9352123a1ea2879882ecb170a2905aa4261b8941f0040",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/p384-root-key.pem",
+    "original_sha256": "425dbbf3e76f6589e7922b82adf25f38ea74c84501cc8d23893a8ac3258f1b56",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/p384-server-key.pem",
+    "original_sha256": "f9cce1336fe249613c15dd0f758ff6778da14fb3dba2626f4f9b9dd8a76576e0",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/pc1-key.pem",
+    "original_sha256": "22a3925db64874c1b12645b17cc2f37fef1a38ed136bc6f726148e1dd0a2f625",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/pc2-key.pem",
+    "original_sha256": "c6c85428c710124d91cce509fcd8e65bda98bf3b6fc417fe037104dc19568788",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/pc5-key.pem",
+    "original_sha256": "3aad523329292be4d0019cc2ce34e6760443f54ad520a61f1ff1fe32ee2e052c",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/root-ed25519.privkey.pem",
+    "original_sha256": "4b4fc44435f8d20dd4e915752db1019d3936877152b95d5f39414f422b1110cd",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/root-ed448-key.pem",
+    "original_sha256": "01affa3ed3ac84e4e853c730e73aa099fd6b6719d96bdf09802c53c2d62e2f65",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/root-key-768.pem",
+    "original_sha256": "418956dcdd5cd0fb91e35e60d04719a6babb1b3b2c49946e9ef7c0993b8b859a",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/root-key.pem",
+    "original_sha256": "d655de9f9b9ca51240f0fea2e157946d3610f6c7f3e01dd026c8eedde0d15509",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/root-key2.pem",
+    "original_sha256": "25170ca65b2d2b66fc5aff6902dff410ea755d7eca89c7a8c347c111ff9a5257",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/root-ml-dsa-44-key.pem",
+    "original_sha256": "2c6a72c6e69734f80b50dd4905daa9f61f4c52cbc0f3a1587f9a8975642319e9",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/rootCA.key",
+    "original_sha256": "4456c6d7b1f469f2d83a51702ee3c4a21f70d1949ca777c65d0374eabaf19ab3",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/rootkey.pem",
+    "original_sha256": "793703dc4c12f4e65e084a9eaadf062e9e63373482bd498a5a76fac30fee15e2",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/server-cecdsa-key.pem",
+    "original_sha256": "6f326428a3bde95dcc9f7a0ede95380ee819953b230f4196702385957928f78f",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/server-dsa-key.pem",
+    "original_sha256": "c1087d28d279317127a1dcb487eef227e01ba81cb13a2137919009fd73dbcc78",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/server-ec-compressed-key.pem",
+    "original_sha256": "73054638f92aaa831631d2882856eca862f7a273a0705d8aa1017bdb4f1cb259",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/server-ecdsa-brainpoolP256r1-key.pem",
+    "original_sha256": "ec39a5edb401b443439a41d9cb61f32f22a16467ea66c4132a620a60640d74ac",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/server-ecdsa-key.pem",
+    "original_sha256": "a9d22a20cd7249108d0230677e6db3626104d0723cd21a43fbbd350c15b9f5c4",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/server-ed25519-key.pem",
+    "original_sha256": "442878092df2fbcc3998e06f7348fce9f7a934d2af04a91236bd4a825b1976aa",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/server-ed448-key.pem",
+    "original_sha256": "380e4b376c2852e789853a51f9ca84c6e89f0633227df9edbf443e070e89da6b",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/server-ml-dsa-44-key.pem",
+    "original_sha256": "ce9eb6cce75afadfdb035d016e2f65f388da04b2c262db305fc460159746526e",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/server-pss-key.pem",
+    "original_sha256": "596b4fa16cbb1878c9effd11bb72b3d89b2de995a5adf231ee51f4e3cbae795b",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/server-pss-restrict-key.pem",
+    "original_sha256": "89889cbfb7028d27ecbda25e5eed3372fd5f288c5eb5ba282411f82ac87050d5",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/serverkey.pem",
+    "original_sha256": "3ebf0386cca98f92ae4212060b89101ba737c1ea800da45577bc059a9dd4467e",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/sm2-root.key",
+    "original_sha256": "46bc1a91e14f02aea0641102efa8a45683c1dbe913302c5fbdae4db678e81890",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/sm2.key",
+    "original_sha256": "eaaa3646ab6ea081bea284f41b82a8fafb675229e44e58ed29fecbb3bb57c991",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/subinterCA.key",
+    "original_sha256": "751b68e77c88e27650a858d29a31a9e8511069c7bbede4bb8f7b14dee8e953f6",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/timing-key.pem",
+    "original_sha256": "2b3891b1b3aa63a8267842adcce059c9dd4817fefde628308767c908f3701821",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/wrongkey.pem",
+    "original_sha256": "7449156738a02669eb7c6e1cd07fd5fb59b515bcc9c8830dae02247b5cb296f5",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/x509-check-key.pem",
+    "original_sha256": "bd1dbf25c85185e7f1fdc89e9e9d2de6ed9bd41db4460eccabbe35ce7f89c94e",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/ocsp-tests/intermediate-key.pem",
+    "original_sha256": "8f58d8bc039ea4c55a7906226f5edde885f29e79bc7f80dcf2a7a44092553f4f",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/ocsp-tests/ocsp.pem",
+    "original_sha256": "cdb820bb5f46ceca4bca2325baf219ca6e82cff22a8ca0c25ab4b372f38a19ff",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/ocsp-tests/root-key.pem",
+    "original_sha256": "2539f4cd02604a3bd5dbb67802390ab39fc3f21ebc20b631883194c02e6e6217",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/ocsp-tests/server-key.pem",
+    "original_sha256": "c76253ca733a00f812a636cf3c891eaed04d507376617d21c6cf62c6ef64efed",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/ocsp-tests/server.pem",
+    "original_sha256": "86660f50980466d6f173c5441d4355d2947deaede468413990eb60b17fac8012",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/smime-certs/csrsa1.pem",
+    "original_sha256": "f6b5d442faac9720cebd3b990f38497fca27f283cec95e39a3a1289e180e3bcf",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/smime-certs/smdh.pem",
+    "original_sha256": "749ccec1e5f240f1780b597aa2435c8458b1a03da1420bdca2dd16df8971faed",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/smime-certs/smdsa1.pem",
+    "original_sha256": "74ced592ae62b11b395c459f4513a787db37e39c096a8c8b5164df7b22f28743",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/smime-certs/smdsa2.pem",
+    "original_sha256": "d8f89c0981f06f84fc3c1d489e775f5676085d74cc244bc18255eadcc4b27eaa",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/smime-certs/smdsa3.pem",
+    "original_sha256": "e23a199a8861bbb3bbf8bfa00cecdb58e3efdb8e4f110ab45195be244abadd94",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/smime-certs/smec1.pem",
+    "original_sha256": "733c9fb4eceb581df2bcdfd86946e8a1b019daa432606ae941cfc94f2286d2a6",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/smime-certs/smec2.pem",
+    "original_sha256": "d2a6d74c17d4547568a11cc88411d55dbae6d3d90bd13a8e2d00aa8ca25cf2c1",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/smime-certs/smec3.pem",
+    "original_sha256": "d940ac0bb1e4880c2679e48a0527d38cab19d4a712d42f402b65ecff3c2e26be",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/smime-certs/smroot.pem",
+    "original_sha256": "322cae84b8307d5f61bbde15e9f90f458844bd8ce8de6ef57cc6ee8f26da5381",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/smime-certs/smrsa1.pem",
+    "original_sha256": "bbf734e62d5e22338a3ad178b6a8f7f251ee44b37b992b5837f77283a30bb843",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/smime-certs/smrsa1024.pem",
+    "original_sha256": "e794a7d802ce13a105c07b503aba3bd7120571c4ac30237c850add80406c50f9",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/smime-certs/smrsa2.pem",
+    "original_sha256": "1d01d8dac710c1b729632c97ceee749278e2ce3036d879d0dd8b7d814cb1b9c8",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/smime-certs/smrsa3-key.pem",
+    "original_sha256": "55a13bd1e768d508f8082c6c8e7067d78f0744fbd83a261e14c35566d3085885",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/smime-certs/smrsa3.pem",
+    "original_sha256": "f9071a185a0ae21e6eccfef7b9421124f7462a3d4f0da2c0ad5a5277e9adf711",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/smime-certs/sm_mldsa44.pem",
+    "original_sha256": "640c60cffeda17071e20da90a858ecd3d9345aaa4aaf644ef1b4b2e10b652d02",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/smime-certs/sm_slhdsa_sha2_128s.pem",
+    "original_sha256": "71473f399d61ba4d645b5d9ae1df15ec04f8f1f100fdc3ced639e856d631f0a8",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/smime-certs/sm_slhdsa_shake_128s.pem",
+    "original_sha256": "d6e47b87b1e56936b1eb442ba7389161293fd165e9a724d489e186543996e991",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/smime-certs/sm_slhdsa_shake_256s.pem",
+    "original_sha256": "1663e23a975609d69a4a3dc9e8fd9226d7286ccd22300f8c01b8465b18362c07",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/beermug.pem",
+    "original_sha256": "0e462b4857fff0ee7629d1349d7868641d8ed326cbd10684c8b67cde54fb64b8",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/key.pem",
+    "original_sha256": "ebdd18f7829a82404ca54be4177f1ba38b4e211e06f6cef3a584e22f864559b9",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_read_depr_data/dsaprivatekey.pem",
+    "original_sha256": "3b77ebd03fc23f96f724d59c3cd9f4ba6d96750759b82bf9d881c09ff32a0c70",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_read_depr_data/rsaprivatekey.pem",
+    "original_sha256": "0bd30e9d085c46c0280c73c623f850b72697fe81ca1229a63c7dad5bb2728d00",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_dsa_codecs_data/prv-44-bare-priv.pem",
+    "original_sha256": "6a38c809ee7ba543e2b24d8dcf7d66d087a6d5a78ad0e8be08be1130b83eeb14",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_dsa_codecs_data/prv-44-bare-seed.pem",
+    "original_sha256": "dec658e06122bf4b1564b43105a7acfc5ba0f3256df793ee9983680735ae5ca6",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_dsa_codecs_data/prv-44-oqskeypair.pem",
+    "original_sha256": "0a40d65d1d0ee60c9ac8a5208b7d4a1ada99b3b25fbcb8bceb0dd38306e806c5",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_dsa_codecs_data/prv-44-priv-only.pem",
+    "original_sha256": "0ce3ae87683cfd06578e710a9367514bf94c33b2b87627b90ccbb8e6386125f6",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_dsa_codecs_data/prv-44-seed-only.pem",
+    "original_sha256": "1f3d0545ff888b8558127fa4a86e866a450b074e0850d9c0471b46a2a2c8a2a7",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_dsa_codecs_data/prv-44-seed-priv.pem",
+    "original_sha256": "cc7c31b85621c07d78eafcab49df4ca8209469c4da3cbc1695ab801ac07709d4",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_dsa_codecs_data/prv-65-bare-priv.pem",
+    "original_sha256": "f9ebde51e6118371416b1a0df0379aaa4cfd8df5cc7eab707ab8f9e2deb4d3fe",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_dsa_codecs_data/prv-65-bare-seed.pem",
+    "original_sha256": "72607cbf06f5801e62be0d408cf1df54efffd8535ebd6960453ecb49ed43eb13",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_dsa_codecs_data/prv-65-oqskeypair.pem",
+    "original_sha256": "af7902a574b48d59400753ccc3d4639324fe445897fc3b5325f09de714e7574e",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_dsa_codecs_data/prv-65-priv-only.pem",
+    "original_sha256": "38c6267319c0ae486da4f946fd0c4f3994a192071235acbf5b4e2e501a721419",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_dsa_codecs_data/prv-65-seed-only.pem",
+    "original_sha256": "3022c858985bc5e8284cff673c06d78d55e88152fcf9a6f5e61ad9f63e5f0e0c",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_dsa_codecs_data/prv-65-seed-priv.pem",
+    "original_sha256": "ff89c392f89a5bfd452e22b1144e6e1b75906604ee71d51bfb56bdd2d2b272ec",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_dsa_codecs_data/prv-87-bare-priv.pem",
+    "original_sha256": "70dc7427bf6c0b44cf709fd5e5820ca0108f7197c87975c437f328283c9bd651",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_dsa_codecs_data/prv-87-bare-seed.pem",
+    "original_sha256": "17b04c9de5c8911d4a7508da79b6885e4b9ad40f97313b316c0830962db70367",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_dsa_codecs_data/prv-87-oqskeypair.pem",
+    "original_sha256": "951187d25a6419151027f934b0c3b643d7d1e210492ecab402419b77cbcf0d49",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_dsa_codecs_data/prv-87-priv-only.pem",
+    "original_sha256": "6def3bb0330c418d93f942cd74d889a5ee4a4a86151e967903abd78dfeb4e778",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_dsa_codecs_data/prv-87-seed-only.pem",
+    "original_sha256": "855cdfe5bea4a003e5a2d5f58fb78e7d96ed019f68812f41a6be1125b796a846",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_dsa_codecs_data/prv-87-seed-priv.pem",
+    "original_sha256": "fd9a70388607943b6f1921f3545fe4d7aa8a55447e98da7e11496a099bebd053",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_kem_codecs_data/prv-1024-bare-priv.pem",
+    "original_sha256": "c11193c028bc6db281a48e05e6b6f1f05925848405747a4929555afe7ea269b5",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_kem_codecs_data/prv-1024-bare-seed.pem",
+    "original_sha256": "e6765af13f905028e61db095612c981bc70208eedb7ce871a929b3e9fa12e1d9",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_kem_codecs_data/prv-1024-oqskeypair.pem",
+    "original_sha256": "9511a4a4107222fb19ef5a7534ba64ac0a3f82f9857cf9877393c78d7250ea20",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_kem_codecs_data/prv-1024-priv-only.pem",
+    "original_sha256": "6c7a985370c8ce7f327eae9675edcede0d7ca832a59245b50c3cb8745fb7451c",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_kem_codecs_data/prv-1024-seed-only.pem",
+    "original_sha256": "3ae21ecd3f5731a0e6b311931cf9970e908827cd7c76d9401d1415578622170b",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_kem_codecs_data/prv-1024-seed-priv.pem",
+    "original_sha256": "405ec1368fe36c5f8350557b20217eb1a5be3c283ee3d4cf670cbd7bc19a9a7a",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_kem_codecs_data/prv-512-bare-priv.pem",
+    "original_sha256": "bd3eee6bc6477e72e4b0a68fd341e9ef8c0c86bb08acfc67666fb5b84062f847",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_kem_codecs_data/prv-512-bare-seed.pem",
+    "original_sha256": "f9f762e7d08acbf443aee9aeb116e8a51d89eded25b80ec8b0d643013de1b78d",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_kem_codecs_data/prv-512-oqskeypair.pem",
+    "original_sha256": "0681318bd6f4844780daeb76e4b1330dc0609a1f17acacb3272048f08a7cc159",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_kem_codecs_data/prv-512-priv-only.pem",
+    "original_sha256": "a426c00bab6aa0c1d89be72caabcd5cc5ae6b75d41d39c44ad7e2cd4e65d8147",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_kem_codecs_data/prv-512-seed-only.pem",
+    "original_sha256": "1f823c67ac65aab4b3010be697e1717ea3b5f9cbdaa90e7b440b8f1ba86354d6",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_kem_codecs_data/prv-512-seed-priv.pem",
+    "original_sha256": "9cfa48b5169b3f3050a5b8230e8f9d026874649057ba9bc4e229b5a12a4f097b",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_kem_codecs_data/prv-768-bare-priv.pem",
+    "original_sha256": "ee23adf9ad9da9eb954f9ad8918c470de9d05d96c18af0f6ef2acdec085ecde2",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_kem_codecs_data/prv-768-bare-seed.pem",
+    "original_sha256": "0b3edeaf1dfd8dce4e71abdb8a92c759979c23e901bc4839000bb54b07692906",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_kem_codecs_data/prv-768-oqskeypair.pem",
+    "original_sha256": "2035d3e52c17d1d8b2a6413f7287d15c61be6bcb145eebf779018184782b6944",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_kem_codecs_data/prv-768-priv-only.pem",
+    "original_sha256": "8feff5989a7facc392c3e3bb35a6eb921b63f5a3e204480c4cccc237df21400c",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_kem_codecs_data/prv-768-seed-only.pem",
+    "original_sha256": "5b4016f2b947e79469ea8bf06011d2d5404d16aa723ea6f2c4b29da8e40cdf5f",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_ml_kem_codecs_data/prv-768-seed-priv.pem",
+    "original_sha256": "4e8c07f6ea2f70f5c8f866be1f9aaf35bf148f0ff45ed79768dabea2a4c5ba99",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_mp_rsa_data/rsamplcm.pem",
+    "original_sha256": "31dbec7f2d9190711efa4d517d1a4548f537c529037a6823e4f93f029527333c",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/15-test_rsapss_data/negativesaltlen.pem",
+    "original_sha256": "d8de80f8b6481fdbe99e50eed7eb76604fa0280960915779913e955f4746864d",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_brainpool.txt",
+    "original_sha256": "b132c90566db7d970cad9c11facbe4c17fc82e2372df98e65c0cf4919dfdf7cd",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_dh.txt",
+    "original_sha256": "7ff0fdd12f2023ef5b65946a42f022bf033594d8df2e87ffb83f437616f1c4f4",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_dsa.txt",
+    "original_sha256": "fa7e8586e096f5fca7740bcf3d2b64602d31c2c15ef899983a5d39a306528184",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_dsa_rfc6979.txt",
+    "original_sha256": "0475cd3de203799faaae48cf8afac3411beb5e945acf474acb78c240ddff2a63",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_dsa_sigalg.txt",
+    "original_sha256": "99cddf1b44f07d2e013810b35412b489dace0ea2544885afdd2164f634c516c2",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_ecc.txt",
+    "original_sha256": "c2474dd5ac42c5a9b14df161555b3c6f05c7b95015e59bcfbff307c27edae5b8",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_ecdh.txt",
+    "original_sha256": "d3938fe1b88e9a8ebb73aa434bd4f938e3cdc21a19858d919df99db88823f74e",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_ecdsa.txt",
+    "original_sha256": "fbc976fa25cdcb8f0e2e65f30d29a35fe8657543b8ea787e2bdc3a22f99ce0cf",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_ecdsa_rfc6979.txt",
+    "original_sha256": "bf106858d569d3b719a3e9c608402d3a13376a66eb3df4ca15a27ee681ed443a",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_ecdsa_sigalg.txt",
+    "original_sha256": "3741822cff789a8c9f21bd182855e325f231d3134f0610c882703a36dc2ca9d7",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_ecx.txt",
+    "original_sha256": "e2073638c30705ead8fee4bdf33ebcc5a7dadc09809c4f62d417f15ce065babe",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_ecx_sigalg.txt",
+    "original_sha256": "7b8520b70bd7a8550789e95d5f2d775efbbbdce55e7bd98b4a4a728d5807d662",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_ffdhe.txt",
+    "original_sha256": "13acc8a91789f127d1674430a82972421819126a39c2a3e90dadfc8cf33d13c3",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_kas.txt",
+    "original_sha256": "9c9cae96fcc2dac5615ca710a91561290cd2b9f51f2d359e4849005f99f1e0e9",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_mismatch.txt",
+    "original_sha256": "fe5113ec3ca888a14677a4d470a207943e8ddb14001df6d75191c8ea2015803b",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_mismatch_ecx.txt",
+    "original_sha256": "8501e115fbf7e1164d38f7953d8ccd611bf4cf94f70c1dd482a9e90a8c791e6f",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_rsa.txt",
+    "original_sha256": "8845dd2c78ed74daf57f206f757d445465fdfc3cf72372b315e009f512bae1af",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_rsa_common.txt",
+    "original_sha256": "10abc5bbb380ea55e0d257fbea7b3d66129b45f5fd08a4b164e2da78a11b2de5",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_rsa_kem.txt",
+    "original_sha256": "a5bea425e3693c35469cc60636f6ce99ce239bc51ffa925128755942e6bb80bd",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_rsa_sigalg.txt",
+    "original_sha256": "59940730a5f554cd61581d17dd5ffb1205a9f00ad9f799dece2dda1fa6a17f32",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_data/evppkey_sm2.txt",
+    "original_sha256": "0f89faa0b5d087c28b65ae937dfc2517d6dad59263b003876b1ac016c54a5457",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_pkey_provided/DH.priv.pem",
+    "original_sha256": "8365682b056b53ef74b7991d5e51e0316cc6b650d7fab348f17d8e8d23c73397",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_pkey_provided/DSA.priv.pem",
+    "original_sha256": "6bf9aebe0a6248639234218d7eab0d54f896ede5ac4932fa686d7f830d310e60",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_pkey_provided/EC.priv.pem",
+    "original_sha256": "0e5ba131d7655491c6a34b0f43abd614b851eed6d46ab3843296a728aa8c5dcf",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_pkey_provided/ED25519.priv.pem",
+    "original_sha256": "c4932a9b6b97423b249a53e58d706f820185467464699038ed7ca5b29815ba03",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_pkey_provided/ED448.priv.pem",
+    "original_sha256": "7d80d12d8f866e70d92e80433feacf9d51493d6743685861438c908d91e95405",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_pkey_provided/RSA.priv.pem",
+    "original_sha256": "7b23fdc1a6fb5d9df5c65b5c841a55f302917593471248e5f0e488950332bec1",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_pkey_provided/X25519.priv.pem",
+    "original_sha256": "e0d11e8b607bd1e45a7d0c10ea36f3587afa32ba8ce3a55f032aad51fa2edd7c",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/30-test_evp_pkey_provided/X448.priv.pem",
+    "original_sha256": "42c03331dd25a8b9c18a47c218f9ec600c6357db528b39c5795a79307e4061d1",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/65-test_cmp_client_data/client.key",
+    "original_sha256": "16c3a92de79665b3517e31498aaec24031217ddd24c44ca902c8439c314b2865",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/65-test_cmp_client_data/server.key",
+    "original_sha256": "bfaf84a22c38b0bb23d763616fdeba2d04800821fc302f50480df74b59214aff",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/65-test_cmp_msg_data/new.key",
+    "original_sha256": "25170ca65b2d2b66fc5aff6902dff410ea755d7eca89c7a8c347c111ff9a5257",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/65-test_cmp_protect_data/prot_Ed.pem",
+    "original_sha256": "4b4fc44435f8d20dd4e915752db1019d3936877152b95d5f39414f422b1110cd",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/65-test_cmp_protect_data/prot_RSA.pem",
+    "original_sha256": "bfaf84a22c38b0bb23d763616fdeba2d04800821fc302f50480df74b59214aff",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/65-test_cmp_protect_data/server.pem",
+    "original_sha256": "bfaf84a22c38b0bb23d763616fdeba2d04800821fc302f50480df74b59214aff",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/65-test_cmp_vfy_data/insta.priv.pem",
+    "original_sha256": "e3fdf57353a5963f422293210b767b330302a40fc8a3e4559287e74e8ebc44aa",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/65-test_cmp_vfy_data/server.key",
+    "original_sha256": "bfaf84a22c38b0bb23d763616fdeba2d04800821fc302f50480df74b59214aff",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/80-test_ca_data/revoked.key",
+    "original_sha256": "d277e4427d2e192b6d05b665212c9549738b6fbcc0e9180fcfcf97c323b462b8",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/80-test_cms_data/dh-key.pem",
+    "original_sha256": "27ffbf9be1dea1f007292439edbf245c11b8fb2be14735303db2c330e6c96416",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/80-test_cms_data/ecdh-key.pem",
+    "original_sha256": "7a26d1de5b3b3f0ed43c515eaa1232aac5d5b16f57a9bd1f99564ac444570f6a",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/80-test_ocsp_data/key.pem",
+    "original_sha256": "e13487b3f6e90117643a1144e037d4fecdf87d700dde7038bcf70d708a365e69",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/90-test_gost_data/server-key2001.pem",
+    "original_sha256": "50011042e2fbe0a4352246057f8b27f7765a35bd9d8805ddf66fc304de3aba18",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/90-test_gost_data/server-key2012.pem",
+    "original_sha256": "b0f32100011b828faa40c746a25bf04d65398145619dcc7c53261ce7df404b22",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/90-test_sslapi_data/dhparams.pem",
+    "original_sha256": "7d1ae11ba3ec9eaefbcea8cb14bc34db91b352cf899d5b454e5757d8ff8c035d",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/90-test_store_data/rsa-key-2432.pem",
+    "original_sha256": "9bd605fc01173c5aa7728164a28f09f4e323f6af2375cf48a88bf8d3510fb4c7",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/90-test_threads_data/rsakey.pem",
+    "original_sha256": "3ebf0386cca98f92ae4212060b89101ba737c1ea800da45577bc059a9dd4467e",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/91-test_pkey_check_data/dhpkey.pem",
+    "original_sha256": "bb92a13de2fd3bc0ff995743b4ab96d932f26a9afe689e1b5edc61c26022f5ef",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/91-test_pkey_check_data/ec_p256_bad_0.pem",
+    "original_sha256": "2eb739b47d6028cafe41e8cb2d9b7c7e8022cf00184f326ff66eee98417ff786",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/91-test_pkey_check_data/ec_p256_bad_1.pem",
+    "original_sha256": "566de227eff2a0660d05bb59fdcdfead77a8126f45dee2fbb4bc8ac94b6228ab",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/91-test_pkey_check_data/sm2_bad_0.pem",
+    "original_sha256": "faac7f124f0aac4f762517fe192d3e1248232e207193a8483d420561f23b5131",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/91-test_pkey_check_data/sm2_bad_1.pem",
+    "original_sha256": "7838c2899112e681d5bfff9527c5b3ff2caee2da175a1ee2c511644a990e5fec",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/91-test_pkey_check_data/sm2_bad_neg1.pem",
+    "original_sha256": "e989816b33f913b3b707303042e0b992e541a8d3b9d6cef3740c64ddb5d73326",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/80-test_cmp_http_data/Mock/new.key",
+    "original_sha256": "66d21d966a7dde3100abc32fd83efb18f89b961b7dd8a6bce7b8d8b158012989",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/80-test_cmp_http_data/Mock/new.RSA2048.key",
+    "original_sha256": "e289ca59a8c4366452bf08b7cd873362564b64d5921e0049d5e1bae8a241db29",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/80-test_cmp_http_data/Mock/newWithNew.pem",
+    "original_sha256": "037785791a67945ba8f4395699ed67484f99bef4c47c579f915a381be10be573",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/80-test_cmp_http_data/Mock/oldWithOld.pem",
+    "original_sha256": "5e31469070a0dca9d210731c97a7fdfab6add141d48baf21a915559e337068f3",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/80-test_cmp_http_data/Mock/server.key",
+    "original_sha256": "3ebf0386cca98f92ae4212060b89101ba737c1ea800da45577bc059a9dd4467e",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/80-test_cmp_http_data/Mock/signer.key",
+    "original_sha256": "66d21d966a7dde3100abc32fd83efb18f89b961b7dd8a6bce7b8d8b158012989",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/spec/bundler/support/builders.rb",
+    "original_sha256": "b0a0d4fd39a92d9880ab9575c5d002f1e4638756be6ef36201bc860aa9341ab8",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/open-uri/test_ssl.rb",
+    "original_sha256": "5d3c33e3332a482fcbc7c11572fed2cf7c8806517e03a5a1a33e4bbdd805bcc8",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/openssl/test_pkey.rb",
+    "original_sha256": "79f0a34539f4d3cfeb4d9eb445fdc4697c0d582edb4cdd75864e1342e883a9e0",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/openssl/test_pkey_ec.rb",
+    "original_sha256": "11f191f335e2bc72d28c2361315679d56a129d8fdb8c4946e498e88b69c2ca95",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/openssl/test_pkey_rsa.rb",
+    "original_sha256": "c4b70c05e6cf8fa707dab295fc233eb4a428968d4053b54f88c94c65858c383d",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/openssl/test_ts.rb",
+    "original_sha256": "7bc618a93e59233ed352bc4a10f3a7743cdb6baf1ddf24b72bef067b1c80329e",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/rubygems/alternate_key.pem",
+    "original_sha256": "242925f0b6a00c7fea98f22eea0a74348b608001cf081f4ae2cbdf6e3f7ba41a",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/rubygems/child_key.pem",
+    "original_sha256": "b90d7cd99b07fc344c36aebc0b03a0bcf1b537bfd1a73b359a0447eece75011d",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/rubygems/client.pem",
+    "original_sha256": "2643e958b303153b4caae31ed5fa04dd2a41bd546d7cd87a2dc1b7f2ee7c9520",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/rubygems/encrypted_private_key.pem",
+    "original_sha256": "a4ae31124a306b48bdaac6fdb0af7ac540288a00d6895608c790569ec3f1714d",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/rubygems/grandchild_key.pem",
+    "original_sha256": "44840b0f1aff68e4348891cd9c5ec4ccb0694577cf98ddf483d25751d2ff992b",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/rubygems/invalidchild_key.pem",
+    "original_sha256": "0ff19d5e5941f94ba814df0f7a113e14109e51fe32e51ce582ad8114608c10dc",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/rubygems/invalid_client.pem",
+    "original_sha256": "330d6923e40a3b185fe281f85cd45ea1073b267e621870074c03a3a0550697a2",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/rubygems/invalid_key.pem",
+    "original_sha256": "2c2531c347e966f6861c5c0ed0c01949acb8da1223fc31e5441f4873f4f810a4",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/rubygems/private3072_key.pem",
+    "original_sha256": "08ec7ce80e2f5e7b8ca07dd181a357d9fc74dbeb80aaa12b9a4a987ea52a712d",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/rubygems/private_ec_key.pem",
+    "original_sha256": "a274356202d9a857232cf6e7686107856588c5dcb0cae4eb2e573f70e68a1de5",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/rubygems/private_key.pem",
+    "original_sha256": "3960cbfa93dff92a7b223c8f725415fb44586e1db7a87e06a8dd197d6998a1dc",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/rubygems/ssl_key.pem",
+    "original_sha256": "da78b4c877cb7676ca07abd89472f4be48039bea07aa9ee069dac307564002c4",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/net/fixtures/server.key",
+    "original_sha256": "40fb2ecf96c902652c00e553168cb773f36ad917c45bb601a87c8ee34e7a9e86",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/openssl/fixtures/pkey/p256.pem",
+    "original_sha256": "f3ac6557cd2381045c780404050940998e05e4578d5aade476718259dd3f4f4b",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/openssl/fixtures/pkey/rsa-1.pem",
+    "original_sha256": "c5301d5768cc233dae1ba0763c68369a287885cfbbb9ce5af099618e18262e42",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/openssl/fixtures/pkey/rsa-2.pem",
+    "original_sha256": "b9f2b5f8442428002b245c809cd4343ed4e24d1bf14c761be9f6fc66a7330bf2",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/openssl/fixtures/pkey/rsa-3.pem",
+    "original_sha256": "5c048fcb61132cc02b2e9bfb0a11263b5007d01d4e44d2a601ec3e5ea339a1e4",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/openssl/fixtures/pkey/rsa1024.pem",
+    "original_sha256": "ca61cee7978d101f56743eaebcb39c2efb73bf87f66e8342937447044f5f5de6",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/openssl/fixtures/pkey/rsa2048.pem",
+    "original_sha256": "fb5a69c309b1054d019e3e2b9f4a83dc7eeae5d849d49098947b93c32b11bf15",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/rubygems/data/gem-private_key.pem",
+    "original_sha256": "d82096f32507e756f51953598c169a21e65ac1ae1356481ee4bbba7f954cbb35",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/tool/test/webrick/test_httpproxy.rb",
+    "original_sha256": "235c853a7ed99989abb7bdb2bbe42d54b5822c58574d0710a05158def3185da9",
+    "reason": "Public upstream sample/test private-key fixture; omitted from publication candidate, not used by runtime build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/apps/dsa-ca.pem",
+    "original_sha256": "840ab42f5a6754f9ddd6df488410a689e6c10ed37059a9f3ea2f7199458aab15",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/apps/dsa-pca.pem",
+    "original_sha256": "6551544012b1e3c4c58f0b64200b75f03b2a39eb69681872f41e6793b0d524be",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/key-pass-12345.pem",
+    "original_sha256": "fc8ccd0034c92c6fe970582549cec2ab84fa8fac95c85ead2a5981578d5da86e",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/certs/leaf-encrypted.key",
+    "original_sha256": "52a2162334f5fbf09e0ffd65105d692f02f78188e79fea7cd1d801f20163e90a",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-1023line.pem",
+    "original_sha256": "86a84b9d9a115e713d0329f7229e2539d921d9604da37da477f4b29cc345464b",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-1024line.pem",
+    "original_sha256": "b916fd56ea467f5a5c48568125200dc038bb31664b5515bad70092b72b47b80a",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-1025line.pem",
+    "original_sha256": "f8384acfbc6d764651b8b779783c3177974af98c0de2ece081250235701d8bf3",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-255line.pem",
+    "original_sha256": "da42ebabe328c6d8d3199b7fefb4dc2ed53f42a174666dfcd4cde484b2cfef6f",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-256line.pem",
+    "original_sha256": "89ff66bbd376329bf66b6a3e1dab6976eec5b115d46ee073f45d646822f0da49",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-257line.pem",
+    "original_sha256": "4da1d2c2481367ed4c5b7c5d23b6283ff3c7499a97b82a54118a20150bce1e57",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-blankline.pem",
+    "original_sha256": "b0ae63e0103c4ab0070471a2277f9c1eb9e988d7d8264e5834102fa985c354c5",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-comment.pem",
+    "original_sha256": "120b03431d05c79132921ecb64511219f33990b20cfdfc99d3e03ca10fefa90c",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-corruptedheader.pem",
+    "original_sha256": "d08fd9a7c2f415e26e18e2d5a7d817efd3827bcc5496c9cab488a842f46f9293",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-corruptiv.pem",
+    "original_sha256": "2c33d450c2d18afc33cc1c158ac645ffd5d420f75b5b522e36039fdd85105865",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-earlypad.pem",
+    "original_sha256": "fe6ddf9af4359226877392504e5686ac27c0ebd42f58cb2425b2e13f906b2f96",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-extrapad.pem",
+    "original_sha256": "9b20b4d3fc3f8565d0619dac3305646e78dbb0938cef97b2ef148b1aed814755",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-infixwhitespace.pem",
+    "original_sha256": "2da049e48f0a26cafaf736bc777b7de6ee85a626def559e7195c2f84bf1016d3",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-junk.pem",
+    "original_sha256": "247fcc128dac8319f060166b58392f92c36a3c6e74d3fa20e9c6c76d4e322e84",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-leadingwhitespace.pem",
+    "original_sha256": "aef7de8d5ee7e2afdf0b2117d0511179dab6ff5592c4a9063e006ea8e7b84e57",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-longline.pem",
+    "original_sha256": "bfe430d9cde396fb8823a391bdea412d185fd8c5c5a8350e5ba95a5b63f5ec8b",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-misalignedpad.pem",
+    "original_sha256": "9527f82566eec2ec8b7de3d8fbbbd71d47ba13587c732c5329cce3bbc393d1a1",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-onecolumn.pem",
+    "original_sha256": "f9a54c395473a05b2b4363142399351da39c476fc2285f5b019f5ba58a045980",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-oneline.pem",
+    "original_sha256": "25d363362f72be64f2adac2c61cf2a211737dde9dcea0908af13498c5c1ae359",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-onelineheader.pem",
+    "original_sha256": "1c847d834994d231ff9afe47c23d001e6a16f6750ce4bb49815b2156dacc4116",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-shortandlongline.pem",
+    "original_sha256": "c41bb10d8db7c0bb6e3df56c134d5020ff39ebc3f45ad1f669bb1f7ba8c4b94a",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-shortline.pem",
+    "original_sha256": "2d39a10f855192251c09ed3d3e0583800abd05554f8a6ddef38b7dda7a2dcf43",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-threecolumn.pem",
+    "original_sha256": "f334ab7b7d665ac631bb5167f7463d497ca4ccf1ea1923ba7a4427dccd6f1426",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa-trailingwhitespace.pem",
+    "original_sha256": "23bcc7db93121381ee9504952d008826ad5d6dece2c0051168a2921ff8471afd",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/04-test_pem_reading_data/dsa.pem",
+    "original_sha256": "5ff0c641c2feff5475e0c917a9f2a9e4f9400f301db1659f4b7db6c3928575fe",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/25-test_req.t",
+    "original_sha256": "cca5d1cdfe48944e3c2f03f045a377c7196bbf290522a0295ae28b85cda198c4",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/61-test_bio_pw_callback_data/private_key.pem",
+    "original_sha256": "eadb9ced71a3c36e60feba3e3566dce79c15dd8a37092161e4113aa8af924463",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/recipes/80-test_cmp_http_data/Mock/new_pass_12345.key",
+    "original_sha256": "fc8ccd0034c92c6fe970582549cec2ab84fa8fac95c85ead2a5981578d5da86e",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/openssl/test/testdsa.pem",
+    "original_sha256": "7146685c894fbbac2435ed117b674d7bd2ef46f3d7aa8fa637bb1b05d32ba341",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/openssl/fixtures/pkey/dsa1024.pem",
+    "original_sha256": "c585a83f0acf9c34483e62764d0a4f88cb634a6d556079bdb6bdcb42847d224a",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/openssl/fixtures/pkey/dsa256.pem",
+    "original_sha256": "36769e208215f0a626a44a83cb17dadf4d38bfe5b54c58813bc724b6c70a5cc6",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/openssl/fixtures/pkey/dsa512.pem",
+    "original_sha256": "ab21b24fbb8b2890441516347a54647a8653766e10723c20bf2d6a3e2f4c7bd0",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/modern/upstream/ruby/test/openssl/test_pkey_dsa.rb",
+    "original_sha256": "3544d826b48e477323683af2ba4565bbacf594998b781ede0a4901515c510b59",
+    "reason": "Additional public upstream private-key test fixture; not used by production build"
+  },
+  {
+    "path": "runtimes/classic/native/ruby193/test/net/imap/server.key",
+    "sha256": "dee132920a5f70465324b16ddae107c00277c79420af22443be45e5e538d59c5",
+    "reason": "Unused public upstream crypto-test key fixture, excluded from publication."
+  },
+  {
+    "path": "runtimes/classic/native/ruby193/test/open-uri/test_ssl.rb",
+    "sha256": "e1078c64e3ea387553158a5a3ee5d692ea6d1c6ffed69dcd92a1f0827c17aca5",
+    "reason": "Unused public upstream crypto-test key fixture, excluded from publication."
+  },
+  {
+    "path": "runtimes/classic/native/ruby193/test/openssl/test_pkcs12.rb",
+    "sha256": "dfad6d857cb25acddec177f9daa69fa2822a26f5c8317d32e5d216ab4444c0e2",
+    "reason": "Unused public upstream crypto-test key fixture, excluded from publication."
+  },
+  {
+    "path": "runtimes/classic/native/ruby193/test/openssl/utils.rb",
+    "sha256": "da47105895102835a336b3afc1479704bf82c8b6b4317aec2a56047984d66452",
+    "reason": "Unused public upstream crypto-test key fixture, excluded from publication."
+  },
+  {
+    "path": "runtimes/classic/native/ruby193/test/rubygems/data/gem-private_key.pem",
+    "sha256": "d82096f32507e756f51953598c169a21e65ac1ae1356481ee4bbba7f954cbb35",
+    "reason": "Unused public upstream crypto-test key fixture, excluded from publication."
+  },
+  {
+    "path": "runtimes/classic/native/ruby193/test/rubygems/private_key.pem",
+    "sha256": "8fa8d9a67b37a2a60dec7381de428fa4c22a1f6bcf36efe44a3d4ef9cce8d21e",
+    "reason": "Unused public upstream crypto-test key fixture, excluded from publication."
+  },
+  {
+    "path": "runtimes/classic/native/ruby193/test/rubygems/ssl_key.pem",
+    "sha256": "19bb5dd3045f25a21c464274b7a099af04334e63c7958912d91dd2eef856f2fa",
+    "reason": "Unused public upstream crypto-test key fixture, excluded from publication."
+  }
+]

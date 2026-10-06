@@ -1,0 +1,309 @@
+{
+  "result": "PASS: all 13 prebuilt runtime libraries reconstructed from source candidate in a separate clean native tree; mGBA rebuilt by clean Gradle candidate build",
+  "functional_tests": "None added; production runtime inputs were not replaced",
+  "initial_packaging_error": "Classic pixman-extra headers omitted; restored MIT headers, rebuilt successfully and included in source snapshot",
+  "binary_equality": "Not required; different build paths and generated Ruby prefix metadata may change binaries. This evidence establishes buildability and records differences, not bitwise equivalence.",
+  "libraries": [
+    {
+      "name": "libbruma_classic.so",
+      "candidate_input_sha256": "7d46b7e764bdf433fef925954f229dd1314095009c20f4934a2a20e14a6ba6bc",
+      "independently_built_sha256": "6fdc656c574d8fdb553b40804aa5a6934a42853e923bd5e00586b2261057cd89",
+      "rebuilt_needed": [
+        "libGLESv2.so",
+        "libandroid.so",
+        "libbruma_classic_fluidlite.so",
+        "libbruma_classic_openal.so",
+        "libbruma_classic_sdl2.so",
+        "libc.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so",
+        "libz.so"
+      ],
+      "current_needed": [
+        "libGLESv2.so",
+        "libandroid.so",
+        "libbruma_classic_fluidlite.so",
+        "libbruma_classic_openal.so",
+        "libbruma_classic_sdl2.so",
+        "libc.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so",
+        "libz.so"
+      ],
+      "needed_matches": true,
+      "bit_identical": false
+    },
+    {
+      "name": "libbruma_classic_fluidlite.so",
+      "candidate_input_sha256": "dec1ab058f29e7b78f335e5850495af2bb516d457686e3746c68b7a83b323d99",
+      "independently_built_sha256": "cd867339915e97e140d3ee3382b1f954eae7f1e34e9577e2d8bf3531a8b577ea",
+      "rebuilt_needed": [
+        "libc.so",
+        "libdl.so",
+        "libm.so"
+      ],
+      "current_needed": [
+        "libc.so",
+        "libdl.so",
+        "libm.so"
+      ],
+      "needed_matches": true,
+      "bit_identical": false
+    },
+    {
+      "name": "libbruma_classic_openal.so",
+      "candidate_input_sha256": "8e08669e7d893241d8c6e2668a6efe49c1cdf7ffe9fdac6630edefff0cfa41b7",
+      "independently_built_sha256": "e796c92bdde343645e94ae32f3c9dd73ecd1f33685b2cb807686240db96f157c",
+      "rebuilt_needed": [
+        "libOpenSLES.so",
+        "libc.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so"
+      ],
+      "current_needed": [
+        "libOpenSLES.so",
+        "libc.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so"
+      ],
+      "needed_matches": true,
+      "bit_identical": false
+    },
+    {
+      "name": "libbruma_classic_sdl2.so",
+      "candidate_input_sha256": "a5a83f0d815ae79b9a589a91e316a08045fd639eaace022fa4f2978d5f37282f",
+      "independently_built_sha256": "7cb7bfa53e62606eff2a61017201f2d86b2bf66be6d9945446a099c23acb6e72",
+      "rebuilt_needed": [
+        "libGLESv1_CM.so",
+        "libGLESv2.so",
+        "libOpenSLES.so",
+        "libandroid.so",
+        "libc.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so"
+      ],
+      "current_needed": [
+        "libGLESv1_CM.so",
+        "libGLESv2.so",
+        "libOpenSLES.so",
+        "libandroid.so",
+        "libc.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so"
+      ],
+      "needed_matches": true,
+      "bit_identical": false
+    },
+    {
+      "name": "libbruma_nds.so",
+      "candidate_input_sha256": "26caaa656a8ec534888afe2ae653aa7bfe5cd02e31b48ae392ebc4d73b4ee5b3",
+      "independently_built_sha256": "622aa7f9353ce7819261b57cd3497f9011f22f08e676fff335293926b3fabf35",
+      "rebuilt_needed": [
+        "libandroid.so",
+        "libc.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so"
+      ],
+      "current_needed": [
+        "libandroid.so",
+        "libc.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so"
+      ],
+      "needed_matches": true,
+      "bit_identical": false
+    },
+    {
+      "name": "libc++_shared.so",
+      "candidate_input_sha256": "ab4e6c71b96b851de45a8a9bd86369e7dbc2130a44b3b4520564be94847910f2",
+      "independently_built_sha256": "ab4e6c71b96b851de45a8a9bd86369e7dbc2130a44b3b4520564be94847910f2",
+      "rebuilt_needed": [
+        "libc.so",
+        "libdl.so",
+        "libm.so"
+      ],
+      "current_needed": [
+        "libc.so",
+        "libdl.so",
+        "libm.so"
+      ],
+      "needed_matches": true,
+      "bit_identical": true
+    },
+    {
+      "name": "libmkxp-z.so",
+      "candidate_input_sha256": "809446062be8339ff3605b92fc15fe067c0b6be0e135606dddbb9d0c69152aa6",
+      "independently_built_sha256": "7ac4a0f5ab5004e36f5d3cf98cee06571b3a52766e05b3c11397b0ca723b4a85",
+      "rebuilt_needed": [
+        "libOpenSLES.so",
+        "libSDL2.so",
+        "libSDL2_image.so",
+        "libSDL2_sound.so",
+        "libSDL2_ttf.so",
+        "libc++_shared.so",
+        "libc.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so",
+        "libopenal.so",
+        "libruby.so",
+        "libz.so"
+      ],
+      "current_needed": [
+        "libOpenSLES.so",
+        "libSDL2.so",
+        "libSDL2_image.so",
+        "libSDL2_sound.so",
+        "libSDL2_ttf.so",
+        "libc++_shared.so",
+        "libc.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so",
+        "libopenal.so",
+        "libruby.so",
+        "libz.so"
+      ],
+      "needed_matches": true,
+      "bit_identical": false
+    },
+    {
+      "name": "libopenal.so",
+      "candidate_input_sha256": "e0a1974a2b6e1a775de3e49a86ab4c00c17bb7fc84542954f0e5f79160cc99e8",
+      "independently_built_sha256": "0df8c912b1ff6aa00719dbd7a1c7ed5520c2bdd9437738254e1e77966988cb8f",
+      "rebuilt_needed": [
+        "libOpenSLES.so",
+        "libc.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so"
+      ],
+      "current_needed": [
+        "libOpenSLES.so",
+        "libc.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so"
+      ],
+      "needed_matches": true,
+      "bit_identical": false
+    },
+    {
+      "name": "libruby.so",
+      "candidate_input_sha256": "4b4d6837789565941cb1ea774a915857d89f5f77cffcd9240e4bad4ee8ce1197",
+      "independently_built_sha256": "64e1161ad53d8358180b43d5bcd2f297b0ae962b4b8a9a6f2d20659be56dbf97",
+      "rebuilt_needed": [
+        "libc.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so",
+        "libz.so"
+      ],
+      "current_needed": [
+        "libc.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so",
+        "libz.so"
+      ],
+      "needed_matches": true,
+      "bit_identical": false
+    },
+    {
+      "name": "libSDL2.so",
+      "candidate_input_sha256": "864785870914c0eb4e3a4946b6631c5f158ebdc02a04b0d48dfd7b81659e48ad",
+      "independently_built_sha256": "1ed0a22eee5d40e3f5950a67e60fc00baf1c226ef3705e23619ea184abd0641a",
+      "rebuilt_needed": [
+        "libGLESv1_CM.so",
+        "libGLESv2.so",
+        "libOpenSLES.so",
+        "libandroid.so",
+        "libc++_shared.so",
+        "libc.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so"
+      ],
+      "current_needed": [
+        "libGLESv1_CM.so",
+        "libGLESv2.so",
+        "libOpenSLES.so",
+        "libandroid.so",
+        "libc++_shared.so",
+        "libc.so",
+        "libdl.so",
+        "liblog.so",
+        "libm.so"
+      ],
+      "needed_matches": true,
+      "bit_identical": false
+    },
+    {
+      "name": "libSDL2_image.so",
+      "candidate_input_sha256": "bb11c579fd85143560b8f80eed0f02b47cd8a05768e4582a4d344c9eb85c5c73",
+      "independently_built_sha256": "c3cfafbd4a663cbfc2d7ddae57cd1ac33c92bdafd2f5e285a9e1c93562f89601",
+      "rebuilt_needed": [
+        "libSDL2.so",
+        "libc.so",
+        "libdl.so",
+        "libm.so"
+      ],
+      "current_needed": [
+        "libSDL2.so",
+        "libc.so",
+        "libdl.so",
+        "libm.so"
+      ],
+      "needed_matches": true,
+      "bit_identical": false
+    },
+    {
+      "name": "libSDL2_sound.so",
+      "candidate_input_sha256": "d2128bf0182d3d21c4b5f4467aa8ca730bcc09b52b2e53126dac11c8d34ab320",
+      "independently_built_sha256": "0a3cf3394112b88163bfb16a99e95e8cf0c5ff700008f55a0fdd4d11d6ce11fc",
+      "rebuilt_needed": [
+        "libSDL2.so",
+        "libc.so",
+        "libdl.so",
+        "libm.so"
+      ],
+      "current_needed": [
+        "libSDL2.so",
+        "libc.so",
+        "libdl.so",
+        "libm.so"
+      ],
+      "needed_matches": true,
+      "bit_identical": false
+    },
+    {
+      "name": "libSDL2_ttf.so",
+      "candidate_input_sha256": "6a0e1945f15f9b87af901aec4cd1330c3d74d64502554c7310caf6fad76b2baf",
+      "independently_built_sha256": "4763aa3556ab0c409e8e86c7e043ce0cef8c6c505374eeda86de43903047878c",
+      "rebuilt_needed": [
+        "libSDL2.so",
+        "libc++_shared.so",
+        "libc.so",
+        "libdl.so",
+        "libm.so"
+      ],
+      "current_needed": [
+        "libSDL2.so",
+        "libc++_shared.so",
+        "libc.so",
+        "libdl.so",
+        "libm.so"
+      ],
+      "needed_matches": true,
+      "bit_identical": false
+    }
+  ]
+}

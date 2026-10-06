@@ -1,0 +1,58 @@
+Path,License,Built SHA256,Evidence
+array.c,Ruby License OR GPL-2.0-only,2df46dbc4f27f7fc3587a6c06b6f5f09e9dfdce4bcafb3a096895277277756e1,COPYING umbrella + complete file headers; no distinct conflicting notice found
+bignum.c,Ruby License OR GPL-2.0-only,15cd69b2d67e7acb1aad1d631c5a25a658aaecb545541d86204fb09f93be55d2,COPYING umbrella + complete file headers; no distinct conflicting notice found
+class.c,Ruby License OR GPL-2.0-only,86734d3a6e11de9fa2b58c04d56eadbbd07501ac1a7ee3e6a996f05590efd120,COPYING umbrella + complete file headers; no distinct conflicting notice found
+compar.c,Ruby License OR GPL-2.0-only,221777df03c9fa2e088c4a4dccd87e5781f9f5bfa47e8286b8353b1e3508edea,COPYING umbrella + complete file headers; no distinct conflicting notice found
+config.h,Generated configuration/adaptation; underlying Ruby License OR GPL-2.0-only where applicable,44355073f0a259c02cd9fff845f93ae95cc003f8cb6cab0f23dcbf0bb81ef981,"generated header/source inputs, BRUMA recipe"
+defines.h,Ruby License OR GPL-2.0-only,6820121f5331937ac8be6dc0b76a29bdd080bb36d0ac983cd04322c3eb81908c,COPYING umbrella + complete file headers; no distinct conflicting notice found
+dir.c,Ruby License OR GPL-2.0-only,ac6a18a9af270fdce08eb5be100ff50fe96b512d7ee8736fd910fb56bc9a6bb5,COPYING umbrella + complete file headers; no distinct conflicting notice found
+dln.c,Ruby License OR GPL-2.0-only,e0e2b285c690efb2d353dab33718384c311e5914097c695549e5a6f39d368898,COPYING umbrella + complete file headers; no distinct conflicting notice found
+dln.h,Ruby License OR GPL-2.0-only,ac84b4a54fa105e27f376bbac4dbdea4cb29e096ef9a9b6d470fbe850d2e422c,COPYING umbrella + complete file headers; no distinct conflicting notice found
+dmyext.c,Generated configuration/adaptation; underlying Ruby License OR GPL-2.0-only where applicable,909931c5190cb3cc3710174d5905f18fadecf49e81302fe9a6f28aefb49a4e82,"generated header/source inputs, BRUMA recipe"
+enum.c,Ruby License OR GPL-2.0-only,5746037b5c83d6b90e78f3ffef9631c1018061c7c797b6ee4e7a8851209171af,COPYING umbrella + complete file headers; no distinct conflicting notice found
+enumerator.c,Ruby License OR GPL-2.0-only,796746c49b213be7a8b9d43884bcf2cd4b42d1823918155fea95a060937e3758,COPYING umbrella + complete file headers; no distinct conflicting notice found
+env.h,Ruby License OR GPL-2.0-only,bb73610d8a60f9a9141ac07fc42307a6ecd60202cc7ab1aad8eae269647be228,COPYING umbrella + complete file headers; no distinct conflicting notice found
+error.c,Ruby License OR GPL-2.0-only,82d17715e6ba1c592e408bb88579340d6dfbbad288915c1e3aeb3628d090724d,COPYING umbrella + complete file headers; no distinct conflicting notice found
+eval.c,Ruby License OR GPL-2.0-only,e07e3963f860fdd8bddccb778ac6efd57027d48aa6369a5fa66dac4dde657317,COPYING umbrella + complete file headers; no distinct conflicting notice found
+ext/zlib/zlib.c,Ruby License OR GPL-2.0-only,49fb2d86ce24edc1fbc20da5a2328792e540f3ddc33678e4383d8d0dde4de09f,COPYING umbrella + complete file headers; no distinct conflicting notice found
+file.c,Ruby License OR GPL-2.0-only,8c939bfb80d66281bcddb9463dcb765be39353b22cd0db0e5dbaff9bbbddd7c8,COPYING umbrella + complete file headers; no distinct conflicting notice found
+gc.c,Ruby License OR GPL-2.0-only,a216a3d81826f855bb58b42ac516e0afb96f2306a647b0d19076f73bec3f8a04,COPYING umbrella + complete file headers; no distinct conflicting notice found
+hash.c,Ruby License OR GPL-2.0-only,dc10d615377b0f76df8e4d669e0d6260233e45f9e13fbae0fcc0c434abd903e0,COPYING umbrella + complete file headers; no distinct conflicting notice found
+inits.c,Ruby License OR GPL-2.0-only,c04758087f19eb652a2ee30301512962a583be8ec63b1c76b91093884f8d798d,COPYING umbrella + complete file headers; no distinct conflicting notice found
+intern.h,Ruby License OR GPL-2.0-only,30485d250987cb744d0803e9092c9f3bbc7841a2ae2c97afd5301451e4fa582b,COPYING umbrella + complete file headers; no distinct conflicting notice found
+io.c,Ruby License OR GPL-2.0-only,0cb4aded6b965d7dd859500483657c92473f4fe607939525127ea235fc36e8ab,COPYING umbrella + complete file headers; no distinct conflicting notice found
+lex.c,Ruby License OR GPL-2.0-only,8cb28f6977bc843d1e5a45edfab0669cf8ea1fc294719cb6c366f6a27941d5d0,COPYING umbrella + complete file headers; no distinct conflicting notice found
+marshal.c,Ruby License OR GPL-2.0-only,f6a44dbf7f167417ad16e90dfbd65faa306befc612f140c2ef81b47667b2ee60,COPYING umbrella + complete file headers; no distinct conflicting notice found
+math.c,Ruby License OR GPL-2.0-only,64047622e17c00483ec05b2e1f134b0fd54772e08cbe453bdfe956fb36c6bbe7,COPYING umbrella + complete file headers; no distinct conflicting notice found
+missing.h,Ruby License OR GPL-2.0-only,1909ebea7f4b2fd8796241583380160f00b59a675714d73f304a85b683fe5f98,COPYING umbrella + complete file headers; no distinct conflicting notice found
+missing/crypt.c,BSD-3-Clause,cdb7836b4456624b25fc8cee6de7982c09506f11da9ba6bffda4c88b88539301,actual crypt.c header; LEGAL historical advertising clause removal
+missing/memcmp.c,Public-domain (plus preserve any embedded notices),05ffe24fe25dc78d9c1cc6552dccfad69f24566200d0f5decf6dff257b770c7d,LEGAL + file headers
+node.h,Ruby License OR GPL-2.0-only,99e9a5131f0b9b4c5a2ee51447ba9d1c4644b7b906af4d00efc20c4a3b4ef7c0,COPYING umbrella + complete file headers; no distinct conflicting notice found
+numeric.c,Ruby License OR GPL-2.0-only,14bd7cd357b9941e0a6c755e5cbaa990d53193ce8ccf9386348ee7c12204f281,COPYING umbrella + complete file headers; no distinct conflicting notice found
+object.c,Ruby License OR GPL-2.0-only,34cb5bd0e80f5f45504cc168b18c095e9f26aecf02f6aed92511082d1897dd3c,COPYING umbrella + complete file headers; no distinct conflicting notice found
+pack.c,Ruby License OR GPL-2.0-only,436bfc9075cca05cd45811e0ae2953e917982dc4acf105dd7f2705a92116e152,COPYING umbrella + complete file headers; no distinct conflicting notice found
+parse.c,GPL-2.0-or-later WITH Bison-exception-2.2; Ruby License permitted for generated parser,4a315f36839cccc124cd642935cb66fddbee6136f9bf8d5e11076fe724e0d424,LEGAL + parse.c Bison skeleton exception
+prec.c,Ruby License OR GPL-2.0-only,7584fa6a7cb2b288fb6bf3e401f751ac23c432d47cbf6b5462633dacb4029ca7,COPYING umbrella + complete file headers; no distinct conflicting notice found
+process.c,Ruby License OR GPL-2.0-only,3f8778d6d0cb0b066181f95686c4a17028c6057b4a0c257d4f2a835179c053fd,COPYING umbrella + complete file headers; no distinct conflicting notice found
+random.c,Ruby License OR GPL-2.0-only; BSD-3-Clause MT19937 section,819c1abbfa2630bb8dd6038ba11bab0f3da2cf69a73a31e886a18edd7f80beef,random.c header + LEGAL
+range.c,Ruby License OR GPL-2.0-only,5bf653ac989e20c1d6b2c834ebd5ac1562e881d24ba173c5529d66ed6c01d37b,COPYING umbrella + complete file headers; no distinct conflicting notice found
+re.c,Ruby License OR GPL-2.0-only,23beb658ac06bbee227393d6b26f7aa27e593083eeb2ec09ed4301f12c53da5c,COPYING umbrella + complete file headers; no distinct conflicting notice found
+re.h,Ruby License OR GPL-2.0-only,6d079fdb4b645777f9bfe095893e5577d31ee9456e08a80f201f2b023db27606,COPYING umbrella + complete file headers; no distinct conflicting notice found
+regex.c,LGPL-2.0-or-later,5423850fec806890706ff02f345e973143f3fb3a76a0fd5b5d69e31ac2772ad6,LEGAL + LGPL headers
+regex.h,LGPL-2.0-or-later,590e0b276b4a4e4ac92d940a2b6ce38942856a0facd344e0b22c3c9679775c0c,LEGAL + LGPL headers
+ruby.c,Ruby License OR GPL-2.0-only,17b011cdd58f71400ee8c81eac52c4db97cad66f9f035de46727399b0bc81833,COPYING umbrella + complete file headers; no distinct conflicting notice found
+ruby.h,Ruby License OR GPL-2.0-only,a1c67ef7b8959d02aec1062639a22c4e7c15a9eafb2ac5d0c1351cbb1aaae1db,COPYING umbrella + complete file headers; no distinct conflicting notice found
+rubyio.h,Ruby License OR GPL-2.0-only,40f1ad1d187423af5cd399a92ca7dc6e5430aa5f995280cb9e2853e10f590082,COPYING umbrella + complete file headers; no distinct conflicting notice found
+rubysig.h,Ruby License OR GPL-2.0-only,00e0381ece18df7c9ddfa692dd6ef4f7a0ea0d7275696bc332cc7d8bb2e63062,COPYING umbrella + complete file headers; no distinct conflicting notice found
+signal.c,Ruby License OR GPL-2.0-only,249c0f7cbe106f97ad94939c748768abafe2df256c6e354e22fc8c4101c66b37,COPYING umbrella + complete file headers; no distinct conflicting notice found
+sprintf.c,Ruby License OR GPL-2.0-only,a2da60dc152ea9bf02156aa4edba48b7017e0341df037923c21fe9e34df49195,COPYING umbrella + complete file headers; no distinct conflicting notice found
+st.c,Public-domain (plus preserve any embedded notices),4352897be5358064e029044b0d45bd4e43ca2764ab22616527a13555b660d628,LEGAL + file headers
+st.h,Public-domain (plus preserve any embedded notices),fb5919257eb37c6ffcdb497def714e86008d5db0ff0b0359b564751f5aaa599a,LEGAL + file headers
+string.c,Ruby License OR GPL-2.0-only,1da254b7d3b4f504f7a333861dabf54c28f44486d8d89065bd71f30c8d640f81,COPYING umbrella + complete file headers; no distinct conflicting notice found
+struct.c,Ruby License OR GPL-2.0-only,d970d6f1426e15b5828285357520bb9a352ac3e9813903d2bdfc76ef8f1d95d2,COPYING umbrella + complete file headers; no distinct conflicting notice found
+time.c,Ruby License OR GPL-2.0-only,995a27e3b9d85fd468d5a4b773e6e787d01d167be74acea19e76ddac7e15c9b7,COPYING umbrella + complete file headers; no distinct conflicting notice found
+util.c,Ruby License OR GPL-2.0-only; Intergraph Perl GPL/Artistic fragment; Lucent dtoa permissive notice,8089d3d382bcc44fa67e3e3d81347b5ccfb84bd851d86e88d4891d711b66c1e8,util.c sections + LEGAL
+util.h,Ruby License OR GPL-2.0-only,c5efacf7d85259d3cceca9b2a26502842925a66eab4b74689ceaf12c47ce6e37,COPYING umbrella + complete file headers; no distinct conflicting notice found
+variable.c,Ruby License OR GPL-2.0-only,8f092cda55bbb775f1ee470891509c6e0b29ed5cd1931371c4e9b29446efc43a,COPYING umbrella + complete file headers; no distinct conflicting notice found
+version.c,Ruby License OR GPL-2.0-only,09c59c144fde06c2c5bf213dad4d1f4e0ba62bfe7d50d4450dcdcd68cb68e203,COPYING umbrella + complete file headers; no distinct conflicting notice found
+version.h,Ruby License OR GPL-2.0-only,9308152d5516a7f7d2989798f9ceca0afd0bfeda698111028d00b36f183b0b93,COPYING umbrella + complete file headers; no distinct conflicting notice found

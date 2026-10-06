@@ -1,0 +1,11 @@
+uniform sampler2D texture;
+varying highp vec2 v_texCoord;
+varying vec2 v_blurCoord[2];
+void main ()
+{
+  lowp vec4 frag_1;
+  frag_1 = (texture2D (texture, v_texCoord) + texture2D (texture, v_blurCoord[0]));
+  frag_1 = (frag_1 + texture2D (texture, v_blurCoord[1]));
+  gl_FragColor = (frag_1 / 3.0);
+}
+

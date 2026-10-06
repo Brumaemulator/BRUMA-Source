@@ -1,0 +1,501 @@
+[
+  {
+    "entry": "include/ruby/oniguruma.h:",
+    "compiled_source_or_header": [
+      "include/ruby/oniguruma.h"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "regcomp.c:",
+    "compiled_source_or_header": [
+      "regcomp.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "regenc.[ch]:",
+    "compiled_source_or_header": [
+      "regenc.c",
+      "regenc.h"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "regerror.c:",
+    "compiled_source_or_header": [
+      "regerror.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "regexec.c:",
+    "compiled_source_or_header": [
+      "regexec.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "regint.h:",
+    "compiled_source_or_header": [
+      "regint.h"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "regparse.[ch]:",
+    "compiled_source_or_header": [
+      "regparse.c",
+      "regparse.h"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/ascii.c",
+    "compiled_source_or_header": [
+      "enc/ascii.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/big5.c",
+    "compiled_source_or_header": [
+      "enc/big5.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/cp949.c",
+    "compiled_source_or_header": [
+      "enc/cp949.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/emacs_mule.c",
+    "compiled_source_or_header": [
+      "enc/emacs_mule.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/encdb.c",
+    "compiled_source_or_header": [
+      "enc/encdb.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/euc_jp.c",
+    "compiled_source_or_header": [
+      "enc/euc_jp.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/euc_kr.c",
+    "compiled_source_or_header": [
+      "enc/euc_kr.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/euc_tw.c",
+    "compiled_source_or_header": [
+      "enc/euc_tw.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/gb18030.c",
+    "compiled_source_or_header": [
+      "enc/gb18030.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/gb2312.c",
+    "compiled_source_or_header": [
+      "enc/gb2312.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/gbk.c",
+    "compiled_source_or_header": [
+      "enc/gbk.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/iso_8859_1.c",
+    "compiled_source_or_header": [
+      "enc/iso_8859_1.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/iso_8859_10.c",
+    "compiled_source_or_header": [
+      "enc/iso_8859_10.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/iso_8859_11.c",
+    "compiled_source_or_header": [
+      "enc/iso_8859_11.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/iso_8859_13.c",
+    "compiled_source_or_header": [
+      "enc/iso_8859_13.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/iso_8859_14.c",
+    "compiled_source_or_header": [
+      "enc/iso_8859_14.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/iso_8859_15.c",
+    "compiled_source_or_header": [
+      "enc/iso_8859_15.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/iso_8859_16.c",
+    "compiled_source_or_header": [
+      "enc/iso_8859_16.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/iso_8859_2.c",
+    "compiled_source_or_header": [
+      "enc/iso_8859_2.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/iso_8859_3.c",
+    "compiled_source_or_header": [
+      "enc/iso_8859_3.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/iso_8859_4.c",
+    "compiled_source_or_header": [
+      "enc/iso_8859_4.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/iso_8859_5.c",
+    "compiled_source_or_header": [
+      "enc/iso_8859_5.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/iso_8859_6.c",
+    "compiled_source_or_header": [
+      "enc/iso_8859_6.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/iso_8859_7.c",
+    "compiled_source_or_header": [
+      "enc/iso_8859_7.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/iso_8859_8.c",
+    "compiled_source_or_header": [
+      "enc/iso_8859_8.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/iso_8859_9.c",
+    "compiled_source_or_header": [
+      "enc/iso_8859_9.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/koi8_r.c",
+    "compiled_source_or_header": [
+      "enc/koi8_r.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/koi8_u.c",
+    "compiled_source_or_header": [
+      "enc/koi8_u.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/shift_jis.c",
+    "compiled_source_or_header": [
+      "enc/shift_jis.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/unicode.c",
+    "compiled_source_or_header": [
+      "enc/unicode.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/us_ascii.c",
+    "compiled_source_or_header": [
+      "enc/us_ascii.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/utf_16be.c",
+    "compiled_source_or_header": [
+      "enc/utf_16be.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/utf_16le.c",
+    "compiled_source_or_header": [
+      "enc/utf_16le.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/utf_32be.c",
+    "compiled_source_or_header": [
+      "enc/utf_32be.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/utf_32le.c",
+    "compiled_source_or_header": [
+      "enc/utf_32le.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/utf_8.c",
+    "compiled_source_or_header": [
+      "enc/utf_8.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "enc/windows_1251.c",
+    "compiled_source_or_header": [
+      "enc/windows_1251.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "configure:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "tool/config.guess:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "tool/config.sub:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "parse.c:",
+    "compiled_source_or_header": [
+      "parse.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "util.c (partly):",
+    "compiled_source_or_header": [
+      "util.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "win32/win32.[ch]:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "util.c (partly):",
+    "compiled_source_or_header": [
+      "util.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "vsnprintf.c:",
+    "compiled_source_or_header": [
+      "vsnprintf.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "st.[ch]:",
+    "compiled_source_or_header": [
+      "st.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "missing/alloca.c:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "missing/dup2.c:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "missing/erf.c:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "missing/finite.c:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "missing/hypot.c:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "missing/isinf.c:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "missing/isnan.c:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "missing/lgamma_r.c:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "missing/memcmp.c:",
+    "compiled_source_or_header": [
+      "missing/memcmp.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "missing/memmove.c:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "missing/strchr.c:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "missing/strstr.c:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "missing/strtol.c:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "missing/tgamma.c:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "ext/digest/sha1/sha1.[ch]:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "missing/crypt.c:",
+    "compiled_source_or_header": [
+      "missing/crypt.c"
+    ],
+    "status": "COMPILED: notices retained"
+  },
+  {
+    "entry": "ext/digest/md5/md5.[ch]:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "ext/digest/rmd160/rmd160.[ch]:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "ext/digest/sha2/sha2.[ch]:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "ext/nkf/nkf-utf8/config.h:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "ext/nkf/nkf-utf8/nkf.c:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "ext/nkf/nkf-utf8/utf8tbl.c:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "ext/socket/addrinfo.h:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "ext/socket/getaddrinfo.c:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "ext/socket/getnameinfo.c:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  },
+  {
+    "entry": "ext/win32ole/win32ole.c:",
+    "compiled_source_or_header": [],
+    "status": "NOT IN COMPILED INPUTS (or build tool); original source and LEGAL retained"
+  }
+]

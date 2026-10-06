@@ -1,0 +1,1505 @@
+{
+  "official_archive_sha256": "44228297861f4dfdf23a47372a3e3c4c5116fbf5b0e10883417f2379874b55c6",
+  "ruby_license_option_selected": "BSD-2-Clause, not historical Ruby custom conditions",
+  "core_archive_members": [
+    "dln.o",
+    "encoding.o",
+    "version.o",
+    "array.o",
+    "bignum.o",
+    "class.o",
+    "compar.o",
+    "complex.o",
+    "dir.o",
+    "dln_find.o",
+    "enum.o",
+    "enumerator.o",
+    "error.o",
+    "eval.o",
+    "load.o",
+    "proc.o",
+    "file.o",
+    "gc.o",
+    "hash.o",
+    "inits.o",
+    "io.o",
+    "marshal.o",
+    "math.o",
+    "node.o",
+    "numeric.o",
+    "object.o",
+    "pack.o",
+    "parse.o",
+    "process.o",
+    "random.o",
+    "range.o",
+    "rational.o",
+    "re.o",
+    "regcomp.o",
+    "regenc.o",
+    "regerror.o",
+    "regexec.o",
+    "regparse.o",
+    "regsyntax.o",
+    "ruby.o",
+    "safe.o",
+    "signal.o",
+    "sprintf.o",
+    "st.o",
+    "strftime.o",
+    "string.o",
+    "struct.o",
+    "time.o",
+    "transcode.o",
+    "util.o",
+    "variable.o",
+    "compile.o",
+    "debug.o",
+    "iseq.o",
+    "vm.o",
+    "vm_dump.o",
+    "thread.o",
+    "cont.o",
+    "ascii.o",
+    "us_ascii.o",
+    "unicode.o",
+    "utf_8.o",
+    "newline.o",
+    "memcmp.o",
+    "crypt.o",
+    "setproctitle.o",
+    "addr2line.o",
+    "prelude.o",
+    "dmyext.o"
+  ],
+  "dependency_errors": [],
+  "files": [
+    {
+      "path": "native/ruby193/addr2line.c",
+      "sha256": "4ad5accc9bc2ddebd42b2bf90868eed7891577080e379bf8f1d159146a7da27a",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  addr2line.h -\n\n  $Author$\n\n  Copyright (C) 2010 Shinichiro Hamaji\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/addr2line.h",
+      "sha256": "0e9ee30b28e3af63b2a3e75e28b8289f5ed8dcc1e8c7d5c31fcda490d2f42590",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  addr2line.h -\n\n  $Author$\n\n  Copyright (C) 2010 Shinichiro Hamaji\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/array.c",
+      "sha256": "bc1bb986c4efa00dcae90a8d7cb1148592bfdacb972bfed74d59d09ba08c1fd8",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  array.c -\n\n  $Author: usa $\n  created at: Fri Aug  6 09:46:12 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.\n  Copyright (C) 2000  Information-technology Promotion Agency, Japan\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/bignum.c",
+      "sha256": "43fa2829a1bb1849409f6bada2e88103b1e6bb67a99d895b6fa3c89e3a980cc1",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  bignum.c -\n\n  $Author: usa $\n  created at: Fri Jun 10 00:48:55 JST 1994\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/class.c",
+      "sha256": "30afae97c9cf73c716bd0bb6015354c672c4f6bb9f5fcb0f57b05e93de243791",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  class.c -\n\n  $Author: usa $\n  created at: Tue Aug 10 15:05:44 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/compar.c",
+      "sha256": "f54e848fdbc1a28d1991f06de21b17303cca3ef935882f3135916fa6da296ebf",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  compar.c -\n\n  $Author: usa $\n  created at: Thu Aug 26 14:39:48 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/compile.c",
+      "sha256": "39205e77f1ad019bd6db0a1c7c5e312fac480f45c8ebff7fde1efe31339385f3",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  compile.c - ruby node tree -> VM instruction sequence\n\n  $Author: usa $\n  created at: 04/01/01 03:42:15 JST\n\n  Copyright (C) 2004-2007 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/complex.c",
+      "sha256": "67ef73a9760dd594331292bc983c8c9e174a8d28491be12a7985544341b54d7e",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/constant.h",
+      "sha256": "a8c68c06ec6e6ca35e447a66ea5c95f0ee73b56396cedd8c461e4429257468c3",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  constant.h -\n\n  $Author$\n  created at: Sun Nov 15 00:09:33 2009\n\n  Copyright (C) 2009 Yusuke Endoh\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/cont.c",
+      "sha256": "bd6ad42f32984eb7dba6e6422dd683898dc5a8f5e8cdf40c496c0ad463448433",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  cont.c -\n\n  $Author: naruse $\n  created at: Thu May 23 09:03:43 2007\n\n  Copyright (C) 2007 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/debug.c",
+      "sha256": "badf0ff3ad1a812049e5109946657081daa49a9a68d50bcc064e11f63c72ceb3",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  debug.c -\n\n  $Author: akr $\n  created at: 04/08/25 02:31:54 JST\n\n  Copyright (C) 2004-2007 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/debug.h",
+      "sha256": "f8c69e8a137c33e061fa46db9e39f0fccf94f063a90250fb02b74da7c51cc681",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  debug.h - YARV Debug function interface\n\n  $Author: akr $\n  created at: 04/08/25 02:33:49 JST\n\n  Copyright (C) 2004-2007 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/dir.c",
+      "sha256": "0dcb29b0aa3bcc6b51a94dfad81f32cf80430f0950473733318df1b4867063a7",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  dir.c -\n\n  $Author: usa $\n  created at: Wed Jan  5 09:51:01 JST 1994\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.\n  Copyright (C) 2000  Information-technology Promotion Agency, Japan\n\n**********************************************************************/",
+        "/*\n *  call-seq:\n *     Dir.mkdir( string [, integer] ) -> 0\n *\n *  Makes a new directory named by <i>string</i>, with permissions\n *  specified by the optional parameter <i>anInteger</i>. The\n *  permissions may be modified by the value of\n *  <code>File::umask</code>, and are ignored on NT. Raises a\n *  <code>SystemCallError</code> if the directory cannot be created. See\n *  also the discussion of permissions in the class documentation for\n *  <code>File</code>.\n *\n *    Dir.mkdir(File.join(Dir.home, \".foo\"), 0700) #=> 0\n *\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/dln.c",
+      "sha256": "9cc9cf2f0236e5cbf8adabf6f793a339b06526ee5ea9f5446e6d6f05fa4c647b",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  dln.c -\n\n  $Author: nobu $\n  created at: Tue Jan 18 17:05:06 JST 1994\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/dln.h",
+      "sha256": "045242b5a63a0a83506f8d4a96b85fc7e7b77b7baf60638c3efcff13598566c7",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  dln.h -\n\n  $Author: nobu $\n  created at: Wed Jan 19 16:53:09 JST 1994\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/dln_find.c",
+      "sha256": "520362df39d9b50e6b99afaf34391026c503171e315957aabdc997981c9f3f97",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  dln_find.c -\n\n  $Author: nobu $\n  created at: Tue Jan 18 17:05:06 JST 1994\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/dmyext.c",
+      "sha256": "fea6dee01092ad8be202238a7b8599fd2f9c1468baac99e347279e2507903115",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/ascii.c",
+      "sha256": "8edb09a37589a18c14f2ed87fa900a050b660707f27046fd1fe999f74d80c73a",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2006  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/big5.c",
+      "sha256": "5aac83ac04fe144087c90b34682a560bbb5bd62ca66200f8b52dcf46a5217afb",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/cp949.c",
+      "sha256": "4395c795714ccc6173b97c489ae4093d03de2b1fc3ec50ad6a8b5999dc2cc1dd",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/emacs_mule.c",
+      "sha256": "a549718172ef10016d9ffa3ddddf3ada46dd7e836e6ceb283f9ab333fa29a57b",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/encdb.c",
+      "sha256": "31735a3e35b7624c89e6b712d3775b52adff305642b0fbeff688cafa7cef53d3",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  enc/encdb.c -\n\n  $Author: akr $\n  created at: Mon Apr  7 15:51:31 2008\n\n  Copyright (C) 2008 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/euc_jp.c",
+      "sha256": "5f3561fed5a00a01853f209cdd05f98e36907aa273dc9f532679227e1d56e67c",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/euc_kr.c",
+      "sha256": "736f392704cfb2c2213ad1d85077b95c1ca667d0a016df20c9c59eff627f2572",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/euc_tw.c",
+      "sha256": "0d8e2b44b055a3dfbc85015f12e7e54ea68fd988ba9222a05b76f03b0b3914f0",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2008  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/gb18030.c",
+      "sha256": "f0925950664c637e48b149404a2bddcd8b7b05a6b857de555d775d470b413a73",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2005-2007  KUBO Takehiro <kubo AT jiubao DOT org>\n *                          K.Kosako <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/gb2312.c",
+      "sha256": "4e9f69b45f6cf330d8834743465397ee578fc02d07e8d67531f6d5f7c791222a",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/gbk.c",
+      "sha256": "2674e34b6b6e3e6e1678f0a91ca2fd05c44d449f3541c1c7de4923f1e0a40ee0",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/iso_8859_1.c",
+      "sha256": "f0669a876546503b14e2611578a837552d02331be5f5383c964debae75f82c9c",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/iso_8859_10.c",
+      "sha256": "4032250d2f7a9e24a905f237fa10066407d3881a55a36169c2aea3268b7f317e",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/iso_8859_11.c",
+      "sha256": "7129ff42478e744a9f39d480ca61c25eb477e79200bd41d656ffdc237736c0b0",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/iso_8859_13.c",
+      "sha256": "3998dd019f83e135c482a28f173d0538c7cb76d1a5ea922454f78774cab9a828",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/iso_8859_14.c",
+      "sha256": "e415522628c7343f83a90df1ceed08cf1efa3f7cdca6461517150b28b0e159f4",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/iso_8859_15.c",
+      "sha256": "1c1d48d2c30e8ea4362fdc52af6a9b03de19b8731505c7ac33c572c3bf06d0b5",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/iso_8859_16.c",
+      "sha256": "acf1790bc7218bdf49bab43b71fbc5e318f9e813a6a8e4a8615556e2bc3be0db",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/iso_8859_2.c",
+      "sha256": "b99aaa3b7961dcf4c01b3353d647863c05346e19be1cd242e7edbbb210601d86",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/iso_8859_3.c",
+      "sha256": "9a3853ba6a1b9a05d99af6e731874cbfe8a8b771330f66ac3a6a8a01b79fada2",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/iso_8859_4.c",
+      "sha256": "102f061ca6d85496dae24292399cdb2ab6d00438c7afed71827f00b04d5ae379",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/iso_8859_5.c",
+      "sha256": "d0ab22eb8a4121c88d5472a213c77260ae49e3a9a6b1d6e00fa8c0f7a994d6c5",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2008  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/iso_8859_6.c",
+      "sha256": "b4ac831e64f7fcc3e5101029170f475a96c4caa4348dd922afe60e5372a5b3b9",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/iso_8859_7.c",
+      "sha256": "56aac61f47d984180cc7a6cf5c8c87eb8ff20ee9cfbad5461bcbd4da6d36d9e4",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/iso_8859_8.c",
+      "sha256": "b105d1170210eb930667b1a43c39bcf83980aa915da2d48e56990dea759c8c29",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/iso_8859_9.c",
+      "sha256": "134b6adf9cc6a61389f3098810fe428bc8ca708faf436fdd4d7c4aaa608fc141",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/koi8_r.c",
+      "sha256": "79a6a0e53f7a20182eb656e9dba5764a8ade177ce039979094a4440fb4cd08c6",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2008  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/koi8_u.c",
+      "sha256": "ab1bd4f224a93a382749ddc370d2b9f844a86fd06dea9272d7055914993bec83",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2008  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/shift_jis.c",
+      "sha256": "61ab13414e36a663dc202f822c9b09125bdb9e7d381a533d6eae47989c22b2c3",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2008  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/trans/big5.c",
+      "sha256": "dcdb20860ac023b4f3e77936987f1c7d1f80be40f9187ec7c3fec4c7e394c88f",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/trans/chinese.c",
+      "sha256": "f7a6b3dc938c0445792a3d29bfedc41663def643dd5409ca0386f6890ab0d30c",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/trans/emoji.c",
+      "sha256": "6cc64dd37d5df2c18eaa7821eb8f02457150b1ad563ef39da2642f2fda7bba38",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/trans/emoji_iso2022_kddi.c",
+      "sha256": "cdcfda94cc608bfb7e214de6da7a1b5ca1b8cfdff8c396e25d13cb51bd4ec82f",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/trans/emoji_sjis_docomo.c",
+      "sha256": "81925ff154f7a694e79d43058a48f013fe6571bba226fb1bed7930e555e7e616",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/trans/emoji_sjis_kddi.c",
+      "sha256": "b279bbcd966c7825868e8a929c1652cf04f8221c88a82f3d9d8ccd5a409ba9f4",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/trans/emoji_sjis_softbank.c",
+      "sha256": "c4c270e39df8e58598a581b2b187c8f20df603d1171b009abb8b12ff8ac5e878",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/trans/escape.c",
+      "sha256": "52e468851efec96f799439f7d91d61e751b0352150fb120dbf496eeb033b744a",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/trans/gb18030.c",
+      "sha256": "b5e066697e9f6d15a5025164dfbc8b74fac88d14699ba341a162fb850b98161d",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/trans/gbk.c",
+      "sha256": "37535727156bbdb981f482d3828a0dfdf20d275e0feb03eb176eb9e87bb2c1c5",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/trans/iso2022.c",
+      "sha256": "7d08ab8e410687483d0ba25e7c9bdc8bcc09f60d780cc63798be5a67894551b6",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/trans/japanese.c",
+      "sha256": "6a9d6e754868b49665c2add353026ce86c4451eee69369d02c8003250e1bd8cb",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/trans/japanese_euc.c",
+      "sha256": "6336974a8e8ebc7d905f74b8e77e93602a750b24728c5e1b5cdfa17eb37f72c0",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/trans/japanese_sjis.c",
+      "sha256": "0f4891041db320eea9f010bd1a7ad434e502eaef283921db708e928fe57875d7",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/trans/korean.c",
+      "sha256": "c40df4fb2c79b5686a9b98fb61a3ea3f02292248eb1c9b9894ee2e1b46d1a067",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/trans/single_byte.c",
+      "sha256": "64f054d0fb64b373bcb9a608f803b6937946745fd680046257fe6224fcc09e6c",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/trans/transdb.c",
+      "sha256": "cc4e587ff60f3f3e517f501b3315b4476da6feba84ce4855db6cbd1c0e645642",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  enc/trans/transdb.c -\n\n  $Author: akr $\n  created at: Mon Apr  7 15:51:31 2008\n\n  Copyright (C) 2008 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/trans/utf8_mac.c",
+      "sha256": "2df71cf0e6df097e21bfb43cda02d866c8f58162822f7a4c3f36a38ae07d8e28",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/trans/utf_16_32.c",
+      "sha256": "432f47b141be2692b87865b7c07785ce5a93f2db894b7472a05aacebd972ae85",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/unicode/name2ctype.h",
+      "sha256": "0bbe9ec55e2821a4a2fb0b853189370532a0d7baef95f9dbfa967117e353b822",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/unicode.c",
+      "sha256": "4f52b869e8e8a05213e2f505ac11edba3cc31685ddb8537860ae96eb4aea186b",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2008  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/us_ascii.c",
+      "sha256": "6aa9c511afb9544ca023cd15ca7c69a05a8e32d4b5bd470c34504b9eee80db6f",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/enc/utf_16be.c",
+      "sha256": "e89f983d5d6998892f152ba2aa4f08508329d26b0b31e43b23460fc1a34c84ed",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2008  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/utf_16le.c",
+      "sha256": "e92d879514a9874a8fc36a923382eddc45386cbcc471e35d001d4143d27c9ab8",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2008  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/utf_32be.c",
+      "sha256": "4de457da59b5b9414ea9d4764a042a0e640407f2e69a9b91179105b78001ca00",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/utf_32le.c",
+      "sha256": "765b851317779fc8164fb1333d9f15a25c9fd5ce683c112282f772c3636e1125",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/utf_8.c",
+      "sha256": "4b5397e4f3179a51f9c8678a4b77eb182a672ee5eb741cafe6c0c50ce376de04",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/enc/windows_1251.c",
+      "sha256": "172994b47d60c9ee850dc7d3cbe2d597428e970ca6471308512707877b27bb0f",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2006-2007  Byte      <byte AT mail DOT kna DOT ru>\n *                          K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/encdb.h",
+      "sha256": "90efe538db98560ee2cc67732a22b966f0ff13f73e2a4e8bd5422b80fb39a3a7",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/encoding.c",
+      "sha256": "7f019582809e289f17972f4e6c4f3557969cca700b6ef32e5ae8b704e44472bf",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  encoding.c -\n\n  $Author: naruse $\n  created at: Thu May 24 17:23:27 JST 2007\n\n  Copyright (C) 2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/enum.c",
+      "sha256": "5c275712e50bb168094b8b0811bb95e68ded615602551d8122fbd113ecf2dbeb",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  enum.c -\n\n  $Author: naruse $\n  created at: Fri Oct  1 15:15:19 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/enumerator.c",
+      "sha256": "99a870e6549245a28f6229f05bc69fbc0e74fcb2b8b067a2801d669b7ab598c8",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/************************************************\n\n  enumerator.c - provides Enumerator class\n\n  $Author: usa $\n\n  Copyright (C) 2001-2003 Akinori MUSHA\n\n  $Idaemons: /home/cvs/rb/enumerator/enumerator.c,v 1.1.1.1 2001/07/15 10:12:48 knu Exp $\n  $RoughId: enumerator.c,v 1.6 2003/07/27 11:03:24 nobu Exp $\n  $Id: enumerator.c 44749 2014-01-29 10:23:19Z usa $\n\n************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/error.c",
+      "sha256": "a260135753ddba6102d32aff6c11b6fc256b2c00b8162850bfa4dc5e6b4ad7d0",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  error.c -\n\n  $Author: usa $\n  created at: Mon Aug  9 16:11:34 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/eval.c",
+      "sha256": "686446f0f148c14ebf7017578a0491106deae113f687b09679f7fe8dab565b1a",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  eval.c -\n\n  $Author: usa $\n  created at: Thu Jun 10 14:22:17 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.\n  Copyright (C) 2000  Information-technology Promotion Agency, Japan\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/eval_error.c",
+      "sha256": "321cf240fea432e1b2a22802d3f1cad4e812601a95738482fdaa0c9560233beb",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/eval_intern.h",
+      "sha256": "d0709bfe5706893120e7ea689bc34de3f4cda950ca900d1d3dde75bed107581e",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/eval_jump.c",
+      "sha256": "894efe928db34dd3757c89d57d7d67646bdb920b53dea5be302bb9d7975a447e",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/ext/zlib/zlib.c",
+      "sha256": "cb266cc70e1173787cebb547d6462ecd73f0fa82a0dc76d9d06ab84799d29686",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/*\n * zlib.c - An interface for zlib.\n *\n *   Copyright (C) UENO Katsuhiro 2000-2003\n *\n * $Id: zlib.c 45091 2014-02-22 00:50:33Z usa $\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/file.c",
+      "sha256": "d9741fa0d017b46304469e96d16e4fc8df782e1b8e90e7132295a36d4be42a53",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  file.c -\n\n  $Author: usa $\n  created at: Mon Nov 15 12:24:34 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.\n  Copyright (C) 2000  Information-technology Promotion Agency, Japan\n\n**********************************************************************/",
+        "/*\n *  call-seq:\n *     stat.mode   -> fixnum\n *\n *  Returns an integer representing the permission bits of\n *  <i>stat</i>. The meaning of the bits is platform dependent; on\n *  Unix systems, see <code>stat(2)</code>.\n *\n *     File.chmod(0644, \"testfile\")   #=> 1\n *     s = File.stat(\"testfile\")\n *     sprintf(\"%o\", s.mode)          #=> \"100644\"\n */",
+        "/*\n * call-seq:\n *    File.world_readable?(file_name)   -> fixnum or nil\n *\n * If <i>file_name</i> is readable by others, returns an integer\n * representing the file permission bits of <i>file_name</i>. Returns\n * <code>nil</code> otherwise. The meaning of the bits is platform\n * dependent; on Unix systems, see <code>stat(2)</code>.\n *\n *    File.world_readable?(\"/etc/passwd\")\t    #=> 420\n *    m = File.world_readable?(\"/etc/passwd\")\n *    sprintf(\"%o\", m)\t\t\t\t    #=> \"644\"\n */",
+        "/*\n * call-seq:\n *    File.world_writable?(file_name)   -> fixnum or nil\n *\n * If <i>file_name</i> is writable by others, returns an integer\n * representing the file permission bits of <i>file_name</i>. Returns\n * <code>nil</code> otherwise. The meaning of the bits is platform\n * dependent; on Unix systems, see <code>stat(2)</code>.\n *\n *    File.world_writable?(\"/tmp\")\t\t    #=> 511\n *    m = File.world_writable?(\"/tmp\")\n *    sprintf(\"%o\", m)\t\t\t\t    #=> \"777\"\n */",
+        "/*\n *  call-seq:\n *     File.chmod(mode_int, file_name, ... )  ->  integer\n *\n *  Changes permission bits on the named file(s) to the bit pattern\n *  represented by <i>mode_int</i>. Actual effects are operating system\n *  dependent (see the beginning of this section). On Unix systems, see\n *  <code>chmod(2)</code> for details. Returns the number of files\n *  processed.\n *\n *     File.chmod(0644, \"testfile\", \"out\")   #=> 2\n */",
+        "/*\n *  call-seq:\n *     file.chmod(mode_int)   -> 0\n *\n *  Changes permission bits on <i>file</i> to the bit pattern\n *  represented by <i>mode_int</i>. Actual effects are platform\n *  dependent; on Unix systems, see <code>chmod(2)</code> for details.\n *  Follows symbolic links. Also see <code>File#lchmod</code>.\n *\n *     f = File.new(\"out\", \"w\");\n *     f.chmod(0644)   #=> 0\n */",
+        "/*\n *  call-seq:\n *     File.lchmod(mode_int, file_name, ...)  -> integer\n *\n *  Equivalent to <code>File::chmod</code>, but does not follow symbolic\n *  links (so it will change the permissions associated with the link,\n *  not the file referenced by the link). Often not available.\n *\n */",
+        "/*\n *  call-seq:\n *     File.umask()          -> integer\n *     File.umask(integer)   -> integer\n *\n *  Returns the current umask value for this process. If the optional\n *  argument is given, set the umask to that value and return the\n *  previous value. Umask values are <em>subtracted</em> from the\n *  default permissions, so a umask of <code>0222</code> would make a\n *  file read-only for everyone.\n *\n *     File.umask(0006)   #=> 18\n *     File.umask         #=> 6\n */",
+        "/*\n * call-seq:\n *    stat.world_readable? -> fixnum or nil\n *\n * If <i>stat</i> is readable by others, returns an integer\n * representing the file permission bits of <i>stat</i>. Returns\n * <code>nil</code> otherwise. The meaning of the bits is platform\n * dependent; on Unix systems, see <code>stat(2)</code>.\n *\n *    m = File.stat(\"/etc/passwd\").world_readable?  #=> 420\n *    sprintf(\"%o\", m)\t\t\t\t    #=> \"644\"\n */",
+        "/*\n * call-seq:\n *    stat.world_writable?  ->  fixnum or nil\n *\n * If <i>stat</i> is writable by others, returns an integer\n * representing the file permission bits of <i>stat</i>. Returns\n * <code>nil</code> otherwise. The meaning of the bits is platform\n * dependent; on Unix systems, see <code>stat(2)</code>.\n *\n *    m = File.stat(\"/tmp\").world_writable?\t    #=> 511\n *    sprintf(\"%o\", m)\t\t\t\t    #=> \"777\"\n */",
+        "/*\n *  call-seq:\n *     stat.setuid?    -> true or false\n *\n *  Returns <code>true</code> if <i>stat</i> has the set-user-id\n *  permission bit set, <code>false</code> if it doesn't or if the\n *  operating system doesn't support this feature.\n *\n *     File.stat(\"/bin/su\").setuid?   #=> true\n */",
+        "/*\n *  call-seq:\n *     stat.setgid?   -> true or false\n *\n *  Returns <code>true</code> if <i>stat</i> has the set-group-id\n *  permission bit set, <code>false</code> if it doesn't or if the\n *  operating system doesn't support this feature.\n *\n *     File.stat(\"/usr/sbin/lpc\").setgid?   #=> true\n *\n */",
+        "/*\n *  A <code>File</code> is an abstraction of any file object accessible\n *  by the program and is closely associated with class <code>IO</code>\n *  <code>File</code> includes the methods of module\n *  <code>FileTest</code> as class methods, allowing you to write (for\n *  example) <code>File.exist?(\"foo\")</code>.\n *\n *  In the description of File methods,\n *  <em>permission bits</em> are a platform-specific\n *  set of bits that indicate permissions of a file. On Unix-based\n *  systems, permissions are viewed as a set of three octets, for the\n *  owner, the group, and the rest of the world. For each of these\n *  entities, permissions may be set to read, write, or execute the\n *  file:\n *\n *  The permission bits <code>0644</code> (in octal) would thus be\n *  interpreted as read/write for owner, and read-only for group and\n *  other. Higher-order bits may also be used to indicate the type of\n *  file (plain, directory, pipe, socket, and so on) and various other\n *  special features. If the permissions are for a directory, the\n *  meaning of the execute bit changes; when set the directory can be\n *  searched.\n *\n *  On non-Posix operating systems, there may be only the ability to\n *  make a file read-only or read-write. In this case, the remaining\n *  permission bits will be synthesized to resemble typical values. For\n *  instance, on Windows NT the default permission bits are\n *  <code>0644</code>, which means read/write for owner, read-only for\n *  all others. The only change that can be made is to make the file\n *  read-only, which is reported as <code>0444</code>.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/gc.c",
+      "sha256": "2816083a97c3a6a19eb25d3d7b058c50d6bfb4f5b1f7be9f6143994c9070ecb9",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  gc.c -\n\n  $Author: usa $\n  created at: Tue Oct  5 09:44:46 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.\n  Copyright (C) 2000  Information-technology Promotion Agency, Japan\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/gc.h",
+      "sha256": "d841b0bdccb819146f59f412157fac488529f61700e99db611bfb5709d6152ac",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/hash.c",
+      "sha256": "170e62936facab139202afcc9aeec7bccbb9811b932fcfb51ff13de7e34607e9",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  hash.c -\n\n  $Author: usa $\n  created at: Mon Nov 22 18:51:18 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.\n  Copyright (C) 2000  Information-technology Promotion Agency, Japan\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/id.c",
+      "sha256": "03ef452dedb57801cdeef2f97c1065660bf086c1b31e2e7094508f0fa3be9772",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  id.c -\n\n  $Author: usa $\n  created at: Thu Jul 12 04:37:51 2007\n\n  Copyright (C) 2004-2007 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/id.h",
+      "sha256": "a82c685ff647c4971500f8f636ad70014e2ded28adb745dd543b3c0008bacc27",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  id.h -\n\n  $Author: usa $\n  created at: Sun Oct 19 21:12:51 2008\n\n  Copyright (C) 2007 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/include/ruby/defines.h",
+      "sha256": "b9a61ec4b2a02d17ed17d3611fecc6121e270006ef181a62efaf433eadf581bc",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/* read permission, owner */",
+        "/* read permission, group */",
+        "/* read permission, other */",
+        "/* write permission, owner */",
+        "/* write permission, group */",
+        "/* write permission, other */",
+        "/* execute/search permission, owner */",
+        "/* execute/search permission, group */",
+        "/* execute/search permission, other */",
+        "/* read, write, execute permissions, owner */",
+        "/* read, write, execute permissions, group */",
+        "/* read, write, execute permissions, other */"
+      ]
+    },
+    {
+      "path": "native/ruby193/include/ruby/encoding.h",
+      "sha256": "4284b733eceedd7ad008bc97f35c7a37c55582043c878185ee6f8d097bc5923f",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  encoding.h -\n\n  $Author: matz $\n  created at: Thu May 24 11:49:41 JST 2007\n\n  Copyright (C) 2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/include/ruby/intern.h",
+      "sha256": "23bf481546e7ae0a04a67778ed6335abe24410147a9d4902ec3c695c7e4a952e",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  intern.h -\n\n  $Author: usa $\n  created at: Thu Jun 10 14:22:17 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.\n  Copyright (C) 2000  Information-technology Promotion Agency, Japan\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/include/ruby/io.h",
+      "sha256": "311112ca76e60a4b64edef2bed0306f17590ad1b21ff8cd5db64ef6797152e17",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  rubyio.h -\n\n  $Author: kosaki $\n  created at: Fri Nov 12 16:47:09 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/include/ruby/missing.h",
+      "sha256": "8c9a9d440917b91373d406debe122691ffa840381250a23a7dc72836ae2c8159",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/include/ruby/oniguruma.h",
+      "sha256": "3a474008d39c16f1921fd21adee39c574233cf5cf2f774f1bdb4749db9a23383",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2008  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/include/ruby/re.h",
+      "sha256": "c00d373350c1738e8a4fc9f158b978d2683c69ce2abc7a68760282f1845df858",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  re.h -\n\n  $Author: nobu $\n  created at: Thu Sep 30 14:18:32 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/include/ruby/regex.h",
+      "sha256": "d5515690ca083760fa3c2829cb6304b039d8054213c389269e77d51faeeafad8",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  regex.h -\n\n  $Author: nobu $\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/include/ruby/ruby.h",
+      "sha256": "de2c4ba4748e3fab6142540c0637a523cb234e6d96d59e2d5f0943d5d026cac5",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  ruby/ruby.h -\n\n  $Author: usa $\n  created at: Thu Jun 10 14:26:32 JST 1993\n\n  Copyright (C) 1993-2008 Yukihiro Matsumoto\n  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.\n  Copyright (C) 2000  Information-technology Promotion Agency, Japan\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/include/ruby/st.h",
+      "sha256": "a100837732b79fc3e89ef0288aa94b44d8cf348a2e778c4fe0fc58c2533d5d75",
+      "license_review": "Public-domain original portions; Ruby modifications BSD-2-Clause option",
+      "notices": [
+        "/* This is a public domain general purpose hash table package written by Peter Moore @ UCB. */"
+      ]
+    },
+    {
+      "path": "native/ruby193/include/ruby/subst.h",
+      "sha256": "9df000cd0136f158e1b51f512774163bd85ad366de3838aec3c6d16c293285be",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/include/ruby/util.h",
+      "sha256": "15cbe425510a86b045790392d3456ebbe3d3df20689f163459e4d4588470d8a5",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  util.h -\n\n  $Author: usa $\n  created at: Thu Mar  9 11:55:53 JST 1995\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/include/ruby/version.h",
+      "sha256": "53d2d5c75ca20cb8aad25f35d2647a430c339f811b9bf69f461f79a66dd8d3a0",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  ruby/version.h -\n\n  $Author: nobu $\n  created at: Wed May 13 12:56:56 JST 2009\n\n  Copyright (C) 1993-2009 Yukihiro Matsumoto\n  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.\n  Copyright (C) 2000  Information-technology Promotion Agency, Japan\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/include/ruby/vm.h",
+      "sha256": "41d7d42a589bc57d96b80f945fd858c8fdc0b3a207f191418f1204fbe22ed38a",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  ruby/vm.h -\n\n  $Author: shyouhei $\n  created at: Sat May 31 15:17:36 2008\n\n  Copyright (C) 2008 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/include/ruby.h",
+      "sha256": "afb8809797e5c9b621825c7005ee7f6f3ec0f2c7d6ffe16fab6690e68cd4f9f2",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  ruby.h -\n\n  $Author$\n  created at: Sun 10 12:06:15 Jun JST 2007\n\n  Copyright (C) 2007-2008 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/inits.c",
+      "sha256": "bbdf9fa37b947329cfe39b68912aef36cd5c7e2a786618c557d11b91dd3164aa",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  inits.c -\n\n  $Author: akr $\n  created at: Tue Dec 28 16:01:58 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/insns.inc",
+      "sha256": "c3e11471f2938da1e36185e206a5b6124eef619b997bee45410ac17a1c69b018",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/insns_info.inc",
+      "sha256": "17d7b5a8ac46f9c0124825f81dc840e1fab92a43a18d63b22c50ac479515af22",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/internal.h",
+      "sha256": "9ead9200a0d6afa15da68d5e2a0715297900c29c5c07e5a0b1b39809ebca4e1d",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  internal.h -\n\n  $Author$\n  created at: Tue May 17 11:42:20 JST 2011\n\n  Copyright (C) 2011 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/io.c",
+      "sha256": "83b9c94f66583d082e759d3737a3c3c804f190427c257edc9917302cf3998a53",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  io.c -\n\n  $Author: usa $\n  created at: Fri Oct 15 18:08:59 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.\n  Copyright (C) 2000  Information-technology Promotion Agency, Japan\n\n**********************************************************************/",
+        "/*\n *  call-seq:\n *     open(path [, mode_enc [, perm]] [, opt])                -> io or nil\n *     open(path [, mode_enc [, perm]] [, opt]) {|io| block }  -> obj\n *\n *  Creates an <code>IO</code> object connected to the given stream,\n *  file, or subprocess.\n *\n *  If <i>path</i> does not start with a pipe character\n *  (``<code>|</code>''), treat it as the name of a file to open using\n *  the specified mode (defaulting to ``<code>r</code>'').\n *\n *  The mode_enc is\n *  either a string or an integer.  If it is an integer, it must be\n *  bitwise-or of open(2) flags, such as File::RDWR or File::EXCL.\n *  If it is a string, it is either \"mode\", \"mode:ext_enc\", or\n *  \"mode:ext_enc:int_enc\".\n *  The mode is one of the following:\n *\n *   r: read (default)\n *   w: write\n *   a: append\n *\n *  The mode can be followed by \"b\" (means binary-mode), or \"+\"\n *  (means both reading and writing allowed) or both.\n *  If ext_enc (external encoding) is specified,\n *  read string will be tagged by the encoding in reading,\n *  and output string will be converted\n *  to the specified encoding in writing.\n *  If ext_enc starts with 'BOM|', check whether the input has a BOM. If\n *  there is a BOM, strip it and set external encoding as\n *  what the BOM tells. If there is no BOM, use ext_enc without 'BOM|'.\n *  If two encoding names,\n *  ext_enc and int_enc (external encoding and internal encoding),\n *  are specified, the read string is converted from ext_enc\n *  to int_enc then tagged with the int_enc in read mode,\n *  and in write mode, the output string will be\n *  converted from int_enc to ext_enc before writing.\n *\n *  If a file is being created, its initial permissions may be\n *  set using the integer third parameter.\n *\n *  If a block is specified, it will be invoked with the\n *  <code>File</code> object as a parameter, and the file will be\n *  automatically closed when the block terminates. The call\n *  returns the value of the block.\n *\n *  If <i>path</i> starts with a pipe character, a subprocess is\n *  created, connected to the caller by a pair of pipes. The returned\n *  <code>IO</code> object may be used to write to the standard input\n *  and read from the standard output of this subprocess. If the command\n *  following the ``<code>|</code>'' is a single minus sign, Ruby forks,\n *  and this subprocess is connected to the parent. In the subprocess,\n *  the <code>open</code> call returns <code>nil</code>. If the command\n *  is not ``<code>-</code>'', the subprocess runs the command. If a\n *  block is associated with an <code>open(\"|-\")</code> call, that block\n *  will be run twice---once in the parent and once in the child. The\n *  block parameter will be an <code>IO</code> object in the parent and\n *  <code>nil</code> in the child. The parent's <code>IO</code> object\n *  will be connected to the child's <code>$stdin</code> and\n *  <code>$stdout</code>. The subprocess will be terminated at the end\n *  of the block.\n *\n *     open(\"testfile\") do |f|\n *       print f.gets\n *     end\n *\n *  <em>produces:</em>\n *\n *     This is line one\n *\n *  Open a subprocess and read its output:\n *\n *     cmd = open(\"|date\")\n *     print cmd.gets\n *     cmd.close\n *\n *  <em>produces:</em>\n *\n *     Wed Apr  9 08:56:31 CDT 2003\n *\n *  Open a subprocess running the same Ruby program:\n *\n *     f = open(\"|-\", \"w+\")\n *     if f == nil\n *       puts \"in Child\"\n *       exit\n *     else\n *       puts \"Got: #{f.gets}\"\n *     end\n *\n *  <em>produces:</em>\n *\n *     Got: in Child\n *\n *  Open a subprocess using a block to receive the I/O object:\n *\n *     open(\"|-\") do |f|\n *       if f == nil\n *         puts \"in Child\"\n *       else\n *         puts \"Got: #{f.gets}\"\n *       end\n *     end\n *\n *  <em>produces:</em>\n *\n *     Got: in Child\n */",
+        "/*\n *  call-seq:\n *     File.new(filename, mode=\"r\" [, opt])            -> file\n *     File.new(filename [, mode [, perm]] [, opt])    -> file\n *\n *  Opens the file named by +filename+ according to +mode+ (default is \"r\")\n *  and returns a new <code>File</code> object.\n *\n *  === Parameters\n *\n *  See the description of class IO for a description of +mode+.  The file\n *  mode may optionally be specified as a Fixnum by +or+-ing together the\n *  flags (O_RDONLY etc, again described under +IO+).\n *\n *  Optional permission bits may be given in +perm+.  These mode and\n *  permission bits are platform dependent; on Unix systems, see\n *  <code>open(2)</code> for details.\n *\n *  Optional +opt+ parameter is same as in IO.open.\n *\n *  === Examples\n *\n *    f = File.new(\"testfile\", \"r\")\n *    f = File.new(\"newfile\",  \"w+\")\n *    f = File.new(\"newfile\", File::CREAT|File::TRUNC|File::RDWR, 0644)\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/iseq.c",
+      "sha256": "cbeba240235a22b67a300c9f21f05ab2e6158035b5ea59d4d7a40fb1be3302b5",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  iseq.c -\n\n  $Author: usa $\n  created at: 2006-07-11(Tue) 09:00:03 +0900\n\n  Copyright (C) 2006 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/iseq.h",
+      "sha256": "7bae96d3cd444ebc4daa36cd9b6be6f3f1fc29bd4ba64066bbd9954d79a4f204",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  iseq.h -\n\n  $Author: usa $\n  created at: 04/01/01 23:36:57 JST\n\n  Copyright (C) 2004-2008 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/known_errors.inc",
+      "sha256": "e4b0524db0a425980e6c096e146495deffb64dd78f1fc5dfa1ca2926303e8569",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/lex.c",
+      "sha256": "4f60edb6b9b4565f999a58ff568729d76d5a661514cf59f3a1141142628c0556",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/load.c",
+      "sha256": "17039e0a12f07f0163eaccea3ab1b6e8edcb140ab296cd15c85d096a3fcc983c",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/marshal.c",
+      "sha256": "91f9bd8beb5d7166372b4ad965b77c4095e751e7de8c1abf5df8afe27adb23e8",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  marshal.c -\n\n  $Author: usa $\n  created at: Thu Apr 27 16:30:01 JST 1995\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/math.c",
+      "sha256": "8e62e881a7b9a52e1430207ae4de6373881094f3b82132745b78413ca2c0fd82",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  math.c -\n\n  $Author: ngoto $\n  created at: Tue Jan 25 14:12:56 JST 1994\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/method.h",
+      "sha256": "65cf5b1a7a5a19959f9b0ac36b684a971771062c88f671ab40b0e45ad729871e",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  method.h -\n\n  $Author: yugui $\n  created at: Wed Jul 15 20:02:33 2009\n\n  Copyright (C) 2009 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/missing/crypt.c",
+      "sha256": "2be8cd04239da3df06ea094ab68f5b290bf5906ed82da94d08dc490c77502050",
+      "license_review": "BSD-3-Clause",
+      "notices": [
+        "/*\n * Copyright (c) 1989, 1993\n *\tThe Regents of the University of California.  All rights reserved.\n *\n * This code is derived from software contributed to Berkeley by\n * Tom Truscott.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n * 3. Neither the name of the University nor the names of its contributors\n *    may be used to endorse or promote products derived from this software\n *    without specific prior written permission.\n *\n * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/missing/memcmp.c",
+      "sha256": "9953c267f71910b6ae4a59613231ea81844daf762320a311f00cf60cbbac728f",
+      "license_review": "Public-domain original portions; Ruby modifications BSD-2-Clause option",
+      "notices": [
+        "/* public domain rewrite of memcmp(3) */"
+      ]
+    },
+    {
+      "path": "native/ruby193/missing/setproctitle.c",
+      "sha256": "a7632808003a14d6e2b3263a8e5cf1f403ca2358b0d27efba35f4680ffdb0023",
+      "license_review": "BSD-3-Clause",
+      "notices": [
+        "/*\n * Copyright 2003 Damien Miller\n * Copyright (c) 1983, 1995-1997 Eric P. Allman\n * Copyright (c) 1988, 1993\n *\tThe Regents of the University of California.  All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n * 3. Neither the name of the University nor the names of its contributors\n *    may be used to endorse or promote products derived from this software\n *    without specific prior written permission.\n *\n * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/node.c",
+      "sha256": "3f369e7129a80af18640b0264112de356ef3afae4bec4b3190161e9f60015084",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  node.c - ruby node tree\n\n  $Author: mame $\n  created at: 09/12/06 21:23:44 JST\n\n  Copyright (C) 2009 Yusuke Endoh\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/node.h",
+      "sha256": "3e3ba140a7c364c0e55589679e483209896c231fb04d1ce20a47d6922923eb03",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  node.h -\n\n  $Author: usa $\n  created at: Fri May 28 15:14:02 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/node_name.inc",
+      "sha256": "2155fb43db9a1dfd579e73879c3992a6ca21ad0182e40991495032b8394da684",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/numeric.c",
+      "sha256": "8f8b2bfcc0a1ae8137ff73ec4e70356b43527c65df1b550389ddf53aeb2dfa2e",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  numeric.c -\n\n  $Author: usa $\n  created at: Fri Aug 13 18:33:09 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/object.c",
+      "sha256": "02d772d99eab3f64f3770aef3347ef60eb0a98563c773ce5c7f7d1792ecd3915",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  object.c -\n\n  $Author: usa $\n  created at: Thu Jul 15 12:01:24 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.\n  Copyright (C) 2000  Information-technology Promotion Agency, Japan\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/optinsn.inc",
+      "sha256": "60ea957323c8d99fa42984a82028f5ceb17852caefe96534e0d6d42fe1b3c84f",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/pack.c",
+      "sha256": "6ab1bc9cbfcc154754681ac30937fa04491c0767367b9b2672747ffedc030594",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  pack.c -\n\n  $Author: naruse $\n  created at: Thu Feb 10 15:17:05 JST 1994\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/parse.c",
+      "sha256": "fe8c39a0ccac3f6d85a68fb36c06aabb6276f708a9c6e1bf8647ed03e11b5797",
+      "license_review": "GPL-3.0-or-later WITH Bison-exception-2.2 + Ruby grammar BSD option",
+      "notices": [
+        "/* Bison implementation for Yacc-like parsers in C\n   \n      Copyright (C) 1984, 1989-1990, 2000-2011 Free Software Foundation, Inc.\n   \n   This program is free software: you can redistribute it and/or modify\n   it under the terms of the GNU General Public License as published by\n   the Free Software Foundation, either version 3 of the License, or\n   (at your option) any later version.\n   \n   This program is distributed in the hope that it will be useful,\n   but WITHOUT ANY WARRANTY; without even the implied warranty of\n   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n   GNU General Public License for more details.\n   \n   You should have received a copy of the GNU General Public License\n   along with this program.  If not, see <http://www.gnu.org/licenses/>.  */",
+        "/* As a special exception, you may create a larger work that contains\n   part or all of the Bison parser skeleton and distribute that work\n   under terms of your choice, so long as that work isn't itself a\n   parser generator using the skeleton or a modified version thereof\n   as a parser skeleton.  Alternatively, if you modify or redistribute\n   the parser skeleton itself, you may (at your option) remove this\n   special exception, which will cause the skeleton and the resulting\n   Bison output files to be licensed under the GNU General Public\n   License without this special exception.\n   \n   This special exception was added by the Free Software Foundation in\n   version 2.2 of Bison.  */"
+      ]
+    },
+    {
+      "path": "native/ruby193/parse.h",
+      "sha256": "b3396afbcf271453e0d162dd8179b3a1b659140ffd1b3c48f1db9fe1d928b594",
+      "license_review": "GPL-3.0-or-later WITH Bison-exception-2.2 + Ruby grammar BSD option",
+      "notices": [
+        "/* Bison interface for Yacc-like parsers in C\n   \n      Copyright (C) 1984, 1989-1990, 2000-2011 Free Software Foundation, Inc.\n   \n   This program is free software: you can redistribute it and/or modify\n   it under the terms of the GNU General Public License as published by\n   the Free Software Foundation, either version 3 of the License, or\n   (at your option) any later version.\n   \n   This program is distributed in the hope that it will be useful,\n   but WITHOUT ANY WARRANTY; without even the implied warranty of\n   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the\n   GNU General Public License for more details.\n   \n   You should have received a copy of the GNU General Public License\n   along with this program.  If not, see <http://www.gnu.org/licenses/>.  */",
+        "/* As a special exception, you may create a larger work that contains\n   part or all of the Bison parser skeleton and distribute that work\n   under terms of your choice, so long as that work isn't itself a\n   parser generator using the skeleton or a modified version thereof\n   as a parser skeleton.  Alternatively, if you modify or redistribute\n   the parser skeleton itself, you may (at your option) remove this\n   special exception, which will cause the skeleton and the resulting\n   Bison output files to be licensed under the GNU General Public\n   License without this special exception.\n   \n   This special exception was added by the Free Software Foundation in\n   version 2.2 of Bison.  */"
+      ]
+    },
+    {
+      "path": "native/ruby193/proc.c",
+      "sha256": "253831607fb9b31b2cc8b7e2e5c4c6916271be22e5b42f52eed0bb28a26c1709",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  proc.c - Proc, Binding, Env\n\n  $Author: usa $\n  created at: Wed Jan 17 12:13:14 2007\n\n  Copyright (C) 2004-2007 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/process.c",
+      "sha256": "3065b05673c28204f9b32cd4c585c6ecca3a0e5c2e786896d70d4667b10f8716",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  process.c -\n\n  $Author: usa $\n  created at: Tue Aug 10 14:30:50 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.\n  Copyright (C) 2000  Information-technology Promotion Agency, Japan\n\n**********************************************************************/",
+        "/*\n *  call-seq:\n *     spawn([env,] command... [,options])     -> pid\n *     Process.spawn([env,] command... [,options])     -> pid\n *\n *  spawn executes specified command and return its pid.\n *\n *  This method doesn't wait for end of the command.\n *  The parent process should\n *  use <code>Process.wait</code> to collect\n *  the termination status of its child or\n *  use <code>Process.detach</code> to register\n *  disinterest in their status;\n *  otherwise, the operating system may accumulate zombie processes.\n *\n *  spawn has bunch of options to specify process attributes:\n *\n *    env: hash\n *      name => val : set the environment variable\n *      name => nil : unset the environment variable\n *    command...:\n *      commandline                 : command line string which is passed to the standard shell\n *      cmdname, arg1, ...          : command name and one or more arguments (no shell)\n *      [cmdname, argv0], arg1, ... : command name, argv[0] and zero or more arguments (no shell)\n *    options: hash\n *      clearing environment variables:\n *        :unsetenv_others => true   : clear environment variables except specified by env\n *        :unsetenv_others => false  : don't clear (default)\n *      process group:\n *        :pgroup => true or 0 : make a new process group\n *        :pgroup => pgid      : join to specified process group\n *        :pgroup => nil       : don't change the process group (default)\n *      create new process group: Windows only\n *        :new_pgroup => true  : the new process is the root process of a new process group\n *        :new_pgroup => false : don't create a new process group (default)\n *      resource limit: resourcename is core, cpu, data, etc.  See Process.setrlimit.\n *        :rlimit_resourcename => limit\n *        :rlimit_resourcename => [cur_limit, max_limit]\n *      current directory:\n *        :chdir => str\n *      umask:\n *        :umask => int\n *      redirection:\n *        key:\n *          FD              : single file descriptor in child process\n *          [FD, FD, ...]   : multiple file descriptor in child process\n *        value:\n *          FD                        : redirect to the file descriptor in parent process\n *          string                    : redirect to file with open(string, \"r\" or \"w\")\n *          [string]                  : redirect to file with open(string, File::RDONLY)\n *          [string, open_mode]       : redirect to file with open(string, open_mode, 0644)\n *          [string, open_mode, perm] : redirect to file with open(string, open_mode, perm)\n *          [:child, FD]              : redirect to the redirected file descriptor\n *          :close                    : close the file descriptor in child process\n *        FD is one of follows\n *          :in     : the file descriptor 0 which is the standard input\n *          :out    : the file descriptor 1 which is the standard output\n *          :err    : the file descriptor 2 which is the standard error\n *          integer : the file descriptor of specified the integer\n *          io      : the file descriptor specified as io.fileno\n *      file descriptor inheritance: close non-redirected non-standard fds (3, 4, 5, ...) or not\n *        :close_others => false : inherit fds (default for system and exec)\n *        :close_others => true  : don't inherit (default for spawn and IO.popen)\n *\n *  If a hash is given as +env+, the environment is\n *  updated by +env+ before <code>exec(2)</code> in the child process.\n *  If a pair in +env+ has nil as the value, the variable is deleted.\n *\n *    # set FOO as BAR and unset BAZ.\n *    pid = spawn({\"FOO\"=>\"BAR\", \"BAZ\"=>nil}, command)\n *\n *  If a hash is given as +options+,\n *  it specifies\n *  process group,\n *  create new process group,\n *  resource limit,\n *  current directory,\n *  umask and\n *  redirects for the child process.\n *  Also, it can be specified to clear environment variables.\n *\n *  The <code>:unsetenv_others</code> key in +options+ specifies\n *  to clear environment variables, other than specified by +env+.\n *\n *    pid = spawn(command, :unsetenv_others=>true) # no environment variable\n *    pid = spawn({\"FOO\"=>\"BAR\"}, command, :unsetenv_others=>true) # FOO only\n *\n *  The <code>:pgroup</code> key in +options+ specifies a process group.\n *  The corresponding value should be true, zero or positive integer.\n *  true and zero means the process should be a process leader of a new\n *  process group.\n *  Other values specifies a process group to be belongs.\n *\n *    pid = spawn(command, :pgroup=>true) # process leader\n *    pid = spawn(command, :pgroup=>10) # belongs to the process group 10\n *\n *  The <code>:new_pgroup</code> key in +options+ specifies to pass\n *  +CREATE_NEW_PROCESS_GROUP+ flag to <code>CreateProcessW()</code> that is\n *  Windows API. This option is only for Windows.\n *  true means the new process is the root process of the new process group.\n *  The new process has CTRL+C disabled. This flag is necessary for\n *  <code>Process.kill(:SIGINT, pid)</code> on the subprocess.\n *  :new_pgroup is false by default.\n *\n *    pid = spawn(command, :new_pgroup=>true)  # new process group\n *    pid = spawn(command, :new_pgroup=>false) # same process group\n *\n *  The <code>:rlimit_</code><em>foo</em> key specifies a resource limit.\n *  <em>foo</em> should be one of resource types such as <code>core</code>.\n *  The corresponding value should be an integer or an array which have one or\n *  two integers: same as cur_limit and max_limit arguments for\n *  Process.setrlimit.\n *\n *    cur, max = Process.getrlimit(:CORE)\n *    pid = spawn(command, :rlimit_core=>[0,max]) # disable core temporary.\n *    pid = spawn(command, :rlimit_core=>max) # enable core dump\n *    pid = spawn(command, :rlimit_core=>0) # never dump core.\n *\n *  The <code>:chdir</code> key in +options+ specifies the current directory.\n *\n *    pid = spawn(command, :chdir=>\"/var/tmp\")\n *\n *  The <code>:umask</code> key in +options+ specifies the umask.\n *\n *    pid = spawn(command, :umask=>077)\n *\n *  The :in, :out, :err, a fixnum, an IO and an array key specifies a redirection.\n *  The redirection maps a file descriptor in the child process.\n *\n *  For example, stderr can be merged into stdout as follows:\n *\n *    pid = spawn(command, :err=>:out)\n *    pid = spawn(command, 2=>1)\n *    pid = spawn(command, STDERR=>:out)\n *    pid = spawn(command, STDERR=>STDOUT)\n *\n *  The hash keys specifies a file descriptor\n *  in the child process started by <code>spawn</code>.\n *  :err, 2 and STDERR specifies the standard error stream (stderr).\n *\n *  The hash values specifies a file descriptor\n *  in the parent process which invokes <code>spawn</code>.\n *  :out, 1 and STDOUT specifies the standard output stream (stdout).\n *\n *  In the above example,\n *  the standard output in the child process is not specified.\n *  So it is inherited from the parent process.\n *\n *  The standard input stream (stdin) can be specified by :in, 0 and STDIN.\n *\n *  A filename can be specified as a hash value.\n *\n *    pid = spawn(command, :in=>\"/dev/null\") # read mode\n *    pid = spawn(command, :out=>\"/dev/null\") # write mode\n *    pid = spawn(command, :err=>\"log\") # write mode\n *    pid = spawn(command, 3=>\"/dev/null\") # read mode\n *\n *  For stdout and stderr,\n *  it is opened in write mode.\n *  Otherwise read mode is used.\n *\n *  For specifying flags and permission of file creation explicitly,\n *  an array is used instead.\n *\n *    pid = spawn(command, :in=>[\"file\"]) # read mode is assumed\n *    pid = spawn(command, :in=>[\"file\", \"r\"])\n *    pid = spawn(command, :out=>[\"log\", \"w\"]) # 0644 assumed\n *    pid = spawn(command, :out=>[\"log\", \"w\", 0600])\n *    pid = spawn(command, :out=>[\"log\", File::WRONLY|File::EXCL|File::CREAT, 0600])\n *\n *  The array specifies a filename, flags and permission.\n *  The flags can be a string or an integer.\n *  If the flags is omitted or nil, File::RDONLY is assumed.\n *  The permission should be an integer.\n *  If the permission is omitted or nil, 0644 is assumed.\n *\n *  If an array of IOs and integers are specified as a hash key,\n *  all the elements are redirected.\n *\n *    # stdout and stderr is redirected to log file.\n *    # The file \"log\" is opened just once.\n *    pid = spawn(command, [:out, :err]=>[\"log\", \"w\"])\n *\n *  Another way to merge multiple file descriptors is [:child, fd].\n *  \\[:child, fd] means the file descriptor in the child process.\n *  This is different from fd.\n *  For example, :err=>:out means redirecting child stderr to parent stdout.\n *  But :err=>[:child, :out] means redirecting child stderr to child stdout.\n *  They differs if stdout is redirected in the child process as follows.\n *\n *    # stdout and stderr is redirected to log file.\n *    # The file \"log\" is opened just once.\n *    pid = spawn(command, :out=>[\"log\", \"w\"], :err=>[:child, :out])\n *\n *  \\[:child, :out] can be used to merge stderr into stdout in IO.popen.\n *  In this case, IO.popen redirects stdout to a pipe in the child process\n *  and [:child, :out] refers the redirected stdout.\n *\n *    io = IO.popen([\"sh\", \"-c\", \"echo out; echo err >&2\", :err=>[:child, :out]])\n *    p io.read #=> \"out\\nerr\\n\"\n *\n *  spawn closes all non-standard unspecified descriptors by default.\n *  The \"standard\" descriptors are 0, 1 and 2.\n *  This behavior is specified by :close_others option.\n *  :close_others doesn't affect the standard descriptors which are\n *  closed only if :close is specified explicitly.\n *\n *    pid = spawn(command, :close_others=>true)  # close 3,4,5,... (default)\n *    pid = spawn(command, :close_others=>false) # don't close 3,4,5,...\n *\n *  :close_others is true by default for spawn and IO.popen.\n *\n *  So IO.pipe and spawn can be used as IO.popen.\n *\n *    # similar to r = IO.popen(command)\n *    r, w = IO.pipe\n *    pid = spawn(command, :out=>w)   # r, w is closed in the child process.\n *    w.close\n *\n *  :close is specified as a hash value to close a fd individually.\n *\n *    f = open(foo)\n *    system(command, f=>:close)        # don't inherit f.\n *\n *  If a file descriptor need to be inherited,\n *  io=>io can be used.\n *\n *    # valgrind has --log-fd option for log destination.\n *    # log_w=>log_w indicates log_w.fileno inherits to child process.\n *    log_r, log_w = IO.pipe\n *    pid = spawn(\"valgrind\", \"--log-fd=#{log_w.fileno}\", \"echo\", \"a\", log_w=>log_w)\n *    log_w.close\n *    p log_r.read\n *\n *  It is also possible to exchange file descriptors.\n *\n *    pid = spawn(command, :out=>:err, :err=>:out)\n *\n *  The hash keys specify file descriptors in the child process.\n *  The hash values specifies file descriptors in the parent process.\n *  So the above specifies exchanging stdout and stderr.\n *  Internally, +spawn+ uses an extra file descriptor to resolve such cyclic\n *  file descriptor mapping.\n *\n *  See <code>Kernel.exec</code> for the standard shell.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/random.c",
+      "sha256": "a479942fe65c77f9d1aa48aa5d2a3f54224ca37f49c8a59c3bd0bf43107ee72e",
+      "license_review": "BSD-2-Clause Ruby + BSD-3-Clause MT19937",
+      "notices": [
+        "/**********************************************************************\n\n  random.c -\n\n  $Author: usa $\n  created at: Fri Dec 24 16:39:21 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/",
+        "/*\nThis is based on trimmed version of MT19937.  To get the original version,\ncontact <http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html>.\n\nThe original copyright notice follows.\n\n   A C-program for MT19937, with initialization improved 2002/2/10.\n   Coded by Takuji Nishimura and Makoto Matsumoto.\n   This is a faster version by taking Shawn Cokus's optimization,\n   Matthe Bellew's simplification, Isaku Wada's real version.\n\n   Before using, initialize the state by using init_genrand(mt, seed)\n   or init_by_array(mt, init_key, key_length).\n\n   Copyright (C) 1997 - 2002, Makoto Matsumoto and Takuji Nishimura,\n   All rights reserved.\n\n   Redistribution and use in source and binary forms, with or without\n   modification, are permitted provided that the following conditions\n   are met:\n\n     1. Redistributions of source code must retain the above copyright\n        notice, this list of conditions and the following disclaimer.\n\n     2. Redistributions in binary form must reproduce the above copyright\n        notice, this list of conditions and the following disclaimer in the\n        documentation and/or other materials provided with the distribution.\n\n     3. The names of its contributors may not be used to endorse or promote\n        products derived from this software without specific prior written\n        permission.\n\n   THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS\n   \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT\n   LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR\n   A PARTICULAR PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR\n   CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,\n   EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO,\n   PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR\n   PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF\n   LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING\n   NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS\n   SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.\n\n\n   Any feedback is very welcome.\n   http://www.math.keio.ac.jp/matumoto/emt.html\n   email: matumoto@math.keio.ac.jp\n*/"
+      ]
+    },
+    {
+      "path": "native/ruby193/range.c",
+      "sha256": "c6ca6a899b8c6b1964b61442aaabb566dafa2bdfbe51ebbee1cb230a0d54200c",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  range.c -\n\n  $Author: tarui $\n  created at: Thu Aug 19 17:46:47 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/rational.c",
+      "sha256": "385ff013a87908353f31d138e977d3bb6e63bbead3890450a49b7284effa8a39",
+      "license_review": "Ruby BSD-2-Clause option + Bruno Haible algorithm explanatory notice",
+      "notices": [
+        "/*\n  The algorithm here is the method described in CLISP.  Bruno Haible has\n  graciously given permission to use this algorithm.  He says, \"You can use\n  it, if you present the following explanation of the algorithm.\"\n\n  Algorithm (recursively presented):\n    If x is a rational number, return x.\n    If x = 0.0, return 0.\n    If x < 0.0, return (- (rationalize (- x))).\n    If x > 0.0:\n      Call (integer-decode-float x). It returns a m,e,s=1 (mantissa,\n      exponent, sign).\n      If m = 0 or e >= 0: return x = m*2^e.\n      Search a rational number between a = (m-1/2)*2^e and b = (m+1/2)*2^e\n      with smallest possible numerator and denominator.\n      Note 1: If m is a power of 2, we ought to take a = (m-1/4)*2^e.\n        But in this case the result will be x itself anyway, regardless of\n        the choice of a. Therefore we can simply ignore this case.\n      Note 2: At first, we need to consider the closed interval [a,b].\n        but since a and b have the denominator 2^(|e|+1) whereas x itself\n        has a denominator <= 2^|e|, we can restrict the search to the open\n        interval (a,b).\n      So, for given a and b (0 < a < b) we are searching a rational number\n      y with a <= y <= b.\n      Recursive algorithm fraction_between(a,b):\n        c := (ceiling a)\n        if c < b\n          then return c       ; because a <= c < b, c integer\n          else\n            ; a is not integer (otherwise we would have had c = a < b)\n            k := c-1          ; k = floor(a), k < a < b <= k+1\n            return y = k + 1/fraction_between(1/(b-k), 1/(a-k))\n                              ; note 1 <= 1/(b-k) < 1/(a-k)\n\n  You can see that we are actually computing a continued fraction expansion.\n\n  Algorithm (iterative):\n    If x is rational, return x.\n    Call (integer-decode-float x). It returns a m,e,s (mantissa,\n      exponent, sign).\n    If m = 0 or e >= 0, return m*2^e*s. (This includes the case x = 0.0.)\n    Create rational numbers a := (2*m-1)*2^(e-1) and b := (2*m+1)*2^(e-1)\n    (positive and already in lowest terms because the denominator is a\n    power of two and the numerator is odd).\n    Start a continued fraction expansion\n      p[-1] := 0, p[0] := 1, q[-1] := 1, q[0] := 0, i := 0.\n    Loop\n      c := (ceiling a)\n      if c >= b\n        then k := c-1, partial_quotient(k), (a,b) := (1/(b-k),1/(a-k)),\n             goto Loop\n    finally partial_quotient(c).\n    Here partial_quotient(c) denotes the iteration\n      i := i+1, p[i] := c*p[i-1]+p[i-2], q[i] := c*q[i-1]+q[i-2].\n    At the end, return s * (p[i]/q[i]).\n    This rational number is already in lowest terms because\n    p[i]*q[i-1]-p[i-1]*q[i] = (-1)^i.\n*/"
+      ]
+    },
+    {
+      "path": "native/ruby193/re.c",
+      "sha256": "982f63b05672c020c69716469f653a184607a2b110082328385c6faa493ecad2",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  re.c -\n\n  $Author: akr $\n  created at: Mon Aug  9 18:24:49 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/regcomp.c",
+      "sha256": "3c5f8f343e8779db17e9da65b9c44c1b31850cb3bd6d49dcc7b3f1b7afcfe484",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2008  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/regenc.c",
+      "sha256": "85000751814af0274ae9101976a509ffe292ebede7570e43574ac1a3781cef88",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/regenc.h",
+      "sha256": "cec0ad29af4a200d4824741c1894afda0fca1eb431080adc94b8c159c45ef858",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2008  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/regerror.c",
+      "sha256": "06bb357b6ea498c8f9d3645a9a356f5825de7f83e319b81bfb6bfe8fefd287f6",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/regexec.c",
+      "sha256": "90a707867c787013308b57fa67423e3c3c60eab170fd18c9be23a656a342e88f",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2008  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/regint.h",
+      "sha256": "9cf1fa5f62899b5221d9c2810052a3773cc3a5b66efdc5fc3eeba99ecd414487",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2008  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/regparse.c",
+      "sha256": "1d43500e0d7948c6740b3c708523e2b4ec33e75b7168b16de8ba419061de11b5",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2008  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/regparse.h",
+      "sha256": "84e0792c0507856d3cc1679c01dee46c1b33b4784a911760330e5b38dca85996",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2007  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/regsyntax.c",
+      "sha256": "b44a593179fab59acff98d233ea75636bdabaf5b593b91434a6cf0b2b1bb8bbf",
+      "license_review": "BSD-2-Clause Oniguruma",
+      "notices": [
+        "/*-\n * Copyright (c) 2002-2006  K.Kosako  <sndgk393 AT ybb DOT ne DOT jp>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/revision.h",
+      "sha256": "c50cf23dd89a0210634cb27f2d68f9b0775da1068f9cd9a6bcc8f4aea81ba95f",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/ruby.c",
+      "sha256": "526948c203eb78a68e99f0e04ec18582f9c3473bd54d9601aedc39cf380c775b",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  ruby.c -\n\n  $Author: usa $\n  created at: Tue Aug 10 12:47:31 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.\n  Copyright (C) 2000  Information-technology Promotion Agency, Japan\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/ruby_atomic.h",
+      "sha256": "bfa36005e8a2a10ef2332778068fdaddcab0edf99ddabf4d1e60311973e40b6a",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/safe.c",
+      "sha256": "6ee21fcba45a221f73b61c8a6fcd3063e247d392a61f0e134879f4bba27bd750",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  safe.c -\n\n  $Author: tadf $\n  created at: Tue Sep 23 09:44:32 JST 2008\n\n  Copyright (C) 2008 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/signal.c",
+      "sha256": "00bc6c9ce971f20c78c9d0246a4dc78feac9c3ea603bbaccebc215acfcfee3fe",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  signal.c -\n\n  $Author: usa $\n  created at: Tue Dec 20 10:13:44 JST 1994\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.\n  Copyright (C) 2000  Information-technology Promotion Agency, Japan\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/siphash.c",
+      "sha256": "98bb518365132cf6467d6371498d9f40e7ab9927e71a5d1b45327b8fee222307",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/siphash.h",
+      "sha256": "6de583f8108a36c921d11442536bbe35ff68383304a38693fa2533f0d70fcf2e",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/sprintf.c",
+      "sha256": "7b5bde07b3ed8733c4b49d2668a619bd9f94a68733f9e851fff64b60e768b982",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  sprintf.c -\n\n  $Author: nagachika $\n  created at: Fri Oct 15 10:39:26 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.\n  Copyright (C) 2000  Information-technology Promotion Agency, Japan\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/st.c",
+      "sha256": "9ae66e284533e5794e8980f231d4c29deb6c30f2f7b0dc382e8b1a63d953a58e",
+      "license_review": "Public-domain original portions; Ruby modifications BSD-2-Clause option",
+      "notices": [
+        "/* This is a public domain general purpose hash table package written by Peter Moore @ UCB. */",
+        "/*\n * hash_32 - 32 bit Fowler/Noll/Vo FNV-1a hash code\n *\n * @(#) $Hash32: Revision: 1.1 $\n * @(#) $Hash32: Id: hash_32a.c,v 1.1 2003/10/03 20:38:53 chongo Exp $\n * @(#) $Hash32: Source: /usr/local/src/cmd/fnv/RCS/hash_32a.c,v $\n *\n ***\n *\n * Fowler/Noll/Vo hash\n *\n * The basis of this hash algorithm was taken from an idea sent\n * as reviewer comments to the IEEE POSIX P1003.2 committee by:\n *\n *      Phong Vo (http://www.research.att.com/info/kpv/)\n *      Glenn Fowler (http://www.research.att.com/~gsf/)\n *\n * In a subsequent ballot round:\n *\n *      Landon Curt Noll (http://www.isthe.com/chongo/)\n *\n * improved on their algorithm.  Some people tried this hash\n * and found that it worked rather well.  In an EMail message\n * to Landon, they named it the ``Fowler/Noll/Vo'' or FNV hash.\n *\n * FNV hashes are designed to be fast while maintaining a low\n * collision rate. The FNV speed allows one to quickly hash lots\n * of data while maintaining a reasonable collision rate.  See:\n *\n *      http://www.isthe.com/chongo/tech/comp/fnv/index.html\n *\n * for more details as well as other forms of the FNV hash.\n ***\n *\n * To use the recommended 32 bit FNV-1a hash, pass FNV1_32A_INIT as the\n * Fnv32_t hashval argument to fnv_32a_buf() or fnv_32a_str().\n *\n ***\n *\n * Please do not copyright this code.  This code is in the public domain.\n *\n * LANDON CURT NOLL DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE,\n * INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO\n * EVENT SHALL LANDON CURT NOLL BE LIABLE FOR ANY SPECIAL, INDIRECT OR\n * CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF\n * USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR\n * OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR\n * PERFORMANCE OF THIS SOFTWARE.\n *\n * By:\n *\tchongo <Landon Curt Noll> /\\oo/\\\n *      http://www.isthe.com/chongo/\n *\n * Share and Enjoy!\t:-)\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/strftime.c",
+      "sha256": "f4e0119868303ad3305bfbc200ac2904179792ba0790403f6c489b666c368d04",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/string.c",
+      "sha256": "df06b3befe141cc6d97c6b9bcd440ef3898b9660a31fb23580febb07fc43ca16",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  string.c -\n\n  $Author: usa $\n  created at: Mon Aug  9 17:12:58 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.\n  Copyright (C) 2000  Information-technology Promotion Agency, Japan\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/struct.c",
+      "sha256": "79433531efd2bb7e4d472f4d7311f194afea90bf106d98f8ae68755d49b8d980",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  struct.c -\n\n  $Author: nobu $\n  created at: Tue Mar 22 18:44:30 JST 1995\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/thread.c",
+      "sha256": "09f6cc4803aa8d66e10ac3fe8af28db8fdbc3b778cecdb5f99e494a81517d10f",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  thread.c -\n\n  $Author: usa $\n\n  Copyright (C) 2004-2007 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/thread_pthread.c",
+      "sha256": "98d9ffcb97058dc2fdf0f7a405d66df7ed506f5cf4976dff83c3cb0ca2ef1a8c",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  thread_pthread.c -\n\n  $Author: usa $\n\n  Copyright (C) 2004-2007 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/thread_pthread.h",
+      "sha256": "e0649cfe4c1f1034ebfdb5b130c6832e14004bbce88da4d626bb33d94bc854c8",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  thread_pthread.h -\n\n  $Author: kosaki $\n\n  Copyright (C) 2004-2007 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/time.c",
+      "sha256": "592bb2964d5e99068e78f7ada268d216abf6a79712df10e3caa3c48215e2a346",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  time.c -\n\n  $Author: usa $\n  created at: Tue Dec 28 14:31:59 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/timev.h",
+      "sha256": "005979caef6812641fd37e0cb7daf24025bd63a3b5f560a6636a598964598c99",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/transcode.c",
+      "sha256": "1e6ce6f93211cfe9eba8ebe7f953f420a6461f572332b88573646c39d2535e2a",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  transcode.c -\n\n  $Author: usa $\n  created at: Tue Oct 30 16:10:22 JST 2007\n\n  Copyright (C) 2007 Martin Duerst\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/transcode_data.h",
+      "sha256": "8041d9347795dc29846be102f6e003076ad3d8407dbc8b797ae4d88f95a84013",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  transcode_data.h -\n\n  $Author: nobu $\n  created at: Mon 10 Dec 2007 14:01:47 JST 2007\n\n  Copyright (C) 2007 Martin Duerst\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/transdb.h",
+      "sha256": "469d5650a7e274256ba258c132b2b072de36cf2e362d30a6707855f43ca3c8de",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/util.c",
+      "sha256": "4469266341ccc8f38ed731e54ee98b1d7fe84159382684ce92afc6477faf890a",
+      "license_review": "BSD-2-Clause Ruby + Lucent dtoa permissive notice + BSD-2-Clause David Schultz",
+      "notices": [
+        "/**********************************************************************\n\n  util.c -\n\n  $Author: usa $\n  created at: Fri Mar 10 17:22:34 JST 1995\n\n  Copyright (C) 1993-2008 Yukihiro Matsumoto\n\n**********************************************************************/",
+        "/****************************************************************\n *\n * The author of this software is David M. Gay.\n *\n * Copyright (c) 1991, 2000, 2001 by Lucent Technologies.\n *\n * Permission to use, copy, modify, and distribute this software for any\n * purpose without fee is hereby granted, provided that this entire notice\n * is included in all copies of any software which is or includes a copy\n * or modification of this software and in all copies of the supporting\n * documentation for such software.\n *\n * THIS SOFTWARE IS BEING PROVIDED \"AS IS\", WITHOUT ANY EXPRESS OR IMPLIED\n * WARRANTY.  IN PARTICULAR, NEITHER THE AUTHOR NOR LUCENT MAKES ANY\n * REPRESENTATION OR WARRANTY OF ANY KIND CONCERNING THE MERCHANTABILITY\n * OF THIS SOFTWARE OR ITS FITNESS FOR ANY PARTICULAR PURPOSE.\n *\n ***************************************************************/",
+        "/*-\n * Copyright (c) 2004-2008 David Schultz <das@FreeBSD.ORG>\n * All rights reserved.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n *\n * THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193/variable.c",
+      "sha256": "c39a035bab1a4091a7f442b64fa59d4e3d558b21826a4254044cfb75713659cf",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  variable.c -\n\n  $Author: marcandre $\n  created at: Tue Apr 19 23:55:15 JST 1994\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.\n  Copyright (C) 2000  Information-technology Promotion Agency, Japan\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/version.c",
+      "sha256": "afca58260609897a2ddcf823459538b707e97b5f52f4f2a06e2b77ca0ee962b0",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  version.c -\n\n  $Author: drbrain $\n  created at: Thu Sep 30 20:08:01 JST 1993\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n\n**********************************************************************/",
+        "/*\n     * The copyright string for ruby\n     */"
+      ]
+    },
+    {
+      "path": "native/ruby193/version.h",
+      "sha256": "70295a617aba21d417c23693b95aa93101e153612c96f4782a8974e80ba5d27f",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/vm.c",
+      "sha256": "463c3ab9dfee5e07720b2f556a82b11da57148cb8921f06000b2165a9ebafd27",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  vm.c -\n\n  $Author: usa $\n\n  Copyright (C) 2004-2007 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/vm.inc",
+      "sha256": "afe84d1f307b7ec3dce169e247df6f8047e6d95f2ab1086cb6827d093e6178a3",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/vm_core.h",
+      "sha256": "771a4a53d2758d4f079ba0357d57801d6892ad97527482ff0c4123d9ca470487",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  vm_core.h -\n\n  $Author: usa $\n  created at: 04/01/01 19:41:38 JST\n\n  Copyright (C) 2004-2007 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/vm_dump.c",
+      "sha256": "9890462ff3abaa2b7b667957269ade6fce192d979909174836a3e5f9360e39ab",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  vm_dump.c -\n\n  $Author: naruse $\n\n  Copyright (C) 2004-2007 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/vm_eval.c",
+      "sha256": "69b768d2df35c7fe45ee2fa767eb13291240f618721e953866873f2d06c93b87",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  vm_eval.c -\n\n  $Author: usa $\n  created at: Sat May 24 16:02:32 JST 2008\n\n  Copyright (C) 1993-2007 Yukihiro Matsumoto\n  Copyright (C) 2000  Network Applied Communication Laboratory, Inc.\n  Copyright (C) 2000  Information-technology Promotion Agency, Japan\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/vm_exec.c",
+      "sha256": "98f665e85df9d30602fdded77087f66bf97dc9c2a71ddc43f6ba677e2ca0b311",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  vm_exec.c -\n\n  $Author: naruse $\n\n  Copyright (C) 2004-2007 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/vm_exec.h",
+      "sha256": "5c8acad16ac065adb1582e5d05e5ec8cce7e08a57054fe9cff70a3400b3d07a3",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  vm.h -\n\n  $Author: usa $\n  created at: 04/01/01 16:56:59 JST\n\n  Copyright (C) 2004-2007 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/vm_insnhelper.c",
+      "sha256": "210e7a4e14d4839440fe660d005d63bbf7843d547412af6680a22724193cdd08",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  vm_insnhelper.c - instruction helper functions.\n\n  $Author: usa $\n\n  Copyright (C) 2007 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/vm_insnhelper.h",
+      "sha256": "6f332684b8489cbfae6de81fb0871fc0229608a1c04b3e4d5f6080eb1497833e",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  insnhelper.h - helper macros to implement each instructions\n\n  $Author: ko1 $\n  created at: 04/01/01 15:50:34 JST\n\n  Copyright (C) 2004-2007 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/vm_method.c",
+      "sha256": "328e2a3453ca9458354f24817167fd13282922a40829d3ef6d7a17028d1616d9",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/vm_opts.h",
+      "sha256": "9c2194595f676cbe68281cf024b1f059e1d34816636d6c2559c09c9120c3d7b1",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": [
+        "/**********************************************************************\n\n  vm_opts.h - VM optimize option\n\n  $Author: akr $\n\n  Copyright (C) 2004-2007 Koichi Sasada\n\n**********************************************************************/"
+      ]
+    },
+    {
+      "path": "native/ruby193/vmtc.inc",
+      "sha256": "77b957ba626cef925daaccd37ffa548d9ac8c7986d1f4510adf0d3156da56e30",
+      "license_review": "BSD-2-Clause (COPYING option), unless embedded exception",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193/vsnprintf.c",
+      "sha256": "993ee50b32a57ab3a23c863feaa51a0e38ee9b8374ccc1fba58f89ad55b82cb6",
+      "license_review": "BSD-3-Clause",
+      "notices": [
+        "/*-\n * Copyright (c) 1990, 1993\n *\tThe Regents of the University of California.  All rights reserved.\n *\n * This code is derived from software contributed to Berkeley by\n * Chris Torek.\n *\n * Redistribution and use in source and binary forms, with or without\n * modification, are permitted provided that the following conditions\n * are met:\n * 1. Redistributions of source code must retain the above copyright\n *    notice, this list of conditions and the following disclaimer.\n * 2. Redistributions in binary form must reproduce the above copyright\n *    notice, this list of conditions and the following disclaimer in the\n *    documentation and/or other materials provided with the distribution.\n * 3. Neither the name of the University nor the names of its contributors\n *    may be used to endorse or promote products derived from this software\n *    without specific prior written permission.\n *\n * THIS SOFTWARE IS PROVIDED BY THE REGENTS AND CONTRIBUTORS ``AS IS'' AND\n * ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE\n * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE\n * ARE DISCLAIMED.  IN NO EVENT SHALL THE REGENTS OR CONTRIBUTORS BE LIABLE\n * FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL\n * DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS\n * OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)\n * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT\n * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY\n * OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF\n * SUCH DAMAGE.\n */",
+        "/*\n * IMPORTANT NOTE:\n * --------------\n * From ftp://ftp.cs.berkeley.edu/pub/4bsd/README.Impt.License.Change\n * paragraph 3 above is now null and void.\n */"
+      ]
+    },
+    {
+      "path": "native/ruby193-build-recipe-final/.ext/include/aarch64-linux-android/ruby/config.h",
+      "sha256": "2c533b88799ed1b2dcd0f19d3ac4311860bd86be7fea2b013605b7dd5143c1cc",
+      "license_review": "Generated from official Ruby sources/configuration",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193-build-recipe-final/libruby-static.a",
+      "sha256": "a4b24cbfb59ef4b6822f9bfe012b0fc6539130fde8f8ac4e9c0cce3f24a782d1",
+      "license_review": "Generated from official Ruby sources/configuration",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193-build-recipe-final/newline.c",
+      "sha256": "9f87f6170dc4187906e50cf3249ba873950777c92b1e3c451d51e230be1028af",
+      "license_review": "Generated from official Ruby sources/configuration",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193-build-recipe-final/prelude.c",
+      "sha256": "88420f9d64c5cc2180a9837e34bcc298f0f03e0f2e5290c6f8ee6dc03a514678",
+      "license_review": "Generated from official Ruby sources/configuration",
+      "notices": []
+    },
+    {
+      "path": "native/ruby193-init.c",
+      "sha256": "77ad43649a677e006f94cad67b45d5badb142564d7296fe1b57aab44294f03a5",
+      "license_review": "Original BRUMA extension/encoding registration, MIT",
+      "notices": [
+        "/* SPDX-License-Identifier: MIT - BRUMA-owned compatibility registration.\r\n * Keep regex String#[] in native C frames: a Ruby wrapper changes $~ scope. */"
+      ]
+    }
+  ]
+}

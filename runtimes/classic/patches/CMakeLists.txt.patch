@@ -1,0 +1,152 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -224,52 +224,87 @@
+ target_include_directories(SDL2_sound PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/../upstream/SDL_sound" "${CMAKE_CURRENT_SOURCE_DIR}/../upstream/SDL_sound/decoders" "${CMAKE_CURRENT_SOURCE_DIR}/../upstream/SDL_sound/decoders/libmpg123" "${CMAKE_CURRENT_SOURCE_DIR}/../upstream/vorbis/include")
+ target_compile_definitions(SDL2_sound PRIVATE HAVE_CONFIG_H REAL_IS_FLOAT OPT_GENERIC MPG123_NO_CONFIGURE SOUND_SUPPORTS_MPG123 SOUND_SUPPORTS_OGG)
+ target_link_libraries(SDL2_sound PUBLIC SDL2 vorbisfile)
+-add_library(ruby STATIC
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/array.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/bignum.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/class.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/compar.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/dir.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/dln.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/enum.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/enumerator.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/error.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/eval.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/file.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/gc.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/hash.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/inits.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/io.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/marshal.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/math.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/numeric.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/object.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/pack.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/parse.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/process.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/prec.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/random.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/range.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/re.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/regex.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/ruby.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/signal.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/sprintf.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/st.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/string.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/struct.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/time.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/util.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/variable.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/version.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/missing/memcmp.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/missing/crypt.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/dmyext.c"
+-"${CMAKE_CURRENT_SOURCE_DIR}/ruby18/ext/zlib/zlib.c")
+-target_include_directories(ruby PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/ruby18 ${CMAKE_CURRENT_SOURCE_DIR}/ruby18/include)
+-target_compile_definitions(ruby PRIVATE RUBY_EXPORT OS_CODE=3)
++# Ruby 1.9.3 official core archive; Android extension/encoding registration is BRUMA-owned.
++add_library(ruby193_core STATIC IMPORTED)
++set_target_properties(ruby193_core PROPERTIES IMPORTED_LOCATION "${BRUMA_RUBY_BUILD_ROOT}/libruby-static.a")
++add_library(ruby STATIC ${CMAKE_CURRENT_SOURCE_DIR}/ruby193-init.c ${CMAKE_CURRENT_SOURCE_DIR}/ruby193/ext/zlib/zlib.c
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/big5.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/cp949.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/emacs_mule.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/encdb.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/euc_jp.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/euc_kr.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/euc_tw.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/gb18030.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/gb2312.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/gbk.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/iso_8859_1.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/iso_8859_10.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/iso_8859_11.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/iso_8859_13.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/iso_8859_14.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/iso_8859_15.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/iso_8859_16.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/iso_8859_2.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/iso_8859_3.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/iso_8859_4.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/iso_8859_5.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/iso_8859_6.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/iso_8859_7.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/iso_8859_8.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/iso_8859_9.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/koi8_r.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/koi8_u.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/shift_jis.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/utf_16be.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/utf_16le.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/utf_32be.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/utf_32le.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/windows_1251.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/big5.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/chinese.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/emoji.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/emoji_iso2022_kddi.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/emoji_sjis_docomo.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/emoji_sjis_kddi.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/emoji_sjis_softbank.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/escape.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/gb18030.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/gbk.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/iso2022.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/japanese.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/japanese_euc.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/japanese_sjis.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/korean.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/single_byte.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/transdb.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/utf8_mac.c"
++ "${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/utf_16_32.c"
++)
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/big5.c" PROPERTIES COMPILE_DEFINITIONS "Init_big5=Init_bruma_trans_big5")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/chinese.c" PROPERTIES COMPILE_DEFINITIONS "Init_chinese=Init_bruma_trans_chinese")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/emoji.c" PROPERTIES COMPILE_DEFINITIONS "Init_emoji=Init_bruma_trans_emoji")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/emoji_iso2022_kddi.c" PROPERTIES COMPILE_DEFINITIONS "Init_emoji_iso2022_kddi=Init_bruma_trans_emoji_iso2022_kddi")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/emoji_sjis_docomo.c" PROPERTIES COMPILE_DEFINITIONS "Init_emoji_sjis_docomo=Init_bruma_trans_emoji_sjis_docomo")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/emoji_sjis_kddi.c" PROPERTIES COMPILE_DEFINITIONS "Init_emoji_sjis_kddi=Init_bruma_trans_emoji_sjis_kddi")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/emoji_sjis_softbank.c" PROPERTIES COMPILE_DEFINITIONS "Init_emoji_sjis_softbank=Init_bruma_trans_emoji_sjis_softbank")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/escape.c" PROPERTIES COMPILE_DEFINITIONS "Init_escape=Init_bruma_trans_escape")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/gb18030.c" PROPERTIES COMPILE_DEFINITIONS "Init_gb18030=Init_bruma_trans_gb18030")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/gbk.c" PROPERTIES COMPILE_DEFINITIONS "Init_gbk=Init_bruma_trans_gbk")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/iso2022.c" PROPERTIES COMPILE_DEFINITIONS "Init_iso2022=Init_bruma_trans_iso2022")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/japanese.c" PROPERTIES COMPILE_DEFINITIONS "Init_japanese=Init_bruma_trans_japanese")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/japanese_euc.c" PROPERTIES COMPILE_DEFINITIONS "Init_japanese_euc=Init_bruma_trans_japanese_euc")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/japanese_sjis.c" PROPERTIES COMPILE_DEFINITIONS "Init_japanese_sjis=Init_bruma_trans_japanese_sjis")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/korean.c" PROPERTIES COMPILE_DEFINITIONS "Init_korean=Init_bruma_trans_korean")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/newline.c" PROPERTIES COMPILE_DEFINITIONS "Init_newline=Init_bruma_trans_newline")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/single_byte.c" PROPERTIES COMPILE_DEFINITIONS "Init_single_byte=Init_bruma_trans_single_byte")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/transdb.c" PROPERTIES COMPILE_DEFINITIONS "Init_transdb=Init_bruma_trans_transdb")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/utf8_mac.c" PROPERTIES COMPILE_DEFINITIONS "Init_utf8_mac=Init_bruma_trans_utf8_mac")
++set_source_files_properties("${CMAKE_CURRENT_SOURCE_DIR}/ruby193/enc/trans/utf_16_32.c" PROPERTIES COMPILE_DEFINITIONS "Init_utf_16_32=Init_bruma_trans_utf_16_32")
++target_include_directories(ruby PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/ruby193/include ${BRUMA_RUBY_BUILD_ROOT}/.ext/include/aarch64-linux-android PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/ruby193)
++target_compile_definitions(ruby PRIVATE RUBY_EXPORT OS_CODE=3 ONIG_ENC_REGISTER=rb_enc_register)
+ target_compile_options(ruby PRIVATE -fvisibility=hidden -fno-strict-aliasing)
+-target_link_libraries(ruby PUBLIC z dl m)
++target_link_libraries(ruby PUBLIC ruby193_core z dl m)
+ add_library(theoradec STATIC
+ "${CMAKE_CURRENT_SOURCE_DIR}/../upstream/theora/lib/apiwrapper.c"
+ "${CMAKE_CURRENT_SOURCE_DIR}/../upstream/theora/lib/bitpack.c"
+@@ -370,7 +405,7 @@
+ target_compile_options(bruma_mkxp PRIVATE -fdeclspec)
+ 
+ target_include_directories(SDL2_ttf PRIVATE ${U}/SDL_ttf/external/freetype-2.9.1/include)
+-target_compile_definitions(bruma_mkxp PRIVATE RUBY_VERSION_MAJOR=1 RUBY_VERSION_MINOR=8)
++target_compile_definitions(bruma_mkxp PRIVATE RUBY_VERSION_MAJOR=1 RUBY_VERSION_MINOR=9)
+ target_compile_options(bruma_mkxp PRIVATE -Wno-register)
+ target_link_options(bruma_mkxp PRIVATE -Wl,--no-undefined -Wl,-z,max-page-size=16384)
+ target_compile_options(ruby PRIVATE -fgnu89-inline)
+@@ -383,3 +418,7 @@
+  set_target_properties(fluidlite PROPERTIES OUTPUT_NAME bruma_classic_fluidlite)
+  set_target_properties(bruma_mkxp PROPERTIES OUTPUT_NAME bruma_classic)
+ endif()
++
++add_executable(bruma_ruby193_probe ruby193-probe.c)
++target_link_libraries(bruma_ruby193_probe PRIVATE ruby)
++

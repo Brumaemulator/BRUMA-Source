@@ -1,0 +1,5 @@
+BrumaModernRuntime is integrated in the ARM64 BRUMA project. `assembleDebug` passed and the updated APK installed on the connected POCO X8 Pro. Pokémon Añil launched through BRUMA's normal RPG library and selected the modern `libmkxp-z.so` engine; Pokémon Z selected and started in `ClassicActivity` using the unchanged `libbruma_classic.so`. Existing instrumentation passed modern game discovery/launch, classification and touch/gamepad/keyboard mapping. Android opened 48 kHz stereo audio for Añil.
+
+The previous modern native libraries are retained at `backups/modern-rpg-engine-before-source-runtime-2026-09-30/`. The matching source archive, locks, notices and hashes are in `third_party/BrumaModernRuntime/`. The NDS and classic engine were not replaced.
+
+Before Google Play publication only: finish explaining the byte-level differences in three native libraries across clean builds, capture the outstanding JDK/MSYS2/NDK installer hashes, and finalize corresponding-source/notice/installation-information delivery and legal review for the combined GPL-3.0-or-later runtime. These do not block the requested local replacement.

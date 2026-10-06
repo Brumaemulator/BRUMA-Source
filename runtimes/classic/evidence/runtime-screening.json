@@ -1,0 +1,224 @@
+{
+  "file_count": 12803,
+  "forbidden_files": [],
+  "patterns_requiring_review": [
+    {
+      "file": "native/ruby193/parse.c",
+      "line": 4954,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/ext/ripper/ripper.c",
+      "line": 4954,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/ext/syck/gram.c",
+      "line": 1114,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/ext/tk/sample/tkextlib/iwidgets/sample/entryfield-1.rb",
+      "line": 26,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/ext/tk/sample/tkextlib/iwidgets/sample/entryfield-2.rb",
+      "line": 32,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/ext/tk/sample/tkextlib/iwidgets/sample/entryfield-3.rb",
+      "line": 28,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/lib/net/imap.rb",
+      "line": 3550,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/lib/net/telnet.rb",
+      "line": 716,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/lib/rexml/xmltokens.rb",
+      "line": 10,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/lib/uri/generic.rb",
+      "line": 506,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/lib/rdoc/parser/ruby.rb",
+      "line": 1447,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/lib/rexml/parsers/baseparser.rb",
+      "line": 40,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/open-uri/test_ssl.rb",
+      "line": 299,
+      "kind": "(?i)-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE ",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/openssl/test_pkcs12.rb",
+      "line": 25,
+      "kind": "(?i)-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE ",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/openssl/utils.rb",
+      "line": 14,
+      "kind": "(?i)-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE ",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/openssl/utils.rb",
+      "line": 32,
+      "kind": "(?i)-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE ",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/openssl/utils.rb",
+      "line": 86,
+      "kind": "(?i)-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE ",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/rexml/test_stream.rb",
+      "line": 14,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/rexml/test_stream.rb",
+      "line": 14,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/ruby/envutil.rb",
+      "line": 189,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/rubygems/private_key.pem",
+      "line": 1,
+      "kind": "(?i)-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE ",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/rubygems/ssl_key.pem",
+      "line": 1,
+      "kind": "(?i)-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE ",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/rubygems/test_gem_commands_owner_command.rb",
+      "line": 11,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/rubygems/test_gem_commands_push_command.rb",
+      "line": 22,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/rubygems/test_gem_gemcutter_utilities.rb",
+      "line": 48,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/rubygems/test_gem_gemcutter_utilities.rb",
+      "line": 60,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/rubygems/test_gem_gemcutter_utilities.rb",
+      "line": 72,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/rubygems/test_gem_gemcutter_utilities.rb",
+      "line": 81,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/rubygems/test_gem_gemcutter_utilities.rb",
+      "line": 82,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/rubygems/test_gem_remote_fetcher.rb",
+      "line": 395,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/net/imap/server.key",
+      "line": 1,
+      "kind": "(?i)-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE ",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "native/ruby193/test/rubygems/data/gem-private_key.pem",
+      "line": 1,
+      "kind": "(?i)-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE ",
+      "review": "Identical official Ruby archive content: parser literals, documentation or public test fixture; not BRUMA credentials."
+    },
+    {
+      "file": "upstream/openal-soft/.github/workflows/makemhr.yml",
+      "line": 72,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Public upstream source: GitHub secret variable reference without its value, Windows public assembly identifier or parser-token diagnostic. No credentials."
+    },
+    {
+      "file": "upstream/SDL/src/video/windows/SDL_windowsmessagebox.c",
+      "line": 944,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Public upstream source: GitHub secret variable reference without its value, Windows public assembly identifier or parser-token diagnostic. No credentials."
+    },
+    {
+      "file": "upstream/SDL_ttf/external/freetype-2.9.1/src/psaux/psobjs.c",
+      "line": 564,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Public upstream source: GitHub secret variable reference without its value, Windows public assembly identifier or parser-token diagnostic. No credentials."
+    },
+    {
+      "file": "upstream/SDL_ttf/external/freetype-2.9.1/src/psaux/psobjs.c",
+      "line": 590,
+      "kind": "(?i)(?:password|token|api_key|secret)\\s*[:=]\\",
+      "review": "Public upstream source: GitHub secret variable reference without its value, Windows public assembly identifier or parser-token diagnostic. No credentials."
+    }
+  ],
+  "game_and_device_evidence_excluded": true,
+  "result": "PASS: no BRUMA secrets, games, saves, keys or private logs; all matches manually reviewed as public upstream material."
+}

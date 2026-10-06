@@ -1,0 +1,29 @@
+uniform sampler2D source;
+uniform sampler2D destination;
+uniform highp vec4 subRect;
+uniform lowp float opacity;
+varying highp vec2 v_texCoord;
+void main ()
+{
+  mediump float co1_1;
+  mediump vec4 resFrag_2;
+  lowp vec4 tmpvar_3;
+  tmpvar_3 = texture2D (source, v_texCoord);
+  lowp vec4 tmpvar_4;
+  highp vec2 P_5;
+  P_5 = ((v_texCoord - subRect.xy) * subRect.zw);
+  tmpvar_4 = texture2D (destination, P_5);
+  lowp float tmpvar_6;
+  tmpvar_6 = (tmpvar_3.w * opacity);
+  co1_1 = tmpvar_6;
+  mediump float tmpvar_7;
+  tmpvar_7 = (tmpvar_4.w * (1.0 - co1_1));
+  resFrag_2.w = (co1_1 + tmpvar_7);
+  if ((resFrag_2.w == 0.0)) {
+    resFrag_2.xyz = tmpvar_3.xyz;
+  } else {
+    resFrag_2.xyz = (((co1_1 * tmpvar_3.xyz) + (tmpvar_7 * tmpvar_4.xyz)) / resFrag_2.w);
+  };
+  gl_FragColor = resFrag_2;
+}
+

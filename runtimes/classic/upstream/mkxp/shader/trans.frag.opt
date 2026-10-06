@@ -1,0 +1,21 @@
+uniform sampler2D currentScene;
+uniform sampler2D frozenScene;
+uniform sampler2D transMap;
+uniform highp float prog;
+uniform highp float vague;
+varying highp vec2 v_texCoord;
+void main ()
+{
+  mediump float alpha_1;
+  lowp float tmpvar_2;
+  tmpvar_2 = ((clamp (texture2D (transMap, v_texCoord).x, prog, 
+    (prog + vague)
+  ) - prog) / vague);
+  alpha_1 = tmpvar_2;
+  lowp vec4 tmpvar_3;
+  tmpvar_3 = texture2D (currentScene, v_texCoord);
+  lowp vec4 tmpvar_4;
+  tmpvar_4 = texture2D (frozenScene, v_texCoord);
+  gl_FragColor = mix (tmpvar_3, tmpvar_4, alpha_1);
+}
+

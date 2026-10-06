@@ -1,0 +1,27 @@
+{
+  "aab_unsigned": true,
+  "signatures": [],
+  "elf_count": 14,
+  "packaged_elf_sha256": {
+    "base/lib/arm64-v8a/libSDL2.so": "f7d7b3a32451d538ed541c12c0506928c46bc048756837eaf7c17e58f5bbf4a4",
+    "base/lib/arm64-v8a/libSDL2_image.so": "dd3fce53ac0e3064d073db37c8d61e31f416855315f4cf289bdd0a844e373d15",
+    "base/lib/arm64-v8a/libSDL2_sound.so": "3c263b943c0fae30295881701ab428511b601eff0f1f0b6dcf2c5504c42d8e8a",
+    "base/lib/arm64-v8a/libSDL2_ttf.so": "024f9291ad079f6a27262e3e18389b4bd9017eb4feb640c8e1975c0b7af2c5d5",
+    "base/lib/arm64-v8a/libbruma_classic.so": "4552ce9f17d129cbebc8eb85c3feddd93f5b0f4e243d7ff9d7f3de686657f07c",
+    "base/lib/arm64-v8a/libbruma_classic_fluidlite.so": "c2539f5f56dc764a3b71abfeae51acfc9497ac42bea035d228b356344b311fd0",
+    "base/lib/arm64-v8a/libbruma_classic_openal.so": "42aa310656d2113c21787cc98e56c378cd6ad4d3f22016f245d0dbeb2c72295f",
+    "base/lib/arm64-v8a/libbruma_classic_sdl2.so": "e448c2b5523c46969afc526759ed1439b848e326af6061d3083f7fa92bd4b808",
+    "base/lib/arm64-v8a/libbruma_nds.so": "41bfafe5dda0a72ac7e83e4eec9fdfcea087dc2f768db51ba4a58afb266bbd68",
+    "base/lib/arm64-v8a/libc++_shared.so": "cd61762848882a16c8244c964a6f396c0caa0b440588a210ce9cc4ab0e6d9f0c",
+    "base/lib/arm64-v8a/liblinkcore.so": "b44974a210027b0828aa1a9ef787bcc0ccd9fb281d7aca2adb5ac8aa505ec2c1",
+    "base/lib/arm64-v8a/libmkxp-z.so": "39429737046fc7fc57a74c323e54632900379d2bae90cae51f66c62bded9f9ae",
+    "base/lib/arm64-v8a/libopenal.so": "e0a1974a2b6e1a775de3e49a86ab4c00c17bb7fc84542954f0e5f79160cc99e8",
+    "base/lib/arm64-v8a/libruby.so": "4b4d6837789565941cb1ea774a915857d89f5f77cffcd9240e4bad4ee8ce1197"
+  },
+  "artifacts": {
+    "BRUMA-1.0.0-Ruby193-UNSIGNED.aab": "1707579dbef10f6fdb940b6c11a517f72d5413c1e15d4f5b4690812b9e1ae80f",
+    "BRUMA-1.0.0-Ruby193-debug.apk": "7c3c0163ff2b4cf4dbc50550694aa3856c1b653df35f0314ddd4e14d1f1db482"
+  },
+  "ruby193_notices_present": true,
+  "old_mkxp18_absent": true
+}

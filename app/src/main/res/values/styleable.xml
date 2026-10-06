@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SPDX-License-Identifier: MIT; preserved attribute names for compatibility. -->
+<resources><declare-styleable name="GamepadButton"><attr name="text" format="string"/><attr name="fgDrawable" format="reference"/><attr name="bgDrawable" format="reference"/></declare-styleable></resources>

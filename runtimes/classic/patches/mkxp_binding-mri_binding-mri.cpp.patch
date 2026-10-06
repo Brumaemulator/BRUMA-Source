@@ -1,0 +1,59 @@
+--- a/mkxp/binding-mri/binding-mri.cpp
++++ b/mkxp/binding-mri/binding-mri.cpp
+@@ -42,6 +42,8 @@
+ #include <string>
+ #include <zlib.h>
+ extern "C" void Init_zlib(void);
++extern "C" void Init_ext(void);
++void brumaRuby193InitExtensions() { Init_ext(); }
+ 
+ #include <SDL_cpuinfo.h>
+ #include <SDL_filesystem.h>
+@@ -577,7 +579,14 @@
+ 
+ static VALUE evalHelper(evalArg *arg)
+ {
+-	VALUE argv[] = { arg->string, Qnil, arg->filename };
++	VALUE source = arg->string;
++ ID compatibility = rb_intern("BrumaRuby193Compat");
++ if (rb_const_defined(rb_cObject, compatibility)) {
++   VALUE adapter = rb_const_get(rb_cObject, compatibility);
++   rb_funcall(adapter, rb_intern("sync_display_size"), 0);
++   source = rb_funcall(adapter, rb_intern("normalize_source"), 2, source, arg->filename);
++ }
++ VALUE argv[] = { source, Qnil, arg->filename };
+ 	return rb_funcall2(Qnil, rb_intern("eval"), ARRAY_SIZE(argv), argv);
+ }
+ 
+@@ -966,18 +975,21 @@
+ 	int argc = 0;
+ 	char **argv = 0;
+ 
+-#if RUBY_API_VERSION_MAJOR == 1
+-	ruby_init();
+-    Init_zlib();
+-    rb_provide("zlib.so");
+-    rb_eval_string("$KCODE='U'");
++#ifdef RUBY_LEGACY_VERSION
++ ruby_init();
++ Init_zlib();
++ rb_provide("zlib.so");
++ rb_eval_string("$KCODE='U'");
+ #else
+-	RUBY_INIT_STACK;
+-    ruby_init();
+-	ruby_exec_node(ruby_options(argc, (char**) &argv));
+-	
+-    rb_enc_set_default_internal(rb_enc_from_encoding(rb_utf8_encoding()));
++ RUBY_INIT_STACK;
++ ruby_init();
++ extern void brumaRuby193InitExtensions();
++ brumaRuby193InitExtensions();
++ const char *rubyArgv[] = {"bruma-classic", "--disable-gems", "-e", "", nullptr};
++ ruby_exec_node(ruby_options(4, const_cast<char **>(rubyArgv)));
++ rb_enc_set_default_internal(rb_enc_from_encoding(rb_utf8_encoding()));
+ #endif
++
+ 	rb_enc_set_default_external(rb_enc_from_encoding(rb_utf8_encoding()));
+ 
+ 	Config &conf = shState->rtData().config;

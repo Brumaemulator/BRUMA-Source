@@ -1,0 +1,48 @@
+uniform mat4 projMat;
+uniform vec2 texSizeInv;
+uniform vec2 translation;
+uniform float aniIndex;
+uniform float t1Ani;
+uniform float t2Ani;
+uniform float t3Ani;
+uniform float t4Ani;
+uniform float t5Ani;
+uniform float t6Ani;
+uniform float t7Ani;
+attribute vec2 position;
+attribute vec2 texCoord;
+varying mediump vec2 v_texCoord;
+void main ()
+{
+  mediump vec2 tex_1;
+  tex_1 = texCoord;
+  mediump float tmpvar_2;
+  tmpvar_2 = float(((texCoord.x <= 96.0) && (texCoord.y <= 896.0)));
+  mediump int tmpvar_3;
+  tmpvar_3 = (int((texCoord.y / 128.0)) + 1);
+  if ((((
+    ((((
+      (tmpvar_3 == 1)
+     && 
+      (t1Ani >= 1.0)
+    ) || (
+      (tmpvar_3 == 2)
+     && 
+      (t2Ani >= 1.0)
+    )) || ((tmpvar_3 == 3) && (t3Ani >= 1.0))) || ((tmpvar_3 == 4) && (t4Ani >= 1.0)))
+   || 
+    ((tmpvar_3 == 5) && (t5Ani >= 1.0))
+  ) || (
+    (tmpvar_3 == 6)
+   && 
+    (t6Ani >= 1.0)
+  )) || ((tmpvar_3 == 7) && (t7Ani >= 1.0)))) {
+    tex_1.x = (texCoord.x + ((aniIndex * 96.0) * tmpvar_2));
+  };
+  vec4 tmpvar_4;
+  tmpvar_4.zw = vec2(0.0, 1.0);
+  tmpvar_4.xy = (position + translation);
+  gl_Position = (projMat * tmpvar_4);
+  v_texCoord = (tex_1 * texSizeInv);
+}
+

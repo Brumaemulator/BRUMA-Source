@@ -1,0 +1,23 @@
+{
+  "JDK 21 java": {
+    "sha256": "82051fdab26319d77d20cc0065045d05ec00b3e3d05f44935d7c06b96b621d55"
+  },
+  "JDK 21 javac": {
+    "sha256": "00f7c6f9ec89ebba4bb96cf8760403cccf1268df2eae8685900ba38e58a7aff9"
+  },
+  "MSYS2 bash": {
+    "sha256": "7b4dc5d6878aacdec5d09ca9c5d8e2b43b925a6bbf631873a24c692980b792b2"
+  },
+  "Python": {
+    "sha256": "dd5f8d19f6755d6491ee7c4bef2fe35ddd521334cc3ca3ed8fc93ebcadf135d0"
+  },
+  "CMake 4.1.2": {
+    "sha256": "9b2f3db4222e8c20a844481428b85ef87358fc14596622a69b499af580c26fe3"
+  },
+  "NDK r28c clang": {
+    "sha256": "7d31c6f6fad98987b6c9d21b800afaa8b3e37f052e94aaddc941d42ff2a35579"
+  },
+  "Gradle wrapper": {
+    "sha256": "497c8c2a7e5031f6aa847f88104aa80a93532ec32ee17bdb8d1d2f67a194a9c7"
+  }
+}

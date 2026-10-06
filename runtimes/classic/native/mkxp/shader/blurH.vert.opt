@@ -1,0 +1,23 @@
+uniform mat4 projMat;
+uniform vec2 texSizeInv;
+attribute vec2 position;
+attribute vec2 texCoord;
+varying vec2 v_texCoord;
+varying vec2 v_blurCoord[2];
+void main ()
+{
+  vec4 tmpvar_1;
+  tmpvar_1.zw = vec2(0.0, 1.0);
+  tmpvar_1.xy = position;
+  gl_Position = (projMat * tmpvar_1);
+  v_texCoord = (texCoord * texSizeInv);
+  vec2 tmpvar_2;
+  tmpvar_2.x = (texCoord.x - 1.0);
+  tmpvar_2.y = texCoord.y;
+  v_blurCoord[0] = (tmpvar_2 * texSizeInv);
+  vec2 tmpvar_3;
+  tmpvar_3.x = (texCoord.x + 1.0);
+  tmpvar_3.y = texCoord.y;
+  v_blurCoord[1] = (tmpvar_3 * texSizeInv);
+}
+

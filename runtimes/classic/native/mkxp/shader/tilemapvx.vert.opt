@@ -1,0 +1,29 @@
+uniform mat4 projMat;
+uniform vec2 texSizeInv;
+uniform vec2 translation;
+uniform vec2 aniOffset;
+attribute vec2 position;
+attribute vec2 texCoord;
+varying mediump vec2 v_texCoord;
+void main ()
+{
+  mediump float pred_1;
+  mediump vec2 tex_2;
+  tex_2.y = texCoord.y;
+  bool tmpvar_3;
+  tmpvar_3 = (texCoord.y <= 384.0);
+  pred_1 = float(((texCoord.x <= 288.0) && tmpvar_3));
+  tex_2.x = (texCoord.x + (aniOffset.x * pred_1));
+  pred_1 = float(((
+    (tex_2.x >= 384.0)
+   && 
+    (tex_2.x <= 512.0)
+  ) && tmpvar_3));
+  tex_2.y = (texCoord.y + (aniOffset.y * pred_1));
+  vec4 tmpvar_4;
+  tmpvar_4.zw = vec2(0.0, 1.0);
+  tmpvar_4.xy = (position + translation);
+  gl_Position = (projMat * tmpvar_4);
+  v_texCoord = (tex_2 * texSizeInv);
+}
+

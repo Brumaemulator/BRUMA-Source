@@ -1,0 +1,77 @@
+[
+  {
+    "component": "SDL2",
+    "file": "patches/SDL2.patch",
+    "sha256": "67f90fdb6f784f3d1be26645877b048356cf7ee159366947812bdf5cfb2ad995"
+  },
+  {
+    "component": "harfbuzz",
+    "file": "patches/harfbuzz.patch",
+    "sha256": "82f0c7f69797cb24f6c3c589285be1310cf1ca4b49ebec3c1932434f933b1cd2"
+  },
+  {
+    "component": "ruby",
+    "file": "patches/ruby.patch",
+    "sha256": "cad34f6a96466c75465143f42efe61355949f10c1f58cd632669c744cf2259f5"
+  },
+  {
+    "component": "BRUMA-MiniFFI",
+    "file": "overrides/mkxp-z/binding/miniffi-binding.cpp",
+    "sha256": "92ad3d5a047d75d7a19f04a534605cbe284ef50fc8ad6e8212c6425266083304"
+  },
+  {
+    "component": "BRUMA-MiniFFI",
+    "file": "overrides/mkxp-z/binding/miniffi.cpp",
+    "sha256": "dc10c80bfb4dfd6b225b483dd2f84e9a96d96de83e8924f8c3df10e72162c0b0"
+  },
+  {
+    "component": "BRUMA-MiniFFI",
+    "file": "overrides/mkxp-z/binding/miniffi.h",
+    "sha256": "144f7c3df40c422fee895e7015057ab7e80904b733c6d4e8ae74a9564005f80d"
+  },
+  {
+    "component": "build-recipe",
+    "file": "scripts/stage-native.py",
+    "sha256": "8232dd0d6ed66fc67fc15a8f46bf841335820f4d58f5c095ddba341afd685d80"
+  },
+  {
+    "component": "BRUMA-original-native-build",
+    "file": "scripts/build-engine.ps1",
+    "sha256": "31f653bc960202bc95818f980e6c90e4b76a867dd7eea93d0dbd374f01f14e3e"
+  },
+  {
+    "component": "BRUMA-original-native-build",
+    "file": "scripts/build-clean-runtime.ps1",
+    "sha256": "1b7d81487b4aea7527ed0fc1a5530d589f7be50ab22fa81544ed248c51a72bc5"
+  },
+  {
+    "component": "BRUMA-original-native-build",
+    "file": "build-system/CMakeLists.txt",
+    "sha256": "810f07a18400c89f0420b6e46db6ca9d4b707a3a6d68233ccc137607eaf8b9ab"
+  },
+  {
+    "component": "BRUMA-original-native-build",
+    "file": "build-system/arm64-requirements.json",
+    "sha256": "d2074b66d7ce289c89986d23dcbbc05b95141314ff138ded2d57987687f5c541"
+  },
+  {
+    "component": "BRUMA-original-native-build",
+    "file": "build-system/LICENSE",
+    "sha256": "a723206bb744443d536c739661b5ef81ee798c17ced20c36813926762499f019"
+  },
+  {
+    "component": "BRUMA-original-native-build",
+    "file": "scripts/package-corresponding-source.py",
+    "sha256": "8f99e2889bca6af8e1eac05176037961905f24a8e34fa146ab8f2bfec761630e"
+  },
+  {
+    "component": "BRUMA-original-native-build",
+    "file": "build-system/README.md",
+    "sha256": "cc568de6ef5b6b68fb334f5935aa88e6d4ef989130ac1c70d98aa4b823da2edc"
+  },
+  {
+    "component": "BRUMA-original-native-build",
+    "file": "build-system/generate-driver.py",
+    "sha256": "d4376fa3a1ee9362fcad11bd3eee9995a4618e90234f51e30d5aa5803994f156"
+  }
+]

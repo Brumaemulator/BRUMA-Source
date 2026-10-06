@@ -1,0 +1,18 @@
+diff --git a/src/ARMJIT_Memory.cpp b/src/ARMJIT_Memory.cpp
+index 09bad07..8592c5b 100644
+--- a/src/ARMJIT_Memory.cpp
++++ b/src/ARMJIT_Memory.cpp
+@@ -916,10 +916,13 @@ ARMJIT_Memory::ARMJIT_Memory(melonDS::NDS& nds) : NDS(nds)
+     }
+     shm_unlink(fastmemPidName);
+ #endif
++#if !defined(__ANDROID__)
++    // Android's shared-memory API has already allocated and sealed the size.
+     if (ftruncate(MemoryFile, MemoryTotalSize) < 0)
+     {
+         Log(LogLevel::Error, "Failed to allocate memory using ftruncate! (%s)", strerror(errno));
+     }
++#endif
+ 
+     mmap(MemoryBase, MemoryTotalSize, PROT_READ | PROT_WRITE, MAP_SHARED | MAP_FIXED, MemoryFile, 0);
+ #endif

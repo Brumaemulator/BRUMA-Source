@@ -1,0 +1,20 @@
+uniform sampler2D texture;
+uniform lowp vec4 tone;
+uniform lowp float opacity;
+uniform lowp vec4 color;
+uniform lowp vec4 flash;
+varying highp vec2 v_texCoord;
+void main ()
+{
+  lowp vec4 frag_1;
+  lowp vec4 tmpvar_2;
+  tmpvar_2 = texture2D (texture, v_texCoord);
+  frag_1.w = tmpvar_2.w;
+  frag_1.xyz = mix (tmpvar_2.xyz, vec3(dot (tmpvar_2.xyz, vec3(0.299, 0.587, 0.114))), tone.w);
+  frag_1.xyz = (frag_1.xyz + tone.xyz);
+  frag_1.w = (tmpvar_2.w * opacity);
+  frag_1.xyz = mix (frag_1.xyz, color.xyz, color.w);
+  frag_1.xyz = mix (frag_1.xyz, flash.xyz, flash.w);
+  gl_FragColor = frag_1;
+}
+

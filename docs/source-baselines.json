@@ -1,0 +1,10 @@
+{
+  "mgba": {
+    "repository": "https://github.com/mgba-emu/mgba",
+    "commit": "26b7884bc25a5933960f3cdcd98bac1ae14d42e2",
+    "version": "0.10.5",
+    "archive_sha256": "9475c26e9fa2f4b30c07ab6636e4b0a5b62e4baee2109ede7b2fecc52edae366",
+    "local_changes": []
+  },
+  "fonts_inventory": "font-inventory.json; SFNT name tables parsed directly by finalize_inputs.py because fontTools was unavailable"
+}

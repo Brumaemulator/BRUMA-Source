@@ -1,0 +1,18 @@
+--- a/mkxp/src/eventthread.cpp
++++ b/mkxp/src/eventthread.cpp
+@@ -452,7 +452,15 @@
+ 				break;
+ 
+ 			case REQUEST_WINRESIZE :
++#ifdef __ANDROID__
++				// Android's SurfaceView owns the drawable size. A desktop-style
++				// SDL resize changes logical dimensions without resizing its
++				// fixed buffer, leaving the rendered game in one corner.
++				SDL_GL_GetDrawableSize(win, &winW, &winH);
++				windowSizeMsg.post(Vec2i(winW, winH));
++#else
+ 				SDL_SetWindowSize(win, event.window.data1, event.window.data2);
++#endif
+ 				break;
+ 
+             case REQUEST_TEXTMODE :

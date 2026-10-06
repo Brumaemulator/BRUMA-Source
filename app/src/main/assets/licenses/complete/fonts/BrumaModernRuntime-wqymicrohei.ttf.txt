@@ -1,0 +1,26 @@
+{
+  "path": "<BUILD-HOME>\\.codex\\.chatgpt-projects\\g-p-6aa4ce9dc5308191a0cecb7d515dda3a\\BrumaModernRuntime\\upstream\\mkxp-z-android-reworked\\app\\jni\\mkxp-z\\assets\\wqymicrohei.ttf",
+  "sha256": "5e2297609126d20a5c3f35eb0ed8ac8bc7e4a2290a820f4055c0703d2c598912",
+  "metadata": {
+    "0": [
+      "Digitized data copyright © 2007, Google Corporation.\nCopyright © 2008-2009 WenQuanYi Board of Trustees (http://wenq.org/) and Qianqian Fang"
+    ],
+    "1": [
+      "WenQuanYi Micro Hei",
+      "文泉驛微米黑",
+      "文泉驿微米黑"
+    ],
+    "5": [
+      "Version 0.2.0-beta"
+    ],
+    "8": [
+      "Ascender Corporation"
+    ],
+    "13": [
+      "Licensed under the Apache License, Version 2.0"
+    ],
+    "14": [
+      "http://www.apache.org/licenses/LICENSE-2.0"
+    ]
+  }
+}

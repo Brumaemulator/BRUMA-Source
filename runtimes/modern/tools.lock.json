@@ -1,0 +1,348 @@
+{
+  "schema": 1,
+  "status": "Clean ARM64 builds completed; device validation found and fixed an ABI mismatch by using the libc++_shared.so supplied by the pinned NDK. Host executables and all 30 cached MSYS2 package archives are SHA-256 recorded. NDK/JDK original distribution archives were not retained; their actual invoked executables and packaged libc++ are hash pinned.",
+  "host": "Windows 11 x64 (build host)",
+  "tools": [
+    {
+      "name": "Android NDK",
+      "version": "r28c / 28.2.13676358",
+      "source": "Google Android SDK package; SDK ndk;28.2.13676358",
+      "target": "aarch64-linux-android26; ARM64 only",
+      "installer_archive": "android-ndk-r28c-windows.zip",
+      "sha256": null,
+      "sha256_status": "Official Android NDK r28c Windows archive SHA-1 recorded; archive not retained, so local SHA-256 unavailable",
+      "sha1": "086bba43ff2f5eb0e387b15c8278bb4e0d89ba1d",
+      "installed_ndk_build_sha256": "372f3d38417243f633dd90f785cbf95ce8540b373a0d4fc82cb50c9ddbf1bfb1",
+      "installed_make_sha256": "0399888d520b66cd75e9bf3abc8453af188a5a51484326730b58bfd675cb373c",
+      "installed_clang_sha256": "7d31c6f6fad98987b6c9d21b800afaa8b3e37f052e94aaddc941d42ff2a35579",
+      "packaged_libcxx_shared_path": "toolchains/llvm/prebuilt/windows-x86_64/sysroot/usr/lib/aarch64-linux-android/libc++_shared.so",
+      "packaged_libcxx_shared_sha256": "AB4E6C71B96B851DE45A8A9BD86369E7DBC2130A44B3B4520564BE94847910F2",
+      "packaged_libcxx_license": "Apache-2.0 WITH LLVM-exception"
+    },
+    {
+      "name": "NDK Clang",
+      "version": "19.0.1; Android 13624864; LLVM revision r530567e",
+      "path": "<BUILD-HOME>\\AppData\\Local\\Android\\Sdk\\ndk\\28.2.13676358\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
+      "sha256": "7d31c6f6fad98987b6c9d21b800afaa8b3e37f052e94aaddc941d42ff2a35579",
+      "source_commit": "llvm/llvm-project 3b5e7c83a6e226d5bd7ed2e9b67449b64812074c; NDK toolchain build is r530567e"
+    },
+    {
+      "name": "Android SDK platform",
+      "version": "android-36",
+      "targetSdk": 36,
+      "buildTools": "36.0.0"
+    },
+    {
+      "name": "Android Gradle Plugin",
+      "version": "9.4.0",
+      "coordinate": "com.android.tools.build:gradle:9.4.0",
+      "repository": "Google Maven",
+      "sha256": null,
+      "verification_metadata_sha256": "041274f407408d12ed208e14e0269d1f131911326b8b5d25bb1db6c270af6d4c",
+      "checksum_status": "All resolved Maven artifacts/POMs are individually pinned in gradle/verification-metadata.xml"
+    },
+    {
+      "name": "Gradle",
+      "version": "9.6.0",
+      "distribution": "https://services.gradle.org/distributions/gradle-9.6.0-bin.zip",
+      "sha256": "bbaeb2fef8710818cf0e261201dab964c572f92b942812df0c3620d62a529a01"
+    },
+    {
+      "name": "JDK",
+      "version": "OpenJDK 25.0.3+15898627 (Android Studio JBR, used for release-test assembly)",
+      "archive_sha256": null,
+      "sha256_status": "JBR installer/archive was not retained; exact JDK distribution hash remains pending",
+      "installed_runtime_sha256": "7148521120f35659dc0b233358a107c67ca7ca92993391519660ee6c80a9df9a",
+      "compiler_sha256": "af9cb81e71f9b65f1841f1a5feb536e45e76b6abfdae743f7b0373ad055a9bd0"
+    },
+    {
+      "name": "CMake",
+      "version": "4.1.2",
+      "source": "Android SDK CMake package",
+      "cmake_sha256": "9b2f3db4222e8c20a844481428b85ef87358fc14596622a69b499af580c26fe3",
+      "ninja_sha256": "950f9deedaf1879ad81e86060307cd4e61cb185c42056e5bd9e8a03120be225c"
+    },
+    {
+      "name": "MSYS2 base",
+      "version": "20260927",
+      "archive": "msys2-base-x86_64-20260927.tar.xz",
+      "sha256": "ea2f31a0b6ade63914ce441ffb022f0f6aa96982bfefa2326460a26d5fb01322"
+    },
+    {
+      "name": "MSYS2 packages",
+      "versions": {
+        "make": "4.4.1-3",
+        "autoconf-wrapper": "20260320-1",
+        "automake-wrapper": "20260320-1",
+        "libtool": "2.6.2-1",
+        "pkgconf": "3.0.7-1",
+        "ruby": "3.4.10-1",
+        "perl": "5.42.3-2",
+        "bison": "3.8.2-5"
+      },
+      "cached_package_archive_sha256": {
+        "autoconf2.73-2.73-1-any.pkg.tar.zst": "716d0542dc12a481f1c2d5574f17f1470eb9d3226cf6e206d4e243c12fa95e1a",
+        "db-6.2.32-6-x86_64.pkg.tar.zst": "41bc94acad3b53eaa92227ec34412305f648848ffbc963bcad88274517e13e8d",
+        "automake1.17-1.17-1-any.pkg.tar.zst": "bb069dbb6f580c2346d2f6d74268b5e12e625f7ba57299426f9cd6c0fa714191",
+        "libyaml-0.2.5-2-x86_64.pkg.tar.zst": "11509c6e3133b3fc63f99cc04e89a1cc5685aa746e96bd5f481e3424fbd4f6c1",
+        "autoconf2.69-2.69-4-any.pkg.tar.zst": "56b2de8e53e46a88bb217a427c2f7b5671ac6400148681fb2089e9b7be817364",
+        "patch-2.8-2-x86_64.pkg.tar.zst": "df34ebf345d607cabf0b2cbad60f562f775f07985647b84035b40702f62ee9b1",
+        "automake1.15-1.15.1-4-any.pkg.tar.zst": "e3c73d0094eebbc2353b2ddd0b7c81020917c2ec09d3e4967d7abc9794fa7843",
+        "automake-wrapper-20260320-1-any.pkg.tar.zst": "693817c288c81bb9f94ac92e5b6f914402735b80bb33e326ccddd7c89cc6a719",
+        "bison-3.8.2-5-x86_64.pkg.tar.zst": "7439ca784a9909e0730a513d3aff15852c3b292ac85053fa2dd7a2a19c1ce04c",
+        "libdb-6.2.32-6-x86_64.pkg.tar.zst": "27a35786f3aab14e625c02df7bcd8a9dda0da782ce4f0549a427a21316b4d179",
+        "automake1.16-1.16.5-1-any.pkg.tar.zst": "1963b5fa0ab5eaf1bdc311501cd742c6bb19941e831dcc8ab1e51a8c7f1634fe",
+        "gdbm-1.26-1-x86_64.pkg.tar.zst": "1f8e949be2bbe488c5644132db78ecda288c9945922e7ed2447384734e2adba2",
+        "autoconf-wrapper-20260320-1-any.pkg.tar.zst": "84c1f93d4450b3bf1ef567110b51c15ffb3f13670d656cc48fea70a01371b20c",
+        "perl-5.42.3-2-x86_64.pkg.tar.zst": "d89eaa2b8d661fd2040b54092d718f57aa1c066ea2d63735989ee47cfa7c9ef2",
+        "autoconf2.13-2.13-6-any.pkg.tar.zst": "38bd817375f053b6d939f80a30582d05bc6ed5cd07db135e7f3120a27f1b9512",
+        "libtool-2.6.2-1-x86_64.pkg.tar.zst": "ed51a0790d6cd59d24f2f76c826ed0e8d85f81bc1ac2807736400ea5e178fc5a",
+        "autoconf2.71-2.71-4-any.pkg.tar.zst": "55be2b911beaa0424d60fdcf206f2411a0eb24cb53e66a82964497ef8a4faac0",
+        "libltdl-2.6.2-1-x86_64.pkg.tar.zst": "bc17673d87573f997c2aad6680edb57a54a7ab837fd58a95dcd6030aac1f63e4",
+        "automake1.18-1.18.1-1-any.pkg.tar.zst": "c045d9eddf900dbacae06d9e0e19e250cc32d849def7d06b833253f85e3fc941",
+        "autoconf2.72-2.72-4-any.pkg.tar.zst": "65b3a37edf8bb4221d38db910ce1acc1ed879c7bcba33faa058066d06d35e7b0",
+        "diffutils-3.12-1-x86_64.pkg.tar.zst": "7902c8ce3d4dd69a0f5e98dc9d5c83c17b23314ba486169db57ef6e2835ce3b6",
+        "libgdbm-1.26-1-x86_64.pkg.tar.zst": "bb4b08b720dd3194db010589812e9c63bec3d29b32545e7cbd07b6443e51c5ed",
+        "pkgconf-3.0.7-1-x86_64.pkg.tar.zst": "5e051b9623f7e539515f8c42430bf4bd1e377a459e810faea4358f48c3115199",
+        "m4-1.4.21-1-x86_64.pkg.tar.zst": "b561e8871c7599502d9fae7196ee965b3fed3d7af09154eb8d2f5e4d9e5e5106",
+        "automake1.13-1.13.4-7-any.pkg.tar.zst": "a0d3eb1b359a67c1c8a9161cf79ba681cccabf47c78cb40d3065b5eff02a82f0",
+        "automake1.14-1.14.1-6-any.pkg.tar.zst": "0b097559c1fa79124552334b63d13417bcec8a08008ab65f77d27300a4ccc5b4",
+        "automake1.12-1.12.6-6-any.pkg.tar.zst": "b6c91241999c6ff8d04c5ea8011b10544a373b01eacb7993c66db99e5f4fb373",
+        "ruby-3.4.10-1-x86_64.pkg.tar.zst": "eb46af8e6d1485e8ac5beb72d5131d2e8584b79445a6e48adcf89c540f1bc703",
+        "automake1.11-1.11.6-6-any.pkg.tar.zst": "25ecc6296e1416513153c290442cbca6dcb813c1c50e5beb3a708408ba5de3a5",
+        "make-4.4.1-3-x86_64.pkg.tar.zst": "af0bdba17f06fe037f0194069adaa31a8fe45f1a11381501896aea1fae37bd5d"
+      },
+      "cached_archives_count": 30,
+      "package_archive_sha256": "Pinned individually in cached_package_archive_sha256; installed set identified by versions and host_tool_binary_hashes."
+    },
+    {
+      "name": "Python",
+      "version": "bundled Codex workspace Python; used for staging/verifiers only",
+      "sha256": null,
+      "executable_sha256": "dd5f8d19f6755d6491ee7c4bef2fe35ddd521334cc3ca3ed8fc93ebcadf135d0"
+    },
+    {
+      "name": "Gradle wrapper",
+      "version": "9.6.0",
+      "properties": "gradle/wrapper/gradle-wrapper.properties",
+      "distributionSha256Sum": "bbaeb2fef8710818cf0e261201dab964c572f92b942812df0c3620d62a529a01"
+    },
+    {
+      "name": "Gradle dependency verification metadata",
+      "path": "gradle/verification-metadata.xml",
+      "sha256": "8a814ff9e78549a9ae37d3d3df740c6e336600684452e75e3cf5e7e8afcca48e"
+    }
+  ],
+  "host_tool_binary_hashes": [
+    {
+      "name": "JDK java.exe",
+      "path": "C:\\Program Files\\Android\\Android Studio1\\jbr\\bin\\java.exe",
+      "bytes": 33432,
+      "sha256": "7148521120f35659dc0b233358a107c67ca7ca92993391519660ee6c80a9df9a"
+    },
+    {
+      "name": "JDK javac.exe",
+      "path": "C:\\Program Files\\Android\\Android Studio1\\jbr\\bin\\javac.exe",
+      "bytes": 23704,
+      "sha256": "af9cb81e71f9b65f1841f1a5feb536e45e76b6abfdae743f7b0373ad055a9bd0"
+    },
+    {
+      "name": "NDK ndk-build.cmd",
+      "path": "<BUILD-HOME>\\AppData\\Local\\Android\\Sdk\\ndk\\28.2.13676358\\ndk-build.cmd",
+      "bytes": 188,
+      "sha256": "372f3d38417243f633dd90f785cbf95ce8540b373a0d4fc82cb50c9ddbf1bfb1"
+    },
+    {
+      "name": "NDK make.exe",
+      "path": "<BUILD-HOME>\\AppData\\Local\\Android\\Sdk\\ndk\\28.2.13676358\\prebuilt\\windows-x86_64\\bin\\make.exe",
+      "bytes": 299616,
+      "sha256": "0399888d520b66cd75e9bf3abc8453af188a5a51484326730b58bfd675cb373c"
+    },
+    {
+      "name": "NDK clang.exe",
+      "path": "<BUILD-HOME>\\AppData\\Local\\Android\\Sdk\\ndk\\28.2.13676358\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang.exe",
+      "bytes": 128240224,
+      "sha256": "7d31c6f6fad98987b6c9d21b800afaa8b3e37f052e94aaddc941d42ff2a35579"
+    },
+    {
+      "name": "CMake 4.1.2 cmake.exe",
+      "path": "<BUILD-HOME>\\AppData\\Local\\Android\\Sdk\\cmake\\4.1.2\\bin\\cmake.exe",
+      "bytes": 12421784,
+      "sha256": "9b2f3db4222e8c20a844481428b85ef87358fc14596622a69b499af580c26fe3"
+    },
+    {
+      "name": "CMake 4.1.2 ninja.exe",
+      "path": "<BUILD-HOME>\\AppData\\Local\\Android\\Sdk\\cmake\\4.1.2\\bin\\ninja.exe",
+      "bytes": 578712,
+      "sha256": "950f9deedaf1879ad81e86060307cd4e61cb185c42056e5bd9e8a03120be225c"
+    },
+    {
+      "name": "Python executable",
+      "path": "<BUILD-HOME>\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+      "bytes": 107312,
+      "sha256": "dd5f8d19f6755d6491ee7c4bef2fe35ddd521334cc3ca3ed8fc93ebcadf135d0"
+    },
+    {
+      "name": "MSYS2 bash.exe",
+      "path": "<BUILD-HOME>\\.codex\\.chatgpt-projects\\g-p-6aa4ce9dc5308191a0cecb7d515dda3a\\tools\\msys64\\usr\\bin\\bash.exe",
+      "bytes": 2449374,
+      "sha256": "7b4dc5d6878aacdec5d09ca9c5d8e2b43b925a6bbf631873a24c692980b792b2"
+    },
+    {
+      "name": "MSYS2 make.exe",
+      "path": "<BUILD-HOME>\\.codex\\.chatgpt-projects\\g-p-6aa4ce9dc5308191a0cecb7d515dda3a\\tools\\msys64\\usr\\bin\\make.exe",
+      "bytes": 236000,
+      "sha256": "91b7e155590d59db22e5eb0a3ffeec6350149f70f9ed2c242d133e584eb72fee"
+    },
+    {
+      "name": "NDK clang++.exe",
+      "path": "<BUILD-HOME>\\AppData\\Local\\Android\\Sdk\\ndk\\28.2.13676358\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\clang++.exe",
+      "bytes": 128240224,
+      "sha256": "1c7792ef6df195b6af5919071a9ca7850bcb850153f02bed9c7d642e266c4ff3"
+    },
+    {
+      "name": "NDK llvm-ar.exe",
+      "path": "<BUILD-HOME>\\AppData\\Local\\Android\\Sdk\\ndk\\28.2.13676358\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\llvm-ar.exe",
+      "bytes": 15932000,
+      "sha256": "f17d96f5f207a887e620c82afcdf2a55fd3bb1db69f50c8cd3061184d3664bc8"
+    },
+    {
+      "name": "NDK llvm-nm.exe",
+      "path": "<BUILD-HOME>\\AppData\\Local\\Android\\Sdk\\ndk\\28.2.13676358\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\llvm-nm.exe",
+      "bytes": 17003616,
+      "sha256": "90236526ebb24c232e59ec573675e32a92190b3346cf3a342c8b0eb5ad0f8203"
+    },
+    {
+      "name": "NDK llvm-ranlib.exe",
+      "path": "<BUILD-HOME>\\AppData\\Local\\Android\\Sdk\\ndk\\28.2.13676358\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\llvm-ranlib.exe",
+      "bytes": 15932000,
+      "sha256": "7deaa35038a2901eceb2ac99929cbf764618815e0062460ba7b9a499b3318686"
+    },
+    {
+      "name": "NDK llvm-strip.exe",
+      "path": "<BUILD-HOME>\\AppData\\Local\\Android\\Sdk\\ndk\\28.2.13676358\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\llvm-strip.exe",
+      "bytes": 5914720,
+      "sha256": "2d411db64e0b45508775e9e8fd436fb6e0af814a9dfbf8aea8fc37ce436c435c"
+    },
+    {
+      "name": "NDK llvm-objcopy.exe",
+      "path": "<BUILD-HOME>\\AppData\\Local\\Android\\Sdk\\ndk\\28.2.13676358\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\llvm-objcopy.exe",
+      "bytes": 5914720,
+      "sha256": "e47bd9ad686780554d5ffccf66ddd8114f48bc669fa9db2bdc66b9643cfe493c"
+    },
+    {
+      "name": "NDK llvm-readelf.exe",
+      "path": "<BUILD-HOME>\\AppData\\Local\\Android\\Sdk\\ndk\\28.2.13676358\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\llvm-readelf.exe",
+      "bytes": 8428128,
+      "sha256": "2646e382d8b2559b5c4ae91e9a98e187ed9bd59f23936054d424049ef795ba5e"
+    },
+    {
+      "name": "NDK ld.lld.exe",
+      "path": "<BUILD-HOME>\\AppData\\Local\\Android\\Sdk\\ndk\\28.2.13676358\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\ld.lld.exe",
+      "bytes": 74947680,
+      "sha256": "3208134dfd067fb969f8d052db5da2e9e44802e239494e051113d81ce8700e83"
+    },
+    {
+      "name": "MSYS2 autoconf",
+      "path": "<BUILD-HOME>\\.codex\\.chatgpt-projects\\g-p-6aa4ce9dc5308191a0cecb7d515dda3a\\tools\\msys64\\usr\\bin\\autoconf",
+      "bytes": 5762,
+      "sha256": "297d3bb53505386eaad79639a5ea67ed9203f6d430c77a9ee5bad77eef7aa74b"
+    },
+    {
+      "name": "MSYS2 autoreconf",
+      "path": "<BUILD-HOME>\\.codex\\.chatgpt-projects\\g-p-6aa4ce9dc5308191a0cecb7d515dda3a\\tools\\msys64\\usr\\bin\\autoreconf",
+      "bytes": 5762,
+      "sha256": "297d3bb53505386eaad79639a5ea67ed9203f6d430c77a9ee5bad77eef7aa74b"
+    },
+    {
+      "name": "MSYS2 automake",
+      "path": "<BUILD-HOME>\\.codex\\.chatgpt-projects\\g-p-6aa4ce9dc5308191a0cecb7d515dda3a\\tools\\msys64\\usr\\bin\\automake",
+      "bytes": 4659,
+      "sha256": "88f9adb6274912fc891a292b201ece1df70481f61d93bc1388358da487d15da7"
+    },
+    {
+      "name": "MSYS2 libtoolize",
+      "path": "<BUILD-HOME>\\.codex\\.chatgpt-projects\\g-p-6aa4ce9dc5308191a0cecb7d515dda3a\\tools\\msys64\\usr\\bin\\libtoolize",
+      "bytes": 138352,
+      "sha256": "6896114b4c486b358eaf5aebc124e2591a49534d047a49a80592fe67a27bb884"
+    },
+    {
+      "name": "MSYS2 bison.exe",
+      "path": "<BUILD-HOME>\\.codex\\.chatgpt-projects\\g-p-6aa4ce9dc5308191a0cecb7d515dda3a\\tools\\msys64\\usr\\bin\\bison.exe",
+      "bytes": 515980,
+      "sha256": "669d6187293f8b15652c1d831d0d78b1b8b9a1e02ec16d4b2f4a2433ab907eed"
+    },
+    {
+      "name": "MSYS2 m4.exe",
+      "path": "<BUILD-HOME>\\.codex\\.chatgpt-projects\\g-p-6aa4ce9dc5308191a0cecb7d515dda3a\\tools\\msys64\\usr\\bin\\m4.exe",
+      "bytes": 298938,
+      "sha256": "1ea03599e3898f5e058256c084e8ec8a7eda91f55891e61cb16cbeec3188c667"
+    },
+    {
+      "name": "MSYS2 patch.exe",
+      "path": "<BUILD-HOME>\\.codex\\.chatgpt-projects\\g-p-6aa4ce9dc5308191a0cecb7d515dda3a\\tools\\msys64\\usr\\bin\\patch.exe",
+      "bytes": 168973,
+      "sha256": "00d555c71e05775208a95a0ad439c00ad95d107ef8d0ae93576554e35eb9125b"
+    },
+    {
+      "name": "MSYS2 tar.exe",
+      "path": "<BUILD-HOME>\\.codex\\.chatgpt-projects\\g-p-6aa4ce9dc5308191a0cecb7d515dda3a\\tools\\msys64\\usr\\bin\\tar.exe",
+      "bytes": 511486,
+      "sha256": "df0582941d1f451a76337863ba1dc8d8986ad0faf44f0e5f5c34afeb43c36453"
+    },
+    {
+      "name": "MSYS2 perl.exe",
+      "path": "<BUILD-HOME>\\.codex\\.chatgpt-projects\\g-p-6aa4ce9dc5308191a0cecb7d515dda3a\\tools\\msys64\\usr\\bin\\perl.exe",
+      "bytes": 13766,
+      "sha256": "7c4c60e1cad4f308a7a58ea220f219f4d903e0be97af758e82c902a830c57baa"
+    },
+    {
+      "name": "MSYS2 ruby.exe",
+      "path": "<BUILD-HOME>\\.codex\\.chatgpt-projects\\g-p-6aa4ce9dc5308191a0cecb7d515dda3a\\tools\\msys64\\usr\\bin\\ruby.exe",
+      "bytes": 11739,
+      "sha256": "42889aabd77ec24c261eaa58083d5c9862f6080b6306fa8dbd994a8f8a4ff638"
+    },
+    {
+      "name": "MSYS2 pkgconf.exe",
+      "path": "<BUILD-HOME>\\.codex\\.chatgpt-projects\\g-p-6aa4ce9dc5308191a0cecb7d515dda3a\\tools\\msys64\\usr\\bin\\pkgconf.exe",
+      "bytes": 49272,
+      "sha256": "cc3df6347de88598ea70ed7a5bc09dbb012c894e4e14ac0edde45b62998c82fd"
+    },
+    {
+      "name": "MSYS2 cygpath.exe",
+      "path": "<BUILD-HOME>\\.codex\\.chatgpt-projects\\g-p-6aa4ce9dc5308191a0cecb7d515dda3a\\tools\\msys64\\usr\\bin\\cygpath.exe",
+      "bytes": 29662,
+      "sha256": "a70581980983340cd7d1358f50f8e9d8e98e015da78724d1b1e824d0cfcf6bce"
+    },
+    {
+      "name": "MSYS2 cp.exe",
+      "path": "<BUILD-HOME>\\.codex\\.chatgpt-projects\\g-p-6aa4ce9dc5308191a0cecb7d515dda3a\\tools\\msys64\\usr\\bin\\cp.exe",
+      "bytes": 114653,
+      "sha256": "5f91e0b445edb4e4c17e9a660ac29239f6cac5a821a173a86d4332b9eaa8cea3"
+    },
+    {
+      "name": "MSYS2 mkdir.exe",
+      "path": "<BUILD-HOME>\\.codex\\.chatgpt-projects\\g-p-6aa4ce9dc5308191a0cecb7d515dda3a\\tools\\msys64\\usr\\bin\\mkdir.exe",
+      "bytes": 71435,
+      "sha256": "fc9b9e49fd6496cdddfc5681208d74bd649ac934818eafdfd50a9571bdcb4861"
+    },
+    {
+      "name": "Android platform-tools adb.exe (device validation)",
+      "path": "<BUILD-HOME>\\AppData\\Local\\Android\\Sdk\\platform-tools\\adb.exe",
+      "bytes": 8273560,
+      "sha256": "B4A6B455702684652CCCF7B46258B29E653538904359A58FD4931CF3EF286B3F"
+    },
+    {
+      "name": "Android build-tools 36.0.0 aapt.exe (APK audit)",
+      "path": "<BUILD-HOME>\\AppData\\Local\\Android\\Sdk\\build-tools\\36.0.0\\aapt.exe",
+      "bytes": 2024544,
+      "sha256": "C528418AF0C5152650D9532485F371E8EED98E1436D1AB1A197580B97917B561"
+    },
+    {
+      "name": "NDK llvm-strings.exe (OpenSSL audit)",
+      "path": "<BUILD-HOME>\\AppData\\Local\\Android\\Sdk\\ndk\\28.2.13676358\\toolchains\\llvm\\prebuilt\\windows-x86_64\\bin\\llvm-strings.exe",
+      "bytes": 544864,
+      "sha256": "CAA130DF816A5C75CDCF89C2183858D333E18DEB5F8734E114D1FDD31B445906"
+    }
+  ]
+}

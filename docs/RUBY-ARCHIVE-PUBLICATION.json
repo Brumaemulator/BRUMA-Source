@@ -1,0 +1,5 @@
+{
+  "official_archive_sha256": "44228297861f4dfdf23a47372a3e3c4c5116fbf5b0e10883417f2379874b55c6",
+  "official_url": "https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p551.tar.xz",
+  "publication": "Original compressed archive omitted because it contains unused public crypto-test keys. Exact production sources and notices remain in runtimes/classic/native/ruby193. Build recipe uses those extracted sources and does not require the archive. The original remains preserved privately as provenance evidence."
+}

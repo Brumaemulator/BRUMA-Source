@@ -1,0 +1,27 @@
+{
+  "path": "<BUILD-HOME>\\.codex\\.chatgpt-projects\\g-p-6aa4ce9dc5308191a0cecb7d515dda3a\\BrumaModernRuntime\\upstream\\mkxp-z-android-reworked\\app\\jni\\mkxp-z\\assets\\liberation.ttf",
+  "sha256": "e5b0af421ea2bfbc1ac8d251d647268087ae82786234c57f757d1f0b90fa8b49",
+  "metadata": {
+    "0": [
+      "Digitized data copyright (c) 2010 Google Corporation. \nCopyright (c) 2012 Red Hat, Inc."
+    ],
+    "1": [
+      "Liberation Sans"
+    ],
+    "5": [
+      "Version 2.00.1"
+    ],
+    "8": [
+      "Ascender Corporation"
+    ],
+    "9": [
+      "Steve Matteson"
+    ],
+    "13": [
+      "Licensed under the SIL Open Font License, Version 1.1"
+    ],
+    "14": [
+      "http://scripts.sil.org/OFL"
+    ]
+  }
+}

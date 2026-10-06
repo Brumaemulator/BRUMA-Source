@@ -1,0 +1,15 @@
+{
+  "libbruma_classic.so": "75d318c56223f0fdd8c04c0b36ed07b6eb3ec14f6cfc352e707f84f44c0226f9",
+  "libbruma_classic_fluidlite.so": "4c7373f557349de9cc3308eee3311e5c578b78e4ff365f28323ac49346aac1a2",
+  "libbruma_classic_openal.so": "63995f2662023c7eebb17af88831fdb15038ddf583b96ea704b12fceca987dab",
+  "libbruma_classic_sdl2.so": "eaa8704858ee59f6acc00b37a74967fd8b26921a2bb45c6dab8e14382aead37f",
+  "libbruma_nds.so": "26caaa656a8ec534888afe2ae653aa7bfe5cd02e31b48ae392ebc4d73b4ee5b3",
+  "libc++_shared.so": "ab4e6c71b96b851de45a8a9bd86369e7dbc2130a44b3b4520564be94847910f2",
+  "libmkxp-z.so": "a6ebec0f51c21b2b60ad28605488eddab53a107a0ac03d4cf560bfc1ca35b7cd",
+  "libopenal.so": "e0a1974a2b6e1a775de3e49a86ab4c00c17bb7fc84542954f0e5f79160cc99e8",
+  "libruby.so": "4b4d6837789565941cb1ea774a915857d89f5f77cffcd9240e4bad4ee8ce1197",
+  "libSDL2.so": "7ecb5b89b83b99216ea9ca792f8144feccb0575a80b7d35fd89311a5deb9dd19",
+  "libSDL2_image.so": "bd354fc03ae5779dbc491bdf86dfb4e5ce3de3e819fe7fc7f6144c5b3f743746",
+  "libSDL2_sound.so": "2ba714bf73fe3aa501b5b94b43662855045a04cc8945e72cc48d6c23192d0722",
+  "libSDL2_ttf.so": "e51e3e6232144d749208c5370f9c1fc467a471194dfea837ebc26af7207a51d5"
+}

@@ -1,0 +1,22 @@
+--- a/mkxp/binding-mri/filesystem-binding.cpp
++++ b/mkxp/binding-mri/filesystem-binding.cpp
+@@ -189,8 +189,17 @@
+ 
+ static VALUE stringForceUTF8(VALUE arg)
+ {
+-	if (RB_TYPE_P(arg, RUBY_T_STRING) && ENCODING_IS_ASCII8BIT(arg))
+-		rb_enc_associate_index(arg, rb_utf8_encindex());
++	// BRUMA Ruby 1.9 adaptation: retain binary data while recognizing
++	// untagged UTF-8 text written by RGSS1/Ruby 1.8. Do not reinterpret
++	// strings containing NUL or invalid UTF-8 as text.
++	if (RB_TYPE_P(arg, RUBY_T_STRING) && ENCODING_IS_ASCII8BIT(arg)
++	    && !memchr(RSTRING_PTR(arg), 0, RSTRING_LEN(arg)))
++	{
++		VALUE candidate = rb_str_dup(arg);
++		rb_enc_associate_index(candidate, rb_utf8_encindex());
++		if (rb_enc_str_coderange(candidate) != ENC_CODERANGE_BROKEN)
++			rb_enc_associate_index(arg, rb_utf8_encindex());
++	}
+ 
+ 	return arg;
+ }

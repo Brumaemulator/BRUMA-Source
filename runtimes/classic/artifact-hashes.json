@@ -1,0 +1,7 @@
+{
+  "app/build/outputs/apk/debug/app-debug.apk": "fd0c28c11e162c4ce13b0dd09895d37f2249b10af2e14d9227583eca13c70ee4",
+  "native-build/libbruma_mkxp.so": "16ae5de6d2fdfb3ebc2069157dd3db0eebb2840c93722f977c338481b61bf143",
+  "native/ruby193-build-recipe-final/libruby-static.a": "a4b24cbfb59ef4b6822f9bfe012b0fc6539130fde8f8ac4e9c0cce3f24a782d1",
+  "native/ruby193-init.c": "77ad43649a677e006f94cad67b45d5badb142564d7296fe1b57aab44294f03a5",
+  "app/src/main/assets/rpg/bruma-ruby193-compat.rb": "003f563f12fd3b485aceff8a13f66020c58d2ad1519949c1b3381b57c52a5648"
+}

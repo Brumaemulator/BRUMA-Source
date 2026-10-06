@@ -2,7 +2,7 @@
 
 BRUMA is a paid Android application for user-supplied GB, GBC, GBA, NDS and compatible RPG Maker games. It has no advertising SDK, subscriptions or in-app purchases. No games or proprietary BIOS/firmware are included.
 
-Version: **1.0.0**, **versionCode 40**, package `com.linkcore.emulator`. Official source repository: https://github.com/Brumaemulator/BRUMA-Source .
+Version: **1.0.0**, **versionCode 40**, package `com.brumastudio.bruma`. Official source repository: https://github.com/Brumaemulator/BRUMA-Source .
 
 This snapshot includes all integrated BRUMA frontend, library, scraping, import, configuration, save handling, automatic engine detection, controls, JNI and build code conservatively under GPL-3.0-or-later. It includes the latest save import and library/deletion/navigation changes. No frontend layer is withheld.
 

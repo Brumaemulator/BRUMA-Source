@@ -1,7 +1,7 @@
 {
   "versionName": "1.0.0",
   "versionCode": 40,
-  "applicationId": "com.linkcore.emulator",
+  "applicationId": "com.brumastudio.bruma",
   "date": "2026-10-06",
   "native_inputs": {
     "libbruma_classic.so": "75d318c56223f0fdd8c04c0b36ed07b6eb3ec14f6cfc352e707f84f44c0226f9",

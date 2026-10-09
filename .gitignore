@@ -17,3 +17,10 @@
 *.gbc
 *.gb
 *.nds
+
+/.kotlin/
+*.apk
+*.aab
+/private-signing/
+/validation/
+/backups/

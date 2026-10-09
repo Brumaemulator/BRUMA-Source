@@ -50,6 +50,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
     private lateinit var libraryCount:TextView
     private lateinit var libraryEmpty:TextView
     private lateinit var folderNote:TextView
+    private lateinit var libraryScanSpinner:ProgressBar
     private lateinit var folderButton:Button
     private var searchText=""
     private var systemFilter="GBA"
@@ -163,8 +164,10 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         val side=LinearLayout(this).apply {orientation=LinearLayout.VERTICAL}
         // Keep resume state for gameplay; the home screen is the unified collection.
         open=Look.button(this,getString(R.string.ui_7)) {pickDocument(41)}
-        folderNote=label("",10f,Look.muted).apply {setPadding(0,dp(8),0,dp(8))}
-        side.addView(folderNote)
+        folderNote=label(getString(R.string.library_scanning),10f,Look.mint).apply {
+            visibility=View.GONE;setSingleLine(true);setPadding(dp(8),0,0,0)
+            accessibilityLiveRegion=View.ACCESSIBILITY_LIVE_REGION_POLITE
+        }
         val collection=LinearLayout(this).apply {orientation=LinearLayout.VERTICAL}
         val search=EditText(this).apply {
             hint=getString(R.string.library_search);setTextColor(Color.WHITE);setHintTextColor(Look.muted);textSize=14f;setSingleLine(true)
@@ -203,6 +206,13 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         val heading=LinearLayout(this).apply {gravity=Gravity.CENTER_VERTICAL}
         libraryCount=label("",19f,Color.WHITE,true)
         heading.addView(libraryCount,LinearLayout.LayoutParams(0,-2,1f))
+        libraryScanSpinner=ProgressBar(this,null,android.R.attr.progressBarStyleSmall).apply {
+            isIndeterminate=true;visibility=View.GONE
+            indeterminateTintList=android.content.res.ColorStateList.valueOf(Look.mint)
+            importantForAccessibility=View.IMPORTANT_FOR_ACCESSIBILITY_NO
+        }
+        heading.addView(libraryScanSpinner,LinearLayout.LayoutParams(dp(14),dp(14)))
+        heading.addView(folderNote,LinearLayout.LayoutParams(-2,-2))
 
         collection.addView(heading,LinearLayout.LayoutParams(-1,dp(if(portrait)42 else 34)))
         val content=FrameLayout(this)
@@ -231,7 +241,8 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         libraryCount.text="${tr("Tu colección","Your collection")}  ·  ${visible.size}"
         libraryEmpty.visibility=if(visible.isEmpty()) View.VISIBLE else View.GONE
         libraryEmpty.text=getString(if(libraryGames.isEmpty()) R.string.library_empty else R.string.library_no_results)
-        folderNote.text=if(scanning) getString(R.string.library_scanning) else if(prefs.contains("treeUri")) getString(R.string.library_linked) else getString(R.string.library_folder_hint)
+        folderNote.visibility=if(scanning) View.VISIBLE else View.GONE
+        libraryScanSpinner.visibility=folderNote.visibility
         folderButton.isEnabled=!scanning
         updateContinueCard()
     }

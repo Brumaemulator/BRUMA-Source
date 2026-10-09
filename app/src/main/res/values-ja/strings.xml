@@ -38,7 +38,7 @@
     <string name="library_search">コレクションを検索…</string>
     <string name="library_refresh">↻ 更新</string>
     <string name="library_no_results">一致するゲームがありません。</string>
-    <string name="library_scanning">ゲームを検索中…</string>
+    <string name="library_scanning">リストを更新中…</string>
     <string name="library_cover">カバーを選択</string>
     <string name="library_options">ゲームのオプション</string>
     <string name="art_cancelled">ダウンロードをキャンセルしました。</string>

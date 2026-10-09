@@ -1,8 +1,8 @@
 {
-  "versionName": "1.0.0",
-  "versionCode": 40,
+  "versionName": "1.0.1",
+  "versionCode": 41,
   "applicationId": "com.brumastudio.bruma",
-  "date": "2026-10-06",
+  "date": "2026-10-09",
   "native_inputs": {
     "libbruma_classic.so": "75d318c56223f0fdd8c04c0b36ed07b6eb3ec14f6cfc352e707f84f44c0226f9",
     "libbruma_classic_fluidlite.so": "4c7373f557349de9cc3308eee3311e5c578b78e4ff365f28323ac49346aac1a2",
@@ -20,5 +20,6 @@
   },
   "classic_interpreter": "Ruby 1.9.3-p551, selected BSD-2-Clause option",
   "modern_openssl": "OpenSSL 3.5.8, Apache-2.0",
-  "no_new_functionality": true
+  "no_new_functionality": false,
+  "update": "Classic Ruby compatibility and Android Back fixes, asynchronous RPG preparation, localized library-update label and spinner."
 }

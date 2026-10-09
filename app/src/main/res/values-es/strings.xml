@@ -85,7 +85,7 @@
 <string name="library_refresh">"↻ Actualizar"</string>
 <string name="library_empty">"Tu próxima aventura empieza aquí.\n\nElige una carpeta con juegos .gba y aparecerán en tu biblioteca."</string>
 <string name="library_no_results">"No hay juegos con ese nombre."</string>
-<string name="library_scanning">"Buscando tus juegos…"</string>
+<string name="library_scanning">Actualizando lista…</string>
 <string name="library_unavailable">"No se pudo leer la carpeta o el juego. Vuelve a elegir la carpeta para renovar el acceso. Tus partidas guardadas se conservan."</string>
 <string name="library_cover">"Elegir carátula"</string>
 <string name="library_bad_cover">"No se pudo abrir esa imagen. Prueba con una imagen JPG, PNG o WebP más pequeña."</string>

@@ -1,4 +1,4 @@
-# Build BRUMA 1.0.0
+# Build BRUMA 1.0.1
 Windows x64; JDK 21; Android SDK platform 36; NDK 28.2.13676358; CMake 4.1.2; Gradle 9.6.0; AGP 9.4.0. Python 3, Git, Ninja and MSYS2 Bash/autotools/make/Ruby are needed for native rebuilds.
 Set JAVA_HOME and ANDROID_HOME. Create local.properties locally with sdk.dir; it is intentionally not distributed. Run `gradlew.bat --no-daemon bundleRelease assembleRelease` from the repository root. No signing key is embedded. Sign the resulting AAB with your own upload key; recipients can build/sign/install modified APKs with their own keys (a differently signed app cannot update an existing install).
 

@@ -12,7 +12,7 @@ object LibraryScaleChecks {
    override fun getFilesDir()=root
    override fun getSharedPreferences(name:String,mode:Int)=super.getSharedPreferences("$token-$name",mode)
   }
-  val store=LibraryStore(ctx);val uri=Uri.parse("content://com.linkcore.emulator.test.scale/tree/root")
+  val store=LibraryStore(ctx);val uri=Uri.parse("content://${test.context.packageName}.scale/tree/root")
   fun call(method:String)=ctx.contentResolver.call(uri,method,null,null)!!
   try{
    call("reset");val discovered=ArrayList<LibraryGame>();var firstOpens=-1

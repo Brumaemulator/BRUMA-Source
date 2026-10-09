@@ -38,7 +38,7 @@
     <string name="library_search">Sammlung durchsuchen…</string>
     <string name="library_refresh">↻ Aktualisieren</string>
     <string name="library_no_results">Keine Spiele mit diesem Namen gefunden.</string>
-    <string name="library_scanning">Spiele werden gesucht…</string>
+    <string name="library_scanning">Liste wird aktualisiert…</string>
     <string name="library_cover">Cover auswählen</string>
     <string name="library_options">Spieloptionen</string>
     <string name="art_cancelled">Download abgebrochen.</string>

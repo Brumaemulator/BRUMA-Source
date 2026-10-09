@@ -52,7 +52,7 @@ public class MainActivity extends SDLActivity implements android.hardware.input.
         if(Build.VERSION.SDK_INT>=33)registerReceiver(closePausedReceiver,filter,Context.RECEIVER_NOT_EXPORTED);else registerReceiver(closePausedReceiver,filter);
         closeReceiverRegistered=true;
         sessionHost=new com.linkcore.emulator.RuntimeSessionHost(this,"RPG Maker XP",()->GAME_PATH,()->mStarted&&!isFinishing()&&!mBrokenLibraries,()->{pauseOnReturn=false;if(mStarted)pauseNativeThread();finish();});
-        if(Build.VERSION.SDK_INT>=33){brumaBackCallback=this::returnToBrumaLibrary;getOnBackInvokedDispatcher().registerOnBackInvokedCallback(android.window.OnBackInvokedDispatcher.PRIORITY_DEFAULT,brumaBackCallback);}
+        if(Build.VERSION.SDK_INT>=33){brumaBackCallback=this::showRpgOptions;getOnBackInvokedDispatcher().registerOnBackInvokedCallback(android.window.OnBackInvokedDispatcher.PRIORITY_DEFAULT,brumaBackCallback);}
         try {byte[] content=java.nio.file.Files.readAllBytes(new File(GAME_PATH,"mkxp.json").toPath());if(content.length<=1048576){org.json.JSONObject cfg=ConfigJson.parse(new String(content,java.nio.charset.StandardCharsets.UTF_8));logicalWidth=cfg.optInt("defScreenW",512);logicalHeight=cfg.optInt("defScreenH",384);}}catch(Exception ignored){}
         logicalWidth=Math.max(128,Math.min(2048,logicalWidth));logicalHeight=Math.max(128,Math.min(2048,logicalHeight));
         mSurface.getHolder().setFixedSize(logicalWidth,logicalHeight);
@@ -78,6 +78,11 @@ public class MainActivity extends SDLActivity implements android.hardware.input.
     @Override public void onWindowFocusChanged(boolean focus){if(!focus)mGamepad.releaseAll();super.onWindowFocusChanged(focus);if(focus)getWindow().getDecorView().postDelayed(this::hideSystemBars,200);}
     @Override public boolean dispatchKeyEvent(KeyEvent event){
         int k=event.getKeyCode();
+        // SDL consumes BACK as a native key, preventing Activity.onBackPressed.
+        if(k==KeyEvent.KEYCODE_BACK){
+            if(event.getAction()==KeyEvent.ACTION_UP&&!event.isCanceled())showRpgOptions();
+            return true;
+        }
         if(k!=KeyEvent.KEYCODE_BACK&&k!=KeyEvent.KEYCODE_VOLUME_DOWN&&k!=KeyEvent.KEYCODE_VOLUME_UP&&k!=KeyEvent.KEYCODE_VOLUME_MUTE&&!mGamepadInvisible){mGamepad.hideView();mGamepadInvisible=true;}
         return mGamepad.processGamepadEvent(event)||super.dispatchKeyEvent(event);
     }
@@ -121,14 +126,18 @@ public class MainActivity extends SDLActivity implements android.hardware.input.
         android.widget.RelativeLayout.LayoutParams p=(android.widget.RelativeLayout.LayoutParams)mSurface.getLayoutParams();
         if(p.width!=width || p.height!=height){p.width=width;p.height=height;mSurface.setLayoutParams(p);}
     }
+    private android.app.AlertDialog optionsDialog;
     private void showRpgOptions() {
+        if(isFinishing()||isDestroyed()||(optionsDialog!=null&&optionsDialog.isShowing()))return;
         String[] options={tr("Abrir teclado","Open keyboard"),tr("Mover botones","Move controls"),
             controlsHidden?tr("Mostrar controles","Show controls"):tr("Ocultar controles","Hide controls"),
             tr("Pantalla: ","Display: ")+(getSharedPreferences("rpg-controls-ui",0).getBoolean("fill",false)?tr("completa","full screen"):tr("proporción original","original aspect")),
             tr("Restablecer botones","Reset controls"),tr("Pausar y volver a BRUMA","Pause and return to BRUMA"),tr("Cerrar juego","Close game")};
-        new android.app.AlertDialog.Builder(this).setTitle(tr("Opciones del juego","Game options")).setItems(options,(dialog,which)->{
+        optionsDialog=new android.app.AlertDialog.Builder(this).setTitle(tr("Opciones del juego","Game options")).setItems(options,(dialog,which)->{
             applyRpgOption(which);
-        }).show();
+        }).create();
+        optionsDialog.setOnDismissListener(d->{optionsDialog=null;hideSystemBars();});
+        optionsDialog.show();
     }
     private void applyRpgOption(int which) {
             switch(which){
@@ -190,7 +199,7 @@ public class MainActivity extends SDLActivity implements android.hardware.input.
         home.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
         startActivity(home);
     }
-    @Override public void onBackPressed() { returnToBrumaLibrary(); }
+    @Override public void onBackPressed() { showRpgOptions(); }
     @Override protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         if(intent.getBooleanExtra("brumaResume",false)){setIntent(intent);pauseOnReturn=false;}

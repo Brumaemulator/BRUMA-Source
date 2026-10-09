@@ -1,4 +1,4 @@
-BRUMA 1.0.0 — Open-source licenses / Licencias de código abierto
+BRUMA 1.0.1 — Open-source licenses / Licencias de código abierto
 Official Corresponding Source repository: https://github.com/Brumaemulator/BRUMA-Source
 This paid application contains free software. Charging for distribution does not remove recipients' license rights.
 BRUMA-owned application code is offered under GPL-3.0-or-later for this combined distribution; existing third-party licenses and earlier MIT grants remain intact.

@@ -2,7 +2,7 @@ package com.linkcore.emulator
 import android.app.Instrumentation
 import java.io.File
 object RpgEngineChecks {
- fun run(test:Instrumentation){
+ fun run(test:Instrumentation,fixturesOnly:Boolean=false){
   fun checkCode(expected:Boolean,vararg scripts:String){check(RpgEngine.classify(scripts.toList())==expected){"Classification mismatch: ${scripts.toList()}"}}
   checkCode(true,"case x\nwhen 0: foo\nend", "System.uptime; Essentials::VERSION")
   checkCode(true,"case x\n when -1, 2 : foo\nend")
@@ -31,6 +31,7 @@ object RpgEngineChecks {
    pack.writeBytes(packed("case x\nwhen 0 then foo\nend"));check(pack.setLastModified(1000000))
    check(!RpgEngine.classic(test.targetContext,cacheDir)){"Stale engine decision after same-size, same-time replacement"}
   }finally{cacheDir.deleteRecursively()}
+  if(fixturesOnly)return
   val root=File(test.targetContext.filesDir,"rpg-games")
   val expected=mapOf("anil" to false,"game-1790472043453" to false,"game-1790472909140" to false,"game-1790517795333" to false,"zip-ae23d6c62f144f186249843af66a4e36c99f07d1" to true,"zip-f799b2d0ad92eeab2c4f431c4c3030167297ea64" to true)
   val result=StringBuilder()

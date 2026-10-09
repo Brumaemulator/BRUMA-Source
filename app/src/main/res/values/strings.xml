@@ -85,7 +85,7 @@
 <string name="library_refresh">"↻ Refresh"</string>
 <string name="library_empty">"Your next adventure starts here.\n\nChoose a folder with .gba games to fill your library."</string>
 <string name="library_no_results">"No games match that name."</string>
-<string name="library_scanning">"Finding your games…"</string>
+<string name="library_scanning">Updating list…</string>
 <string name="library_unavailable">"Could not read the folder or game. Choose the folder again to renew access. Your saved progress is safe."</string>
 <string name="library_cover">"Choose cover"</string>
 <string name="library_bad_cover">"Could not open that image. Try a smaller JPG, PNG or WebP image."</string>

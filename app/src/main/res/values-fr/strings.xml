@@ -38,7 +38,7 @@
     <string name="library_search">Rechercher dans votre collection…</string>
     <string name="library_refresh">↻ Actualiser</string>
     <string name="library_no_results">Aucun jeu ne correspond à ce nom.</string>
-    <string name="library_scanning">Recherche de vos jeux…</string>
+    <string name="library_scanning">Mise à jour…</string>
     <string name="library_cover">Choisir une jaquette</string>
     <string name="library_options">Options du jeu</string>
     <string name="art_cancelled">Téléchargement annulé.</string>

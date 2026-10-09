@@ -26,25 +26,45 @@ public class RpgLibraryActivity extends Activity {
         super.onCreate(saved);
         String uri=getIntent().getStringExtra("launchUri");
         if(uri==null){show();return;}
-        Uri selected=Uri.parse(uri);
-        if("file".equals(selected.getScheme())) {
-            try{File dir=new File(selected.getPath()).getCanonicalFile();if(!dir.getPath().startsWith(gamesRoot().getCanonicalPath()+File.separator))throw new IOException();launch(dir);}
-            catch(Exception e){failLaunch();}
-        } else if("content".equals(selected.getScheme())) {
-            File[] existing=gamesRoot().listFiles();if(existing!=null)for(File dir:existing) {
-                try{if(new File(dir,"bruma-origin.txt").isFile()&&read(new File(dir,"bruma-origin.txt")).trim().equals(uri)){launch(dir);return;}}catch(Exception ignored){}
-            }
-            importGame(selected,DocumentsContract.getDocumentId(selected),uri);
-        } else failLaunch();
+        worker.execute(()->{
+            try {
+                Uri selected=Uri.parse(uri);
+                if("file".equals(selected.getScheme())) {
+                    File dir=new File(selected.getPath()).getCanonicalFile();
+                    if(!dir.getPath().startsWith(gamesRoot().getCanonicalPath()+File.separator))throw new IOException();
+                    runOnUiThread(()->launch(dir));
+                } else if("content".equals(selected.getScheme())) {
+                    File[] existing=gamesRoot().listFiles();
+                    if(existing!=null)for(File dir:existing) {
+                        if(new File(dir,"bruma-origin.txt").isFile()&&read(new File(dir,"bruma-origin.txt")).trim().equals(uri)){
+                            runOnUiThread(()->launch(dir));return;
+                        }
+                    }
+                    runOnUiThread(()->{if(!isFinishing()&&!isDestroyed())importGame(selected,DocumentsContract.getDocumentId(selected),uri);});
+                } else runOnUiThread(this::failLaunch);
+            } catch(Exception e){runOnUiThread(this::failLaunch);}
+        });
     }
-    private void failLaunch(){new AlertDialog.Builder(this).setMessage(tr("No se pudo abrir el juego.","Could not open game.")).setPositiveButton(android.R.string.ok,(d,w)->finish()).setOnCancelListener(d->finish()).show();}
-    private void launch(File dir)throws Exception {
-        com.linkcore.emulator.RpgCacheCleanup.restore(this,dir);
-        boolean classic=com.linkcore.emulator.RpgEngine.classic(this,dir);
-        com.linkcore.emulator.RuntimeSessionHost.closeOthers(this,(classic?ClassicActivity.class:MainActivity.class).getName());
-        if(classic)prepareClassic(dir);else prepare(dir);
-        getSharedPreferences("rpg",0).edit().putString("path",dir.getAbsolutePath()).apply();
-        startActivity(new Intent(this,classic?ClassicActivity.class:MainActivity.class).putExtra("gamePath",dir.getAbsolutePath()));finish();
+    private void failLaunch(){if(isFinishing()||isDestroyed())return;new AlertDialog.Builder(this).setMessage(tr("No se pudo abrir el juego.","Could not open game.")).setPositiveButton(android.R.string.ok,(d,w)->finish()).setOnCancelListener(d->finish()).show();}
+    private boolean launching;
+    private void launch(File dir) {
+        if(launching||isFinishing()||isDestroyed())return;
+        launching=true;
+        worker.execute(()->{
+            try {
+                long started=android.os.SystemClock.elapsedRealtime();
+                com.linkcore.emulator.RpgCacheCleanup.restore(this,dir);
+                boolean classic=com.linkcore.emulator.RpgEngine.classic(this,dir);
+                if(classic)prepareClassic(dir);else prepare(dir);
+                android.util.Log.i("BRUMA-RPG","Prepared runtime in "+(android.os.SystemClock.elapsedRealtime()-started)+" ms; classic="+classic);
+                runOnUiThread(()->{
+                    if(isFinishing()||isDestroyed())return;
+                    com.linkcore.emulator.RuntimeSessionHost.closeOthers(this,(classic?ClassicActivity.class:MainActivity.class).getName());
+                    getSharedPreferences("rpg",0).edit().putString("path",dir.getAbsolutePath()).apply();
+                    startActivity(new Intent(this,classic?ClassicActivity.class:MainActivity.class).putExtra("gamePath",dir.getAbsolutePath()));finish();
+                });
+            }catch(Exception error){android.util.Log.e("BRUMA-RPG","Runtime preparation failed",error);runOnUiThread(()->{launching=false;if(!isFinishing()&&!isDestroyed())failLaunch();});}
+        });
     }
     private void prepareClassic(File dir)throws Exception {
         new File(dir,"UserData/Temp").mkdirs();

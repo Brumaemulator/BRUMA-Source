@@ -38,7 +38,7 @@
     <string name="library_search">搜索收藏…</string>
     <string name="library_refresh">↻ 刷新</string>
     <string name="library_no_results">没有找到匹配的游戏。</string>
-    <string name="library_scanning">正在查找游戏…</string>
+    <string name="library_scanning">正在更新列表…</string>
     <string name="library_cover">选择封面</string>
     <string name="library_options">游戏选项</string>
     <string name="art_cancelled">下载已取消。</string>

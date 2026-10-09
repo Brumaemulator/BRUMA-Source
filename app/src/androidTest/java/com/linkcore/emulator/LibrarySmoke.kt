@@ -16,11 +16,12 @@ import java.io.File
 object LibrarySmoke {
     fun run(i:Instrumentation) {
         val ctx=i.targetContext
+        val authority=i.context.packageName+".library"
         val index=File(ctx.filesDir,"game-library.json")
         val originalIndex=if(index.exists()) index.readBytes() else null
         val prefs=ctx.getSharedPreferences("library",0);val old=prefs.all.toMap()
         val store=LibraryStore(ctx)
-        val tree=DocumentsContract.buildTreeDocumentUri("com.linkcore.emulator.test.library","root")
+        val tree=DocumentsContract.buildTreeDocumentUri(authority,"root")
         var activity:Activity?=null
         var importedId:String?=null
         val existing=File(ctx.filesDir,"roms").listFiles()?.map {it.nameWithoutExtension}?.toSet() ?: emptySet()
@@ -33,7 +34,7 @@ object LibrarySmoke {
             File(dir,"$name.png").outputStream().use {image.compress(Bitmap.CompressFormat.PNG,100,it)};image.recycle()
         }
         try {
-            val rpg=store.scan(DocumentsContract.buildTreeDocumentUri("com.linkcore.emulator.test.library","rpg"))
+            val rpg=store.scan(DocumentsContract.buildTreeDocumentUri(authority,"rpg"))
             check(rpg.size==1 && rpg.single().system=="RPG Maker XP" && rpg.single().title=="RPG fixture") {"RPG folder detection failed"}
             val found=store.scan(tree)
             check(found.size==6 && found.count {it.cover.isNotEmpty()}==2) {"Nested folder or cover matching failed"}
@@ -58,12 +59,12 @@ object LibrarySmoke {
                 check(testStore.read().map {it.cached}.distinct().size==6) {"Different ROMs merged"}
             } finally {isolatedIndex.delete()}
             store.replaceFolder(found)
-            check(LibraryStore(ctx).read().count {it.uri.startsWith("content://com.linkcore.emulator.test.library")}==6)
+            check(LibraryStore(ctx).read().count {it.uri.startsWith("content://$authority")}==6)
             // Simulate an added game: the saved index does not contain the last folder entry.
             store.replaceFolder(found.dropLast(1))
             prefs.edit().remove("treeUris").putString("treeUri",tree.toString()).commit()
             activity=i.startActivitySync(Intent(ctx,MainActivity::class.java).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK))
-            main {activity!!.requestedOrientation=ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE};SystemClock.sleep(700);waitReady();check(store.read().count {it.uri.startsWith("content://com.linkcore.emulator.test.library")}==6) {"Startup did not discover new game"};shot("library-landscape")
+            main {activity!!.requestedOrientation=ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE};SystemClock.sleep(700);waitReady();check(store.read().count {it.uri.startsWith("content://$authority")}==6) {"Startup did not discover new game"};shot("library-landscape")
             main {activity!!.requestedOrientation=ActivityInfo.SCREEN_ORIENTATION_PORTRAIT};SystemClock.sleep(700);shot("library-portrait")
             main {
                 val search=find(activity!!.window.decorView){it is EditText} as EditText

@@ -19,6 +19,23 @@ class << Zlib::Inflate
   end
 end
 
+# This legacy battle extension defines a top-level helper, then explicitly
+# calls it on a battle scene. Restrict the bridge to that receiver and helper;
+# retain private visibility and propagate every other missing-method error.
+class Object
+  unless private_method_defined?(:bruma_previous_object_method_missing)
+    alias_method :bruma_previous_object_method_missing, :method_missing
+    def method_missing(name, *arguments, &block)
+      if name == :raiseSpeciesStats && defined?(PokeBattle_Scene) &&
+          kind_of?(PokeBattle_Scene) && private_methods.include?(name)
+        return __send__(name, *arguments, &block)
+      end
+      bruma_previous_object_method_missing(name, *arguments, &block)
+    end
+    private :method_missing, :bruma_previous_object_method_missing
+  end
+end
+
 
 # encoding: UTF-8
 # SPDX-License-Identifier: MIT
@@ -32,6 +49,23 @@ module BrumaRuby193Compat
     changed = changed.gsub(/^(\s*)retry if deleting\s*==\s*false\s*$/, '\1next if deleting==false')
     # C1 control range in UTF-8 regex literals must use codepoints, not invalid bytes.
     changed = changed.gsub('\\x7f-\\x9f', '\\u007f-\\u009f')
+    # The legacy roaming-map listener uses non-local return in a top-level
+    # proc. Ruby 1.9 raises LocalJumpError when its early exit is taken.
+    # Convert only its two guard exits to block-local next; method returns
+    # and other callbacks retain their original semantics.
+    changed = changed.gsub(/(Events\.(?:onMapChange|onWildBattleEnd)\s*\+=\s*proc\s*\{\s*\|sender\s*,\s*e\|)([^}]*)(\})/m) do |listener|
+      prefix, body, suffix = $1, $2, $3
+      if body.include?('$PokemonGlobal.roamHistory')
+        body = body.gsub(/(^[ \t]*)return(?=[ \t]+if[ \t]+(?:!\$PokemonGlobal|\$game_map[ \t]*&&[ \t]*mapinfos))/, '\1next')
+        prefix + body + suffix
+      elsif body.include?('$PokemonTemp.pokeradar') && body.include?('pbPokeRadarCancel')
+        # The radar's non-grass battle exit has the same non-local return.
+        body = body.gsub(/(^[ \t]*)return([ \t]*\r*)(?=\n|$)/, '\1next\2')
+        prefix + body + suffix
+      else
+        listener
+      end
+    end
     if changed != source
       warn "BRUMA_RUBY193 normalized legacy syntax: #{filename}"
     end
@@ -89,5 +123,23 @@ module BrumaRuby193Compat
     Graphics.poke_resize_screen(width,height)
     @display_size=size
     warn "BRUMA_RUBY193 game canvas #{width}x#{height}"
+  end
+end
+
+# Older Essentials explicitly invokes these helpers on Kernel. Ruby 1.9 keeps
+# their module-function copies private. pbRgssOpen loads message tables; the
+# game rescues its access error and silently returns empty species/move names.
+# Forward ONLY these known legacy calls, including the file reader's block;
+# preserve every other missing/private-method error and the game's own files.
+class << Kernel
+  unless private_method_defined?(:bruma_previous_method_missing)
+    alias_method :bruma_previous_method_missing, :method_missing
+    def method_missing(name, *arguments, &block)
+      if (name == :pbAddDependency2 || name == :pbRgssOpen) && private_methods.include?(name)
+        return __send__(name, *arguments, &block)
+      end
+      bruma_previous_method_missing(name, *arguments, &block)
+    end
+    private :method_missing, :bruma_previous_method_missing
   end
 end

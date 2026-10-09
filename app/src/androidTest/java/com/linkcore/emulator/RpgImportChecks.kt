@@ -11,7 +11,7 @@ object RpgImportChecks {
     fun run(test:Instrumentation) {
         val ctx=test.targetContext
         val root=File(ctx.cacheDir,"rpg-import-check-${System.currentTimeMillis()}").apply{mkdirs()}
-        val fixture=Uri.parse("content://com.linkcore.emulator.test.library/tree/root")
+        val fixture=Uri.parse("content://${test.context.packageName}.library/tree/root")
         fun digest(file:File)=MessageDigest.getInstance("SHA-256").run {
             file.inputStream().use { input -> val b=ByteArray(65536);while(true){val n=input.read(b);if(n<0)break;update(b,0,n)} };digest().toList()
         }

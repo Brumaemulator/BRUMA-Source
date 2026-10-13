@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="translations_title">翻訳</string><string name="translation_info">承認済みでハッシュが一致するパッチのみ。元のゲームは保持されます。RPG Makerには専用アダプターを使用します。</string><string name="translation_authorize">BRUMAを認証 · テストコード</string><string name="translation_authorize_first">管理者が承認したコードを入力してください。</string><string name="translation_failed">翻訳を適用できませんでした。</string><string name="translation_matches">対応する翻訳：%1$d</string><string name="translation_apply">翻訳を適用</string><string name="translation_preserve">BRUMA内のゲームを翻訳版に置き換えます。元に戻すために必要なデータのみ保持します。</string><string name="translation_success">翻訳を検証しました。翻訳済みゲームをライブラリに追加しました。</string>
+<string name="translation_back">戻る</string>
+<string name="translation_hero">あなたの言語でプレイ</string>
+<string name="translation_intro">ライブラリのゲームに対応する翻訳を探しましょう。</string>
+<string name="translation_original_safe">元のゲームとセーブデータは保持されます。</string>
+<string name="translation_searching">翻訳を検索中…</string>
+<string name="translation_refresh">翻訳を更新</string>
+<string name="translation_code_hint">アクセスコード</string>
+<string name="translation_empty_title">対応する翻訳はまだありません</string>
+<string name="translation_empty">対応するゲームをライブラリに追加して再検索してください。</string>
+<string name="translation_version">バージョン %1$s</string>
+<string name="translation_by">作者：%1$s</string>
+<string name="translation_view_library">ライブラリで見る</string>
+<string name="translation_download">ダウンロードして適用</string>
+<string name="translation_installed">翻訳をインストール済み</string>
+<string name="translation_ready">このゲームに対応</string>
+<string name="translation_details">詳細</string>
+<string name="translation_applying">ダウンロードして適用中…</string>
+<plurals name="translation_count"><item quantity="one">対応する翻訳：%1$d件</item><item quantity="other">対応する翻訳：%1$d件</item></plurals>
+<string name="translation_restore">翻訳を削除して元に戻す</string>
+<string name="translation_restore_confirm">元のゲームを復元します。セーブデータは削除されません。</string>
+</resources>

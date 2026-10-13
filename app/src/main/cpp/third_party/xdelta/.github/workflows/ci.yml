@@ -1,0 +1,465 @@
+name: CI
+
+on:
+  push:
+    branches: [ release3_1_apl, release3_0_apl, main ]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  clang-format:
+    name: clang-format check
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: xdelta3
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install clang-format
+        run: sudo apt-get update && sudo apt-get install -y clang-format-20
+
+      - name: Check formatting
+        run: CLANG_FORMAT=clang-format-20 ./format.sh --check
+
+  cmake:
+    name: ${{ matrix.os }} / lzma=${{ matrix.lzma }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - ubuntu-24.04-arm
+          - macos-latest
+          - macos-15-intel
+        lzma: [ "on", "off" ]
+    defaults:
+      run:
+        working-directory: xdelta3
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install liblzma (Linux)
+        if: runner.os == 'Linux' && matrix.lzma == 'on'
+        run: sudo apt-get update && sudo apt-get install -y liblzma-dev
+
+      - name: Install liblzma (macOS)
+        if: runner.os == 'macOS' && matrix.lzma == 'on'
+        run: brew install xz
+
+      - name: Configure
+        run: >
+          cmake -B build
+          -DCMAKE_BUILD_TYPE=Release
+          -DXD3_LZMA_MODE=${{ matrix.lzma }}
+          -DXD3_WERROR=ON
+          -DCMAKE_PREFIX_PATH="$(brew --prefix 2>/dev/null || echo /usr)"
+
+      - name: Build
+        run: cmake --build build --config Release -j
+
+      - name: Test (C and C++ regression suites)
+        run: ctest --test-dir build --output-on-failure
+
+  cmake-small-usize:
+    name: ${{ matrix.os }} / 32-bit usize_t
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - ubuntu-24.04-arm
+          - macos-latest
+          - macos-15-intel
+    defaults:
+      run:
+        working-directory: xdelta3
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Configure (XD3_LARGESIZET=OFF)
+        run: >
+          cmake -B build
+          -DCMAKE_BUILD_TYPE=Release
+          -DXD3_LARGESIZET=OFF
+          -DXD3_LZMA_MODE=off
+          -DXD3_WERROR=ON
+          -DCMAKE_PREFIX_PATH="$(brew --prefix 2>/dev/null || echo /usr)"
+
+      - name: Build
+        run: cmake --build build --config Release -j
+
+      - name: Test (C and C++ regression suites)
+        run: ctest --test-dir build --output-on-failure
+
+  cmake-static-lzma:
+    name: ${{ matrix.os }} / fetched static liblzma
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+          - os: ubuntu-24.04-arm
+          - os: macos-latest
+          - os: macos-15-intel
+          - os: windows-latest
+            cmake_arch: -A Win32
+            cmake_options: -DXD3_LARGESIZET=OFF
+          - os: windows-latest
+            cmake_arch: -A x64
+          - os: windows-11-arm
+            cmake_arch: -A ARM64
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Configure (XD3_LZMA_FETCH=ON)
+        working-directory: xdelta3
+        run: >
+          cmake -B build
+          -DCMAKE_BUILD_TYPE=Release
+          -DXD3_LZMA_FETCH=ON
+          ${{ matrix.cmake_arch }}
+          ${{ matrix.cmake_options }}
+
+      - name: Build
+        working-directory: xdelta3
+        run: cmake --build build --config Release -j
+
+      - name: Test (registered regression suites)
+        working-directory: xdelta3
+        run: ctest --test-dir build -C Release --output-on-failure
+
+  windows:
+    name: ${{ matrix.name }} / lzma=${{ matrix.lzma }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: windows-latest
+            name: windows-x86
+            cmake_arch: Win32
+            cmake_options: -DXD3_LARGESIZET=OFF
+            vcpkg_triplet: x86-windows
+            lzma: "on"
+          - os: windows-latest
+            name: windows-x86
+            cmake_arch: Win32
+            cmake_options: -DXD3_LARGESIZET=OFF
+            vcpkg_triplet: x86-windows
+            lzma: "off"
+          - os: windows-latest
+            name: windows-x86_64
+            cmake_arch: x64
+            vcpkg_triplet: x64-windows
+            lzma: "on"
+          - os: windows-latest
+            name: windows-x86_64
+            cmake_arch: x64
+            vcpkg_triplet: x64-windows
+            lzma: "off"
+          - os: windows-11-arm
+            name: windows-arm64
+            cmake_arch: ARM64
+            vcpkg_triplet: arm64-windows
+            lzma: "on"
+          - os: windows-11-arm
+            name: windows-arm64
+            cmake_arch: ARM64
+            vcpkg_triplet: arm64-windows
+            lzma: "off"
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: xdelta3
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install liblzma (vcpkg)
+        if: matrix.lzma == 'on'
+        run: vcpkg install liblzma:${{ matrix.vcpkg_triplet }}
+
+      - name: Configure (no lzma)
+        if: matrix.lzma == 'off'
+        run: >
+          cmake -B build -A ${{ matrix.cmake_arch }}
+          -DXD3_LZMA_MODE=off
+          -DXD3_WERROR=ON
+          ${{ matrix.cmake_options }}
+
+      - name: Configure (vcpkg lzma)
+        if: matrix.lzma == 'on'
+        run: >
+          cmake -B build -A ${{ matrix.cmake_arch }}
+          -DXD3_LZMA_MODE=on
+          -DXD3_WERROR=ON
+          -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_INSTALLATION_ROOT/scripts/buildsystems/vcpkg.cmake"
+          -DVCPKG_TARGET_TRIPLET=${{ matrix.vcpkg_triplet }}
+          ${{ matrix.cmake_options }}
+
+      - name: Build
+        run: cmake --build build --config Release -j
+
+      - name: Test
+        run: ctest --test-dir build -C Release --output-on-failure
+
+  mingw:
+    name: MinGW-w64 ${{ matrix.name }} cross-build
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: x86
+            package: g++-mingw-w64-i686
+            prefix: i686-w64-mingw32
+            cmake_options: -DXD3_LARGESIZET=OFF
+          - name: x86_64
+            package: g++-mingw-w64-x86-64
+            prefix: x86_64-w64-mingw32
+            cmake_options: ""
+    defaults:
+      run:
+        working-directory: xdelta3
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install MinGW-w64
+        run: sudo apt-get update && sudo apt-get install -y ${{ matrix.package }}
+
+      - name: Configure
+        run: >
+          cmake -B build
+          -DCMAKE_SYSTEM_NAME=Windows
+          -DCMAKE_C_COMPILER=${{ matrix.prefix }}-gcc
+          -DCMAKE_CXX_COMPILER=${{ matrix.prefix }}-g++
+          -DCMAKE_BUILD_TYPE=Release
+          -DXD3_LZMA_MODE=off
+          -DXD3_ARMOR=OFF
+          -DXD3_BUILD_TESTS=OFF
+          ${{ matrix.cmake_options }}
+
+      - name: Compile public header with warnings as errors
+        run: >
+          printf '#include "xdelta3.h"\nint main(void) { return 0; }\n' |
+          ${{ matrix.prefix }}-gcc
+          -std=c99 -Wall -Wextra -Werror
+          -DHAVE_CONFIG_H=1
+          -Ibuild -I.
+          -x c -c -o build/header-smoke.o -
+
+      - name: Build
+        run: cmake --build build -j
+
+  library-consumer:
+    name: ${{ matrix.os }} / library install + consumer
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - ubuntu-24.04-arm
+          - macos-latest
+          - macos-15-intel
+    defaults:
+      run:
+        working-directory: xdelta3
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Configure and build the library
+        run: >
+          cmake -B build
+          -DCMAKE_BUILD_TYPE=Release
+          -DXD3_LZMA_MODE=off
+          -DXD3_ARMOR=OFF
+          -DXD3_WERROR=ON
+          &&
+          cmake --build build --config Release -j
+
+      - name: Install to a staging prefix
+        run: cmake --install build --prefix "$GITHUB_WORKSPACE/stage"
+
+      - name: Build a find_package() consumer
+        run: |
+          mkdir -p "$RUNNER_TEMP/consumer"
+          cp testing/lib_smoke.c "$RUNNER_TEMP/consumer/main.c"
+          cat > "$RUNNER_TEMP/consumer/CMakeLists.txt" <<'EOF'
+          cmake_minimum_required(VERSION 3.13)
+          project(consumer C)
+          find_package(xdelta3 REQUIRED)
+          add_executable(app main.c)
+          target_link_libraries(app PRIVATE xdelta3::xdelta3)
+          EOF
+          cmake -S "$RUNNER_TEMP/consumer" -B "$RUNNER_TEMP/consumer/build" \
+            -DCMAKE_PREFIX_PATH="$GITHUB_WORKSPACE/stage"
+          cmake --build "$RUNNER_TEMP/consumer/build"
+          "$RUNNER_TEMP/consumer/build/app"
+
+      - name: Build a pkg-config consumer
+        run: |
+          export PKG_CONFIG_PATH="$GITHUB_WORKSPACE/stage/lib/pkgconfig"
+          cc "$RUNNER_TEMP/consumer/main.c" $(pkg-config --cflags --libs xdelta3) -o "$RUNNER_TEMP/app_pc"
+          "$RUNNER_TEMP/app_pc"
+
+  blockdev-test:
+    name: ${{ matrix.os }} / block-device source
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - ubuntu-24.04-arm
+          - macos-latest
+          - macos-15-intel
+    defaults:
+      run:
+        working-directory: xdelta3
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Configure
+        run: cmake -B build -DCMAKE_BUILD_TYPE=Release
+
+      - name: Build
+        run: cmake --build build --config Release -j
+
+      - name: Block-device source test
+        run: ./testing/blockdev_test.sh ./build/xdelta3
+
+  xdelta1:
+    name: ${{ matrix.os }} / xdelta1 (v1 line)
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - ubuntu-latest
+          - ubuntu-24.04-arm
+          - macos-latest
+          - macos-15-intel
+    defaults:
+      run:
+        working-directory: xdelta1
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install GLib and zlib (Linux)
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y pkg-config libglib2.0-dev zlib1g-dev
+
+      - name: Install GLib (macOS)
+        if: runner.os == 'macOS'
+        run: brew install glib pkg-config
+
+      - name: Configure
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DXD1_WERROR=ON
+
+      - name: Build
+        run: cmake --build build --parallel
+
+      - name: Test
+        run: ctest --test-dir build --output-on-failure
+
+      - name: Install to a staging prefix
+        run: cmake --install build --prefix "$GITHUB_WORKSPACE/stage1"
+
+      - name: Check the installed program reports its version
+        run: |
+          test -x "$GITHUB_WORKSPACE/stage1/bin/xdelta"
+          "$GITHUB_WORKSPACE/stage1/bin/xdelta" --version
+
+      - name: Delta and patch round trip
+        run: |
+          set -e
+          work="$RUNNER_TEMP/xdelta1-roundtrip"
+          rm -rf "$work" && mkdir -p "$work"
+          # A source large enough that the delta finds matching blocks.
+          seq 1 5000 > "$work/original"
+          cp "$work/original" "$work/updated"
+          echo "an appended line that did not exist before" >> "$work/updated"
+          xdelta="$GITHUB_WORKSPACE/stage1/bin/xdelta"
+          "$xdelta" delta "$work/original" "$work/updated" "$work/change.xdelta"
+          "$xdelta" patch "$work/change.xdelta" "$work/original" "$work/reconstructed"
+          cmp "$work/updated" "$work/reconstructed"
+          # The delta must be much smaller than the file it reconstructs.
+          test "$(wc -c < "$work/change.xdelta")" -lt "$(wc -c < "$work/updated")"
+
+      - name: Delta and patch round trip on gzip input
+        run: |
+          set -e
+          work="$RUNNER_TEMP/xdelta1-gzip"
+          rm -rf "$work" && mkdir -p "$work"
+          seq 1 5000 > "$work/original"
+          cp "$work/original" "$work/updated"
+          echo "an appended line that did not exist before" >> "$work/updated"
+          gzip "$work/original" && gzip "$work/updated"
+          xdelta="$GITHUB_WORKSPACE/stage1/bin/xdelta"
+          # Exercises the transparent gzip decompression path.
+          "$xdelta" delta "$work/original.gz" "$work/updated.gz" "$work/change.xdelta"
+          "$xdelta" patch "$work/change.xdelta" "$work/original.gz" "$work/reconstructed.gz"
+          gunzip -c "$work/updated.gz" > "$work/updated"
+          gunzip -c "$work/reconstructed.gz" > "$work/reconstructed"
+          cmp "$work/updated" "$work/reconstructed"
+
+      - name: Confirm the Autotools build system is gone
+        run: |
+          if find . -name 'configure' -o -name 'Makefile.am' -o -name 'Makefile.in' \
+                 -o -name 'aclocal.m4' -o -name 'ltmain.sh' | grep .; then
+            echo "obsolete Autotools files are present" >&2
+            exit 1
+          fi
+
+  xdelta1-windows:
+    name: ${{ matrix.name }} / xdelta1 (v1 line)
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: windows-x86
+            cmake_arch: Win32
+            vcpkg_triplet: x86-windows
+          - name: windows-x86_64
+            cmake_arch: x64
+            vcpkg_triplet: x64-windows
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: xdelta1
+    steps:
+      - uses: actions/checkout@v5
+
+      - name: Install GLib and zlib
+        run: >
+          vcpkg install
+          pkgconf:x64-windows
+          glib:${{ matrix.vcpkg_triplet }}
+          zlib:${{ matrix.vcpkg_triplet }}
+
+      - name: Configure
+        run: >
+          cmake -S . -B build -A ${{ matrix.cmake_arch }}
+          -DCMAKE_BUILD_TYPE=Release
+          -DXD1_WERROR=ON
+          -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_INSTALLATION_ROOT/scripts/buildsystems/vcpkg.cmake"
+          -DVCPKG_TARGET_TRIPLET=${{ matrix.vcpkg_triplet }}
+          -DPKG_CONFIG_EXECUTABLE="$env:VCPKG_INSTALLATION_ROOT/installed/x64-windows/tools/pkgconf/pkgconf.exe"
+
+      - name: Build
+        run: cmake --build build --config Release --parallel
+
+      - name: Test
+        run: ctest --test-dir build -C Release --output-on-failure
+
+      - name: Check the program and bundled runtime libraries
+        run: |
+          build/Release/xdelta.exe --version
+          if (-not (Test-Path build/Release/glib-2.0-0.dll)) {
+            throw "vcpkg did not deploy the GLib runtime beside xdelta.exe"
+          }

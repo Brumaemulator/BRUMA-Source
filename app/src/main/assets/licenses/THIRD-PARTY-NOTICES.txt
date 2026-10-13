@@ -1,0 +1,2 @@
+
+Translations: IPS/BPS/UPS/reverse-delta implementation by Bruma Studio, GPL-3.0-or-later. xdelta3 3.2.2 by Joshua MacDonald, Apache-2.0; exact source and license in app/src/main/cpp/third_party/xdelta. No LZMA secondary decoder compiled.

@@ -1,0 +1,214 @@
+name: Release Xdelta 1
+
+# Publishes an Xdelta 1 release when a v1.* tag is pushed. See RELEASING.md.
+# Windows packages include the runtime libraries needed by xdelta.exe.
+on:
+  push:
+    tags: [ 'v1.*' ]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Existing v1.x tag to (re)build, e.g. v1.2.0'
+        required: true
+
+permissions:
+  contents: write
+
+env:
+  TAG: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref_name }}
+
+jobs:
+  verify:
+    name: Verify, build, and test
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.check.outputs.version }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref }}
+
+      - name: Check tag against source version
+        id: check
+        run: |
+          set -euo pipefail
+          tag="${TAG}"
+          if ! [[ "$tag" =~ ^v1\.[0-9]+\.[0-9]+$ ]]; then
+            echo "::error::Expected a v1.x.y tag, got $tag"
+            exit 1
+          fi
+          version="${tag#v}"
+          cmake_version="$(sed -n 's/^project(xdelta VERSION \([0-9][0-9.]*\).*/\1/p' xdelta1/CMakeLists.txt)"
+          if [ "$version" != "$cmake_version" ]; then
+            echo "::error::Tag $tag implies $version but xdelta1/CMakeLists.txt has $cmake_version"
+            exit 1
+          fi
+          grep -Fq "#define XDELTA_VERSION \"$version\"" xdelta1/xdelta.h || {
+            echo "::error::xdelta1/xdelta.h does not contain version $version"
+            exit 1
+          }
+          grep -Fq "static const char xdelta_version[] = \"$version\";" xdelta1/xdmain.c || {
+            echo "::error::xdelta1/xdmain.c does not contain version $version"
+            exit 1
+          }
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Install dependencies
+        run: sudo apt-get update && sudo apt-get install -y pkg-config libglib2.0-dev zlib1g-dev
+
+      - name: Configure and build
+        working-directory: xdelta1
+        run: |
+          cmake -S . -B build -DCMAKE_BUILD_TYPE=Release -DXD1_WERROR=ON
+          cmake --build build --parallel
+
+      - name: Test historical compatibility
+        working-directory: xdelta1
+        run: ctest --test-dir build --output-on-failure
+
+      - name: Test round trip
+        working-directory: xdelta1
+        run: |
+          set -euo pipefail
+          seq 1 5000 > build/original
+          cp build/original build/updated
+          echo "release test" >> build/updated
+          build/xdelta delta build/original build/updated build/change.xdelta
+          build/xdelta patch build/change.xdelta build/original build/reconstructed
+          cmp build/updated build/reconstructed
+
+  source:
+    name: Create source archive
+    needs: verify
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref }}
+          fetch-depth: 0
+
+      - name: Package Xdelta 1 sources
+        run: |
+          set -euo pipefail
+          version="${{ needs.verify.outputs.version }}"
+          archive="xdelta-${version}.tar.gz"
+          git archive \
+            --format=tar.gz \
+            --prefix="xdelta-${version}/" \
+            --output="$archive" \
+            "${TAG}:xdelta1"
+          sha256sum "$archive" > "${archive}.sha256"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: xdelta1-source
+          path: |
+            xdelta-*.tar.gz
+            xdelta-*.tar.gz.sha256
+
+  binaries:
+    name: ${{ matrix.name }} binaries
+    needs: verify
+    runs-on: windows-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: windows-x86
+            cmake_arch: Win32
+            vcpkg_triplet: x86-windows
+          - name: windows-x86_64
+            cmake_arch: x64
+            vcpkg_triplet: x64-windows
+    defaults:
+      run:
+        shell: pwsh
+        working-directory: xdelta1
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref }}
+
+      - name: Install GLib and zlib
+        run: >
+          vcpkg install
+          pkgconf:x64-windows
+          glib:${{ matrix.vcpkg_triplet }}
+          zlib:${{ matrix.vcpkg_triplet }}
+
+      - name: Configure
+        run: >
+          cmake -S . -B build -A ${{ matrix.cmake_arch }}
+          -DCMAKE_BUILD_TYPE=Release
+          -DXD1_WERROR=ON
+          -DCMAKE_TOOLCHAIN_FILE="$env:VCPKG_INSTALLATION_ROOT/scripts/buildsystems/vcpkg.cmake"
+          -DVCPKG_TARGET_TRIPLET=${{ matrix.vcpkg_triplet }}
+          -DPKG_CONFIG_EXECUTABLE="$env:VCPKG_INSTALLATION_ROOT/installed/x64-windows/tools/pkgconf/pkgconf.exe"
+
+      - name: Build
+        run: cmake --build build --config Release --parallel
+
+      - name: Test
+        run: ctest --test-dir build -C Release --output-on-failure
+
+      - name: Package
+        run: |
+          $version = "${{ needs.verify.outputs.version }}"
+          $dir = "xdelta-$version-${{ matrix.name }}"
+          New-Item -ItemType Directory -Path $dir | Out-Null
+          Copy-Item build/Release/xdelta.exe $dir/
+          Copy-Item build/Release/*.dll $dir/
+          Copy-Item README, COPYING $dir/
+          & "$dir/xdelta.exe" --version
+          Compress-Archive -Path $dir -DestinationPath "$dir.zip"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: xdelta1-${{ matrix.name }}
+          path: xdelta1/xdelta-*.zip
+
+  release:
+    name: Publish GitHub Release
+    needs: [ verify, source, binaries ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: ${{ github.event_name == 'workflow_dispatch' && inputs.tag || github.ref }}
+
+      - name: Prepare release notes
+        run: |
+          set -euo pipefail
+          version="${{ needs.verify.outputs.version }}"
+          awk -v heading="** Changes in version ${version}" '
+            $0 == heading { found = 1; next }
+            found && index($0, "\f") { exit }
+            found { print }
+            END { if (!found) exit 1 }
+          ' xdelta1/NEWS > release-notes.txt
+          if ! grep -q '[^[:space:]]' release-notes.txt; then
+            echo "::error::No release notes found for Xdelta ${version}"
+            exit 1
+          fi
+
+      - uses: actions/download-artifact@v4
+        with:
+          path: dist
+          merge-multiple: true
+
+      - name: Publish release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          version="${{ needs.verify.outputs.version }}"
+          if gh release view "${TAG}" >/dev/null 2>&1; then
+            gh release upload "${TAG}" --clobber dist/*
+          else
+            gh release create "${TAG}" \
+              --title "Xdelta ${version}" \
+              --notes-file release-notes.txt \
+              --latest=false \
+              --verify-tag \
+              dist/*
+          fi

@@ -1,0 +1,11 @@
+# CMake build directories
+build/
+build_*/
+
+# Compiled objects and editor backups
+*.o
+*~
+
+# MkDocs build output (site/mkdocs.yml sets site_dir: _site)
+site/_site/
+

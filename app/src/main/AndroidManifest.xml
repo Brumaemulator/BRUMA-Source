@@ -54,5 +54,6 @@
         <activity android:name="com.hatkid.mkxpz.ClassicActivity" android:exported="false" android:process=":rpgclassic" android:launchMode="singleTask" android:screenOrientation="sensorLandscape" android:configChanges="layoutDirection|locale|orientation|uiMode|screenLayout|screenSize|smallestScreenSize|density|keyboard|keyboardHidden|navigation" android:theme="@android:style/Theme.Material.NoActionBar.Fullscreen"><meta-data android:name="mkxp_debug" android:value="false"/></activity>
 <activity android:name=".NdsActivity" android:exported="false" android:process=":nds" android:launchMode="singleTask" android:screenOrientation="user" android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" android:theme="@android:style/Theme.Material.NoActionBar.Fullscreen" />
 <activity android:name=".OpenSourceLicensesActivity" android:exported="false" />
+<activity android:name="com.linkcore.emulator.translations.TranslationsActivity" android:exported="false" />
 </application>
 </manifest>

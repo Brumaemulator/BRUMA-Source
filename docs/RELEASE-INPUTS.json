@@ -1,8 +1,8 @@
 {
-  "versionName": "1.0.1",
-  "versionCode": 41,
+  "versionName": "1.0.2",
+  "versionCode": 44,
   "applicationId": "com.brumastudio.bruma",
-  "date": "2026-10-09",
+  "date": "2026-10-13",
   "native_inputs": {
     "libbruma_classic.so": "75d318c56223f0fdd8c04c0b36ed07b6eb3ec14f6cfc352e707f84f44c0226f9",
     "libbruma_classic_fluidlite.so": "4c7373f557349de9cc3308eee3311e5c578b78e4ff365f28323ac49346aac1a2",
@@ -21,5 +21,13 @@
   "classic_interpreter": "Ruby 1.9.3-p551, selected BSD-2-Clause option",
   "modern_openssl": "OpenSSL 3.5.8, Apache-2.0",
   "no_new_functionality": false,
-  "update": "Classic Ruby compatibility and Android Back fixes, asynchronous RPG preparation, localized library-update label and spinner."
+  "update": "Optional translations catalog, verified patching and reverse delta restoration; no Creators client or new Google SDK.",
+  "translation_decoder": {
+    "repository": "https://github.com/jmacd/xdelta",
+    "tag": "v3.2.2",
+    "commit": "5f8f5a553181c139d91b0289c009e5c276c5318c",
+    "archive_sha256": "1529ccd7e8cc6b780ee56b2cb31ff4b6c1f9ead30cca5a0e84a940ab0668ea97"
+  },
+  "production_ready": false,
+  "pending": "Replace manual pilot enrollment before general release."
 }

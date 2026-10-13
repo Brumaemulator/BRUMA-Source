@@ -1,0 +1,4 @@
+xdelta3 3.2.2, commit 5f8f5a553181c139d91b0289c009e5c276c5318c
+Copyright 2016 Joshua MacDonald
+Apache License 2.0. Only xdelta3 is compiled, not xdelta1.
+Own patch appliers and client: BRUMA GPL-3.0-or-later.

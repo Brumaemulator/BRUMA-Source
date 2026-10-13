@@ -1,0 +1,32 @@
+<resources>
+<string name="translations_title">Translations</string>
+<string name="translation_info">Only approved patches matching the exact game hash. Originals are preserved. RPG Maker uses a separate adapter.</string>
+<string name="translation_authorize">Authorize BRUMA · test code</string>
+<string name="translation_authorize_first">Enter the administrator-approved code.</string>
+<string name="translation_failed">Could not apply translation.</string>
+<string name="translation_matches">Compatible translations: %1$d</string>
+<string name="translation_apply">Apply translation</string>
+<string name="translation_preserve">The translation will replace the game in BRUMA. Only the data needed to undo it will be kept.</string>
+<string name="translation_success">Translation verified. The translated game is now in the library.</string>
+
+<string name="translation_back">Back</string>
+<string name="translation_hero">Play in your language</string>
+<string name="translation_intro">Find translations compatible with the games in your library.</string>
+<string name="translation_original_safe">Your original game and saves stay safe.</string>
+<string name="translation_searching">Looking for translations…</string>
+<string name="translation_refresh">Refresh translations</string>
+<string name="translation_code_hint">Access code</string>
+<string name="translation_empty_title">No compatible translations yet</string>
+<string name="translation_empty">Add a compatible game to your library and check again.</string>
+<string name="translation_version">Version %1$s</string>
+<string name="translation_by">By %1$s</string>
+<string name="translation_view_library">View in library</string>
+<string name="translation_download">Download and apply</string>
+<string name="translation_installed">Translation installed</string>
+<string name="translation_ready">Compatible with your game</string>
+<string name="translation_details">Details</string>
+<string name="translation_applying">Downloading and applying…</string>
+<plurals name="translation_count"><item quantity="one">Compatible translations: %1$d</item><item quantity="other">Compatible translations: %1$d</item></plurals>
+<string name="translation_restore">Remove translation and restore original</string>
+<string name="translation_restore_confirm">The original game will be restored. Save files will not be deleted.</string>
+</resources>

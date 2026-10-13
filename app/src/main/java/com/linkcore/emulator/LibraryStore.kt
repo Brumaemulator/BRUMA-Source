@@ -34,7 +34,7 @@ class LibraryStore(private val context:Context) {
     // Only local metadata is needed for the first paint; validation happens in scan.
     fun cachedGames():List<LibraryGame> = read().map {g->
         if(g.system=="RPG Maker XP" && g.cached.isNotBlank())
-            g.copy(uri=Uri.fromFile(File(context.filesDir,"rpg-games/${g.cached}")).toString()) else g
+            g.copy(uri=Uri.fromFile(File(context.filesDir,"rpg-games/${g.cached}")).toString()) else com.linkcore.emulator.translations.TranslationInstaller.mapGame(context,g)
     }.sortedWith(compareBy<LibraryGame>{it.system}.thenBy{it.title.lowercase()})
     private fun scanFingerprint(uri:String,size:Long,modified:Long):String {
         val cache=context.getSharedPreferences("rom-scan-signatures",0)
@@ -56,7 +56,7 @@ class LibraryStore(private val context:Context) {
         digest.digest().joinToString("") {"%02x".format(it.toInt() and 255)}
     }.getOrDefault("")
     private fun hydrate(g:LibraryGame):LibraryGame {
-        if(g.system!="RPG Maker XP")return g.copy(source=RomCacheCleanup.source(context,g))
+        if(g.system!="RPG Maker XP")return com.linkcore.emulator.translations.TranslationInstaller.mapGame(context,g.copy(source=RomCacheCleanup.source(context,g)))
         val dir=File(context.filesDir,"rpg-games/${g.cached}").takeIf{g.cached.isNotEmpty() && File(it,"Game.ini").isFile()}
         val origin=dir?.let{File(it,"bruma-origin.txt").takeIf{it.isFile}?.readText()?.trim()}
         val source=g.source.ifBlank{origin?.substringBefore("#rpg=") ?: g.uri.takeIf{it.startsWith("content:")} ?: ""}
@@ -99,6 +99,10 @@ class LibraryStore(private val context:Context) {
         write(unique(read()+games))
     }
     @Synchronized fun setCover(key:String,path:String) {write(allGames().map {if(it.key==key) it.copy(cover=path) else it})}
+    @Synchronized fun replaceTranslation(originalId:String,translatedId:String,game:LibraryGame) {
+        write(unique(read().filterNot{it.cached==originalId || it.cached==translatedId || it.key==game.key}+game))
+        RomCacheCleanup.record(context,game)
+    }
     @Synchronized fun mergeImported() {
         val list=read().map {if(it.system in setOf("GBA","GB","GBC") && it.cached.isBlank() && it.uri.isNotBlank()) it.copy(cached=fingerprint(it.uri)) else it}.toMutableList()
         File(context.filesDir,"roms").listFiles()?.filter {it.name.matches(Regex("[a-f0-9]{64}\\.(gba|gbc|gb|nds)"))}?.forEach {f->
@@ -138,7 +142,7 @@ class LibraryStore(private val context:Context) {
     fun scan(tree:Uri,onGame:((LibraryGame)->Unit)?=null):List<LibraryGame> {
         val found=ArrayList<LibraryGame>();val visited=HashSet<String>()
         val archives=ArrayList<Array<String>>()
-        fun emit(game:LibraryGame) {found+=game;onGame?.invoke(game)}
+        fun emit(game:LibraryGame) {val resolved=com.linkcore.emulator.translations.TranslationInstaller.mapGame(context,game);found+=resolved;onGame?.invoke(resolved)}
         fun visit(id:String,depth:Int) {
             require(depth<=8) {context.getString(R.string.library_limit)}
             if(!visited.add(id)) return

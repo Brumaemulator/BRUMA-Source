@@ -1,4 +1,4 @@
-# Build BRUMA 1.0.1
+# Build BRUMA 1.0.2
 Windows x64; JDK 21; Android SDK platform 36; NDK 28.2.13676358; CMake 4.1.2; Gradle 9.6.0; AGP 9.4.0. Python 3, Git, Ninja and MSYS2 Bash/autotools/make/Ruby are needed for native rebuilds.
 Set JAVA_HOME and ANDROID_HOME. Create local.properties locally with sdk.dir; it is intentionally not distributed. Run `gradlew.bat --no-daemon bundleRelease assembleRelease` from the repository root. No signing key is embedded. Sign the resulting AAB with your own upload key; recipients can build/sign/install modified APKs with their own keys (a differently signed app cannot update an existing install).
 
@@ -11,6 +11,8 @@ All covered source, patches and scripts are included. Dynamic runtime libraries 
 
 Modern runtime now uses original MIT CMake recipes and scripts/build-engine.ps1 instead of inherited Android.mk/ndk-build. API 26, ARM64, NDK 28.2.13676358, C++ shared; see runtimes/modern/build-system/README.md.
 
-## Classic runtime update — 2026-10-02
+## Classic runtime update â€” 2026-10-02
 
 The older classic staging/prepare-native.py recipe is superseded. `scripts/build-native.ps1` now calls `runtimes/classic/scripts/build-runtime.ps1`, which configures and builds official Ruby 1.9.3-p551 from source in a fresh directory, then builds mkxp and all its auxiliary libraries under the bruma_classic SONAMEs. It does not use a prebuilt Ruby archive. See runtimes/classic/README.md, sources.lock.json and licenses/ruby193/. The standalone clean Ruby recipe and full ARM64 integrated engine build completed; game operation was accepted by the user. No bit-for-bit reproducibility claim is made.
+
+The translationpatch native library is built by the same Gradle/CMake invocation; no additional SDK or download is needed. Exact xdelta source revision and archive hash: translation-xdelta.lock.json. Only xdelta3 is compiled, with secondary LZMA disabled.

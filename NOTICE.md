@@ -1,4 +1,4 @@
-BRUMA 1.0.1 — Open-source licenses / Licencias de código abierto
+BRUMA 1.0.2 — Open-source licenses / Licencias de código abierto
 Official Corresponding Source repository: https://github.com/Brumaemulator/BRUMA-Source
 This paid application contains free software. Charging for distribution does not remove recipients' license rights.
 BRUMA-owned application code is offered under GPL-3.0-or-later for this combined distribution; existing third-party licenses and earlier MIT grants remain intact.
@@ -16,3 +16,5 @@ See complete component texts below and the source package's inventory, COPYING/L
 Modern Android build driver: original BRUMA MIT; inherited top-level port recipes excluded. Classic Ruby licensing was closed with official Ruby 1.9.3-p551, BSD-2-Clause option and retained exceptions.
 
 2026-10-02: Classic interpreter replaced with public Ruby 1.9.3-p551 under its BSD-2-Clause option; per-file notices and exceptions preserved in bruma-classic-public/ruby-1.9.3-p551/. The combined application remains GPLv3. Ruby 1.8.7-p374 is no longer a binary input.
+
+Translations: IPS/BPS/UPS/reverse-delta implementation by Bruma Studio, GPL-3.0-or-later. xdelta3 3.2.2 by Joshua MacDonald, Apache-2.0; exact source and license in app/src/main/cpp/third_party/xdelta. No LZMA secondary decoder compiled.

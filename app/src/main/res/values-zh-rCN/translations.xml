@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="translations_title">翻译</string><string name="translation_info">仅使用已批准且哈希完全匹配的补丁。原版游戏将保留。RPG Maker将使用独立适配器。</string><string name="translation_authorize">授权BRUMA · 测试代码</string><string name="translation_authorize_first">请输入管理员授权的代码。</string><string name="translation_failed">无法应用翻译。</string><string name="translation_matches">兼容的翻译：%1$d</string><string name="translation_apply">应用翻译</string><string name="translation_preserve">翻译将替换BRUMA中的游戏。仅保留恢复所需的数据。</string><string name="translation_success">翻译已验证。翻译版游戏已添加至游戏库。</string>
+<string name="translation_back">返回</string>
+<string name="translation_hero">用你的语言游玩</string>
+<string name="translation_intro">查找适用于游戏库中游戏的翻译。</string>
+<string name="translation_original_safe">原始游戏和存档将安全保留。</string>
+<string name="translation_searching">正在查找翻译…</string>
+<string name="translation_refresh">刷新翻译</string>
+<string name="translation_code_hint">访问代码</string>
+<string name="translation_empty_title">暂无兼容的翻译</string>
+<string name="translation_empty">将兼容的游戏添加到游戏库后重试。</string>
+<string name="translation_version">版本 %1$s</string>
+<string name="translation_by">作者：%1$s</string>
+<string name="translation_view_library">在游戏库中查看</string>
+<string name="translation_download">下载并应用</string>
+<string name="translation_installed">翻译已安装</string>
+<string name="translation_ready">与你的游戏兼容</string>
+<string name="translation_details">详情</string>
+<string name="translation_applying">正在下载并应用…</string>
+<plurals name="translation_count"><item quantity="one">%1$d 个兼容翻译</item><item quantity="other">%1$d 个兼容翻译</item></plurals>
+<string name="translation_restore">移除翻译并恢复原版</string>
+<string name="translation_restore_confirm">将恢复原版游戏。不会删除存档。</string>
+</resources>

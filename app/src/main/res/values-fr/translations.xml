@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources><string name="translations_title">Traductions</string><string name="translation_info">Uniquement des correctifs approuvés compatibles avec le hash exact. Le jeu original est conservé. RPG Maker utilisera un adaptateur distinct.</string><string name="translation_authorize">Autoriser BRUMA · code de test</string><string name="translation_authorize_first">Saisissez le code autorisé par l’administrateur.</string><string name="translation_failed">Impossible d’appliquer la traduction.</string><string name="translation_matches">Traductions compatibles : %1$d</string><string name="translation_apply">Appliquer la traduction</string><string name="translation_preserve">La traduction remplacera le jeu dans BRUMA. Seules les données nécessaires pour l’annuler seront conservées.</string><string name="translation_success">Traduction vérifiée. Le jeu traduit apparaît dans la bibliothèque.</string>
+<string name="translation_back">Retour</string>
+<string name="translation_hero">Jouez dans votre langue</string>
+<string name="translation_intro">Trouvez des traductions compatibles avec les jeux de votre bibliothèque.</string>
+<string name="translation_original_safe">Votre jeu original et vos sauvegardes sont conservés.</string>
+<string name="translation_searching">Recherche de traductions…</string>
+<string name="translation_refresh">Actualiser les traductions</string>
+<string name="translation_code_hint">Code d’accès</string>
+<string name="translation_empty_title">Aucune traduction compatible pour le moment</string>
+<string name="translation_empty">Ajoutez un jeu compatible à votre bibliothèque puis réessayez.</string>
+<string name="translation_version">Version %1$s</string>
+<string name="translation_by">Par %1$s</string>
+<string name="translation_view_library">Voir dans la bibliothèque</string>
+<string name="translation_download">Télécharger et appliquer</string>
+<string name="translation_installed">Traduction installée</string>
+<string name="translation_ready">Compatible avec votre jeu</string>
+<string name="translation_details">Détails</string>
+<string name="translation_applying">Téléchargement et application…</string>
+<plurals name="translation_count"><item quantity="one">%1$d traduction compatible</item><item quantity="other">%1$d traductions compatibles</item></plurals>
+<string name="translation_restore">Retirer la traduction et restaurer l’original</string>
+<string name="translation_restore_confirm">Le jeu original sera restauré. Vos sauvegardes ne seront pas supprimées.</string>
+</resources>

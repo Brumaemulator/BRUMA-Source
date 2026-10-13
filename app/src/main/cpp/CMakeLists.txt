@@ -18,3 +18,8 @@ target_compile_definitions(linkcore PRIVATE M_CORE_GBA M_CORE_GB)
 target_include_directories(linkcore PRIVATE third_party/mgba-0.10.5/src)
 target_link_libraries(linkcore mgba log jnigraphics)
 
+add_library(translationpatch SHARED translation_xdelta.cpp third_party/xdelta/xdelta3/xdelta3.c)
+target_include_directories(translationpatch PRIVATE third_party/xdelta/xdelta3)
+target_compile_definitions(translationpatch PRIVATE SIZEOF_SIZE_T=8 SIZEOF_UNSIGNED_LONG=8 SIZEOF_UNSIGNED_LONG_LONG=8 SIZEOF_UNSIGNED_INT=4 XD3_MAIN=0 SECONDARY_LZMA=0 SECONDARY_DJW=1 SECONDARY_FGK=1 HAVE_CONFIG_H=0)
+target_compile_options(translationpatch PRIVATE -O2)
+

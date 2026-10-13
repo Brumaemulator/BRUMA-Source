@@ -511,7 +511,7 @@
     "submodules": "",
     "used_in_build": true,
     "name": "mkxp",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "license": "GPL-2.0-or-later",
     "packaged": true
   },
@@ -522,7 +522,7 @@
     "submodules": "",
     "used_in_build": true,
     "name": "FluidLite",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "license": "LGPL-2.1-or-later",
     "packaged": true
   },
@@ -533,7 +533,7 @@
     "submodules": "",
     "used_in_build": true,
     "name": "libsigcplusplus",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "license": "LGPL-2.1-or-later",
     "packaged": true
   },
@@ -544,7 +544,7 @@
     "submodules": "",
     "used_in_build": true,
     "name": "ogg",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "license": "BSD-3-Clause",
     "packaged": true
   },
@@ -555,7 +555,7 @@
     "submodules": "",
     "used_in_build": true,
     "name": "opus",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "license": "BSD-3-Clause (+ bundled notices)",
     "packaged": true
   },
@@ -566,7 +566,7 @@
     "submodules": "",
     "used_in_build": true,
     "name": "opusfile",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "license": "BSD-3-Clause",
     "packaged": true
   },
@@ -577,7 +577,7 @@
     "submodules": "",
     "used_in_build": true,
     "name": "physfs",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "license": "Zlib",
     "packaged": true
   },
@@ -588,7 +588,7 @@
     "submodules": "",
     "used_in_build": true,
     "name": "SDL",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "license": "Zlib",
     "packaged": true
   },
@@ -599,7 +599,7 @@
     "download_ref": "release-2.0.5",
     "used_in_build": true,
     "name": "SDL_image",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "license": "Zlib",
     "packaged": true
   },
@@ -610,7 +610,7 @@
     "download_ref": "release-2.0.15",
     "used_in_build": true,
     "name": "SDL_ttf",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "license": "Zlib",
     "packaged": true
   },
@@ -621,7 +621,7 @@
     "submodules": "",
     "used_in_build": true,
     "name": "SDL_sound",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "license": "LGPL-2.1-or-later",
     "packaged": true
   },
@@ -632,7 +632,7 @@
     "submodules": "",
     "used_in_build": true,
     "name": "theora",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "license": "BSD-3-Clause",
     "packaged": true
   },
@@ -643,7 +643,7 @@
     "submodules": "",
     "used_in_build": true,
     "name": "theoraplay",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "license": "Zlib",
     "packaged": true
   },
@@ -654,7 +654,7 @@
     "submodules": "",
     "used_in_build": true,
     "name": "vorbis",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "license": "BSD-3-Clause",
     "packaged": true
   },
@@ -665,13 +665,13 @@
     "download_ref": "1.23.1",
     "used_in_build": true,
     "name": "openal-soft",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "license": "LGPL-2.0-or-later",
     "packaged": true
   },
   {
     "name": "libiconv",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "repository": "https://github.com/joiplay/android-mkxp",
     "commit": "2e81fd25c591ae6c4335a19989ce48c35d6a9d41",
     "source_path": "historical/app/src/main/jni/libiconv",
@@ -680,7 +680,7 @@
   },
   {
     "name": "libguess",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "repository": "https://github.com/joiplay/android-mkxp",
     "commit": "2e81fd25c591ae6c4335a19989ce48c35d6a9d41",
     "source_path": "historical/app/src/main/jni/libguess",
@@ -689,7 +689,7 @@
   },
   {
     "name": "pixman",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "repository": "https://github.com/joiplay/android-mkxp",
     "commit": "2e81fd25c591ae6c4335a19989ce48c35d6a9d41",
     "source_path": "historical/app/src/main/jni/pixman",
@@ -698,7 +698,7 @@
   },
   {
     "name": "Ruby MRI",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "version": "1.9.3-p551",
     "repository": "https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p551.tar.xz",
     "sha256": "44228297861f4dfdf23a47372a3e3c4c5116fbf5b0e10883417f2379874b55c6",
@@ -711,7 +711,7 @@
   },
   {
     "name": "FreeType",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "version": "2.9.1 in SDL_ttf",
     "commit": "33cdd1881e31184b49a68b4890d1d256fc0c6dc1",
     "license": "FTL selected",
@@ -719,7 +719,7 @@
   },
   {
     "name": "libpng",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "version": "1.6.37 in SDL_image",
     "commit": "ab2a9c602623193d61827ccd395302d92d90fc38",
     "license": "libpng-2.0",
@@ -727,7 +727,7 @@
   },
   {
     "name": "JPEG",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "version": "9b in SDL_image",
     "commit": "ab2a9c602623193d61827ccd395302d92d90fc38",
     "license": "IJG",
@@ -735,14 +735,14 @@
   },
   {
     "name": "libnsgif",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "commit": "27ce890fa9023598ffa5ab7561cd9c61c5bde3b5",
     "license": "MIT",
     "packaged": true
   },
   {
     "name": "mpg123 / Timidity / SDL_sound decoders",
-    "system": "RPG clásico",
+    "system": "RPG cl\u00c3\u00a1sico",
     "commit": "04798ba55dccd18b094c0f6a2630c2fe7b15aa86",
     "license": "LGPL-2.1-or-later (preserve decoder notices)",
     "packaged": true
@@ -825,7 +825,7 @@
   },
   {
     "name": "Android Java wrapper and gamepad base",
-    "system": "RPG clásico y moderno",
+    "system": "RPG cl\u00c3\u00a1sico y moderno",
     "repository": "https://github.com/BookerRues9/mkxp-z-android-reworked",
     "commit": "0828373e0ad65402eced54e6b45645fceacf6bea",
     "license": "MIT (original BRUMA replacement); SDLActivity remains upstream zlib",
@@ -873,7 +873,7 @@
   },
   {
     "name": "Liberation Sans",
-    "system": "RPG moderno y clásico",
+    "system": "RPG moderno y cl\u00c3\u00a1sico",
     "version": "2.00.1",
     "license": "SIL-OFL-1.1",
     "packaged": true,
@@ -894,5 +894,13 @@
     "license": "MIT",
     "source": "app/src/main/java/com/hatkid/mkxpz and runtimes/modern/overrides",
     "status": "Current original implementation; not upstream historical wrapper"
+  },
+  {
+    "component": "xdelta3",
+    "version": "3.2.2",
+    "license": "Apache-2.0",
+    "commit": "5f8f5a553181c139d91b0289c009e5c276c5318c",
+    "source": "app/src/main/cpp/third_party/xdelta",
+    "compiled": "xdelta3/xdelta3.c; no xdelta1, no LZMA secondary"
   }
 ]

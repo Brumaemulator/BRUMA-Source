@@ -1,0 +1,108 @@
+diff --git a/app/src/main/AndroidManifest.xml b/app/src/main/AndroidManifest.xml
+index 2a6d0883..b4305c91 100644
+--- a/app/src/main/AndroidManifest.xml
++++ b/app/src/main/AndroidManifest.xml
+@@ -54,5 +54,6 @@
+         <activity android:name="com.hatkid.mkxpz.ClassicActivity" android:exported="false" android:process=":rpgclassic" android:launchMode="singleTask" android:screenOrientation="sensorLandscape" android:configChanges="layoutDirection|locale|orientation|uiMode|screenLayout|screenSize|smallestScreenSize|density|keyboard|keyboardHidden|navigation" android:theme="@android:style/Theme.Material.NoActionBar.Fullscreen"><meta-data android:name="mkxp_debug" android:value="false"/></activity>
+ <activity android:name=".NdsActivity" android:exported="false" android:process=":nds" android:launchMode="singleTask" android:screenOrientation="user" android:configChanges="orientation|screenSize|screenLayout|keyboardHidden" android:theme="@android:style/Theme.Material.NoActionBar.Fullscreen" />
+ <activity android:name=".OpenSourceLicensesActivity" android:exported="false" />
++<activity android:name="com.linkcore.emulator.translations.TranslationsActivity" android:exported="false" />
+ </application>
+ </manifest>
+diff --git a/app/src/main/cpp/CMakeLists.txt b/app/src/main/cpp/CMakeLists.txt
+index a0353fac..2eec872a 100644
+--- a/app/src/main/cpp/CMakeLists.txt
++++ b/app/src/main/cpp/CMakeLists.txt
+@@ -17,4 +17,9 @@ target_compile_options(linkcore PRIVATE -O2)
+ target_compile_definitions(linkcore PRIVATE M_CORE_GBA M_CORE_GB)
+ target_include_directories(linkcore PRIVATE third_party/mgba-0.10.5/src)
+ target_link_libraries(linkcore mgba log jnigraphics)
++
++add_library(translationpatch SHARED translation_xdelta.cpp third_party/xdelta/xdelta3/xdelta3.c)
++target_include_directories(translationpatch PRIVATE third_party/xdelta/xdelta3)
++target_compile_definitions(translationpatch PRIVATE SIZEOF_SIZE_T=8 SIZEOF_UNSIGNED_LONG=8 SIZEOF_UNSIGNED_LONG_LONG=8 SIZEOF_UNSIGNED_INT=4 XD3_MAIN=0 SECONDARY_LZMA=0 SECONDARY_DJW=1 SECONDARY_FGK=1 HAVE_CONFIG_H=0)
++target_compile_options(translationpatch PRIVATE -O2)
+ 
+diff --git a/app/src/main/java/com/linkcore/emulator/LibraryStore.kt b/app/src/main/java/com/linkcore/emulator/LibraryStore.kt
+index 0d98d8f9..b522d72b 100644
+--- a/app/src/main/java/com/linkcore/emulator/LibraryStore.kt
++++ b/app/src/main/java/com/linkcore/emulator/LibraryStore.kt
+@@ -34,7 +34,7 @@ class LibraryStore(private val context:Context) {
+     // Only local metadata is needed for the first paint; validation happens in scan.
+     fun cachedGames():List<LibraryGame> = read().map {g->
+         if(g.system=="RPG Maker XP" && g.cached.isNotBlank())
+-            g.copy(uri=Uri.fromFile(File(context.filesDir,"rpg-games/${g.cached}")).toString()) else g
++            g.copy(uri=Uri.fromFile(File(context.filesDir,"rpg-games/${g.cached}")).toString()) else com.linkcore.emulator.translations.TranslationInstaller.mapGame(context,g)
+     }.sortedWith(compareBy<LibraryGame>{it.system}.thenBy{it.title.lowercase()})
+     private fun scanFingerprint(uri:String,size:Long,modified:Long):String {
+         val cache=context.getSharedPreferences("rom-scan-signatures",0)
+@@ -56,7 +56,7 @@ class LibraryStore(private val context:Context) {
+         digest.digest().joinToString("") {"%02x".format(it.toInt() and 255)}
+     }.getOrDefault("")
+     private fun hydrate(g:LibraryGame):LibraryGame {
+-        if(g.system!="RPG Maker XP")return g.copy(source=RomCacheCleanup.source(context,g))
++        if(g.system!="RPG Maker XP")return com.linkcore.emulator.translations.TranslationInstaller.mapGame(context,g.copy(source=RomCacheCleanup.source(context,g)))
+         val dir=File(context.filesDir,"rpg-games/${g.cached}").takeIf{g.cached.isNotEmpty() && File(it,"Game.ini").isFile()}
+         val origin=dir?.let{File(it,"bruma-origin.txt").takeIf{it.isFile}?.readText()?.trim()}
+         val source=g.source.ifBlank{origin?.substringBefore("#rpg=") ?: g.uri.takeIf{it.startsWith("content:")} ?: ""}
+@@ -99,6 +99,10 @@ class LibraryStore(private val context:Context) {
+         write(unique(read()+games))
+     }
+     @Synchronized fun setCover(key:String,path:String) {write(allGames().map {if(it.key==key) it.copy(cover=path) else it})}
++    @Synchronized fun replaceTranslation(originalId:String,translatedId:String,game:LibraryGame) {
++        write(unique(read().filterNot{it.cached==originalId || it.cached==translatedId || it.key==game.key}+game))
++        RomCacheCleanup.record(context,game)
++    }
+     @Synchronized fun mergeImported() {
+         val list=read().map {if(it.system in setOf("GBA","GB","GBC") && it.cached.isBlank() && it.uri.isNotBlank()) it.copy(cached=fingerprint(it.uri)) else it}.toMutableList()
+         File(context.filesDir,"roms").listFiles()?.filter {it.name.matches(Regex("[a-f0-9]{64}\\.(gba|gbc|gb|nds)"))}?.forEach {f->
+@@ -138,7 +142,7 @@ class LibraryStore(private val context:Context) {
+     fun scan(tree:Uri,onGame:((LibraryGame)->Unit)?=null):List<LibraryGame> {
+         val found=ArrayList<LibraryGame>();val visited=HashSet<String>()
+         val archives=ArrayList<Array<String>>()
+-        fun emit(game:LibraryGame) {found+=game;onGame?.invoke(game)}
++        fun emit(game:LibraryGame) {val resolved=com.linkcore.emulator.translations.TranslationInstaller.mapGame(context,game);found+=resolved;onGame?.invoke(resolved)}
+         fun visit(id:String,depth:Int) {
+             require(depth<=8) {context.getString(R.string.library_limit)}
+             if(!visited.add(id)) return
+diff --git a/app/src/main/java/com/linkcore/emulator/MainActivity.kt b/app/src/main/java/com/linkcore/emulator/MainActivity.kt
+index 52396f4c..68832e04 100644
+--- a/app/src/main/java/com/linkcore/emulator/MainActivity.kt
++++ b/app/src/main/java/com/linkcore/emulator/MainActivity.kt
+@@ -276,8 +276,8 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
+                                 if(BuildConfig.DEBUG)android.util.Log.d("BrumaLibrary","Progress ${preview.size} games in ${android.os.SystemClock.elapsedRealtime()-libraryStarted} ms")
+                             }
+                         }
+-                        val found=try {folders.flatMap {folder->
+-                            GameFolderMedia.ensureHidden(this,Uri.parse(folder))
++                        val found=try {folders.flatMap {folder->
++                            GameFolderMedia.ensureHidden(this,Uri.parse(folder))
+                             libraryStore.scan(Uri.parse(folder)) {game->
+                             discovered+=game;pending.set(discovered.toList())
+                             // Flush even if the scanner next blocks on a large ZIP.
+@@ -347,7 +347,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
+         }
+     }
+     private fun showHomeOptions() {
+-        val options=arrayOf(getString(R.string.library_refresh),getString(R.string.art_download),getString(R.string.pad_title),getString(R.string.ui_1),getString(R.string.app_language),tr("Ajustes","Settings"))
++        val options=arrayOf(getString(R.string.library_refresh),getString(R.string.art_download),getString(R.string.pad_title),getString(R.string.ui_1),getString(R.string.app_language),tr("Ajustes","Settings"),getString(R.string.translations_title))
+         AlertDialog.Builder(this).setTitle(tr("Opciones","Options")).setItems(options) {_,which->when(which) {
+             0->refreshLibrary(true)
+             1->scraper.show(libraryGames.filter {it.system in setOf("GB","GBC","GBA","NDS")})
+@@ -355,6 +355,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
+             3->showHelp()
+             4->showLanguagePicker()
+             5->showLegalSettings()
++            6->startActivity(Intent(this,com.linkcore.emulator.translations.TranslationsActivity::class.java))
+         }}.show()
+     }
+     private fun showLegalSettings() {
+@@ -577,7 +578,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
+         if(requestCode==44) {
+             val tree=data?.data ?: return
+             try {
+-                val granted=data.flags and (Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
++                val granted=data.flags and (Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)
+                 contentResolver.takePersistableUriPermission(tree,granted)
+                 val folders=prefs.getStringSet("treeUris",emptySet())!!.toMutableSet()
+                 prefs.getString("treeUri",null)?.let {folders.add(it)};folders.add(tree.toString())

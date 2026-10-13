@@ -347,7 +347,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         }
     }
     private fun showHomeOptions() {
-        val options=arrayOf(getString(R.string.library_refresh),getString(R.string.art_download),getString(R.string.pad_title),getString(R.string.ui_1),getString(R.string.app_language),tr("Ajustes","Settings"))
+        val options=arrayOf(getString(R.string.library_refresh),getString(R.string.art_download),getString(R.string.pad_title),getString(R.string.ui_1),getString(R.string.app_language),tr("Ajustes","Settings"),getString(R.string.translations_title))
         AlertDialog.Builder(this).setTitle(tr("Opciones","Options")).setItems(options) {_,which->when(which) {
             0->refreshLibrary(true)
             1->scraper.show(libraryGames.filter {it.system in setOf("GB","GBC","GBA","NDS")})
@@ -355,6 +355,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
             3->showHelp()
             4->showLanguagePicker()
             5->showLegalSettings()
+            6->startActivity(Intent(this,com.linkcore.emulator.translations.TranslationsActivity::class.java))
         }}.show()
     }
     private fun showLegalSettings() {

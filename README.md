@@ -26,8 +26,8 @@ Signing keys, passwords, local configuration, user games/saves, backups and priv
 
 See docs/UPDATE-1.0.2.md for changes and validation limits.
 
-## Translations candidate
+## Translations
 
 Optional catalog at Bruma Studio, exact game/patch/result SHA-256 validation, IPS/BPS/UPS and xdelta3 decoding. Restoration uses a verified reverse delta and retains one library entry. RPG translation adapter is reserved, not enabled. No Creators/referral code is integrated in this release candidate.
 
-**Not yet approved for general distribution:** the automatic-access backend and privacy update are prepared locally but not yet deployed. This source snapshot must not be described as a finished production release until public access and privacy requirements are validated.
+The automatic-access backend and privacy update were deployed and validated on 13 October 2026. The signed Android 1.0.2 / 44 build was tested on a physical device: Crown translation download/application and original restoration passed. Google Play Data Safety must reflect the optional network feature and all active test tracks before rollout. See the external release manifest for the exact signed AAB hash and original build commit. Documentation-only release closure does not change the Android sources or binary.

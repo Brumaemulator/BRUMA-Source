@@ -1,4 +1,4 @@
-# BRUMA 1.0.2 / 44 — translations candidate
+# BRUMA 1.0.2 / 44 — translations release
 
 Base: public BRUMA 1.0.1, including its classic Ruby fixes, Android Back menu,
 asynchronous RPG preparation and library spinner. No emulator runtime input was
@@ -18,11 +18,13 @@ Google SDK, attestation or purchase validation. Tickets expire after 120 seconds
 and require the bound bearer. Browser requests to bootstrap are rejected, but
 headers can be imitated by an external client: no exclusivity guarantee.
 The Netlify function config contains an edge 60-per-minute IP/domain limiter.
-Deployment must verify this rule before public release. Existing manual pilot
+The deployed function metadata confirms this rule. Existing manual pilot
 endpoints remain backward compatible; the public Android client never uses them.
 
-Pending before distribution: deploy and verify backend/privacy changes. Version
-code 44 is confirmed available by the owner. No Creators production changes.
+Backend and privacy deployed and verified on 13 October 2026. Crown download,
+application, and original restoration passed on the owner's phone with the signed
+1.0.2 / 44 APK. Version code 44 is confirmed available by the owner.
+No Creators production changes. Google Play Data Safety must be reviewed before rollout.
 
 Native build: the CMake translationpatch target compiles translation_xdelta.cpp
 and xdelta3.c with DJW/FGK, without secondary LZMA or xdelta1. Full upstream

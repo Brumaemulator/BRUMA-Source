@@ -28,8 +28,7 @@
     "commit": "5f8f5a553181c139d91b0289c009e5c276c5318c",
     "archive_sha256": "1529ccd7e8cc6b780ee56b2cb31ff4b6c1f9ead30cca5a0e84a940ab0668ea97"
   },
-  "production_ready": false,
-  "pending": "Deploy and verify automatic-access backend and privacy update before public distribution.",
+  "production_ready": true,
   "automatic_translation_access": {
     "session_seconds": 3600,
     "ticket_seconds": 120,
@@ -38,5 +37,8 @@
     "google_sdks": false,
     "native_headers_are_not_attestation": true,
     "edge_rate_limit": "60 requests / 60 seconds per IP/domain; verify deployment rule"
-  }
+  },
+  "android_build_commit": "58664a0f1342f98fae02ef4a3765e036fb1ce709",
+  "backend_deploy": "6ace6cf4549438414bef6080",
+  "validation": "Live access/download/hash/browser rejection and physical-device Crown patch/restoration PASS; remaining Play Console declarations are operator actions."
 }

@@ -20,7 +20,6 @@ class TranslationsActivity:Activity() {
     private lateinit var cards:LinearLayout
     private lateinit var status:TextView
     private lateinit var spinner:ProgressBar
-    private lateinit var authorize:Button
     private lateinit var refreshButton:Button
     private val actions=mutableListOf<Button>()
     private var busy=false
@@ -63,24 +62,15 @@ class TranslationsActivity:Activity() {
         column.addView(state);space(column,16)
         cards=vertical();column.addView(cards)
         space(column,16)
-        authorize=Look.button(this,getString(R.string.translation_authorize)){authorizationDialog()}
-        column.addView(authorize,LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,dp(48)))
-        authorize.visibility=if(client.authorized())View.GONE else View.VISIBLE
         setContentView(root);root.requestApplyInsets();refresh()
-    }
-    private fun authorizationDialog(){
-        val input=EditText(this).apply{hint=getString(R.string.translation_code_hint);isSingleLine=true;inputType=android.text.InputType.TYPE_CLASS_TEXT or android.text.InputType.TYPE_TEXT_VARIATION_PASSWORD}
-        AlertDialog.Builder(this).setTitle(R.string.translation_authorize).setMessage(R.string.translation_authorize_first).setView(input)
-            .setPositiveButton(android.R.string.ok){_,_->runTask(after={authorize.visibility=View.GONE;refresh()}){client.enroll(input.text.toString().trim())}}
-            .setNegativeButton(android.R.string.cancel,null).show()
     }
     private fun runTask(after:()->Unit={},task:()->Unit){
         if(busy || isDestroyed)return
-        busy=true;spinner.visibility=View.VISIBLE;authorize.isEnabled=false;refreshButton.isEnabled=false;actions.forEach{it.isEnabled=false}
+        busy=true;spinner.visibility=View.VISIBLE;refreshButton.isEnabled=false;actions.forEach{it.isEnabled=false}
         worker.execute{
             var succeeded=false
-            try{task();succeeded=true}catch(e:Exception){runOnUiThread{if(!isDestroyed){status.text=getString(R.string.translation_failed);if(e.message?.contains("401")==true){status.text=getString(R.string.translation_authorize_first);authorize.visibility=View.VISIBLE}}}}
-            finally{runOnUiThread{if(!isDestroyed){busy=false;spinner.visibility=View.GONE;authorize.isEnabled=true;refreshButton.isEnabled=true;actions.forEach{it.isEnabled=true};if(succeeded)after()}}}
+            try{task();succeeded=true}catch(e:Exception){runOnUiThread{if(!isDestroyed){status.text=getString(R.string.translation_failed)}}}
+            finally{runOnUiThread{if(!isDestroyed){busy=false;spinner.visibility=View.GONE;refreshButton.isEnabled=true;actions.forEach{it.isEnabled=true};if(succeeded)after()}}}
         }
     }
     private fun source(game:LibraryGame):File?=RomFiles.cached(this,game.cached) ?: if(game.uri.isNotBlank())RomFiles.import(this,Uri.parse(game.uri),game.name).first else null
@@ -116,7 +106,7 @@ class TranslationsActivity:Activity() {
         card.addView(text(language.replaceFirstChar{it.titlecase(resources.configuration.locales[0])},17f,Look.mint,true));space(card,6)
         card.addView(text(getString(R.string.translation_by,m.getString("author")),14f,Look.muted));space(card,18)
         val action=Look.button(this,getString(if(match.installed)R.string.translation_view_library else R.string.translation_download),primary=true){
-            if(match.installed)finish() else if(!client.authorized())authorizationDialog() else confirm(match)
+            if(match.installed)finish() else confirm(match)
         }
         actions+=action;card.addView(action,LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT,dp(52)))
         space(card,10)

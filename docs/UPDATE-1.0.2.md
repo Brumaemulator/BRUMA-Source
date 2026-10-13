@@ -11,10 +11,18 @@ library entry per patched game; localized interface in all nine existing languag
 User-supplied external game files are not overwritten. No games/patch payloads
 are included in the app/source. RPG Maker file-translation contract is inactive.
 
-Known release blocker: manual 10-minute enrollment codes and 24-hour client grants
-belong to the pilot. Public users cannot download automatically yet. No Google SDK
-or embedded shared secret is added to work around this. General publication waits
-for an authorized public-client access design and verification.
+Automatic access: the native client requests an anonymous signed one-hour
+session only when downloading, stores it in memory, and retries once after a
+401. No enrollment code, shared credential, permanent installation identity,
+Google SDK, attestation or purchase validation. Tickets expire after 120 seconds
+and require the bound bearer. Browser requests to bootstrap are rejected, but
+headers can be imitated by an external client: no exclusivity guarantee.
+The Netlify function config contains an edge 60-per-minute IP/domain limiter.
+Deployment must verify this rule before public release. Existing manual pilot
+endpoints remain backward compatible; the public Android client never uses them.
+
+Pending before distribution: deploy and verify backend/privacy changes. Version
+code 44 is confirmed available by the owner. No Creators production changes.
 
 Native build: the CMake translationpatch target compiles translation_xdelta.cpp
 and xdelta3.c with DJW/FGK, without secondary LZMA or xdelta1. Full upstream

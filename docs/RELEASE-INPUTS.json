@@ -29,5 +29,14 @@
     "archive_sha256": "1529ccd7e8cc6b780ee56b2cb31ff4b6c1f9ead30cca5a0e84a940ab0668ea97"
   },
   "production_ready": false,
-  "pending": "Replace manual pilot enrollment before general release."
+  "pending": "Deploy and verify automatic-access backend and privacy update before public distribution.",
+  "automatic_translation_access": {
+    "session_seconds": 3600,
+    "ticket_seconds": 120,
+    "persistent_installation_id": false,
+    "embedded_secrets": false,
+    "google_sdks": false,
+    "native_headers_are_not_attestation": true,
+    "edge_rate_limit": "60 requests / 60 seconds per IP/domain; verify deployment rule"
+  }
 }

@@ -30,4 +30,4 @@ See docs/UPDATE-1.0.2.md for changes and validation limits.
 
 Optional catalog at Bruma Studio, exact game/patch/result SHA-256 validation, IPS/BPS/UPS and xdelta3 decoding. Restoration uses a verified reverse delta and retains one library entry. RPG translation adapter is reserved, not enabled. No Creators/referral code is integrated in this release candidate.
 
-**Not yet approved for general distribution:** server authorization still uses the manual test enrollment protocol. This source snapshot must not be described as a finished production release until public access and privacy requirements are validated.
+**Not yet approved for general distribution:** the automatic-access backend and privacy update are prepared locally but not yet deployed. This source snapshot must not be described as a finished production release until public access and privacy requirements are validated.

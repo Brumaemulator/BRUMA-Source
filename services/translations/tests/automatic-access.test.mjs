@@ -1,0 +1,23 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {createService,sha} from '../server/service.mjs';
+test('Automatic native session: signature, expiry, browser rejection, approval, hash and private download',async()=>{
+ const entries=new Map(),patch=Buffer.from('PATCHtestEOF');let clock=1000000;
+ const m={id:'synthetic-es',approved:true,gameSha256:sha('synthetic-source'),patchSha256:sha(patch),patchType:'IPS',objectKey:'private-patch'};entries.set('translation/'+m.id,m);
+ const store={get:async k=>entries.get(k),set:async(k,v)=>entries.set(k,v),list:async()=>[m],getBytes:async()=>patch};
+ const api=createService(store,{ADMIN_TOKEN:'only-a-test-admin',DOWNLOAD_SIGNING_KEY:'only-a-test-secret'},()=>clock);
+ const access=(body={package:'com.brumastudio.bruma',versionCode:44},headers={})=>api(new Request('https://example.invalid/api/translations/access',{method:'POST',headers:{'Content-Type':'application/json','X-Bruma-Client':'android','User-Agent':'BRUMA/44 Android',...headers},body:JSON.stringify(body)}));
+ assert.equal((await access(undefined,{Origin:'https://example.invalid'})).status,403);
+ assert.equal((await access(undefined,{'Sec-Fetch-Mode':'cors'})).status,403);
+ assert.equal((await access({package:'other',versionCode:44})).status,400);
+ assert.equal((await access({package:'com.brumastudio.bruma',versionCode:43})).status,400);
+ const grant=await access();assert.equal(grant.status,200);const {token}=await grant.json();assert.equal(entries.size,1,'No persistent installation record created');
+ const ticket=async(t=token,hash=m.gameSha256)=>api(new Request('https://example.invalid/api/translations/ticket',{method:'POST',headers:{Authorization:'Bearer '+t},body:JSON.stringify({id:m.id,gameSha256:hash})}));
+ assert.equal((await ticket(token,sha('wrong'))).status,409);assert.equal((await ticket(token.slice(0,-1)+'!')).status,401);
+ const t=await ticket();assert.equal(t.status,200);const {url}=await t.json();
+ const download=async(t=token)=>api(new Request(url,{headers:t?{Authorization:'Bearer '+t}:{}}));
+ assert.equal((await download('')).status,401);assert.deepEqual(Buffer.from(await(await download()).arrayBuffer()),patch);
+ const other=(await(await access()).json()).token;assert.equal((await download(other)).status,403);
+ clock+=120001;assert.equal((await download()).status,403);clock+=3600000;assert.equal((await ticket()).status,401);
+ const renewed=(await(await access()).json()).token;assert.equal((await ticket(renewed)).status,200);
+ entries.set('device/'+sha(renewed),{revoked:true});assert.equal((await ticket(renewed)).status,401);
+ assert.equal((await access({package:'com.brumastudio.bruma',versionCode:44,padding:'x'.repeat(5000)})).status,413);
+});

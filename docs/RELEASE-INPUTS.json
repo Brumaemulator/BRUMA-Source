@@ -28,7 +28,6 @@
     "commit": "5f8f5a553181c139d91b0289c009e5c276c5318c",
     "archive_sha256": "1529ccd7e8cc6b780ee56b2cb31ff4b6c1f9ead30cca5a0e84a940ab0668ea97"
   },
-  "production_ready": false,
   "automatic_translation_access": {
     "session_seconds": 3600,
     "ticket_seconds": 120,
@@ -39,10 +38,12 @@
     "edge_rate_limit": "60 requests / 60 seconds per IP/domain; verify deployment rule"
   },
   "backend_deploy": "6ace6cf4549438414bef6080",
-  "validation": "Live access/download/hash/browser rejection and physical-device Crown patch/restoration PASS; remaining Play Console declarations are operator actions.",
+  "validation": "Release build/lint, signed AAB manifest/certificate/ARM64/16KB, identical tested storage sources, exact source archive/Git parity and credential exclusion PASS. Device regression evidence retained; Play-signed update remains a manual internal-test step.",
   "previous_public_version": "1.0.2/44",
   "unchanged_native_runtimes": true,
   "new_dependencies": [],
   "storage_regression_evidence": "docs/STORAGE-REGRESSION-2026-10-28.txt",
-  "privacy_changes": "No additional permissions, data collection or endpoints; no privacy/Data Safety expansion for this storage correction."
+  "privacy_changes": "No additional permissions, data collection or endpoints; no privacy/Data Safety expansion for this storage correction.",
+  "technical_checks_passed": true,
+  "google_play_publication_performed": false
 }

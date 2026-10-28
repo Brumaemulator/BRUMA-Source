@@ -11,6 +11,7 @@ import java.io.File
 /** On-device integration checks using an original homebrew fixture. No test libraries. */
 class CoreSmokeTest : Instrumentation() {
     private var rawSave=false; private var licenseChecks=false; private var cleanup=false; private var deletedSource=false; private var crystal=false; private var engines=false; private var scale=false; private var imports=false; private var gbcUi=false
+    private var storage=false
     private var ndsClose=false
     private var libraryDeletion=false
     private var archives=false
@@ -19,8 +20,9 @@ class CoreSmokeTest : Instrumentation() {
     private var library=false
     private var pokemon=false
     private var pausedGames=false; private var rpg=false; private var ndsLanguage=false; private var ndsExpected=5; private var ndsLaunch:String?=null
-    override fun onCreate(arguments: Bundle?) { engineFixturesOnly=arguments?.getString("engineFixturesOnly")=="true"; ndsClose=arguments?.getString("ndsClose")=="true"; libraryDeletion=arguments?.getString("libraryDeletion")=="true"; rawSave=arguments?.getString("rawSave")=="true"; licenseChecks=arguments?.getString("licenseChecks")=="true"; pausedGames=arguments?.getString("pausedGames")=="true"; ndsExpected=arguments?.getString("ndsExpected")?.toInt()?:5; ndsLaunch=arguments?.getString("ndsLaunch"); ndsLanguage=arguments?.getString("ndsLanguage")=="true"; cleanup=arguments?.getString("cleanup")=="true"; deletedSource=arguments?.getString("deletedSource")=="true"; crystal=arguments?.getString("crystal")=="true";engines=arguments?.getString("engines")=="true";scale=arguments?.getString("scale")=="true";imports=arguments?.getString("imports")=="true";gbcUi=arguments?.getString("gbcUi")=="true";archives=arguments?.getString("archives")=="true";utilities=arguments?.getString("utilities")=="true";library=arguments?.getString("library")=="true";pokemon=arguments?.getString("pokemon")=="true";rpg=arguments?.getString("rpg")=="true"; super.onCreate(arguments); start() }
+    override fun onCreate(arguments: Bundle?) { storage=arguments?.getString("storage")=="true"; engineFixturesOnly=arguments?.getString("engineFixturesOnly")=="true"; ndsClose=arguments?.getString("ndsClose")=="true"; libraryDeletion=arguments?.getString("libraryDeletion")=="true"; rawSave=arguments?.getString("rawSave")=="true"; licenseChecks=arguments?.getString("licenseChecks")=="true"; pausedGames=arguments?.getString("pausedGames")=="true"; ndsExpected=arguments?.getString("ndsExpected")?.toInt()?:5; ndsLaunch=arguments?.getString("ndsLaunch"); ndsLanguage=arguments?.getString("ndsLanguage")=="true"; cleanup=arguments?.getString("cleanup")=="true"; deletedSource=arguments?.getString("deletedSource")=="true"; crystal=arguments?.getString("crystal")=="true";engines=arguments?.getString("engines")=="true";scale=arguments?.getString("scale")=="true";imports=arguments?.getString("imports")=="true";gbcUi=arguments?.getString("gbcUi")=="true";archives=arguments?.getString("archives")=="true";utilities=arguments?.getString("utilities")=="true";library=arguments?.getString("library")=="true";pokemon=arguments?.getString("pokemon")=="true";rpg=arguments?.getString("rpg")=="true"; super.onCreate(arguments); start() }
     override fun onStart() {
+        if(storage){StorageChecks.run(this);return}
         if(ndsClose){NdsCloseChecks.run(this);return}
         if(libraryDeletion){LibraryDeletionTest.run(this);return}
         if(rawSave){RawSaveChecks.run(this);return}

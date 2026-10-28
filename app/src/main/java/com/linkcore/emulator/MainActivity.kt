@@ -40,7 +40,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
     private val libraryStore by lazy {LibraryStore(this)}
     private val activeSourceMonitor by lazy {ActiveGameSourceMonitor(this,
         java.util.function.Supplier{rom?.path.orEmpty()},java.util.function.BooleanSupplier{loaded&&!busy},Runnable {
-            userPaused=true;stopGame();NativeCore.close();loaded=false
+            userPaused=true;stopGame();closeCore();loaded=false
             rom=null;romName="";prefs.edit().remove("lastId").remove("lastName").apply()
             goHome(true)
         })}
@@ -291,6 +291,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
                 if(scan) RpgCacheCleanup.clean(this)
                 libraryStore.mergeImported()
                 val items=libraryStore.allGames()
+                if(scan){RomAccess.sweep(this);val protected=setOfNotNull(rom?.takeIf{loaded}?.nameWithoutExtension)+sessionClient?.sessions?.values.orEmpty().map{File(it.path).nameWithoutExtension};RomAccess.reclaim(this,libraryStore.read(),protected)}
                 runOnUiThread {if(!isDestroyed) {if(scan)closeDeletedLibrarySessions(immediate,items);libraryGames=items;scanning=false;renderLibrary();if(BuildConfig.DEBUG) android.util.Log.d("BrumaLibrary","Refreshed ${items.size} games in ${android.os.SystemClock.elapsedRealtime()-libraryStarted} ms")}}
             } catch(e:Exception) {android.util.Log.e("BrumaLibrary","Scan failed",e);val cached=runCatching {libraryStore.cachedGames()}.getOrDefault(emptyList());runOnUiThread {if(!isDestroyed) {libraryGames=cached;scanning=false;renderLibrary();showError(getString(R.string.library_unavailable))}}}
         }
@@ -300,7 +301,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         val removed=previous.filter {old->current.none {g->g.key==old.key || (old.cached.isNotBlank() && g.cached==old.cached) || (old.identity.isNotBlank() && g.identity==old.identity)}}
         var closed=false
         if(loaded && removed.any{it.cached.isNotBlank() && it.cached==rom?.nameWithoutExtension}) {
-            userPaused=true;stopGame();NativeCore.close();loaded=false;closed=true
+            userPaused=true;stopGame();closeCore();loaded=false;closed=true
         }
         for(session in sessionClient?.sessions?.values?.toList().orEmpty()) {
             val file=File(session.path)
@@ -327,7 +328,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         if(item.system=="RPG Maker XP") {
             if(busy) return
             userPaused=true;stopGame()
-            if(loaded){NativeCore.close();loaded=false;updateStatus()}
+            if(loaded){closeCore();loaded=false;updateStatus()}
             startActivity(Intent(this,com.hatkid.mkxpz.RpgLibraryActivity::class.java).putExtra("launchUri",item.uri))
             return
         }
@@ -339,10 +340,9 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         userPaused=true;stopGame();busy=true;updateStatus()
         imports.execute {
             try {
-                val cached=RomFiles.cached(this,item.cached)
-                val file=if(item.cached.isNotEmpty() && cached!=null) cached else importRom(Uri.parse(item.uri)).first
-                libraryStore.remember(item.uri,item.name,file.nameWithoutExtension,RomFiles.system(file.name))
-                runOnUiThread {if(!isDestroyed) {NativeCore.close();loaded=false;busy=false;if(item.system=="NDS"){updateStatus();startActivity(Intent(this,NdsActivity::class.java).putExtra("romPath",file.path).addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))}else{rom=file;romName=item.name;updateStatus();enterGame()}}}
+                val file=if(item.system=="NDS")null else RomAccess.open(this,item)
+                if(file!=null)libraryStore.remember(item.uri,item.name,file.nameWithoutExtension,RomFiles.system(file.name))
+                runOnUiThread {if(isDestroyed){RomAccess.release(file)}else {closeCore();loaded=false;busy=false;if(item.system=="NDS"){updateStatus();startActivity(Intent(this,NdsActivity::class.java).putExtra("romPath",file?.path).putExtra("gameUri",item.source.ifBlank{item.uri}).putExtra("gameName",item.name).putExtra("gameId",item.cached).addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))}else{rom=file;romName=item.name;updateStatus();enterGame()}}}
             } catch(e:Exception) {runOnUiThread {if(!isDestroyed) {busy=false;updateStatus();showError(localizedError(e) ?: getString(R.string.library_unavailable))}}}
         }
     }
@@ -476,7 +476,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
     private fun showContinueOptions(){
         val session=continueSession?:return
         AlertDialog.Builder(this).setTitle(continueItem?.title).setItems(arrayOf(getString(R.string.resume_action),getString(R.string.resume_close))){_,which->
-            if(which==0)resumeCurrentGame() else if(session.component==javaClass.name){userPaused=true;stopGame();NativeCore.close();loaded=false;updateStatus()}
+            if(which==0)resumeCurrentGame() else if(session.component==javaClass.name){userPaused=true;stopGame();closeCore();loaded=false;updateStatus()}
             else sessionClient?.close(session)
         }.show()
     }
@@ -615,12 +615,16 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
                             runOnUiThread {if(!isDestroyed){busy=false;updateStatus();refreshLibrary(false);if(imported.size==1)launchLibraryGame(imported.first())}}
                             return@execute
                         }
-                        val (file,name)=importRom(uri)
-                        libraryStore.remember(uri.toString(),name,file.nameWithoutExtension,RomFiles.system(file.name))
+                        val name=RomFiles.name(this,uri)
+                        runCatching{contentResolver.takePersistableUriPermission(uri,Intent.FLAG_GRANT_READ_URI_PERMISSION)}
+                        val system=RomFiles.system(name)
+                        val file=if(system=="NDS")null else RomAccess.open(this,uri.toString(),name)
+                        val id=file?.nameWithoutExtension?:RomAccess.hash(this,uri.toString())
+                        libraryStore.remember(uri.toString(),name,id,system)
                         runOnUiThread {
-                            if(isDestroyed) return@runOnUiThread
-                            NativeCore.close(); loaded=false; busy=false
-                            if(RomFiles.system(file.name)=="NDS"){updateStatus();refreshLibrary(false);startActivity(Intent(this,NdsActivity::class.java).putExtra("romPath",file.path).addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))}
+                            if(isDestroyed){RomAccess.release(file);return@runOnUiThread}
+                            closeCore(); loaded=false; busy=false
+                            if(system=="NDS"){updateStatus();refreshLibrary(false);startActivity(Intent(this,NdsActivity::class.java).putExtra("gameUri",uri.toString()).putExtra("gameName",name).putExtra("gameId",id).addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))}
                             else {rom=file;romName=name;updateStatus();enterGame()}
                         }
                     }
@@ -638,7 +642,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
                         runOnUiThread {
                             if(isDestroyed) return@runOnUiThread
                             try {
-                                NativeCore.close(); loaded=false
+                                closeCore(false); loaded=false
                                 SaveArchive.replace(File(filesDir,"saves/${file.nameWithoutExtension}.sav"),bytes)
                                 done(getString(R.string.ui_43))
                             } catch(error: Exception) {
@@ -666,7 +670,8 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         startActivity(android.content.Intent(this, OpenSourceLicensesActivity::class.java))
     }
 
-    private fun importRom(uri:Uri):Pair<File,String> = RomFiles.import(this,uri)
+    private fun closeCore(releaseSource:Boolean=true) { NativeCore.close();if(releaseSource){RomAccess.release(rom);rom=null} }
+    private fun importRom(uri:Uri):Pair<File,String> {val name=RomFiles.name(this,uri);return RomAccess.open(this,uri.toString(),name) to name}
 
     private fun startGame() {
         val file = rom ?: return
@@ -828,7 +833,7 @@ class MainActivity : Activity(), SurfaceHolder.Callback {
         if(inGame && userPaused) pauseGame() else startGame()
     }
     override fun onPause() { activeSourceMonitor.stop(); resumed=false; userPaused=true; stopGame(); super.onPause() }
-    override fun onDestroy() { activeSourceMonitor.dispose(); stopGame(); menu?.dismiss(); NativeCore.close(); sessionClient?.dispose();if(::continueCard.isInitialized)continueCard.close();libraryAdapter?.close(); scraper.close(); gamepadSettings.close(); gamepad.close(); imports.shutdown(); libraryScanner.shutdown(); super.onDestroy() }
+    override fun onDestroy() { activeSourceMonitor.dispose(); stopGame(); menu?.dismiss(); closeCore(); sessionClient?.dispose();if(::continueCard.isInitialized)continueCard.close();libraryAdapter?.close(); scraper.close(); gamepadSettings.close(); gamepad.close(); imports.shutdown(); libraryScanner.shutdown(); super.onDestroy() }
     override fun surfaceCreated(holder: SurfaceHolder) { surfaceReady=true; surface.setGameFrameRate(); startGame() }
     override fun surfaceChanged(holder: SurfaceHolder,format: Int,width: Int,height: Int) {}
     override fun surfaceDestroyed(holder: SurfaceHolder) { surfaceReady=false; stopGame() }

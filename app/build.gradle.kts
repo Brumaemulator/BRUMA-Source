@@ -13,8 +13,8 @@ android {
         applicationId = "com.brumastudio.bruma"
         minSdk = 26
         targetSdk = 36
-        versionCode = 44
-        versionName = "1.0.2"
+        versionCode = 46
+        versionName = "1.0.3"
         testInstrumentationRunner = "com.linkcore.emulator.CoreSmokeTest"
 
         ndk {

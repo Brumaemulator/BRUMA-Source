@@ -1,0 +1,8 @@
+PASS: 500 GBC originals (65,536,000 bytes), scan creates 0 ROM bytes.
+PASS: ZIP with 500 GBC games: 0 bytes extracted by scan; selected game only 131,072 temporary bytes; 0 after close; patch input reads selected entry.
+PASS: native GBA plays through read-only descriptor, 0 copied ROM bytes; save survives close/reopen.
+PASS: verified redundant copy removed; active game, translation pins and unavailable original protected; saves/covers unchanged.
+PASS: mixed RPG Maker/cartridge ZIP copies RPG folder only; cartridge stays in source ZIP.
+PASS: native GB, GBC and NDS play directly from original descriptors with video; 0 copied ROM bytes.
+PASS: Translations UI queried real catalog with 500 GBC library entries; no ROMs copied.
+PASS: isolated NDS Activity opens original URI and closes its session; no permanent copy.

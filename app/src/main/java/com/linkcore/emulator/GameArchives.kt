@@ -10,17 +10,19 @@ import java.io.File
 import java.io.IOException
 import java.util.zip.ZipInputStream
 
-/** ZIPs are unpacked only into private staging storage, never into source folders. */
+/** Cartridge ZIPs store metadata only. RPG Maker needs an extracted filesystem. */
 object GameArchives {
  private fun message(c:Context)=if(c.resources.configuration.locales[0].language=="es") "El ZIP no contiene ROMs GB/GBC/GBA ni un juego RPG Maker XP compatible." else "The ZIP contains no GB/GBC/GBA ROMs or compatible RPG Maker XP game."
  @Synchronized fun import(c:Context,uri:Uri,size:Long=0,modified:Long=0):List<LibraryGame> {
+  val catalog=ArchiveCatalog.read(c,uri,size,modified)
+  if(!catalog.hasRpg)return catalog.games
   val key=LibraryStore.key(uri.toString());val indexes=File(c.filesDir,"archive-index").apply{mkdirs()};val marker=AtomicFile(File(indexes,"$key.json"))
   var actualSize=size;var actualModified=modified
   if(size==0L)runCatching {c.contentResolver.query(uri,null,null,null,null)?.use {q->if(q.moveToFirst()){val s=q.getColumnIndex("_size");val m=q.getColumnIndex(DocumentsContract.Document.COLUMN_LAST_MODIFIED);if(s>=0)actualSize=q.getLong(s);if(m>=0)actualModified=q.getLong(m)}}}
   val previous=runCatching {JSONObject(marker.openRead().bufferedReader().use {it.readText()})}.getOrNull()
   if(previous!=null && previous.optLong("size")==actualSize && previous.optLong("modified")==actualModified){
    val a=previous.getJSONArray("games");val games=(0 until a.length()).map{n->val j=a.getJSONObject(n);LibraryGame(j.getString("key"),j.getString("name"),j.getString("uri"),cached=j.getString("cached"),system=j.getString("system"),source=j.optString("source",uri.toString()))}
-   if(games.isNotEmpty() && games.all{if(it.system=="RPG Maker XP")File(Uri.parse(it.uri).path!!,"Game.ini").isFile() else RomFiles.cached(c,it.cached)!=null})return games
+   if(games.isNotEmpty() && games.all{if(it.system=="RPG Maker XP")File(Uri.parse(it.uri).path!!,"Game.ini").isFile() else catalog.games.any{g->g.key==it.key}})return games.map{g->if(g.system=="RPG Maker XP")g else catalog.games.first{it.key==g.key}}
   }
   val staging=File(c.filesDir,"archive-staging").apply{mkdirs()};val pending=File(staging,"$key-${System.nanoTime()}").apply{mkdirs()}
   val games=ArrayList<LibraryGame>();val created=ArrayList<File>()
@@ -60,9 +62,8 @@ object GameArchives {
      return
     }
     for(file in files){if(file.isDirectory)visit(file) else if(RomFiles.system(file.name).isNotEmpty()){
-     val (rom,name)=RomFiles.import(c,Uri.fromFile(file),file.name)
      val origin=uri.toString()+"#rom="+Uri.encode(file.relativeTo(pending).invariantSeparatorsPath)
-     games+=LibraryGame(LibraryStore.key(origin),name,Uri.fromFile(rom).toString(),cached=rom.nameWithoutExtension,system=RomFiles.system(rom.name),source=origin)
+     games+=catalog.games.first{it.key==LibraryStore.key(origin)}
     }}
    }
    visit(pending);if(games.isEmpty())throw IOException(message(c))

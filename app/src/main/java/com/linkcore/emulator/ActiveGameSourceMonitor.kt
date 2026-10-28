@@ -43,11 +43,12 @@ class ActiveGameSourceMonitor(private val context:Context,private val path:Suppl
 
     companion object {
         fun confirmedMissing(c:Context,path:String):Boolean {
-            val file=File(path).canonicalFile
+            val original=File(path)
+            val file=if(RomAccess.isSession(c,original))original.absoluteFile else original.canonicalFile
             val romRoot=File(c.filesDir,"roms").canonicalFile
             val rpgRoot=File(c.filesDir,"rpg-games").canonicalFile
             val rpg=file.parentFile==rpgRoot
-            if(file.parentFile!=romRoot && !rpg)return false
+            if(file.parentFile!=romRoot && !RomAccess.isSession(c,file) && !rpg)return false
             val entries=LibraryStore(c).read().filter{if(rpg)it.cached==file.name || Uri.parse(it.uri).path==file.path else it.cached==file.nameWithoutExtension}
             val sources=linkedSetOf<String>()
             if(rpg) {

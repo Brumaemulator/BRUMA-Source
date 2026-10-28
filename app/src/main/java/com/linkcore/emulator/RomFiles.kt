@@ -15,7 +15,7 @@ object RomFiles {
   val folder=File(context.filesDir,"roms").apply {mkdirs()};val temp=File.createTempFile("import-",".tmp",folder)
   try {
    val digest=MessageDigest.getInstance("SHA-256");var length=0L
-   context.contentResolver.openInputStream(uri)!!.use {input->temp.outputStream().use {out->val buffer=ByteArray(65536);while(true){val n=input.read(buffer);if(n<0)break;length+=n;require(length<=(if(system(displayName)=="NDS")512L else 32L)*1024*1024){"ROM too large"};digest.update(buffer,0,n);out.write(buffer,0,n)}}}
+   RomAccess.stream(context,uri.toString()).use {input->temp.outputStream().use {out->val buffer=ByteArray(65536);while(true){val n=input.read(buffer);if(n<0)break;length+=n;require(length<=(if(system(displayName)=="NDS")512L else 32L)*1024*1024){"ROM too large"};digest.update(buffer,0,n);out.write(buffer,0,n)}}}
    require(length>=when(system(displayName)){"GBA"->192;"NDS"->512;else->336}){"Invalid ROM"}
    val hash=digest.digest().joinToString(""){"%02x".format(it.toInt() and 255)}
    val file=cached(context,hash) ?: File(folder,"$hash.${displayName.substringAfterLast('.').lowercase(java.util.Locale.ROOT)}")

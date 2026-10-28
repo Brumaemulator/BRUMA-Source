@@ -41,6 +41,7 @@ class NdsActivity:Activity(),InputManager.InputDeviceListener {
  private var returningToLibrary=false
  private var backCallback:android.window.OnBackInvokedCallback?=null
  private var worker:Thread?=null
+ private var switchGeneration=0
  private val es get()=resources.configuration.locales[0].language=="es"
  internal fun tr(a:String,b:String)=if(es)a else b
  override fun onCreate(state:Bundle?){
@@ -52,33 +53,35 @@ class NdsActivity:Activity(),InputManager.InputDeviceListener {
   fastSound=getSharedPreferences("nds_ui",MODE_PRIVATE).getBoolean("fast_sound",false)
   (getSystemService(Context.INPUT_SERVICE) as InputManager).registerInputDeviceListener(this,android.os.Handler(mainLooper))
   immersive()
-  val path=intent.getStringExtra("romPath")
-  val rom=path?.let{File(it).canonicalFile}
-  val base=File(filesDir,"roms").canonicalFile
-  if(rom==null||rom.parentFile!=base||rom.extension!="nds"||!rom.isFile){errorDialog(tr("No se encuentra el juego de DS.","DS game not found."));return}
-  activeRomPath=rom.path
   sessionHost=RuntimeSessionHost(this,"NDS",java.util.function.Supplier{activeRomPath.orEmpty()},java.util.function.BooleanSupplier{sessionReady&&alive},Runnable{alive=false;release();finish()})
   if(android.os.Build.VERSION.SDK_INT>=33){backCallback=android.window.OnBackInvokedCallback{options()};onBackInvokedDispatcher.registerOnBackInvokedCallback(android.window.OnBackInvokedDispatcher.PRIORITY_DEFAULT,backCallback!!)}
-  worker=Thread({runConsole(rom)},"Bruma-NDS").also{it.start()}
+  worker=Thread({openConsole(intent)},"Bruma-NDS").also{it.start()}
  }
- override fun onNewIntent(nextIntent:android.content.Intent){
+ override fun onNewIntent(nextIntent:Intent){
   super.onNewIntent(nextIntent);setIntent(nextIntent)
-  val next=nextIntent.getStringExtra("romPath")?.let{runCatching{File(it).canonicalFile}.getOrNull()}?:return
-  val base=File(filesDir,"roms").canonicalFile
-  if(next.parentFile!=base||next.extension!="nds"||!next.isFile){errorDialog(tr("No se encuentra el juego de DS.","DS game not found."));return}
-  if(nextIntent.getBooleanExtra("brumaResume",false)){pauseOnReturn=false;returningToLibrary=false;paused=false}
-  if(next.path==activeRomPath)return
-  switchRom(next)
- }
- private fun switchRom(next:File){
-  val previous=worker
-  alive=false;paused=true;release()
+  if(nextIntent.getBooleanExtra("brumaResume",false)){pauseOnReturn=false;returningToLibrary=false;paused=false;return}
+  val id=nextIntent.getStringExtra("gameId")
+  if(id!=null && sessionReady && File(activeRomPath.orEmpty()).nameWithoutExtension==id){pauseOnReturn=false;returningToLibrary=false;paused=false;return}
+  val generation=++switchGeneration
+  val previous=worker;alive=false;paused=true;release()
   Thread({
    try{previous?.join()}catch(_:InterruptedException){Thread.currentThread().interrupt();return@Thread}
-   runOnUiThread{
-    if(!isDestroyed&&!isFinishing){activeRomPath=next.path;alive=true;paused=false;worker=Thread({runConsole(next)},"Bruma-NDS").also{it.start()}}
-   }
+   runOnUiThread{if(generation==switchGeneration&&!isDestroyed&&!isFinishing){alive=true;paused=false;worker=Thread({openConsole(nextIntent)},"Bruma-NDS").also{it.start()}}}
   },"Bruma-NDS-switch").start()
+ }
+ private fun openConsole(request:Intent){
+  try{
+   val source=request.getStringExtra("gameUri")
+   val rom=if(!source.isNullOrBlank()) {
+    val id=request.getStringExtra("gameId").orEmpty()
+    RomAccess.open(this,LibraryGame(LibraryStore.key(source),request.getStringExtra("gameName")?:"game.nds",source,cached=id,system="NDS",source=source))
+   }else{
+    val f=request.getStringExtra("romPath")?.let{File(it).canonicalFile}?:error("DS game not found")
+    require(f.parentFile==File(filesDir,"roms").canonicalFile&&f.extension=="nds"&&f.isFile);f
+   }
+   if(!alive){RomAccess.release(rom);return}
+   require(rom.extension=="nds");activeRomPath=rom.path;runConsole(rom)
+  }catch(e:Throwable){android.util.Log.e("BrumaNDS","Open source failed",e);errorDialog(e.message?:"DS game not found")}
  }
  private fun immersive(){
   if(android.os.Build.VERSION.SDK_INT>=30){window.setDecorFitsSystemWindows(false);window.insetsController?.let{it.hide(WindowInsets.Type.systemBars());it.systemBarsBehavior=WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE}}
@@ -137,7 +140,7 @@ class NdsActivity:Activity(),InputManager.InputDeviceListener {
    }
    bitmap.recycle()
   }catch(e:Throwable){android.util.Log.e("BrumaNDS","Session failed",e);errorDialog(e.message?:"NDS error")}
-  finally{sessionReady=false;sessionHost?.publish();try{if(opened)NdsNative.close()}catch(e:Throwable){android.util.Log.e("BrumaNDS","Save failed",e);errorDialog(e.message?:"Save failed")};audio?.release()}
+  finally{sessionReady=false;sessionHost?.publish();try{if(opened)NdsNative.close()}catch(e:Throwable){android.util.Log.e("BrumaNDS","Save failed",e);errorDialog(e.message?:"Save failed")};audio?.release();RomAccess.release(rom)}
  }
  private fun bit(code:Int)=when(code){KeyEvent.KEYCODE_BUTTON_A,KeyEvent.KEYCODE_DPAD_CENTER->0;KeyEvent.KEYCODE_BUTTON_B->1;KeyEvent.KEYCODE_BUTTON_SELECT->2;KeyEvent.KEYCODE_BUTTON_START->3;KeyEvent.KEYCODE_DPAD_RIGHT->4;KeyEvent.KEYCODE_DPAD_LEFT->5;KeyEvent.KEYCODE_DPAD_UP->6;KeyEvent.KEYCODE_DPAD_DOWN->7;KeyEvent.KEYCODE_BUTTON_R1->8;KeyEvent.KEYCODE_BUTTON_L1->9;KeyEvent.KEYCODE_BUTTON_X->10;KeyEvent.KEYCODE_BUTTON_Y->11;else->-1}
  override fun dispatchKeyEvent(e:KeyEvent):Boolean{

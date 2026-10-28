@@ -73,7 +73,8 @@ class TranslationsActivity:Activity() {
             finally{runOnUiThread{if(!isDestroyed){busy=false;spinner.visibility=View.GONE;refreshButton.isEnabled=true;actions.forEach{it.isEnabled=true};if(succeeded)after()}}}
         }
     }
-    private fun source(game:LibraryGame):File?=RomFiles.cached(this,game.cached) ?: if(game.uri.isNotBlank())RomFiles.import(this,Uri.parse(game.uri),game.name).first else null
+    private fun sourceHash(game:LibraryGame):String = game.cached.takeIf{it.matches(Regex("[a-f0-9]{64}"))}
+        ?: RomAccess.hash(this,game.source.ifBlank{game.uri})
     private fun refresh(){
         if(busy)return
         status.text=getString(R.string.translation_searching)
@@ -81,7 +82,7 @@ class TranslationsActivity:Activity() {
             TranslationInstaller(this).migrateLegacy()
             val catalog=client.catalog();val games=LibraryStore(this).cachedGames().filter{it.system in setOf("GBA","GBC","NDS","GB")}
             val matches=mutableListOf<Match>();val seen=mutableSetOf<String>()
-            for(game in games){val file=source(game)?:continue;val hash=PatchEngine.sha(file)
+            for(game in games){if((0 until catalog.length()).none{catalog.getJSONObject(it).getString("system")==game.system})continue;val hash=runCatching{sourceHash(game)}.getOrNull()?:continue
                 for(i in 0 until catalog.length()){val m=catalog.getJSONObject(i)
                     val installed=TranslationInstaller.active(this,m)
                     if(m.getString("system")==game.system && (m.getString("gameSha256")==hash || (installed && m.getString("targetSha256")==hash)) && seen.add(m.getString("id")))

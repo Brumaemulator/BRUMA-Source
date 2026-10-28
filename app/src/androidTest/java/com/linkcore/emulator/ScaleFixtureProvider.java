@@ -8,9 +8,10 @@ import java.io.*;
 import java.util.concurrent.atomic.AtomicInteger;
 public class ScaleFixtureProvider extends ContentProvider {
  private final AtomicInteger opens=new AtomicInteger(),queries=new AtomicInteger();
- private int revision=1,count=300;private File root;
+ private int revision=1,count=300,bytesPerRom=1024;private String extension="gba";private File root;
  public boolean onCreate(){root=new File(getContext().getCacheDir(),"scale-roms");root.mkdirs();return true;}
  public Bundle call(String method,String arg,Bundle extras){
+  if(method.equals("storage")){count=500;bytesPerRom=131072;extension="gbc";}
   if(method.equals("reset")){opens.set(0);queries.set(0);}
   if(method.equals("change"))revision++;
   if(method.equals("remove"))count=299;
@@ -22,9 +23,9 @@ public class ScaleFixtureProvider extends ContentProvider {
    Object[] row=new Object[projection.length];
    for(int k=0;k<row.length;k++)switch(projection[k]){
     case "document_id":row[k]="rom"+n;break;
-    case "_display_name":row[k]=String.format(java.util.Locale.ROOT,"Test %03d.gba",n);break;
+    case "_display_name":row[k]=String.format(java.util.Locale.ROOT,"Test %03d."+extension,n);break;
     case "mime_type":row[k]="application/octet-stream";break;
-    case "_size":row[k]=1024L;break;
+    case "_size":row[k]=(long)bytesPerRom;break;
     case "last_modified":row[k]=n==0?(long)revision:1L;break;
    }
    c.addRow(row);
@@ -36,7 +37,7 @@ public class ScaleFixtureProvider extends ContentProvider {
   int n=Integer.parseInt(DocumentsContract.getDocumentId(uri).substring(3));
   File file=new File(root,"rom"+n);
   try(FileOutputStream out=new FileOutputStream(file)){
-   byte[] bytes=new byte[1024];bytes[0]=(byte)n;bytes[1]=(byte)(n>>8);bytes[2]=(byte)(n==0?revision:1);out.write(bytes);
+   byte[] bytes=new byte[bytesPerRom];bytes[0]=(byte)n;bytes[1]=(byte)(n>>8);bytes[2]=(byte)(n==0?revision:1);out.write(bytes);
   }catch(IOException e){throw new FileNotFoundException(e.toString());}
   return ParcelFileDescriptor.open(file,ParcelFileDescriptor.MODE_READ_ONLY);
  }

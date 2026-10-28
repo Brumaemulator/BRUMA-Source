@@ -78,8 +78,9 @@ object LibrarySmoke {
             main {MainActivity::class.java.getDeclaredMethod("launchLibraryGame",LibraryGame::class.java).apply {isAccessible=true}.invoke(activity,game)}
             repeat(100){if(field("running").getBoolean(activity)) return@repeat;SystemClock.sleep(50)}
             main {check(field("loaded").getBoolean(activity) && field("running").getBoolean(activity)) {"Library game did not start"}}
+            check(!File(ctx.filesDir,"roms/"+game.cached+".gba").exists()) {"Library launch created a permanent ROM copy"}
             SystemClock.sleep(600)
-            main {MainActivity::class.java.getDeclaredMethod("goHome").apply {isAccessible=true}.invoke(activity)}
+            main {MainActivity::class.java.getDeclaredMethod("goHome",Boolean::class.javaPrimitiveType).apply {isAccessible=true}.invoke(activity,false)}
             SystemClock.sleep(700);waitReady()
             importedId=prefs.getString("lastId",null)
             check(!File(ctx.filesDir,"covers/game-$importedId.png").exists()) {"Automatic gameplay preview still generated"}
@@ -89,7 +90,10 @@ object LibrarySmoke {
             }
             SystemClock.sleep(1000);waitReady()
             check(store.read().first {it.key==game.key}.cover.startsWith("file:")) {"Custom cover not stored"}
-            main {activity!!.finish()};i.waitForIdleSync();activity=null
+            val closing=activity!!;main {closing.finish()};i.waitForIdleSync()
+            var tries=0;while(!closing.isDestroyed&&tries++<100)SystemClock.sleep(50)
+            check(closing.isDestroyed) {"Library Activity was not destroyed"};activity=null
+            check(RomAccess.root(ctx).listFiles().orEmpty().isEmpty()) {"Closed game left a temporary ROM"}
         } finally {
             activity?.let {a->main {a.finish()};i.waitForIdleSync()}
             if(originalIndex==null) index.delete() else index.writeBytes(originalIndex)

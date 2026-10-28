@@ -1,8 +1,8 @@
 {
-  "versionName": "1.0.2",
-  "versionCode": 44,
+  "versionName": "1.0.3",
+  "versionCode": 46,
   "applicationId": "com.brumastudio.bruma",
-  "date": "2026-10-13",
+  "date": "2026-10-28",
   "native_inputs": {
     "libbruma_classic.so": "75d318c56223f0fdd8c04c0b36ed07b6eb3ec14f6cfc352e707f84f44c0226f9",
     "libbruma_classic_fluidlite.so": "4c7373f557349de9cc3308eee3311e5c578b78e4ff365f28323ac49346aac1a2",
@@ -21,14 +21,14 @@
   "classic_interpreter": "Ruby 1.9.3-p551, selected BSD-2-Clause option",
   "modern_openssl": "OpenSSL 3.5.8, Apache-2.0",
   "no_new_functionality": false,
-  "update": "Optional translations catalog, verified patching and reverse delta restoration; no Creators client or new Google SDK.",
+  "update": "Cartridge source access and bounded session files; metadata-only ZIP catalog and translation lookup; safe legacy duplicate reclamation.",
   "translation_decoder": {
     "repository": "https://github.com/jmacd/xdelta",
     "tag": "v3.2.2",
     "commit": "5f8f5a553181c139d91b0289c009e5c276c5318c",
     "archive_sha256": "1529ccd7e8cc6b780ee56b2cb31ff4b6c1f9ead30cca5a0e84a940ab0668ea97"
   },
-  "production_ready": true,
+  "production_ready": false,
   "automatic_translation_access": {
     "session_seconds": 3600,
     "ticket_seconds": 120,
@@ -38,7 +38,11 @@
     "native_headers_are_not_attestation": true,
     "edge_rate_limit": "60 requests / 60 seconds per IP/domain; verify deployment rule"
   },
-  "android_build_commit": "58664a0f1342f98fae02ef4a3765e036fb1ce709",
   "backend_deploy": "6ace6cf4549438414bef6080",
-  "validation": "Live access/download/hash/browser rejection and physical-device Crown patch/restoration PASS; remaining Play Console declarations are operator actions."
+  "validation": "Live access/download/hash/browser rejection and physical-device Crown patch/restoration PASS; remaining Play Console declarations are operator actions.",
+  "previous_public_version": "1.0.2/44",
+  "unchanged_native_runtimes": true,
+  "new_dependencies": [],
+  "storage_regression_evidence": "docs/STORAGE-REGRESSION-2026-10-28.txt",
+  "privacy_changes": "No additional permissions, data collection or endpoints; no privacy/Data Safety expansion for this storage correction."
 }

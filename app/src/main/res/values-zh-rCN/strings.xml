@@ -45,7 +45,7 @@
     <string name="art_network">无法完成下载。请检查网络连接后重试。</string>
     <string name="art_invalid">Libretro 返回了不支持的内容。</string>
     <string name="art_not_found">未找到此游戏的封面。</string>
-    <string name="art_consent">无需账号即可从 Libretro 免费下载封面。图片会保存到本机，供离线查看。</string>
+    <string name="art_consent">无需账号即可从 Libretro / GitHub 免费下载封面。图片会保存到本机，供离线查看。</string>
     <string name="art_missing">仅限没有封面的游戏</string>
     <string name="art_download">下载封面</string>
     <string name="art_nothing">没有需要下载封面的游戏。</string>

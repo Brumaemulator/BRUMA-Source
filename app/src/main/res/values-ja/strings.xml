@@ -45,7 +45,7 @@
     <string name="art_network">ダウンロードできません。接続を確認してもう一度お試しください。</string>
     <string name="art_invalid">Libretroから未対応の応答がありました。</string>
     <string name="art_not_found">このゲームのカバーが見つかりません。</string>
-    <string name="art_consent">アカウント不要でLibretroから無料のカバーを取得します。画像はオフラインでも表示できます。</string>
+    <string name="art_consent">アカウント不要でLibretro / GitHubから無料のカバーを取得します。画像はオフラインでも表示できます。</string>
     <string name="art_missing">カバーのないゲームのみ</string>
     <string name="art_download">カバーをダウンロード</string>
     <string name="art_nothing">カバーが必要なゲームはありません。</string>

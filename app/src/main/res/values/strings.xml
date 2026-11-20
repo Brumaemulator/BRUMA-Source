@@ -95,7 +95,7 @@
     <string name="art_network">Unable to complete the download. Check your connection and try again.</string>
     <string name="art_invalid">Libretro returned an unsupported response.</string>
     <string name="art_not_found">No cover found for this game.</string>
-    <string name="art_consent">Download free covers from Libretro, without an account. Images are saved for offline viewing.</string>
+    <string name="art_consent">Download free covers from Libretro / GitHub, without an account. Images are saved for offline viewing.</string>
     <string name="art_missing">Only games without a cover</string>
     <string name="art_replace">This replaces the current cover if a match is found.</string>
     <string name="art_download">Download covers</string>

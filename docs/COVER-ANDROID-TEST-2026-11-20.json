@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "cancellationAndUnsafeFilename": "PASS",
+  "systems": [
+    {
+      "system": "GB",
+      "entries": 1647,
+      "imageBytes": 648751,
+      "decoded": true,
+      "cache": true
+    },
+    {
+      "system": "GBC",
+      "entries": 1524,
+      "imageBytes": 119650,
+      "decoded": true,
+      "cache": true
+    },
+    {
+      "system": "GBA",
+      "entries": 5961,
+      "imageBytes": 104719,
+      "decoded": true,
+      "cache": true
+    },
+    {
+      "system": "NDS",
+      "entries": 7335,
+      "imageBytes": 169807,
+      "decoded": true,
+      "cache": true
+    }
+  ],
+  "noImagesPersisted": true
+}

@@ -45,7 +45,7 @@
     <string name="art_network">Impossibile completare il download. Controlla la connessione e riprova.</string>
     <string name="art_invalid">Libretro ha restituito una risposta non supportata.</string>
     <string name="art_not_found">Nessuna copertina trovata per questo gioco.</string>
-    <string name="art_consent">Scarica copertine gratuite da Libretro senza account. Le immagini saranno disponibili anche offline.</string>
+    <string name="art_consent">Scarica copertine gratuite da Libretro / GitHub senza account. Le immagini saranno disponibili anche offline.</string>
     <string name="art_missing">Solo giochi senza copertina</string>
     <string name="art_download">Scarica copertine</string>
     <string name="art_nothing">Nessun gioco ha bisogno di una copertina.</string>

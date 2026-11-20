@@ -45,7 +45,7 @@
     <string name="art_network">Download nicht möglich. Prüfe deine Verbindung und versuche es erneut.</string>
     <string name="art_invalid">Libretro hat eine nicht unterstützte Antwort zurückgegeben.</string>
     <string name="art_not_found">Für dieses Spiel wurde kein Cover gefunden.</string>
-    <string name="art_consent">Lade kostenlose Cover ohne Konto von Libretro herunter. Sie sind anschließend offline verfügbar.</string>
+    <string name="art_consent">Lade kostenlose Cover ohne Konto von Libretro / GitHub herunter. Sie sind anschließend offline verfügbar.</string>
     <string name="art_missing">Nur Spiele ohne Cover</string>
     <string name="art_download">Cover herunterladen</string>
     <string name="art_nothing">Kein Spiel benötigt ein Cover.</string>

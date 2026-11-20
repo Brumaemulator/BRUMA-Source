@@ -95,7 +95,7 @@
     <string name="art_network">No se ha podido completar la descarga. Revisa la conexión e inténtalo de nuevo.</string>
     <string name="art_invalid">Libretro ha devuelto una respuesta no compatible.</string>
     <string name="art_not_found">No se ha encontrado una carátula para este juego.</string>
-    <string name="art_consent">Descarga gratuita de carátulas de Libretro, sin cuenta. Las imágenes se guardan para verlas sin conexión.</string>
+    <string name="art_consent">Descarga gratuita de carátulas de Libretro / GitHub, sin cuenta. Las imágenes se guardan para verlas sin conexión.</string>
     <string name="art_missing">Solo juegos sin carátula</string>
     <string name="art_replace">Se sustituirá la carátula actual si se encuentra una coincidencia.</string>
     <string name="art_download">Descargar carátulas</string>

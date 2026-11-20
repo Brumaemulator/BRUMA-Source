@@ -1,8 +1,8 @@
-# BRUMA Emulator â€” Corresponding Source v1.0.3
+# BRUMA Emulator â€” Corresponding Source v1.0.4
 
 BRUMA is a paid Android application for user-supplied GB, GBC, GBA, NDS and compatible RPG Maker games. It has no advertising SDK, subscriptions or in-app purchases. No games or proprietary BIOS/firmware are included.
 
-Version: **1.0.3**, **versionCode 46**, package `com.brumastudio.bruma`. Official source repository: https://github.com/Brumaemulator/BRUMA-Source .
+Version: **1.0.4**, **versionCode 47**, package `com.brumastudio.bruma`. Official source repository: https://github.com/Brumaemulator/BRUMA-Source .
 
 This snapshot includes all integrated BRUMA frontend, library, scraping, import, configuration, save handling, automatic engine detection, controls, JNI and build code conservatively under GPL-3.0-or-later. It includes the latest save import and library/deletion/navigation changes. No frontend layer is withheld.
 
@@ -20,14 +20,18 @@ Full texts: `COPYING-GPL-3.0.txt`, `LICENSE.md`, `NOTICE.md`, `THIRD-PARTY-NOTIC
 
 See `BUILDING.md`. The exact native input libraries are included in `app/src/main/jniLibs`, and their full corresponding sources, patches, configurations and rebuild scripts are in `runtimes/`. mGBA source is in `app/src/main/cpp/third_party`. SHA256SUMS identifies every published file. `docs/dependency-inventory.json`, engine locks and `docs/RELEASE-INPUTS.json` document provenance.
 
-The release source ZIP and its SHA-256 must accompany the signed AAB. The release manifest outside the source tree records the exact Git commit and final signed AAB hash, avoiding self-referential hashes. To obtain the exact source, use the commit recorded in RELEASE-MANIFEST.json or the matching `BRUMA-1.0.3-Corresponding-Source.zip`, not an unversioned upstream branch.
+The release source ZIP and its SHA-256 must accompany the signed AAB. The release manifest outside the source tree records the exact Git commit and final signed AAB hash, avoiding self-referential hashes. To obtain the exact source, use the commit recorded in RELEASE-MANIFEST.json or the matching `BRUMA-1.0.4-Corresponding-Source.zip`, not an unversioned upstream branch.
 
 Signing keys, passwords, local configuration, user games/saves, backups and private data are deliberately excluded. Recipients can rebuild/relink and sign modified APKs with their own keys. No additional restriction is imposed on LGPL debugging, relinking or GPL rights.
 
-See docs/UPDATE-1.0.3.md for changes and validation limits.
+See docs/UPDATE-1.0.4.md for changes and validation limits.
 
 ## Translations
 
 Optional catalog at Bruma Studio, exact game/patch/result SHA-256 validation, IPS/BPS/UPS and xdelta3 decoding. Restoration uses a verified reverse delta and retains one library entry. RPG translation adapter is reserved, not enabled. No Creators/referral code is integrated in this release candidate.
 
-The automatic-access backend and privacy update remain the ones deployed on 13 October 2026 for 1.0.2/44. Version 1.0.3/46 changes local storage handling only, without new collection, SDKs, permissions, backend endpoints or Creators/referral features. See docs/UPDATE-1.0.3.md and docs/STORAGE-REGRESSION-2026-10-28.txt for the new device checks. The external release manifest identifies the signed AAB and exact source snapshot.
+The automatic-access backend and privacy update remain the ones deployed on 13 October 2026 for 1.0.2/44. Version 1.0.3/46 introduced the local storage correction retained here. Version 1.0.4/47 repairs optional cover downloads using the official GitHub-hosted catalog as fallback; update the privacy provider disclosure before public rollout. No new SDKs, permissions, backend changes or Creators/referral features. See docs/UPDATE-1.0.4.md and the retained storage regression evidence. The external release manifest identifies the signed AAB and exact source snapshot.
+
+## 1.0.4 / 47 — cover service repair
+
+This update restores optional cover retrieval using the official libretro-thumbnails repositories when the legacy server returns 404 or is unavailable. New optional HTTPS recipients: api.github.com and raw.githubusercontent.com. No account, API key or new SDK. Cached/local images are retained. Engines, storage fixes, translations, saves, controls, permissions and referral behavior are unchanged. The public privacy section should list these additional cover delivery hosts before public rollout. Sources prepared locally; publication status is recorded outside this tree.

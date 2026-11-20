@@ -45,7 +45,7 @@
     <string name="art_network">Não foi possível concluir o download. Verifique sua conexão e tente novamente.</string>
     <string name="art_invalid">O Libretro retornou uma resposta incompatível.</string>
     <string name="art_not_found">Nenhuma capa encontrada para este jogo.</string>
-    <string name="art_consent">Baixe capas gratuitas do Libretro, sem conta. As imagens ficam salvas para visualização offline.</string>
+    <string name="art_consent">Baixe capas gratuitas do Libretro / GitHub, sem conta. As imagens ficam salvas para visualização offline.</string>
     <string name="art_missing">Somente jogos sem capa</string>
     <string name="art_download">Baixar capas</string>
     <string name="art_nothing">Não há jogos que precisem de capas.</string>

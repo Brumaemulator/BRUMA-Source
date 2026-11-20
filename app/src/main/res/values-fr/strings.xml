@@ -45,7 +45,7 @@
     <string name="art_network">Téléchargement impossible. Vérifiez votre connexion et réessayez.</string>
     <string name="art_invalid">Libretro a renvoyé une réponse non prise en charge.</string>
     <string name="art_not_found">Aucune jaquette trouvée pour ce jeu.</string>
-    <string name="art_consent">Téléchargez gratuitement des jaquettes depuis Libretro, sans compte. Elles restent disponibles hors ligne.</string>
+    <string name="art_consent">Téléchargez gratuitement des jaquettes depuis Libretro / GitHub, sans compte. Elles restent disponibles hors ligne.</string>
     <string name="art_missing">Jeux sans jaquette uniquement</string>
     <string name="art_download">Télécharger les jaquettes</string>
     <string name="art_nothing">Aucun jeu ne nécessite de jaquette.</string>

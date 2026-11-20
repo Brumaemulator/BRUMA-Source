@@ -1,8 +1,8 @@
 {
-  "versionName": "1.0.3",
-  "versionCode": 46,
+  "versionName": "1.0.4",
+  "versionCode": 47,
   "applicationId": "com.brumastudio.bruma",
-  "date": "2026-10-28",
+  "date": "2026-11-20",
   "native_inputs": {
     "libbruma_classic.so": "75d318c56223f0fdd8c04c0b36ed07b6eb3ec14f6cfc352e707f84f44c0226f9",
     "libbruma_classic_fluidlite.so": "4c7373f557349de9cc3308eee3311e5c578b78e4ff365f28323ac49346aac1a2",
@@ -21,7 +21,7 @@
   "classic_interpreter": "Ruby 1.9.3-p551, selected BSD-2-Clause option",
   "modern_openssl": "OpenSSL 3.5.8, Apache-2.0",
   "no_new_functionality": false,
-  "update": "Cartridge source access and bounded session files; metadata-only ZIP catalog and translation lookup; safe legacy duplicate reclamation.",
+  "update": "Optional Libretro cover delivery fallback to official GitHub repositories; original engines/storage/translations unchanged.",
   "translation_decoder": {
     "repository": "https://github.com/jmacd/xdelta",
     "tag": "v3.2.2",
@@ -38,12 +38,12 @@
     "edge_rate_limit": "60 requests / 60 seconds per IP/domain; verify deployment rule"
   },
   "backend_deploy": "6ace6cf4549438414bef6080",
-  "validation": "Release build/lint, signed AAB manifest/certificate/ARM64/16KB, identical tested storage sources, exact source archive/Git parity and credential exclusion PASS. Device regression evidence retained; Play-signed update remains a manual internal-test step.",
-  "previous_public_version": "1.0.2/44",
+  "validation": "Release AAB/signature/bundle/ARM64/16KB PASS. Exact cover client tested on Android for GB/GBC/GBA/NDS, cache/cancellation/path rejection PASS. Native/source parity recorded outside this tree; no full gameplay rerun.",
+  "previous_public_version": "1.0.3/46",
   "unchanged_native_runtimes": true,
   "new_dependencies": [],
   "storage_regression_evidence": "docs/STORAGE-REGRESSION-2026-10-28.txt",
-  "privacy_changes": "No additional permissions, data collection or endpoints; no privacy/Data Safety expansion for this storage correction.",
+  "privacy_changes": "Optional cover service also uses api.github.com and raw.githubusercontent.com. Same connection/IP/title-path data; update public provider disclosure before rollout.",
   "technical_checks_passed": true,
   "google_play_publication_performed": false
 }

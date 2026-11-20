@@ -45,7 +45,7 @@
     <string name="art_network">다운로드할 수 없습니다. 연결을 확인하고 다시 시도하세요.</string>
     <string name="art_invalid">Libretro에서 지원되지 않는 응답을 받았습니다.</string>
     <string name="art_not_found">이 게임의 표지를 찾을 수 없습니다.</string>
-    <string name="art_consent">계정 없이 Libretro에서 무료 표지를 다운로드합니다. 이미지는 오프라인에서도 볼 수 있습니다.</string>
+    <string name="art_consent">계정 없이 Libretro / GitHub에서 무료 표지를 다운로드합니다. 이미지는 오프라인에서도 볼 수 있습니다.</string>
     <string name="art_missing">표지가 없는 게임만</string>
     <string name="art_download">표지 다운로드</string>
     <string name="art_nothing">표지가 필요한 게임이 없습니다.</string>

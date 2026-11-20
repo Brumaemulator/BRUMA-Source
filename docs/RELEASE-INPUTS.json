@@ -1,6 +1,6 @@
 {
   "versionName": "1.0.4",
-  "versionCode": 47,
+  "versionCode": 48,
   "applicationId": "com.brumastudio.bruma",
   "date": "2026-11-20",
   "native_inputs": {
@@ -21,7 +21,7 @@
   "classic_interpreter": "Ruby 1.9.3-p551, selected BSD-2-Clause option",
   "modern_openssl": "OpenSSL 3.5.8, Apache-2.0",
   "no_new_functionality": false,
-  "update": "Optional Libretro cover delivery fallback to official GitHub repositories; original engines/storage/translations unchanged.",
+  "update": "Manifest-only landscape hardware requirement override plus versionCode 48; no engine, layout, storage, cover or translation code changes.",
   "translation_decoder": {
     "repository": "https://github.com/jmacd/xdelta",
     "tag": "v3.2.2",
@@ -45,5 +45,6 @@
   "storage_regression_evidence": "docs/STORAGE-REGRESSION-2026-10-28.txt",
   "privacy_changes": "Optional cover service also uses api.github.com and raw.githubusercontent.com. Same connection/IP/title-path data; update public provider disclosure before rollout.",
   "technical_checks_passed": true,
-  "google_play_publication_performed": false
+  "google_play_publication_performed": false,
+  "previous_candidate": "1.0.4/47"
 }
